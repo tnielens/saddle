@@ -1,0 +1,705 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title></title>
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title"><span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.saddle" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saddle"></a><a id="saddle:saddle"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Saddle is a Scala Data Library." href="../index.html"><span class="name">saddle</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Saddle is a <b>S</b>cala <b>D</b>ata <b>L</b>ibrary.</p><div class="fullcomment"><div class="comment cmt"><h4> Saddle </h4><p>Saddle is a <b>S</b>cala <b>D</b>ata <b>L</b>ibrary.</p><p>Saddle provides array-backed, indexed one- and two-dimensional data structures.</p><p>These data structures are specialized on JVM primitives. With them one can often avoid
+the overhead of boxing and unboxing.</p><p>Basic operations also aim to be robust to missing values (NA's)</p><p>The building blocks are intended to be easily composed.</p><p>The foundational building blocks are:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Index.html" class="extype" name="org.saddle.Index">org.saddle.Index</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Inspiration for Saddle comes from many sources, including the R programming language, the
+pandas data analysis library for Python, and the Scala collections library.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.saddle.csv" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="CsvParser$.html" title="Csv parsing utilities"></a>
+                        <a href="CsvParser$.html" title="Csv parsing utilities">CsvParser</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="CsvSettings.html" title="Settings for writing a CSV file"></a>
+                        <a href="CsvSettings.html" title="Settings for writing a CSV file">CsvSettings</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="" title=""></a>
+                        <a href="" title="">CsvWriter</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="object value">
+      <div id="definition">
+        <div class="big-circle object">o</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.csv">csv</a></p>
+        <h1>CsvWriter<span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CsvWriter</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.saddle.csv.CsvWriter"><span>CsvWriter</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.csv.CsvWriter#writeFrameToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="writeFrameToArray[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$15:org.saddle.ST[RX],implicitevidence$16:org.saddle.ORD[RX],implicitevidence$17:org.saddle.ST[CX],implicitevidence$18:org.saddle.ORD[CX],implicitevidence$19:org.saddle.ST[T]):Array[Byte]"></a><a id="writeFrameToArray[RX,CX,T](Frame[RX,CX,T],Boolean,Boolean,CsvSettings)(ST[RX],ORD[RX],ST[CX],ORD[CX],ST[T]):Array[Byte]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeFrameToArray[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$15:org.saddle.ST[RX],implicitevidence$16:org.saddle.ORD[RX],implicitevidence$17:org.saddle.ST[CX],implicitevidence$18:org.saddle.ORD[CX],implicitevidence$19:org.saddle.ST[T]):Array[Byte]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeFrameToArray</span><span class="tparams">[<span name="RX">RX</span>, <span name="CX">CX</span>, <span name="T">T</span>]</span><span class="params">(<span name="frame">frame: <a href="../Frame.html" class="extype" name="org.saddle.Frame">Frame</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.RX">RX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.CX">CX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.T">T</span>]</span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.RX">RX</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.RX">RX</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.CX">CX</span>]</span>, <span name="arg3">arg3: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.CX">CX</span>]</span>, <span name="arg4">arg4: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToArray.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.csv.CsvWriter#writeFrameToFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeFrameToFile[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],path:String,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$10:org.saddle.ST[RX],implicitevidence$11:org.saddle.ORD[RX],implicitevidence$12:org.saddle.ST[CX],implicitevidence$13:org.saddle.ORD[CX],implicitevidence$14:org.saddle.ST[T]):Unit"></a><a id="writeFrameToFile[RX,CX,T](Frame[RX,CX,T],String,Boolean,Boolean,CsvSettings)(ST[RX],ORD[RX],ST[CX],ORD[CX],ST[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeFrameToFile[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],path:String,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$10:org.saddle.ST[RX],implicitevidence$11:org.saddle.ORD[RX],implicitevidence$12:org.saddle.ST[CX],implicitevidence$13:org.saddle.ORD[CX],implicitevidence$14:org.saddle.ST[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeFrameToFile</span><span class="tparams">[<span name="RX">RX</span>, <span name="CX">CX</span>, <span name="T">T</span>]</span><span class="params">(<span name="frame">frame: <a href="../Frame.html" class="extype" name="org.saddle.Frame">Frame</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.RX">RX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.CX">CX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.T">T</span>]</span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.RX">RX</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.RX">RX</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.CX">CX</span>]</span>, <span name="arg3">arg3: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.CX">CX</span>]</span>, <span name="arg4">arg4: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToFile.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write a frame in CSV format to a file at the path provided
+</p><div class="fullcomment"><div class="comment cmt"><p>Write a frame in CSV format to a file at the path provided
+</p></div><dl class="paramcmts block"><dt class="param">path</dt><dd class="cmt"><p>File to write</p></dd><dt class="param">withColIx</dt><dd class="cmt"><p>If true, print out headers as first row</p></dd><dt class="param">withRowIx</dt><dd class="cmt"><p>If true, print out index value as first column</p></dd><dt class="param">settings</dt><dd class="cmt"><p>Settings to use in formatting</p></dd></dl></div>
+    </li><li name="org.saddle.csv.CsvWriter#writeFrameToStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="writeFrameToStream[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],stream:java.io.OutputStream,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$20:org.saddle.ST[RX],implicitevidence$21:org.saddle.ORD[RX],implicitevidence$22:org.saddle.ST[CX],implicitevidence$23:org.saddle.ORD[CX],implicitevidence$24:org.saddle.ST[T]):Unit"></a><a id="writeFrameToStream[RX,CX,T](Frame[RX,CX,T],OutputStream,Boolean,Boolean,CsvSettings)(ST[RX],ORD[RX],ST[CX],ORD[CX],ST[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeFrameToStream[RX,CX,T](frame:org.saddle.Frame[RX,CX,T],stream:java.io.OutputStream,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$20:org.saddle.ST[RX],implicitevidence$21:org.saddle.ORD[RX],implicitevidence$22:org.saddle.ST[CX],implicitevidence$23:org.saddle.ORD[CX],implicitevidence$24:org.saddle.ST[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeFrameToStream</span><span class="tparams">[<span name="RX">RX</span>, <span name="CX">CX</span>, <span name="T">T</span>]</span><span class="params">(<span name="frame">frame: <a href="../Frame.html" class="extype" name="org.saddle.Frame">Frame</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.RX">RX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.CX">CX</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.T">T</span>]</span>, <span name="stream">stream: <span class="extype" name="java.io.OutputStream">OutputStream</span></span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.RX">RX</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.RX">RX</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.CX">CX</span>]</span>, <span name="arg3">arg3: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.CX">CX</span>]</span>, <span name="arg4">arg4: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeFrameToStream.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Write a frame in CSV format to the stream provided
+</p><div class="fullcomment"><div class="comment cmt"><p>Write a frame in CSV format to the stream provided
+</p></div><dl class="paramcmts block"><dt class="param">stream</dt><dd class="cmt"><p>Stream to write on</p></dd><dt class="param">withColIx</dt><dd class="cmt"><p>If true, print out headers as first row</p></dd><dt class="param">withRowIx</dt><dd class="cmt"><p>If true, print out index value as first column</p></dd><dt class="param">settings</dt><dd class="cmt"><p>Settings to use in formatting</p></dd></dl></div>
+    </li><li name="org.saddle.csv.CsvWriter#writeSeriesToArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="writeSeriesToArray[X,T](series:org.saddle.Series[X,T],withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$7:org.saddle.ST[X],implicitevidence$8:org.saddle.ORD[X],implicitevidence$9:org.saddle.ST[T]):Array[Byte]"></a><a id="writeSeriesToArray[X,T](Series[X,T],Boolean,Boolean,CsvSettings)(ST[X],ORD[X],ST[T]):Array[Byte]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeSeriesToArray[X,T](series:org.saddle.Series[X,T],withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$7:org.saddle.ST[X],implicitevidence$8:org.saddle.ORD[X],implicitevidence$9:org.saddle.ST[T]):Array[Byte]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeSeriesToArray</span><span class="tparams">[<span name="X">X</span>, <span name="T">T</span>]</span><span class="params">(<span name="series">series: <a href="../Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToArray.X">X</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToArray.T">T</span>]</span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToArray.X">X</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToArray.X">X</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToArray.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Byte">Byte</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.csv.CsvWriter#writeSeriesToFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="writeSeriesToFile[X,T](series:org.saddle.Series[X,T],path:String,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$1:org.saddle.ST[X],implicitevidence$2:org.saddle.ORD[X],implicitevidence$3:org.saddle.ST[T]):Unit"></a><a id="writeSeriesToFile[X,T](Series[X,T],String,Boolean,Boolean,CsvSettings)(ST[X],ORD[X],ST[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeSeriesToFile[X,T](series:org.saddle.Series[X,T],path:String,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$1:org.saddle.ST[X],implicitevidence$2:org.saddle.ORD[X],implicitevidence$3:org.saddle.ST[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeSeriesToFile</span><span class="tparams">[<span name="X">X</span>, <span name="T">T</span>]</span><span class="params">(<span name="series">series: <a href="../Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToFile.X">X</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToFile.T">T</span>]</span>, <span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToFile.X">X</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToFile.X">X</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToFile.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides enrichment on Series object for writing to a Csv file.</p>
+    </li><li name="org.saddle.csv.CsvWriter#writeSeriesToStream" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="writeSeriesToStream[X,T](series:org.saddle.Series[X,T],stream:java.io.OutputStream,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$4:org.saddle.ST[X],implicitevidence$5:org.saddle.ORD[X],implicitevidence$6:org.saddle.ST[T]):Unit"></a><a id="writeSeriesToStream[X,T](Series[X,T],OutputStream,Boolean,Boolean,CsvSettings)(ST[X],ORD[X],ST[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/CsvWriter$.html#writeSeriesToStream[X,T](series:org.saddle.Series[X,T],stream:java.io.OutputStream,withColIx:Boolean,withRowIx:Boolean,settings:org.saddle.csv.CsvSettings)(implicitevidence$4:org.saddle.ST[X],implicitevidence$5:org.saddle.ORD[X],implicitevidence$6:org.saddle.ST[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">writeSeriesToStream</span><span class="tparams">[<span name="X">X</span>, <span name="T">T</span>]</span><span class="params">(<span name="series">series: <a href="../Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToStream.X">X</span>, <span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToStream.T">T</span>]</span>, <span name="stream">stream: <span class="extype" name="java.io.OutputStream">OutputStream</span></span>, <span name="withColIx">withColIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="withRowIx">withRowIx: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">true</span></span>, <span name="settings">settings: <a href="CsvSettings.html" class="extype" name="org.saddle.csv.CsvSettings">CsvSettings</a> = <span class="symbol"><span class="name"><a href="CsvSettings.html">new CsvSettings()</a></span></span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToStream.X">X</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToStream.X">X</span>]</span>, <span name="arg2">arg2: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.csv.CsvWriter.writeSeriesToStream.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

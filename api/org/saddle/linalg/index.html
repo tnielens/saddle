@@ -1,0 +1,2346 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title></title>
+          <meta name="description" content="" />
+          <meta name="keywords" content="" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title"><span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.org" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="org"></a><a id="org:org"></a>
+      <span class="permalink">
+      <a href="../../../org/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">org</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="org.saddle" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="saddle"></a><a id="saddle:saddle"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Saddle is a Scala Data Library." href="../index.html"><span class="name">saddle</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Saddle is a <b>S</b>cala <b>D</b>ata <b>L</b>ibrary.</p><div class="fullcomment"><div class="comment cmt"><h4> Saddle </h4><p>Saddle is a <b>S</b>cala <b>D</b>ata <b>L</b>ibrary.</p><p>Saddle provides array-backed, indexed one- and two-dimensional data structures.</p><p>These data structures are specialized on JVM primitives. With them one can often avoid
+the overhead of boxing and unboxing.</p><p>Basic operations also aim to be robust to missing values (NA's)</p><p>The building blocks are intended to be easily composed.</p><p>The foundational building blocks are:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Index.html" class="extype" name="org.saddle.Index">org.saddle.Index</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Inspiration for Saddle comes from many sources, including the R programming language, the
+pandas data analysis library for Python, and the Scala collections library.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
+    </li><li name="org.saddle.array" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="array"></a><a id="array:array"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/array/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This package contains utilities for working with arrays that are specialized for numeric types." href="../array/index.html"><span class="name">array</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This package contains utilities for working with arrays that
+are specialized for numeric types.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains utilities for working with arrays that
+are specialized for numeric types.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.binary" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="binary"></a><a id="binary:binary"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/binary/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Binary serialization for Frame[String,String,T] or Mat[T] with primitive T" href="../binary/index.html"><span class="name">binary</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Binary serialization for Frame[String,String,T] or Mat[T] with primitive T</p><div class="fullcomment"><div class="comment cmt"><p>Binary serialization for Frame[String,String,T] or Mat[T] with primitive T</p><p>The layout of binary format is as follows:
+- The first 6 bytes are &quot;SADDLE&quot;
+- The next unsigned byte is the major version
+- The next unsigned byte is the minor version
+- The next 4 bytes form a little endian integer as HEADER_LENGTH
+- The next HEADER_LENGTH bytes form an UTF-8 string as the header.
+- The header is a valid JSON object with the following fields:</p><ul><li>v: numeric positive integer is the version of the header structure</li><li>colix : a JSON array of strings, it is the column index of the frame</li><li>rowix : a JSON array of strings, it is the row index of the frame</li><li>numrows: numeric positive integer, number of rows</li><li>numcols: numeric positive integer, number of cols</li><li>Either one of rowix or numrows may be missing</li><li>Either one of colix or numcols may be missing</li><li>rowmajor : a boolean, indicating whether the data is stored in row-major or col-major order</li><li>datatype : string, either &quot;double&quot;, &quot;long&quot;, &quot;int&quot;, &quot;float&quot;, &quot;byte&quot;
+- The header is padded with spaces (0x20) such that HEADER_LENGTH+12 is divisible by 16.
+  The count of spaces are included in HEADER_LENGTH.
+- The next width * numRows * numCols bytes form a little endian primitive array in row-major
+  or col-major order. numRows and numCols are determined from the rowix/numrows and colix/numcols
+  header fields. width is determined from the datatype field (8 for double and long, 4 for
+  int and float, 1 for byte)
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.csv" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="csv"></a><a id="csv:csv"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/csv/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../csv/index.html"><span class="name">csv</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.groupby" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="groupby"></a><a id="groupby:groupby"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/groupby/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../groupby/index.html"><span class="name">groupby</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.index" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="index"></a><a id="index:index"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/index/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index/index.html"><span class="name">index</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.linalg" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="linalg"></a><a id="linalg:linalg"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">linalg</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AtxA.html" title=""></a>
+                        <a href="AtxA.html" title="">AtxA</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AtxB.html" title=""></a>
+                        <a href="AtxB.html" title="">AtxB</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AtxBt.html" title=""></a>
+                        <a href="AtxBt.html" title="">AtxBt</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AtxV.html" title=""></a>
+                        <a href="AtxV.html" title="">AtxV</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AxAt.html" title=""></a>
+                        <a href="AxAt.html" title="">AxAt</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AxB.html" title=""></a>
+                        <a href="AxB.html" title="">AxB</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AxBt.html" title=""></a>
+                        <a href="AxBt.html" title="">AxBt</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AxDiag.html" title=""></a>
+                        <a href="AxDiag.html" title="">AxDiag</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="AxV.html" title=""></a>
+                        <a href="AxV.html" title="">AxV</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Cholesky.html" title=""></a>
+                        <a href="Cholesky.html" title="">Cholesky</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ColSums.html" title=""></a>
+                        <a href="ColSums.html" title="">ColSums</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DPotrfException.html" title=""></a>
+                        <a href="DPotrfException.html" title="">DPotrfException</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Diag.html" title=""></a>
+                        <a href="Diag.html" title="">Diag</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DiagAtxA.html" title=""></a>
+                        <a href="DiagAtxA.html" title="">DiagAtxA</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DiagAxAt.html" title=""></a>
+                        <a href="DiagAxAt.html" title="">DiagAxAt</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DiagXAInverseXt.html" title=""></a>
+                        <a href="DiagXAInverseXt.html" title="">DiagXAInverseXt</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="DiagxA.html" title=""></a>
+                        <a href="DiagxA.html" title="">DiagxA</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EigNS.html" title=""></a>
+                        <a href="EigNS.html" title="">EigNS</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EigNSTrunc.html" title=""></a>
+                        <a href="EigNSTrunc.html" title="">EigNSTrunc</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EigS.html" title=""></a>
+                        <a href="EigS.html" title="">EigS</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EigSTrunc.html" title=""></a>
+                        <a href="EigSTrunc.html" title="">EigSTrunc</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="EigValSymTrunc.html" title=""></a>
+                        <a href="EigValSymTrunc.html" title="">EigValSymTrunc</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="EigenDecompositionNonSymmetric.html" title=""></a>
+                        <a href="EigenDecompositionNonSymmetric.html" title="">EigenDecompositionNonSymmetric</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="EigenDecompositionSymmetric.html" title=""></a>
+                        <a href="EigenDecompositionSymmetric.html" title="">EigenDecompositionSymmetric</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="GeneralSVD.html" title=""></a>
+                        <a href="GeneralSVD.html" title="">GeneralSVD</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="GeneralSVDTrunc.html" title=""></a>
+                        <a href="GeneralSVDTrunc.html" title="">GeneralSVDTrunc</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="GeneralSolve.html" title=""></a>
+                        <a href="GeneralSolve.html" title="">GeneralSolve</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="InvertPDCholesky.html" title=""></a>
+                        <a href="InvertPDCholesky.html" title="">InvertPDCholesky</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="InvertWithLU.html" title=""></a>
+                        <a href="InvertWithLU.html" title="">InvertWithLU</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatBinOp.html" title=""></a>
+                        <a href="MatBinOp.html" title="">MatBinOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatGemmOp.html" title=""></a>
+                        <a href="MatGemmOp.html" title="">MatGemmOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatGemmSelfOp.html" title=""></a>
+                        <a href="MatGemmSelfOp.html" title="">MatGemmSelfOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatLinalgOps.html" title=""></a>
+                        <a href="MatLinalgOps.html" title="">MatLinalgOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MatPimp.html" title=""></a>
+                        <a href="MatPimp.html" title="">MatPimp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatUnaryOp.html" title=""></a>
+                        <a href="MatUnaryOp.html" title="">MatUnaryOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatUnaryOp1Scalar.html" title=""></a>
+                        <a href="MatUnaryOp1Scalar.html" title="">MatUnaryOp1Scalar</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="MatUnaryOp1ScalarTarget.html" title=""></a>
+                        <a href="MatUnaryOp1ScalarTarget.html" title="">MatUnaryOp1ScalarTarget</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="OpImpl.html" title=""></a>
+                        <a href="OpImpl.html" title="">OpImpl</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="RowSums.html" title=""></a>
+                        <a href="RowSums.html" title="">RowSums</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SVDResult.html" title=""></a>
+                        <a href="SVDResult.html" title="">SVDResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SingularValues.html" title=""></a>
+                        <a href="SingularValues.html" title="">SingularValues</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SolveLowerTriangular.html" title=""></a>
+                        <a href="SolveLowerTriangular.html" title="">SolveLowerTriangular</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="SolveUpperTriangular.html" title=""></a>
+                        <a href="SolveUpperTriangular.html" title="">SolveUpperTriangular</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="TestPD.html" title=""></a>
+                        <a href="TestPD.html" title="">TestPD</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="Trace.html" title=""></a>
+                        <a href="Trace.html" title="">Trace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="VecBinOp.html" title=""></a>
+                        <a href="VecBinOp.html" title="">VecBinOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="VecLinalgOps.html" title=""></a>
+                        <a href="VecLinalgOps.html" title="">VecLinalgOps</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="VecPimp.html" title=""></a>
+                        <a href="VecPimp.html" title="">VecPimp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAtxApbC.html" title=""></a>
+                        <a href="aAtxApbC.html" title="">aAtxApbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAtxBpbC.html" title=""></a>
+                        <a href="aAtxBpbC.html" title="">aAtxBpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAtxBtpbC.html" title=""></a>
+                        <a href="aAtxBtpbC.html" title="">aAtxBtpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAtxVpbC.html" title=""></a>
+                        <a href="aAtxVpbC.html" title="">aAtxVpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAxAtpbC.html" title=""></a>
+                        <a href="aAxAtpbC.html" title="">aAxAtpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAxBpbC.html" title=""></a>
+                        <a href="aAxBpbC.html" title="">aAxBpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAxBtpbC.html" title=""></a>
+                        <a href="aAxBtpbC.html" title="">aAxBtpbC</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="aAxVpbC.html" title=""></a>
+                        <a href="aAxVpbC.html" title="">aAxVpbC</a>
+                      </li><li name="org.saddle.locator" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="locator"></a><a id="locator:locator"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/locator/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../locator/index.html"><span class="name">locator</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.mat" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mat"></a><a id="mat:mat"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/mat/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../mat/index.html"><span class="name">mat</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.ops" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ops"></a><a id="ops:ops"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides type aliases for a few basic operations" href="../ops/index.html"><span class="name">ops</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides type aliases for a few basic operations
+</p><div class="fullcomment"><div class="comment cmt"><p>Provides type aliases for a few basic operations
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.scalar" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="scalar"></a><a id="scalar:scalar"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/scalar/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../scalar/index.html"><span class="name">scalar</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.stats" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stats"></a><a id="stats:stats"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/stats/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../stats/index.html"><span class="name">stats</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.time" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="time"></a><a id="time:time"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/time/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Functionality to assist in TimeSeries related operations" href="../time/index.html"><span class="name">time</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Functionality to assist in TimeSeries related operations
+</p><div class="fullcomment"><div class="comment cmt"><p>Functionality to assist in TimeSeries related operations
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.util" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/util/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Additional utilities that need a home" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Additional utilities that need a home
+</p><div class="fullcomment"><div class="comment cmt"><p>Additional utilities that need a home
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.vec" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="vec"></a><a id="vec:vec"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Factory methods to generate Vec instances" href="../vec/index.html"><span class="name">vec</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Factory methods to generate Vec instances
+</p><div class="fullcomment"><div class="comment cmt"><p>Factory methods to generate Vec instances
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a></p>
+        <h1>linalg<span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">linalg</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="org.saddle.linalg"><span>linalg</span></li><li class="in" name="org.saddle.linalg.OpImpl"><span>OpImpl</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.saddle.linalg.AtxA" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AtxAextendsAnyRef"></a><a id="AtxA:AtxA"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AtxA.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AtxA.html"><span class="name">AtxA</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AtxB" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AtxBextendsAnyRef"></a><a id="AtxB:AtxB"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AtxB.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AtxB.html"><span class="name">AtxB</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AtxBt" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AtxBtextendsAnyRef"></a><a id="AtxBt:AtxBt"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AtxBt.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AtxBt.html"><span class="name">AtxBt</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AtxV" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AtxVextendsAnyRef"></a><a id="AtxV:AtxV"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AtxV.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AtxV.html"><span class="name">AtxV</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AxAt" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AxAtextendsAnyRef"></a><a id="AxAt:AxAt"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AxAt.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AxAt.html"><span class="name">AxAt</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AxB" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AxBextendsAnyRef"></a><a id="AxB:AxB"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AxB.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AxB.html"><span class="name">AxB</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AxBt" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AxBtextendsAnyRef"></a><a id="AxBt:AxBt"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AxBt.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AxBt.html"><span class="name">AxBt</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AxDiag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AxDiagextendsAnyRef"></a><a id="AxDiag:AxDiag"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AxDiag.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AxDiag.html"><span class="name">AxDiag</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.AxV" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AxVextendsAnyRef"></a><a id="AxV:AxV"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/AxV.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="AxV.html"><span class="name">AxV</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.Cholesky" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CholeskyextendsAnyRef"></a><a id="Cholesky:Cholesky"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/Cholesky.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Cholesky.html"><span class="name">Cholesky</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.ColSums" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ColSumsextendsAnyRef"></a><a id="ColSums:ColSums"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/ColSums.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ColSums.html"><span class="name">ColSums</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.DPotrfException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DPotrfExceptionextendsException"></a><a id="DPotrfException:DPotrfException"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/DPotrfException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DPotrfException.html"><span class="name">DPotrfException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.Diag" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DiagextendsAnyRef"></a><a id="Diag:Diag"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/Diag.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Diag.html"><span class="name">Diag</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.DiagAtxA" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DiagAtxAextendsAnyRef"></a><a id="DiagAtxA:DiagAtxA"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/DiagAtxA.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DiagAtxA.html"><span class="name">DiagAtxA</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.DiagAxAt" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DiagAxAtextendsAnyRef"></a><a id="DiagAxAt:DiagAxAt"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/DiagAxAt.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DiagAxAt.html"><span class="name">DiagAxAt</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.DiagXAInverseXt" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DiagXAInverseXtextendsAnyRef"></a><a id="DiagXAInverseXt:DiagXAInverseXt"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/DiagXAInverseXt.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DiagXAInverseXt.html"><span class="name">DiagXAInverseXt</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.DiagxA" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DiagxAextendsAnyRef"></a><a id="DiagxA:DiagxA"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/DiagxA.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DiagxA.html"><span class="name">DiagxA</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigNS" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EigNSextendsAnyRef"></a><a id="EigNS:EigNS"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigNS.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigNS.html"><span class="name">EigNS</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigNSTrunc" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EigNSTruncextendsAnyRef"></a><a id="EigNSTrunc:EigNSTrunc"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigNSTrunc.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigNSTrunc.html"><span class="name">EigNSTrunc</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigS" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EigSextendsAnyRef"></a><a id="EigS:EigS"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigS.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigS.html"><span class="name">EigS</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigSTrunc" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EigSTruncextendsAnyRef"></a><a id="EigSTrunc:EigSTrunc"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigSTrunc.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigSTrunc.html"><span class="name">EigSTrunc</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigValSymTrunc" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EigValSymTruncextendsAnyRef"></a><a id="EigValSymTrunc:EigValSymTrunc"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigValSymTrunc.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigValSymTrunc.html"><span class="name">EigValSymTrunc</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigenDecompositionNonSymmetric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EigenDecompositionNonSymmetricextendsProductwithSerializable"></a><a id="EigenDecompositionNonSymmetric:EigenDecompositionNonSymmetric"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigenDecompositionNonSymmetric.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigenDecompositionNonSymmetric.html"><span class="name">EigenDecompositionNonSymmetric</span></a><span class="params">(<span name="q">q: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="lambdaReal">lambdaReal: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="lambdaImag">lambdaImag: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.EigenDecompositionSymmetric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EigenDecompositionSymmetricextendsProductwithSerializable"></a><a id="EigenDecompositionSymmetric:EigenDecompositionSymmetric"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/EigenDecompositionSymmetric.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="EigenDecompositionSymmetric.html"><span class="name">EigenDecompositionSymmetric</span></a><span class="params">(<span name="q">q: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="lambdaReal">lambdaReal: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.GeneralSVD" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GeneralSVDextendsAnyRef"></a><a id="GeneralSVD:GeneralSVD"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/GeneralSVD.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="GeneralSVD.html"><span class="name">GeneralSVD</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.GeneralSVDTrunc" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GeneralSVDTruncextendsAnyRef"></a><a id="GeneralSVDTrunc:GeneralSVDTrunc"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/GeneralSVDTrunc.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="GeneralSVDTrunc.html"><span class="name">GeneralSVDTrunc</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.GeneralSolve" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GeneralSolveextendsAnyRef"></a><a id="GeneralSolve:GeneralSolve"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/GeneralSolve.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="GeneralSolve.html"><span class="name">GeneralSolve</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.InvertPDCholesky" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InvertPDCholeskyextendsAnyRef"></a><a id="InvertPDCholesky:InvertPDCholesky"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/InvertPDCholesky.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InvertPDCholesky.html"><span class="name">InvertPDCholesky</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.InvertWithLU" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="InvertWithLUextendsAnyRef"></a><a id="InvertWithLU:InvertWithLU"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/InvertWithLU.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InvertWithLU.html"><span class="name">InvertWithLU</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.MatBinOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatBinOp[O,Res]extendsAnyRef"></a><a id="MatBinOp[O,Res]:MatBinOp[O,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatBinOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatBinOp.html"><span class="name">MatBinOp</span></a><span class="tparams">[<span name="O">O</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.MatGemmOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatGemmOp[O,Res]extendsAnyRef"></a><a id="MatGemmOp[O,Res]:MatGemmOp[O,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatGemmOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatGemmOp.html"><span class="name">MatGemmOp</span></a><span class="tparams">[<span name="O">O</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.MatGemmSelfOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatGemmSelfOp[O,Res]extendsAnyRef"></a><a id="MatGemmSelfOp[O,Res]:MatGemmSelfOp[O,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatGemmSelfOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatGemmSelfOp.html"><span class="name">MatGemmSelfOp</span></a><span class="tparams">[<span name="O">O</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.MatLinalgOps" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="MatLinalgOpsextendsAnyRef"></a><a id="MatLinalgOps:MatLinalgOps"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatLinalgOps.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatLinalgOps.html"><span class="name">MatLinalgOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.MatPimp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatPimpextendsMatLinalgOps"></a><a id="MatPimp:MatPimp"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatPimp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatPimp.html"><span class="name">MatPimp</span></a><span class="result"> extends <a href="MatLinalgOps.html" class="extype" name="org.saddle.linalg.MatLinalgOps">MatLinalgOps</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.MatUnaryOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatUnaryOp[O,Res]extendsAnyRef"></a><a id="MatUnaryOp[O,Res]:MatUnaryOp[O,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatUnaryOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatUnaryOp.html"><span class="name">MatUnaryOp</span></a><span class="tparams">[<span name="O">O</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.MatUnaryOp1Scalar" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatUnaryOp1Scalar[O,T,Res]extendsAnyRef"></a><a id="MatUnaryOp1Scalar[O,T,Res]:MatUnaryOp1Scalar[O,T,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatUnaryOp1Scalar.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatUnaryOp1Scalar.html"><span class="name">MatUnaryOp1Scalar</span></a><span class="tparams">[<span name="O">O</span>, <span name="T">T</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.MatUnaryOp1ScalarTarget" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MatUnaryOp1ScalarTarget[O,T]extendsAnyRef"></a><a id="MatUnaryOp1ScalarTarget[O,T]:MatUnaryOp1ScalarTarget[O,T]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/MatUnaryOp1ScalarTarget.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MatUnaryOp1ScalarTarget.html"><span class="name">MatUnaryOp1ScalarTarget</span></a><span class="tparams">[<span name="O">O</span>, <span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="OpImplextendsAnyRef"></a><a id="OpImpl:OpImpl"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/OpImpl.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="OpImpl.html"><span class="name">OpImpl</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.RowSums" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RowSumsextendsAnyRef"></a><a id="RowSums:RowSums"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/RowSums.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RowSums.html"><span class="name">RowSums</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.SVDResult" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SVDResultextendsProductwithSerializable"></a><a id="SVDResult:SVDResult"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/SVDResult.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SVDResult.html"><span class="name">SVDResult</span></a><span class="params">(<span name="u">u: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="sigma">sigma: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>, <span name="vt">vt: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.SingularValues" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SingularValuesextendsAnyRef"></a><a id="SingularValues:SingularValues"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/SingularValues.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SingularValues.html"><span class="name">SingularValues</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.SolveLowerTriangular" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SolveLowerTriangularextendsAnyRef"></a><a id="SolveLowerTriangular:SolveLowerTriangular"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/SolveLowerTriangular.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SolveLowerTriangular.html"><span class="name">SolveLowerTriangular</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.SolveUpperTriangular" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SolveUpperTriangularextendsAnyRef"></a><a id="SolveUpperTriangular:SolveUpperTriangular"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/SolveUpperTriangular.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SolveUpperTriangular.html"><span class="name">SolveUpperTriangular</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.TestPD" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TestPDextendsAnyRef"></a><a id="TestPD:TestPD"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/TestPD.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TestPD.html"><span class="name">TestPD</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.Trace" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TraceextendsAnyRef"></a><a id="Trace:Trace"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/Trace.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Trace.html"><span class="name">Trace</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.VecBinOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="VecBinOp[O,Res]extendsAnyRef"></a><a id="VecBinOp[O,Res]:VecBinOp[O,Res]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/VecBinOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="VecBinOp.html"><span class="name">VecBinOp</span></a><span class="tparams">[<span name="O">O</span>, <span name="Res">Res</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="symbol">&quot;${O} not found&quot;</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="org.saddle.linalg.VecLinalgOps" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="VecLinalgOpsextendsAnyRef"></a><a id="VecLinalgOps:VecLinalgOps"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/VecLinalgOps.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="VecLinalgOps.html"><span class="name">VecLinalgOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.VecPimp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecPimpextendsVecLinalgOps"></a><a id="VecPimp:VecPimp"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/VecPimp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="VecPimp.html"><span class="name">VecPimp</span></a><span class="result"> extends <a href="VecLinalgOps.html" class="extype" name="org.saddle.linalg.VecLinalgOps">VecLinalgOps</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAtxApbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAtxApbCextendsAnyRef"></a><a id="aAtxApbC:aAtxApbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAtxApbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAtxApbC.html"><span class="name">aAtxApbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAtxBpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAtxBpbCextendsAnyRef"></a><a id="aAtxBpbC:aAtxBpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAtxBpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAtxBpbC.html"><span class="name">aAtxBpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAtxBtpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAtxBtpbCextendsAnyRef"></a><a id="aAtxBtpbC:aAtxBtpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAtxBtpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAtxBtpbC.html"><span class="name">aAtxBtpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAtxVpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAtxVpbCextendsAnyRef"></a><a id="aAtxVpbC:aAtxVpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAtxVpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAtxVpbC.html"><span class="name">aAtxVpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAxAtpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAxAtpbCextendsAnyRef"></a><a id="aAxAtpbC:aAxAtpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAxAtpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAxAtpbC.html"><span class="name">aAxAtpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAxBpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAxBpbCextendsAnyRef"></a><a id="aAxBpbC:aAxBpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAxBpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAxBpbC.html"><span class="name">aAxBpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAxBtpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAxBtpbCextendsAnyRef"></a><a id="aAxBtpbC:aAxBtpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAxBtpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAxBtpbC.html"><span class="name">aAxBtpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.aAxVpbC" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="aAxVpbCextendsAnyRef"></a><a id="aAxVpbC:aAxVpbC"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/aAxVpbC.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aAxVpbC.html"><span class="name">aAxVpbC</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="org.saddle.linalg.OpImpl#BLAS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BLAS:com.github.fommil.netlib.BLAS"></a><a id="BLAS:BLAS"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#BLAS:com.github.fommil.netlib.BLAS" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">BLAS</span><span class="result">: <span class="extype" name="com.github.fommil.netlib.BLAS">BLAS</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#LAPACK" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LAPACK:com.github.fommil.netlib.LAPACK"></a><a id="LAPACK:LAPACK"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#LAPACK:com.github.fommil.netlib.LAPACK" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LAPACK</span><span class="result">: <span class="extype" name="com.github.fommil.netlib.LAPACK">LAPACK</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#cholesky" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cholesky:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Cholesky,Option[org.saddle.Mat[Double]]]"></a><a id="cholesky:MatUnaryOp[Cholesky,Option[Mat[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#cholesky:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Cholesky,Option[org.saddle.Mat[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cholesky</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="Cholesky.html" class="extype" name="org.saddle.linalg.Cholesky">Cholesky</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#colSums" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="colSums:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.ColSums,org.saddle.Vec[Double]]"></a><a id="colSums:MatUnaryOp[ColSums,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#colSums:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.ColSums,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">colSums</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="ColSums.html" class="extype" name="org.saddle.linalg.ColSums">ColSums</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#ddot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ddot:org.saddle.linalg.VecBinOp[org.saddle.Vec[Double],Double]"></a><a id="ddot:VecBinOp[Vec[Double],Double]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#ddot:org.saddle.linalg.VecBinOp[org.saddle.Vec[Double],Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ddot</span><span class="result">: <a href="VecBinOp.html" class="extype" name="org.saddle.linalg.VecBinOp">VecBinOp</a>[<a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>], <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#dgemv" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dgemv:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AxV,org.saddle.Vec[Double],org.saddle.Vec[Double]]"></a><a id="dgemv:MatUnaryOp1Scalar[AxV,Vec[Double],Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#dgemv:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AxV,org.saddle.Vec[Double],org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dgemv</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="AxV.html" class="extype" name="org.saddle.linalg.AxV">AxV</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#dgemvT" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dgemvT:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AtxV,org.saddle.Vec[Double],org.saddle.Vec[Double]]"></a><a id="dgemvT:MatUnaryOp1Scalar[AtxV,Vec[Double],Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#dgemvT:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AtxV,org.saddle.Vec[Double],org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dgemvT</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="AtxV.html" class="extype" name="org.saddle.linalg.AtxV">AtxV</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#dgemvTTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dgemvTTarget:org.saddle.linalg.MatUnaryOp1ScalarTarget[org.saddle.linalg.AtxV,org.saddle.Vec[Double]]"></a><a id="dgemvTTarget:MatUnaryOp1ScalarTarget[AtxV,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#dgemvTTarget:org.saddle.linalg.MatUnaryOp1ScalarTarget[org.saddle.linalg.AtxV,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dgemvTTarget</span><span class="result">: <a href="MatUnaryOp1ScalarTarget.html" class="extype" name="org.saddle.linalg.MatUnaryOp1ScalarTarget">MatUnaryOp1ScalarTarget</a>[<a href="AtxV.html" class="extype" name="org.saddle.linalg.AtxV">AtxV</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#dgemvTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dgemvTarget:org.saddle.linalg.MatUnaryOp1ScalarTarget[org.saddle.linalg.AxV,org.saddle.Vec[Double]]"></a><a id="dgemvTarget:MatUnaryOp1ScalarTarget[AxV,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#dgemvTarget:org.saddle.linalg.MatUnaryOp1ScalarTarget[org.saddle.linalg.AxV,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dgemvTarget</span><span class="result">: <a href="MatUnaryOp1ScalarTarget.html" class="extype" name="org.saddle.linalg.MatUnaryOp1ScalarTarget">MatUnaryOp1ScalarTarget</a>[<a href="AxV.html" class="extype" name="org.saddle.linalg.AxV">AxV</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#diag" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="diag:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Diag,org.saddle.Vec[Double]]"></a><a id="diag:MatUnaryOp[Diag,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#diag:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Diag,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">diag</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="Diag.html" class="extype" name="org.saddle.linalg.Diag">Diag</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#diagAtxA" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="diagAtxA:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.DiagAtxA,org.saddle.Vec[Double]]"></a><a id="diagAtxA:MatUnaryOp[DiagAtxA,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#diagAtxA:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.DiagAtxA,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">diagAtxA</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="DiagAtxA.html" class="extype" name="org.saddle.linalg.DiagAtxA">DiagAtxA</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#diagAxAt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="diagAxAt:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.DiagAxAt,org.saddle.Vec[Double]]"></a><a id="diagAxAt:MatUnaryOp[DiagAxAt,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#diagAxAt:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.DiagAxAt,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">diagAxAt</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="DiagAxAt.html" class="extype" name="org.saddle.linalg.DiagAxAt">DiagAxAt</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#diagXAInverseXt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="diagXAInverseXt:org.saddle.linalg.MatBinOp[org.saddle.linalg.DiagXAInverseXt,Option[org.saddle.Vec[Double]]]"></a><a id="diagXAInverseXt:MatBinOp[DiagXAInverseXt,Option[Vec[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#diagXAInverseXt:org.saddle.linalg.MatBinOp[org.saddle.linalg.DiagXAInverseXt,Option[org.saddle.Vec[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">diagXAInverseXt</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="DiagXAInverseXt.html" class="extype" name="org.saddle.linalg.DiagXAInverseXt">DiagXAInverseXt</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#forwardSolveForTransposed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forwardSolveForTransposed:org.saddle.linalg.MatBinOp[org.saddle.linalg.SolveLowerTriangular,Option[org.saddle.Mat[Double]]]"></a><a id="forwardSolveForTransposed:MatBinOp[SolveLowerTriangular,Option[Mat[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#forwardSolveForTransposed:org.saddle.linalg.MatBinOp[org.saddle.linalg.SolveLowerTriangular,Option[org.saddle.Mat[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forwardSolveForTransposed</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="SolveLowerTriangular.html" class="extype" name="org.saddle.linalg.SolveLowerTriangular">SolveLowerTriangular</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#forwardSolveUpperDiagonalForTransposed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="forwardSolveUpperDiagonalForTransposed:org.saddle.linalg.MatBinOp[org.saddle.linalg.SolveUpperTriangular,Option[org.saddle.Mat[Double]]]"></a><a id="forwardSolveUpperDiagonalForTransposed:MatBinOp[SolveUpperTriangular,Option[Mat[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#forwardSolveUpperDiagonalForTransposed:org.saddle.linalg.MatBinOp[org.saddle.linalg.SolveUpperTriangular,Option[org.saddle.Mat[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">forwardSolveUpperDiagonalForTransposed</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="SolveUpperTriangular.html" class="extype" name="org.saddle.linalg.SolveUpperTriangular">SolveUpperTriangular</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#invertGeneralLU" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="invertGeneralLU:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.InvertWithLU,org.saddle.Mat[Double]]"></a><a id="invertGeneralLU:MatUnaryOp[InvertWithLU,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#invertGeneralLU:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.InvertWithLU,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">invertGeneralLU</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="InvertWithLU.html" class="extype" name="org.saddle.linalg.InvertWithLU">InvertWithLU</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#invertPD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="invertPD:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.InvertPDCholesky,Option[org.saddle.Mat[Double]]]"></a><a id="invertPD:MatUnaryOp[InvertPDCholesky,Option[Mat[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#invertPD:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.InvertPDCholesky,Option[org.saddle.Mat[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">invertPD</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="InvertPDCholesky.html" class="extype" name="org.saddle.linalg.InvertPDCholesky">InvertPDCholesky</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#ispd" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ispd:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.TestPD,Boolean]"></a><a id="ispd:MatUnaryOp[TestPD,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#ispd:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.TestPD,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ispd</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="TestPD.html" class="extype" name="org.saddle.linalg.TestPD">TestPD</a>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult1" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult1:org.saddle.linalg.MatBinOp[org.saddle.linalg.AxB,org.saddle.Mat[Double]]"></a><a id="mult1:MatBinOp[AxB,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult1:org.saddle.linalg.MatBinOp[org.saddle.linalg.AxB,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult1</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="AxB.html" class="extype" name="org.saddle.linalg.AxB">AxB</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult1c" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult1c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAxBpbC,org.saddle.Mat[Double]]"></a><a id="mult1c:MatGemmOp[aAxBpbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult1c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAxBpbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult1c</span><span class="result">: <a href="MatGemmOp.html" class="extype" name="org.saddle.linalg.MatGemmOp">MatGemmOp</a>[<a href="aAxBpbC.html" class="extype" name="org.saddle.linalg.aAxBpbC">aAxBpbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult2" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult2:org.saddle.linalg.MatBinOp[org.saddle.linalg.AtxB,org.saddle.Mat[Double]]"></a><a id="mult2:MatBinOp[AtxB,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult2:org.saddle.linalg.MatBinOp[org.saddle.linalg.AtxB,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult2</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="AtxB.html" class="extype" name="org.saddle.linalg.AtxB">AtxB</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult2c" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult2c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAtxBpbC,org.saddle.Mat[Double]]"></a><a id="mult2c:MatGemmOp[aAtxBpbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult2c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAtxBpbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult2c</span><span class="result">: <a href="MatGemmOp.html" class="extype" name="org.saddle.linalg.MatGemmOp">MatGemmOp</a>[<a href="aAtxBpbC.html" class="extype" name="org.saddle.linalg.aAtxBpbC">aAtxBpbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult2cself" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult2cself:org.saddle.linalg.MatGemmSelfOp[org.saddle.linalg.aAtxApbC,org.saddle.Mat[Double]]"></a><a id="mult2cself:MatGemmSelfOp[aAtxApbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult2cself:org.saddle.linalg.MatGemmSelfOp[org.saddle.linalg.aAtxApbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult2cself</span><span class="result">: <a href="MatGemmSelfOp.html" class="extype" name="org.saddle.linalg.MatGemmSelfOp">MatGemmSelfOp</a>[<a href="aAtxApbC.html" class="extype" name="org.saddle.linalg.aAtxApbC">aAtxApbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult2self" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult2self:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.AtxA,org.saddle.Mat[Double]]"></a><a id="mult2self:MatUnaryOp[AtxA,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult2self:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.AtxA,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult2self</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="AtxA.html" class="extype" name="org.saddle.linalg.AtxA">AtxA</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult3" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult3:org.saddle.linalg.MatBinOp[org.saddle.linalg.AxBt,org.saddle.Mat[Double]]"></a><a id="mult3:MatBinOp[AxBt,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult3:org.saddle.linalg.MatBinOp[org.saddle.linalg.AxBt,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult3</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="AxBt.html" class="extype" name="org.saddle.linalg.AxBt">AxBt</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult3c" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult3c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAxBtpbC,org.saddle.Mat[Double]]"></a><a id="mult3c:MatGemmOp[aAxBtpbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult3c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAxBtpbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult3c</span><span class="result">: <a href="MatGemmOp.html" class="extype" name="org.saddle.linalg.MatGemmOp">MatGemmOp</a>[<a href="aAxBtpbC.html" class="extype" name="org.saddle.linalg.aAxBtpbC">aAxBtpbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult3self" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult3self:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.AxAt,org.saddle.Mat[Double]]"></a><a id="mult3self:MatUnaryOp[AxAt,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult3self:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.AxAt,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult3self</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="AxAt.html" class="extype" name="org.saddle.linalg.AxAt">AxAt</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult3selfplus" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult3selfplus:org.saddle.linalg.MatGemmSelfOp[org.saddle.linalg.aAxAtpbC,org.saddle.Mat[Double]]"></a><a id="mult3selfplus:MatGemmSelfOp[aAxAtpbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult3selfplus:org.saddle.linalg.MatGemmSelfOp[org.saddle.linalg.aAxAtpbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult3selfplus</span><span class="result">: <a href="MatGemmSelfOp.html" class="extype" name="org.saddle.linalg.MatGemmSelfOp">MatGemmSelfOp</a>[<a href="aAxAtpbC.html" class="extype" name="org.saddle.linalg.aAxAtpbC">aAxAtpbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult4" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult4:org.saddle.linalg.MatBinOp[org.saddle.linalg.AtxBt,org.saddle.Mat[Double]]"></a><a id="mult4:MatBinOp[AtxBt,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult4:org.saddle.linalg.MatBinOp[org.saddle.linalg.AtxBt,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult4</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="AtxBt.html" class="extype" name="org.saddle.linalg.AtxBt">AtxBt</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#mult4c" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mult4c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAtxBtpbC,org.saddle.Mat[Double]]"></a><a id="mult4c:MatGemmOp[aAtxBtpbC,Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#mult4c:org.saddle.linalg.MatGemmOp[org.saddle.linalg.aAtxBtpbC,org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mult4c</span><span class="result">: <a href="MatGemmOp.html" class="extype" name="org.saddle.linalg.MatGemmOp">MatGemmOp</a>[<a href="aAtxBtpbC.html" class="extype" name="org.saddle.linalg.aAtxBtpbC">aAtxBtpbC</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#multDiagFromLeft" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="multDiagFromLeft:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.DiagxA,org.saddle.Vec[Double],org.saddle.Mat[Double]]"></a><a id="multDiagFromLeft:MatUnaryOp1Scalar[DiagxA,Vec[Double],Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#multDiagFromLeft:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.DiagxA,org.saddle.Vec[Double],org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multDiagFromLeft</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="DiagxA.html" class="extype" name="org.saddle.linalg.DiagxA">DiagxA</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#multDiagFromRight" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="multDiagFromRight:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AxDiag,org.saddle.Vec[Double],org.saddle.Mat[Double]]"></a><a id="multDiagFromRight:MatUnaryOp1Scalar[AxDiag,Vec[Double],Mat[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#multDiagFromRight:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.AxDiag,org.saddle.Vec[Double],org.saddle.Mat[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">multDiagFromRight</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="AxDiag.html" class="extype" name="org.saddle.linalg.AxDiag">AxDiag</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#nonsymmEigen" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="nonsymmEigen:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.EigNS,org.saddle.linalg.EigenDecompositionNonSymmetric]"></a><a id="nonsymmEigen:MatUnaryOp[EigNS,EigenDecompositionNonSymmetric]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#nonsymmEigen:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.EigNS,org.saddle.linalg.EigenDecompositionNonSymmetric]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nonsymmEigen</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="EigNS.html" class="extype" name="org.saddle.linalg.EigNS">EigNS</a>, <a href="EigenDecompositionNonSymmetric.html" class="extype" name="org.saddle.linalg.EigenDecompositionNonSymmetric">EigenDecompositionNonSymmetric</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg#pimp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pimp(m:org.saddle.Vec[Double]):org.saddle.linalg.VecPimp"></a><a id="pimp(Vec[Double]):VecPimp"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#pimp(m:org.saddle.Vec[Double]):org.saddle.linalg.VecPimp" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pimp</span><span class="params">(<span name="m">m: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="VecPimp.html" class="extype" name="org.saddle.linalg.VecPimp">VecPimp</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg#pimp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pimp(m:org.saddle.Mat[Double]):org.saddle.linalg.MatPimp"></a><a id="pimp(Mat[Double]):MatPimp"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#pimp(m:org.saddle.Mat[Double]):org.saddle.linalg.MatPimp" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pimp</span><span class="params">(<span name="m">m: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="MatPimp.html" class="extype" name="org.saddle.linalg.MatPimp">MatPimp</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.linalg.OpImpl#rowSums" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="rowSums:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.RowSums,org.saddle.Vec[Double]]"></a><a id="rowSums:MatUnaryOp[RowSums,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#rowSums:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.RowSums,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rowSums</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="RowSums.html" class="extype" name="org.saddle.linalg.RowSums">RowSums</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#singularValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="singularValues:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.SingularValues,Int,org.saddle.Vec[Double]]"></a><a id="singularValues:MatUnaryOp1Scalar[SingularValues,Int,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#singularValues:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.SingularValues,Int,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">singularValues</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="SingularValues.html" class="extype" name="org.saddle.linalg.SingularValues">SingularValues</a>, <span class="extype" name="scala.Int">Int</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#solve" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="solve:org.saddle.linalg.MatBinOp[org.saddle.linalg.GeneralSolve,Option[org.saddle.Mat[Double]]]"></a><a id="solve:MatBinOp[GeneralSolve,Option[Mat[Double]]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#solve:org.saddle.linalg.MatBinOp[org.saddle.linalg.GeneralSolve,Option[org.saddle.Mat[Double]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">solve</span><span class="result">: <a href="MatBinOp.html" class="extype" name="org.saddle.linalg.MatBinOp">MatBinOp</a>[<a href="GeneralSolve.html" class="extype" name="org.saddle.linalg.GeneralSolve">GeneralSolve</a>, <span class="extype" name="scala.Option">Option</span>[<a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="scala.Double">Double</span>]]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#svd" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="svd:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.GeneralSVD,org.saddle.linalg.SVDResult]"></a><a id="svd:MatUnaryOp[GeneralSVD,SVDResult]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#svd:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.GeneralSVD,org.saddle.linalg.SVDResult]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">svd</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="GeneralSVD.html" class="extype" name="org.saddle.linalg.GeneralSVD">GeneralSVD</a>, <a href="SVDResult.html" class="extype" name="org.saddle.linalg.SVDResult">SVDResult</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#svdtrunc" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="svdtrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.GeneralSVDTrunc,Int,org.saddle.linalg.SVDResult]"></a><a id="svdtrunc:MatUnaryOp1Scalar[GeneralSVDTrunc,Int,SVDResult]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#svdtrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.GeneralSVDTrunc,Int,org.saddle.linalg.SVDResult]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">svdtrunc</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="GeneralSVDTrunc.html" class="extype" name="org.saddle.linalg.GeneralSVDTrunc">GeneralSVDTrunc</a>, <span class="extype" name="scala.Int">Int</span>, <a href="SVDResult.html" class="extype" name="org.saddle.linalg.SVDResult">SVDResult</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#symmEigen" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="symmEigen:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.EigS,org.saddle.linalg.EigenDecompositionSymmetric]"></a><a id="symmEigen:MatUnaryOp[EigS,EigenDecompositionSymmetric]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#symmEigen:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.EigS,org.saddle.linalg.EigenDecompositionSymmetric]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symmEigen</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="EigS.html" class="extype" name="org.saddle.linalg.EigS">EigS</a>, <a href="EigenDecompositionSymmetric.html" class="extype" name="org.saddle.linalg.EigenDecompositionSymmetric">EigenDecompositionSymmetric</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#symmEigenTrunc" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="symmEigenTrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.EigSTrunc,Int,org.saddle.linalg.EigenDecompositionSymmetric]"></a><a id="symmEigenTrunc:MatUnaryOp1Scalar[EigSTrunc,Int,EigenDecompositionSymmetric]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#symmEigenTrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.EigSTrunc,Int,org.saddle.linalg.EigenDecompositionSymmetric]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symmEigenTrunc</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="EigSTrunc.html" class="extype" name="org.saddle.linalg.EigSTrunc">EigSTrunc</a>, <span class="extype" name="scala.Int">Int</span>, <a href="EigenDecompositionSymmetric.html" class="extype" name="org.saddle.linalg.EigenDecompositionSymmetric">EigenDecompositionSymmetric</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#symmEigenValueTrunc" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="symmEigenValueTrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.EigValSymTrunc,Int,org.saddle.Vec[Double]]"></a><a id="symmEigenValueTrunc:MatUnaryOp1Scalar[EigValSymTrunc,Int,Vec[Double]]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#symmEigenValueTrunc:org.saddle.linalg.MatUnaryOp1Scalar[org.saddle.linalg.EigValSymTrunc,Int,org.saddle.Vec[Double]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">symmEigenValueTrunc</span><span class="result">: <a href="MatUnaryOp1Scalar.html" class="extype" name="org.saddle.linalg.MatUnaryOp1Scalar">MatUnaryOp1Scalar</a>[<a href="EigValSymTrunc.html" class="extype" name="org.saddle.linalg.EigValSymTrunc">EigValSymTrunc</a>, <span class="extype" name="scala.Int">Int</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li><li name="org.saddle.linalg.OpImpl#trace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="trace:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Trace,Double]"></a><a id="trace:MatUnaryOp[Trace,Double]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/linalg/index.html#trace:org.saddle.linalg.MatUnaryOp[org.saddle.linalg.Trace,Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">trace</span><span class="result">: <a href="MatUnaryOp.html" class="extype" name="org.saddle.linalg.MatUnaryOp">MatUnaryOp</a>[<a href="Trace.html" class="extype" name="org.saddle.linalg.Trace">Trace</a>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="org.saddle.linalg.OpImpl">
+              <h3>Inherited from <a href="OpImpl.html" class="extype" name="org.saddle.linalg.OpImpl">OpImpl</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
