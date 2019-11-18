@@ -140,8 +140,16 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="BinOpFrame.html" title="Provides concrete implementations of binary operations for org.saddle.Frame; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Frame.">BinOpFrame</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="BinOpInPlace.html" title=""></a>
+                        <a href="BinOpInPlace.html" title="">BinOpInPlace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="BinOpMat.html" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat."></a>
                         <a href="BinOpMat.html" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat.">BinOpMat</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinOpMatInPlace.html" title=""></a>
+                        <a href="BinOpMatInPlace.html" title="">BinOpMatInPlace</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BinOpSeries.html" title="Provides concrete implementations of binary operations for org.saddle.Series; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Series."></a>
@@ -291,7 +299,7 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="../Frame.html" class="extype" name="org.saddle.Frame">Frame</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>, <a href="../Series.html" class="extype" name="org.saddle.Series">Series</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>, <a href="../mat/MatDefault.html" class="extype" name="org.saddle.mat.MatDefault">MatDefault</a>, <a href="../vec/VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a>, <a href="../vec/VecTime.html" class="extype" name="org.saddle.vec.VecTime">VecTime</a></div>
+            <div class="subClasses hiddenContent"><a href="../Frame.html" class="extype" name="org.saddle.Frame">Frame</a>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>, <a href="../Series.html" class="extype" name="org.saddle.Series">Series</a>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>, <a href="../vec/VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a>, <a href="../vec/VecTime.html" class="extype" name="org.saddle.vec.VecTime">VecTime</a></div>
           </div></div>
         
 
@@ -392,6 +400,22 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
       </span>
       
       <p class="shortcomment cmt">Integer modulus of division</p><div class="fullcomment"><div class="comment cmt"><p>Integer modulus of division</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance (divisor)</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl></div>
+    </li><li name="org.saddle.ops.NumericOps#%=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="%=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Mod,This,B]):Unit"></a><a id="%=[B](B)(BinOpInPlace[Mod,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#%=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Mod,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $percent$eq" class="name">%=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps.%=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps.%=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.NumericOps#&amp;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&amp;[B,That](other:B)(implicitop:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,This,B,That]):That"></a><a id="&amp;[B,That](B)(BinOp[BitAnd,This,B,That]):That"></a>
       <span class="permalink">
@@ -456,6 +480,38 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
       </span>
       
       <p class="shortcomment cmt">Exponentiation</p><div class="fullcomment"><div class="comment cmt"><p>Exponentiation</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance (exponent)</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl></div>
+    </li><li name="org.saddle.ops.NumericOps#**=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="**=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Power,This,B]):Unit"></a><a id="**=[B](B)(BinOpInPlace[Power,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#**=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Power,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$times$eq" class="name">**=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps.**=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps.**=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.NumericOps#*=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="*=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Multiply,This,B]):Unit"></a><a id="*=[B](B)(BinOpInPlace[Multiply,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#*=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Multiply,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$eq" class="name">*=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps.*=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps.*=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.NumericOps#+" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="+[B,That](other:B)(implicitop:org.saddle.ops.BinOp[org.saddle.ops.Add,This,B,That]):That"></a><a id="+[B,That](B)(BinOp[Add,This,B,That]):That"></a>
       <span class="permalink">
@@ -472,6 +528,22 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
       </span>
       
       <p class="shortcomment cmt">Addition</p><div class="fullcomment"><div class="comment cmt"><p>Addition</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl></div>
+    </li><li name="org.saddle.ops.NumericOps#+=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="+=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Add,This,B]):Unit"></a><a id="+=[B](B)(BinOpInPlace[Add,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#+=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Add,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus$eq" class="name">+=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps.+=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps.+=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.NumericOps#-" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="-[B,That](other:B)(implicitop:org.saddle.ops.BinOp[org.saddle.ops.Subtract,This,B,That]):That"></a><a id="-[B,That](B)(BinOp[Subtract,This,B,That]):That"></a>
       <span class="permalink">
@@ -488,6 +560,22 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
       </span>
       
       <p class="shortcomment cmt">Subtraction</p><div class="fullcomment"><div class="comment cmt"><p>Subtraction</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl></div>
+    </li><li name="org.saddle.ops.NumericOps#-=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="-=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Subtract,This,B]):Unit"></a><a id="-=[B](B)(BinOpInPlace[Subtract,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#-=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Subtract,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$eq" class="name">-=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps.-=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps.-=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.NumericOps#/" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="/[B,That](other:B)(implicitop:org.saddle.ops.BinOp[org.saddle.ops.Divide,This,B,That]):That"></a><a id="/[B,That](B)(BinOp[Divide,This,B,That]):That"></a>
       <span class="permalink">
@@ -504,6 +592,22 @@ Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">4</s
       </span>
       
       <p class="shortcomment cmt">Division</p><div class="fullcomment"><div class="comment cmt"><p>Division</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance (divisor)</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl></div>
+    </li><li name="org.saddle.ops.NumericOps#/=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="/=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Divide,This,B]):Unit"></a><a id="/=[B](B)(BinOpInPlace[Divide,This,B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/NumericOps.html#/=[B](other:B)(implicitop:org.saddle.ops.BinOpInPlace[org.saddle.ops.Divide,This,B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div$eq" class="name">/=</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="other">other: <span class="extype" name="org.saddle.ops.NumericOps./=.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="org.saddle.ops.NumericOps.This">This</span>, <span class="extype" name="org.saddle.ops.NumericOps./=.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.NumericOps#&lt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="&lt;[B,That](other:B)(implicitop:org.saddle.ops.BinOp[org.saddle.ops.LtOp,This,B,That]):That"></a><a id="&lt;[B,That](B)(BinOp[LtOp,This,B,That]):That"></a>
       <span class="permalink">

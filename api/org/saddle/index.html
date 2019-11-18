@@ -364,7 +364,7 @@ are specialized for numeric types.</p>
                         <a href="Index.html" title="Index provides a constant-time look-up of a value within array-backed storage, as well as operations to support joining and slicing.">Index</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Mat$.html" title=""></a>
-                        <a class="trait" href="Mat.html" title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;)."></a>
+                        <a class="class" href="Mat.html" title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;)."></a>
                         <a href="Mat.html" title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;).">Mat</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
@@ -606,8 +606,8 @@ align along their indexes:</p><pre>f + f.shift(<span class="num">1</span>) == Fr
       
       <p class="shortcomment cmt">Index provides a constant-time look-up of a value within array-backed storage,
 as well as operations to support joining and slicing.</p>
-    </li><li name="org.saddle.Mat" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="Mat[A]extendsNumericOps[org.saddle.Mat[A]]"></a><a id="Mat[A]:Mat[A]"></a>
+    </li><li name="org.saddle.Mat" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Mat[T]extendsNumericOps[org.saddle.Mat[T]]"></a><a id="Mat[T]:Mat[T]"></a>
       <span class="permalink">
       <a href="../../org/saddle/Mat.html" title="Permalink">
         <i class="material-icons"></i>
@@ -615,10 +615,10 @@ as well as operations to support joining and slicing.</p>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;)." href="Mat.html"><span class="name">Mat</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="ops/NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">NumericOps</a>[<a href="Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.Mat.A">A</span>]]</span>
+        <a title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;)." href="Mat.html"><span class="name">Mat</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="ops/NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">NumericOps</a>[<a href="Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.Mat.T">T</span>]]</span>
       </span>
       
       <p class="shortcomment cmt"><code>Mat</code> is an immutable container for 2D homogeneous data (a &quot;matrix&quot;).</p><div class="fullcomment"><div class="comment cmt"><p><code>Mat</code> is an immutable container for 2D homogeneous data (a &quot;matrix&quot;). It is
@@ -633,7 +633,7 @@ m dot m == Mat(<span class="num">2</span>,<span class="num">2</span>,<span class
 m * <span class="num">3</span> == Mat(<span class="num">2</span>, <span class="num">2</span>, <span class="std">Array</span>(<span class="num">3</span>,<span class="num">6</span>,<span class="num">9</span>,<span class="num">12</span>))</pre><p>Note, Mat is generally compatible with EJML's DenseMatrix. It may be convenient
 to induce this conversion to do more complex linear algebra, or to work with a
 mutable data structure.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>Type of elements within the Mat</p></dd></dl></div>
+</p></div></div>
     </li><li name="org.saddle.NUM" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NUM[C]=spire.math.Numeric[C]"></a><a id="NUM[C]:NUM[C]"></a>
       <span class="permalink">
@@ -1102,7 +1102,7 @@ abused to mutate the contents of the Vec. Try to avoid this!
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Mat$.html"><span class="name">Mat</span></a><span class="result"> extends <a href="ops/BinOpMat.html" class="extype" name="org.saddle.ops.BinOpMat">BinOpMat</a></span>
+        <a title="" href="Mat$.html"><span class="name">Mat</span></a><span class="result"> extends <a href="ops/BinOpMat.html" class="extype" name="org.saddle.ops.BinOpMat">BinOpMat</a> with <a href="ops/BinOpMatInPlace.html" class="extype" name="org.saddle.ops.BinOpMatInPlace">BinOpMatInPlace</a></span>
       </span>
       
       

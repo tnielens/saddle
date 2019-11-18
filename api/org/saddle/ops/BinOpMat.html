@@ -140,8 +140,16 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="BinOpFrame.html" title="Provides concrete implementations of binary operations for org.saddle.Frame; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Frame.">BinOpFrame</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="BinOpInPlace.html" title=""></a>
+                        <a href="BinOpInPlace.html" title="">BinOpInPlace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat."></a>
                         <a href="" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat.">BinOpMat</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinOpMatInPlace.html" title=""></a>
+                        <a href="BinOpMatInPlace.html" title="">BinOpMatInPlace</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BinOpSeries.html" title="Provides concrete implementations of binary operations for org.saddle.Series; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Series."></a>
@@ -338,7 +346,7 @@ inherited by Mat.
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="org.saddle.ops.BinOpMat.MatMatElemOp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="org.saddle.ops.BinOpMat.MatMatElemOp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="MatMatElemOp[OP&lt;:org.saddle.ops.ScalarOp,A,B,C]extendsBinOp[OP,org.saddle.Mat[A],org.saddle.Mat[B],org.saddle.Mat[C]]"></a><a id="MatMatElemOp[OP&lt;:ScalarOp,A,B,C]:MatMatElemOp[OP,A,B,C]"></a>
       <span class="permalink">
       <a href="../../../org/saddle/ops/BinOpMat$MatMatElemOp.html" title="Permalink">
@@ -350,10 +358,15 @@ inherited by Mat.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="BinOpMat$MatMatElemOp.html"><span class="name">MatMatElemOp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.OP">OP</span>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.A">A</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.B">B</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.C">C</span>]]</span>
+        <a title="Binary element-wise operation on two Mats" href="BinOpMat$MatMatElemOp.html"><span class="name">MatMatElemOp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>, <span name="C">C</span>]</span><span class="result"> extends <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.OP">OP</span>, <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.A">A</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.B">B</span>], <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatMatElemOp.C">C</span>]]</span>
       </span>
       
-      
+      <p class="shortcomment cmt">Binary element-wise operation on two Mats</p><div class="fullcomment"><div class="comment cmt"><p>Binary element-wise operation on two Mats</p><p>Broadcasts according to the following rules (same as numpy).
+If any of the pairs of dimensions are the same, or one of the pair is size 1, then
+the dimensions are compatible.
+If the compatible dimension is size 1, then it is virtually expanded to match the size of the
+corresponding dimension of the other operand.
+</p></div></div>
     </li><li name="org.saddle.ops.BinOpMat.MatSclrElemOp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElemOp[OP&lt;:org.saddle.ops.ScalarOp,A,B,C]extendsBinOp[OP,org.saddle.Mat[A],B,org.saddle.Mat[C]]"></a><a id="MatSclrElemOp[OP&lt;:ScalarOp,A,B,C]:MatSclrElemOp[OP,A,B,C]"></a>
       <span class="permalink">
@@ -570,6 +583,38 @@ inherited by Mat.
       </span>
       
       
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpBBB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpBBB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Boolean,Boolean,Boolean]"></a><a id="MatSclrElmOpBBB[Op&lt;:ScalarOp](BinOp[Op,Boolean,Boolean,Boolean]):MatSclrElemOp[Op,Boolean,Boolean,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpBBB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Boolean,Boolean,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpBBB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpBBB.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpBBB.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpDDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpDDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Double,Boolean]"></a><a id="MatSclrElmOpDDB[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Boolean]):MatSclrElemOp[Op,Double,Double,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpDDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Double,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpDDB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDDB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDDB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpDDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElmOpDDD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpMat.this.MatSclrElemOp[Op,Double,Double,Double]"></a><a id="MatSclrElmOpDDD[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Double]):MatSclrElemOp[Op,Double,Double,Double]"></a>
       <span class="permalink">
@@ -583,6 +628,22 @@ inherited by Mat.
       </span>
       <span class="symbol">
         <span class="name">MatSclrElmOpDDD</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDDD.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDDD.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpDIB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpDIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Int,Boolean]"></a><a id="MatSclrElmOpDIB[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Boolean]):MatSclrElemOp[Op,Double,Int,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpDIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Int,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpDIB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDIB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDIB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
       </span>
       
       
@@ -602,6 +663,22 @@ inherited by Mat.
       </span>
       
       
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpDLB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpDLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Long,Boolean]"></a><a id="MatSclrElmOpDLB[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Boolean]):MatSclrElemOp[Op,Double,Long,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpDLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Double,Long,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpDLB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDLB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpDLB.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpDLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElmOpDLD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpMat.this.MatSclrElemOp[Op,Double,Long,Double]"></a><a id="MatSclrElmOpDLD[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):MatSclrElemOp[Op,Double,Long,Double]"></a>
       <span class="permalink">
@@ -618,6 +695,22 @@ inherited by Mat.
       </span>
       
       
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpIDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpIDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Int,Double,Boolean]"></a><a id="MatSclrElmOpIDB[Op&lt;:ScalarOp](BinOp[Op,Int,Double,Boolean]):MatSclrElemOp[Op,Int,Double,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpIDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Int,Double,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpIDB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIDB.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIDB.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpIDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElmOpIDD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Double,Double]):BinOpMat.this.MatSclrElemOp[Op,Int,Double,Double]"></a><a id="MatSclrElmOpIDD[Op&lt;:ScalarOp](BinOp[Op,Int,Double,Double]):MatSclrElemOp[Op,Int,Double,Double]"></a>
       <span class="permalink">
@@ -631,6 +724,22 @@ inherited by Mat.
       </span>
       <span class="symbol">
         <span class="name">MatSclrElmOpIDD</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIDD.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIDD.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpIIB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpIIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Int,Int,Boolean]"></a><a id="MatSclrElmOpIIB[Op&lt;:ScalarOp](BinOp[Op,Int,Int,Boolean]):MatSclrElemOp[Op,Int,Int,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpIIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Int,Int,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpIIB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIIB.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpIIB.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
       </span>
       
       
@@ -666,6 +775,22 @@ inherited by Mat.
       </span>
       
       
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpLDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpLDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Double,Boolean]"></a><a id="MatSclrElmOpLDB[Op&lt;:ScalarOp](BinOp[Op,Long,Double,Boolean]):MatSclrElemOp[Op,Long,Double,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpLDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Double,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Double,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpLDB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLDB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLDB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpLDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElmOpLDD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Double,Double]):BinOpMat.this.MatSclrElemOp[Op,Long,Double,Double]"></a><a id="MatSclrElmOpLDD[Op&lt;:ScalarOp](BinOp[Op,Long,Double,Double]):MatSclrElemOp[Op,Long,Double,Double]"></a>
       <span class="permalink">
@@ -682,6 +807,22 @@ inherited by Mat.
       </span>
       
       
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpLIB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpLIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Int,Boolean]"></a><a id="MatSclrElmOpLIB[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Boolean]):MatSclrElemOp[Op,Long,Int,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpLIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Int,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpLIB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLIB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLIB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpLIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MatSclrElmOpLIL[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpMat.this.MatSclrElemOp[Op,Long,Int,Long]"></a><a id="MatSclrElmOpLIL[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Long]):MatSclrElemOp[Op,Long,Int,Long]"></a>
       <span class="permalink">
@@ -695,6 +836,22 @@ inherited by Mat.
       </span>
       <span class="symbol">
         <span class="name">MatSclrElmOpLIL</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLIL.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLIL.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpMat#MatSclrElmOpLLB" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MatSclrElmOpLLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Long,Boolean]"></a><a id="MatSclrElmOpLLB[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Boolean]):MatSclrElemOp[Op,Long,Long,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpMat.html#MatSclrElmOpLLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Boolean]):BinOpMat.this.MatSclrElemOp[Op,Long,Long,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MatSclrElmOpLLB</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLLB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpMat$MatSclrElemOp.html" class="extype" name="org.saddle.ops.BinOpMat.MatSclrElemOp">MatSclrElemOp</a>[<span class="extype" name="org.saddle.ops.BinOpMat.MatSclrElmOpLLB.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
       </span>
       
       

@@ -140,8 +140,8 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="BinOpFrame.html" title="Provides concrete implementations of binary operations for org.saddle.Frame; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Frame.">BinOpFrame</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="BinOpInPlace.html" title=""></a>
-                        <a href="BinOpInPlace.html" title="">BinOpInPlace</a>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">BinOpInPlace</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BinOpMat.html" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat."></a>
@@ -232,8 +232,8 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="NumericOps.html" title="NumericOps provides a mix-in trait for mathematical objects, which in Saddle include:">NumericOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="" title="All operations on Saddle objects are defined via instances of subtypes of the trait OpType."></a>
-                        <a href="" title="All operations on Saddle objects are defined via instances of subtypes of the trait OpType.">OpType</a>
+                        <a class="trait" href="OpType.html" title="All operations on Saddle objects are defined via instances of subtypes of the trait OpType."></a>
+                        <a href="OpType.html" title="All operations on Saddle objects are defined via instances of subtypes of the trait OpType.">OpType</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="OrOp.html" title=""></a>
@@ -267,8 +267,8 @@ pandas data analysis library for Python, and the Scala collections library.
       <div id="definition">
         <div class="big-circle trait">t</div>
         <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.ops">ops</a></p>
-        <h1>OpType<span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html" title="Permalink">
+        <h1>BinOpInPlace<span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -277,20 +277,16 @@ pandas data analysis library for Python, and the Scala collections library.
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
+        <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">OpType</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">BinOpInPlace</span><span class="tparams">[<span name="O">O &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>, <span name="X">-X</span>, <span name="Y">-Y</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>All operations on Saddle objects are defined via instances of subtypes
-of the trait OpType. The instances further derive from ScalarOp or MatrixOp,
-depending on whether the second operand is a scalar or higher-dimensional
-object.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -299,7 +295,7 @@ object.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <a href="AndOp.html" class="extype" name="org.saddle.ops.AndOp">AndOp</a>, <a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>, <a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>, <a href="BitShl.html" class="extype" name="org.saddle.ops.BitShl">BitShl</a>, <a href="BitShr.html" class="extype" name="org.saddle.ops.BitShr">BitShr</a>, <a href="BitUShr.html" class="extype" name="org.saddle.ops.BitUShr">BitUShr</a>, <a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>, <a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <a href="EqOp.html" class="extype" name="org.saddle.ops.EqOp">EqOp</a>, <a href="GtOp.html" class="extype" name="org.saddle.ops.GtOp">GtOp</a>, <a href="GteOp.html" class="extype" name="org.saddle.ops.GteOp">GteOp</a>, <a href="InnerProd.html" class="extype" name="org.saddle.ops.InnerProd">InnerProd</a>, <a href="LtOp.html" class="extype" name="org.saddle.ops.LtOp">LtOp</a>, <a href="LteOp.html" class="extype" name="org.saddle.ops.LteOp">LteOp</a>, <a href="MatrixOp.html" class="extype" name="org.saddle.ops.MatrixOp">MatrixOp</a>, <a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <a href="NeqOp.html" class="extype" name="org.saddle.ops.NeqOp">NeqOp</a>, <a href="OrOp.html" class="extype" name="org.saddle.ops.OrOp">OrOp</a>, <a href="OuterProd.html" class="extype" name="org.saddle.ops.OuterProd">OuterProd</a>, <a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a>, <a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <a href="XorOp.html" class="extype" name="org.saddle.ops.XorOp">XorOp</a></div>
+            <div class="subClasses hiddenContent"><a href="BinOpMatInPlace$MatMatElemOpIp.html" class="extype" name="org.saddle.ops.BinOpMatInPlace.MatMatElemOpIp">MatMatElemOpIp</a>, <a href="BinOpMatInPlace$MatSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpMatInPlace.MatSclrElemOpIp">MatSclrElemOpIp</a></div>
           </div></div>
         
 
@@ -325,7 +321,7 @@ object.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.saddle.ops.OpType"><span>OpType</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.saddle.ops.BinOpInPlace"><span>BinOpInPlace</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -347,15 +343,34 @@ object.
 
         
 
-        
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="org.saddle.ops.BinOpInPlace#apply" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="apply(a:X,b:Y):Unit"></a><a id="apply(X,Y):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#apply(a:X,b:Y):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="a">a: <span class="extype" name="org.saddle.ops.BinOpInPlace.X">X</span></span>, <span name="b">b: <span class="extype" name="org.saddle.ops.BinOpInPlace.Y">Y</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         <div class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -371,7 +386,7 @@ object.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html###():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -387,7 +402,7 @@ object.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -403,7 +418,7 @@ object.
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -419,7 +434,7 @@ object.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#clone():Object" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -443,7 +458,7 @@ object.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -459,7 +474,7 @@ object.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,7 +490,7 @@ object.
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#finalize():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -497,7 +512,7 @@ object.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -516,7 +531,7 @@ object.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#hashCode():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -535,7 +550,7 @@ object.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -551,7 +566,7 @@ object.
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -567,7 +582,7 @@ object.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#notify():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -586,7 +601,7 @@ object.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -605,7 +620,7 @@ object.
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -621,7 +636,7 @@ object.
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#toString():String" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -637,7 +652,7 @@ object.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#wait():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -659,7 +674,7 @@ object.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -681,7 +696,7 @@ object.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/OpType.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpInPlace.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>

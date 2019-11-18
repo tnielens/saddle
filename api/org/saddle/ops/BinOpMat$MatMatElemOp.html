@@ -145,8 +145,8 @@ inherited by Mat.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle.ops">ops</a></dd></dl></div>
     </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">MatMatElemOp</a>
+                        <a class="class" href="" title="Binary element-wise operation on two Mats"></a>
+                        <a href="" title="Binary element-wise operation on two Mats">MatMatElemOp</a>
                       </li><li class="current-entities indented4">
                         <span class="separator"></span>
                         <a class="class" href="BinOpMat$MatSclrElemOp.html" title=""></a>
@@ -179,7 +179,12 @@ inherited by Mat.
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Binary element-wise operation on two Mats</p><p>Broadcasts according to the following rules (same as numpy).
+If any of the pairs of dimensions are the same, or one of the pair is size 1, then
+the dimensions are compatible.
+If the compatible dimension is size 1, then it is virtually expanded to match the size of the
+corresponding dimension of the other operand.
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

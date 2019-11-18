@@ -140,8 +140,16 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="BinOpFrame.html" title="Provides concrete implementations of binary operations for org.saddle.Frame; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Frame.">BinOpFrame</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="trait" href="BinOpInPlace.html" title=""></a>
+                        <a href="BinOpInPlace.html" title="">BinOpInPlace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="BinOpMat.html" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat."></a>
                         <a href="BinOpMat.html" title="Provides concrete implementations of binary operations for org.saddle.Mat; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Mat.">BinOpMat</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="BinOpMatInPlace.html" title=""></a>
+                        <a href="BinOpMatInPlace.html" title="">BinOpMatInPlace</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BinOpSeries.html" title="Provides concrete implementations of binary operations for org.saddle.Series; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Series."></a>
@@ -332,154 +340,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="org.saddle.ops.BinOp.BDDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]"></a><a id="BDDD[T&lt;:OpType]:BDDD[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BDDD</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BDDD.T">T</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BDID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]"></a><a id="BDID[T&lt;:OpType]:BDID[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BDID</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BDID.T">T</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BDLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]"></a><a id="BDLD[T&lt;:OpType]:BDLD[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BDLD</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BDLD.T">T</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BIDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]"></a><a id="BIDD[T&lt;:OpType]:BIDD[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BIDD</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BIDD.T">T</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BIII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]"></a><a id="BIII[T&lt;:OpType]:BIII[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BIII</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BIII.T">T</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BILL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]"></a><a id="BILL[T&lt;:OpType]:BILL[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BILL</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BILL.T">T</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BLDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]"></a><a id="BLDD[T&lt;:OpType]:BLDD[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BLDD</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BLDD.T">T</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BLIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]"></a><a id="BLIL[T&lt;:OpType]:BLIL[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BLIL</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BLIL.T">T</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp.BLLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]"></a><a id="BLLL[T&lt;:OpType]:BLLL[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">BLLL</span><span class="tparams">[<span name="T">T &lt;: <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></span>]</span><span class="result alias"> = <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOp.BLLL.T">T</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
-      </span>
-      
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -535,9 +396,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="org.saddle.ops.BinOp#addDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Add]"></a><a id="addDD:BDDD[Add]"></a>
+      <a id="addDD:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Double,Double]"></a><a id="addDD:BinOp[Add,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addDD:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -546,14 +407,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Add]"></a><a id="addDI:BIDD[Add]"></a>
+      <a id="addDI:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Int,Double]"></a><a id="addDI:BinOp[Add,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addDI:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -562,14 +423,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Add]"></a><a id="addDL:BDLD[Add]"></a>
+      <a id="addDL:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Long,Double]"></a><a id="addDL:BinOp[Add,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addDL:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -578,14 +439,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Add]"></a><a id="addID:BDID[Add]"></a>
+      <a id="addID:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Double,Double]"></a><a id="addID:BinOp[Add,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addID:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -594,14 +455,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Add]"></a><a id="addII:BIII[Add]"></a>
+      <a id="addII:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Int,Int]"></a><a id="addII:BinOp[Add,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addII:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -610,14 +471,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Add]"></a><a id="addIL:BILL[Add]"></a>
+      <a id="addIL:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Long,Long]"></a><a id="addIL:BinOp[Add,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addIL:org.saddle.ops.BinOp[org.saddle.ops.Add,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -626,14 +487,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Add]"></a><a id="addLD:BLDD[Add]"></a>
+      <a id="addLD:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Double,Double]"></a><a id="addLD:BinOp[Add,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addLD:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -642,14 +503,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Add]"></a><a id="addLI:BLIL[Add]"></a>
+      <a id="addLI:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Int,Long]"></a><a id="addLI:BinOp[Add,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addLI:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -658,14 +519,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#addLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="addLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Add]"></a><a id="addLL:BLLL[Add]"></a>
+      <a id="addLL:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Long,Long]"></a><a id="addLL:BinOp[Add,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#addLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Add]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#addLL:org.saddle.ops.BinOp[org.saddle.ops.Add,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -674,7 +535,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">addLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>]</span>
+        <span class="name">addLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Add.html" class="extype" name="org.saddle.ops.Add">Add</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -695,9 +556,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       
       
     </li><li name="org.saddle.ops.BinOp#andII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="andII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitAnd]"></a><a id="andII:BIII[BitAnd]"></a>
+      <a id="andII:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Int,Int,Int]"></a><a id="andII:BinOp[BitAnd,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#andII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitAnd]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#andII:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -706,14 +567,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">andII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>]</span>
+        <span class="name">andII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#andIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="andIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitAnd]"></a><a id="andIL:BILL[BitAnd]"></a>
+      <a id="andIL:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Int,Long,Long]"></a><a id="andIL:BinOp[BitAnd,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#andIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitAnd]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#andIL:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -722,14 +583,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">andIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>]</span>
+        <span class="name">andIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#andLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="andLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitAnd]"></a><a id="andLI:BLIL[BitAnd]"></a>
+      <a id="andLI:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Long,Int,Long]"></a><a id="andLI:BinOp[BitAnd,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#andLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitAnd]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#andLI:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -738,14 +599,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">andLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>]</span>
+        <span class="name">andLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#andLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="andLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitAnd]"></a><a id="andLL:BLLL[BitAnd]"></a>
+      <a id="andLL:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Long,Long,Long]"></a><a id="andLL:BinOp[BitAnd,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#andLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitAnd]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#andLL:org.saddle.ops.BinOp[org.saddle.ops.BitAnd,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -754,7 +615,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">andLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>]</span>
+        <span class="name">andLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitAnd.html" class="extype" name="org.saddle.ops.BitAnd">BitAnd</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -799,9 +660,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
               
         </dd></dl></div>
     </li><li name="org.saddle.ops.BinOp#divDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Divide]"></a><a id="divDD:BDDD[Divide]"></a>
+      <a id="divDD:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Double,Double]"></a><a id="divDD:BinOp[Divide,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divDD:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -810,14 +671,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Divide]"></a><a id="divDI:BIDD[Divide]"></a>
+      <a id="divDI:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Int,Double]"></a><a id="divDI:BinOp[Divide,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divDI:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -826,14 +687,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Divide]"></a><a id="divDL:BDLD[Divide]"></a>
+      <a id="divDL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Long,Double]"></a><a id="divDL:BinOp[Divide,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divDL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -842,14 +703,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Divide]"></a><a id="divID:BDID[Divide]"></a>
+      <a id="divID:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Double,Double]"></a><a id="divID:BinOp[Divide,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divID:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -858,14 +719,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Divide]"></a><a id="divII:BIII[Divide]"></a>
+      <a id="divII:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Int,Int]"></a><a id="divII:BinOp[Divide,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divII:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -874,14 +735,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Divide]"></a><a id="divIL:BILL[Divide]"></a>
+      <a id="divIL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Long,Long]"></a><a id="divIL:BinOp[Divide,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divIL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -890,14 +751,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Divide]"></a><a id="divLD:BLDD[Divide]"></a>
+      <a id="divLD:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Double,Double]"></a><a id="divLD:BinOp[Divide,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divLD:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -906,14 +767,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Divide]"></a><a id="divLI:BLIL[Divide]"></a>
+      <a id="divLI:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Int,Long]"></a><a id="divLI:BinOp[Divide,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divLI:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -922,14 +783,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#divLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="divLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Divide]"></a><a id="divLL:BLLL[Divide]"></a>
+      <a id="divLL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Long,Long]"></a><a id="divLL:BinOp[Divide,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#divLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Divide]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#divLL:org.saddle.ops.BinOp[org.saddle.ops.Divide,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -938,7 +799,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">divLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>]</span>
+        <span class="name">divLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Divide.html" class="extype" name="org.saddle.ops.Divide">Divide</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -1051,22 +912,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       <span class="symbol">
         <span class="name">eqII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="EqOp.html" class="extype" name="org.saddle.ops.EqOp">EqOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp#eqIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="eqIL:org.saddle.ops.BinOp[org.saddle.ops.EqOp,Int,Long,Boolean]"></a><a id="eqIL:BinOp[EqOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#eqIL:org.saddle.ops.BinOp[org.saddle.ops.EqOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">eqIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="EqOp.html" class="extype" name="org.saddle.ops.EqOp">EqOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
       </span>
       
       
@@ -1271,22 +1116,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       
       
-    </li><li name="org.saddle.ops.BinOp#gtIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="gtIL:org.saddle.ops.BinOp[org.saddle.ops.GtOp,Int,Long,Boolean]"></a><a id="gtIL:BinOp[GtOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#gtIL:org.saddle.ops.BinOp[org.saddle.ops.GtOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">gtIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="GtOp.html" class="extype" name="org.saddle.ops.GtOp">GtOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
     </li><li name="org.saddle.ops.BinOp#gtLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="gtLD:org.saddle.ops.BinOp[org.saddle.ops.GtOp,Long,Double,Boolean]"></a><a id="gtLD:BinOp[GtOp,Long,Double,Boolean]"></a>
       <span class="permalink">
@@ -1428,22 +1257,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       <span class="symbol">
         <span class="name">gteII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="GteOp.html" class="extype" name="org.saddle.ops.GteOp">GteOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp#gteIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="gteIL:org.saddle.ops.BinOp[org.saddle.ops.GteOp,Int,Long,Boolean]"></a><a id="gteIL:BinOp[GteOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#gteIL:org.saddle.ops.BinOp[org.saddle.ops.GteOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">gteIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="GteOp.html" class="extype" name="org.saddle.ops.GteOp">GteOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
       </span>
       
       
@@ -1626,22 +1439,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       
       
-    </li><li name="org.saddle.ops.BinOp#ltIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ltIL:org.saddle.ops.BinOp[org.saddle.ops.LtOp,Int,Long,Boolean]"></a><a id="ltIL:BinOp[LtOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#ltIL:org.saddle.ops.BinOp[org.saddle.ops.LtOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ltIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="LtOp.html" class="extype" name="org.saddle.ops.LtOp">LtOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
     </li><li name="org.saddle.ops.BinOp#ltLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ltLD:org.saddle.ops.BinOp[org.saddle.ops.LtOp,Long,Double,Boolean]"></a><a id="ltLD:BinOp[LtOp,Long,Double,Boolean]"></a>
       <span class="permalink">
@@ -1786,22 +1583,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       
       
-    </li><li name="org.saddle.ops.BinOp#lteIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lteIL:org.saddle.ops.BinOp[org.saddle.ops.LteOp,Int,Long,Boolean]"></a><a id="lteIL:BinOp[LteOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#lteIL:org.saddle.ops.BinOp[org.saddle.ops.LteOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lteIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="LteOp.html" class="extype" name="org.saddle.ops.LteOp">LteOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
     </li><li name="org.saddle.ops.BinOp#lteLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="lteLD:org.saddle.ops.BinOp[org.saddle.ops.LteOp,Long,Double,Boolean]"></a><a id="lteLD:BinOp[LteOp,Long,Double,Boolean]"></a>
       <span class="permalink">
@@ -1851,9 +1632,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       
       
     </li><li name="org.saddle.ops.BinOp#modDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Mod]"></a><a id="modDD:BDDD[Mod]"></a>
+      <a id="modDD:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Double,Double]"></a><a id="modDD:BinOp[Mod,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modDD:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1862,14 +1643,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Mod]"></a><a id="modDI:BIDD[Mod]"></a>
+      <a id="modDI:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Int,Double]"></a><a id="modDI:BinOp[Mod,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modDI:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1878,14 +1659,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Mod]"></a><a id="modDL:BDLD[Mod]"></a>
+      <a id="modDL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Long,Double]"></a><a id="modDL:BinOp[Mod,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modDL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1894,14 +1675,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Mod]"></a><a id="modID:BDID[Mod]"></a>
+      <a id="modID:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Double,Double]"></a><a id="modID:BinOp[Mod,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modID:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1910,14 +1691,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Mod]"></a><a id="modII:BIII[Mod]"></a>
+      <a id="modII:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Int,Int]"></a><a id="modII:BinOp[Mod,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modII:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1926,14 +1707,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Mod]"></a><a id="modIL:BILL[Mod]"></a>
+      <a id="modIL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Long,Long]"></a><a id="modIL:BinOp[Mod,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modIL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1942,14 +1723,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Mod]"></a><a id="modLD:BLDD[Mod]"></a>
+      <a id="modLD:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Double,Double]"></a><a id="modLD:BinOp[Mod,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modLD:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1958,14 +1739,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Mod]"></a><a id="modLI:BLIL[Mod]"></a>
+      <a id="modLI:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Int,Long]"></a><a id="modLI:BinOp[Mod,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modLI:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1974,14 +1755,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#modLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Mod]"></a><a id="modLL:BLLL[Mod]"></a>
+      <a id="modLL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Long,Long]"></a><a id="modLL:BinOp[Mod,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#modLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Mod]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#modLL:org.saddle.ops.BinOp[org.saddle.ops.Mod,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1990,14 +1771,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">modLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>]</span>
+        <span class="name">modLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Mod.html" class="extype" name="org.saddle.ops.Mod">Mod</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Multiply]"></a><a id="mulDD:BDDD[Multiply]"></a>
+      <a id="mulDD:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Double,Double]"></a><a id="mulDD:BinOp[Multiply,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulDD:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2006,14 +1787,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Multiply]"></a><a id="mulDI:BIDD[Multiply]"></a>
+      <a id="mulDI:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Int,Double]"></a><a id="mulDI:BinOp[Multiply,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulDI:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2022,14 +1803,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Multiply]"></a><a id="mulDL:BDLD[Multiply]"></a>
+      <a id="mulDL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Long,Double]"></a><a id="mulDL:BinOp[Multiply,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulDL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2038,14 +1819,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Multiply]"></a><a id="mulID:BDID[Multiply]"></a>
+      <a id="mulID:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Double,Double]"></a><a id="mulID:BinOp[Multiply,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulID:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2054,14 +1835,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Multiply]"></a><a id="mulII:BIII[Multiply]"></a>
+      <a id="mulII:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Int,Int]"></a><a id="mulII:BinOp[Multiply,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulII:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2070,14 +1851,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Multiply]"></a><a id="mulIL:BILL[Multiply]"></a>
+      <a id="mulIL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Long,Long]"></a><a id="mulIL:BinOp[Multiply,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulIL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2086,14 +1867,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Multiply]"></a><a id="mulLD:BLDD[Multiply]"></a>
+      <a id="mulLD:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Double,Double]"></a><a id="mulLD:BinOp[Multiply,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulLD:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2102,14 +1883,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Multiply]"></a><a id="mulLI:BLIL[Multiply]"></a>
+      <a id="mulLI:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Int,Long]"></a><a id="mulLI:BinOp[Multiply,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulLI:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2118,14 +1899,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#mulLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="mulLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Multiply]"></a><a id="mulLL:BLLL[Multiply]"></a>
+      <a id="mulLL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Long,Long]"></a><a id="mulLL:BinOp[Multiply,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#mulLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Multiply]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#mulLL:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2134,7 +1915,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mulLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>]</span>
+        <span class="name">mulLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Multiply.html" class="extype" name="org.saddle.ops.Multiply">Multiply</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -2250,22 +2031,6 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       
       
-    </li><li name="org.saddle.ops.BinOp#neqIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="neqIL:org.saddle.ops.BinOp[org.saddle.ops.NeqOp,Int,Long,Boolean]"></a><a id="neqIL:BinOp[NeqOp,Int,Long,Boolean]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#neqIL:org.saddle.ops.BinOp[org.saddle.ops.NeqOp,Int,Long,Boolean]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">neqIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="NeqOp.html" class="extype" name="org.saddle.ops.NeqOp">NeqOp</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
-      </span>
-      
-      
     </li><li name="org.saddle.ops.BinOp#neqLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="neqLD:org.saddle.ops.BinOp[org.saddle.ops.NeqOp,Long,Double,Boolean]"></a><a id="neqLD:BinOp[NeqOp,Long,Double,Boolean]"></a>
       <span class="permalink">
@@ -2369,9 +2134,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       
       
     </li><li name="org.saddle.ops.BinOp#orII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="orII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitOr]"></a><a id="orII:BIII[BitOr]"></a>
+      <a id="orII:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Int,Int,Int]"></a><a id="orII:BinOp[BitOr,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#orII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitOr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#orII:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2380,14 +2145,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">orII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>]</span>
+        <span class="name">orII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#orIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="orIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitOr]"></a><a id="orIL:BILL[BitOr]"></a>
+      <a id="orIL:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Int,Long,Long]"></a><a id="orIL:BinOp[BitOr,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#orIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitOr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#orIL:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2396,14 +2161,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">orIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>]</span>
+        <span class="name">orIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#orLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="orLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitOr]"></a><a id="orLI:BLIL[BitOr]"></a>
+      <a id="orLI:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Long,Int,Long]"></a><a id="orLI:BinOp[BitOr,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#orLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitOr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#orLI:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2412,14 +2177,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">orLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>]</span>
+        <span class="name">orLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#orLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="orLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitOr]"></a><a id="orLL:BLLL[BitOr]"></a>
+      <a id="orLL:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Long,Long,Long]"></a><a id="orLL:BinOp[BitOr,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#orLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitOr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#orLL:org.saddle.ops.BinOp[org.saddle.ops.BitOr,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2428,14 +2193,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">orLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>]</span>
+        <span class="name">orLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitOr.html" class="extype" name="org.saddle.ops.BitOr">BitOr</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Power]"></a><a id="powDD:BDDD[Power]"></a>
+      <a id="powDD:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Double,Double]"></a><a id="powDD:BinOp[Power,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powDD:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2444,14 +2209,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Power]"></a><a id="powDI:BIDD[Power]"></a>
+      <a id="powDI:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Int,Double]"></a><a id="powDI:BinOp[Power,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powDI:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2460,14 +2225,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Power]"></a><a id="powDL:BDLD[Power]"></a>
+      <a id="powDL:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Long,Double]"></a><a id="powDL:BinOp[Power,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powDL:org.saddle.ops.BinOp[org.saddle.ops.Power,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2476,14 +2241,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Power]"></a><a id="powID:BDID[Power]"></a>
+      <a id="powID:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Double,Double]"></a><a id="powID:BinOp[Power,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powID:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2492,14 +2257,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Power]"></a><a id="powII:BIII[Power]"></a>
+      <a id="powII:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Int,Int]"></a><a id="powII:BinOp[Power,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powII:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2508,14 +2273,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Power]"></a><a id="powIL:BILL[Power]"></a>
+      <a id="powIL:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Long,Long]"></a><a id="powIL:BinOp[Power,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powIL:org.saddle.ops.BinOp[org.saddle.ops.Power,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2524,14 +2289,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Power]"></a><a id="powLD:BLDD[Power]"></a>
+      <a id="powLD:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Double,Double]"></a><a id="powLD:BinOp[Power,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powLD:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2540,14 +2305,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Power]"></a><a id="powLI:BLIL[Power]"></a>
+      <a id="powLI:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Int,Long]"></a><a id="powLI:BinOp[Power,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powLI:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2556,14 +2321,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#powLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="powLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Power]"></a><a id="powLL:BLLL[Power]"></a>
+      <a id="powLL:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Long,Long]"></a><a id="powLL:BinOp[Power,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#powLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Power]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#powLL:org.saddle.ops.BinOp[org.saddle.ops.Power,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2572,14 +2337,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">powLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>]</span>
+        <span class="name">powLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Power.html" class="extype" name="org.saddle.ops.Power">Power</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#shlII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shlII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitShl]"></a><a id="shlII:BIII[BitShl]"></a>
+      <a id="shlII:org.saddle.ops.BinOp[org.saddle.ops.BitShl,Int,Int,Int]"></a><a id="shlII:BinOp[BitShl,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#shlII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitShl]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#shlII:org.saddle.ops.BinOp[org.saddle.ops.BitShl,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2588,30 +2353,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">shlII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitShl.html" class="extype" name="org.saddle.ops.BitShl">BitShl</a>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp#shlLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shlLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitShl]"></a><a id="shlLI:BLIL[BitShl]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#shlLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitShl]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">shlLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitShl.html" class="extype" name="org.saddle.ops.BitShl">BitShl</a>]</span>
+        <span class="name">shlII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitShl.html" class="extype" name="org.saddle.ops.BitShl">BitShl</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#shrII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shrII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitShr]"></a><a id="shrII:BIII[BitShr]"></a>
+      <a id="shrII:org.saddle.ops.BinOp[org.saddle.ops.BitShr,Int,Int,Int]"></a><a id="shrII:BinOp[BitShr,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#shrII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitShr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#shrII:org.saddle.ops.BinOp[org.saddle.ops.BitShr,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2620,30 +2369,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">shrII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitShr.html" class="extype" name="org.saddle.ops.BitShr">BitShr</a>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp#shrLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shrLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitShr]"></a><a id="shrLI:BLIL[BitShr]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#shrLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitShr]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">shrLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitShr.html" class="extype" name="org.saddle.ops.BitShr">BitShr</a>]</span>
+        <span class="name">shrII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitShr.html" class="extype" name="org.saddle.ops.BitShr">BitShr</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Subtract]"></a><a id="subDD:BDDD[Subtract]"></a>
+      <a id="subDD:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Double,Double]"></a><a id="subDD:BinOp[Subtract,Double,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subDD:org.saddle.ops.BinOp.BDDD[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subDD:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2652,14 +2385,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subDD</span><span class="result">: <a href="#BDDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDDD">BDDD</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subDD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subDI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Subtract]"></a><a id="subDI:BIDD[Subtract]"></a>
+      <a id="subDI:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Int,Double]"></a><a id="subDI:BinOp[Subtract,Double,Int,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subDI:org.saddle.ops.BinOp.BIDD[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subDI:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Int,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2668,14 +2401,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subDI</span><span class="result">: <a href="#BIDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BIDD">BIDD</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subDI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subDL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Subtract]"></a><a id="subDL:BDLD[Subtract]"></a>
+      <a id="subDL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Long,Double]"></a><a id="subDL:BinOp[Subtract,Double,Long,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subDL:org.saddle.ops.BinOp.BDLD[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subDL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Double,Long,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2684,14 +2417,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subDL</span><span class="result">: <a href="#BDLD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Long,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDLD">BDLD</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subDL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subID" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Subtract]"></a><a id="subID:BDID[Subtract]"></a>
+      <a id="subID:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Double,Double]"></a><a id="subID:BinOp[Subtract,Int,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subID:org.saddle.ops.BinOp.BDID[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subID:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2700,14 +2433,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subID</span><span class="result">: <a href="#BDID[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Double,Int,Double]" class="extmbr" name="org.saddle.ops.BinOp.BDID">BDID</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subID</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Subtract]"></a><a id="subII:BIII[Subtract]"></a>
+      <a id="subII:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Int,Int]"></a><a id="subII:BinOp[Subtract,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subII:org.saddle.ops.BinOp.BIII[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subII:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2716,14 +2449,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Subtract]"></a><a id="subIL:BILL[Subtract]"></a>
+      <a id="subIL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Long,Long]"></a><a id="subIL:BinOp[Subtract,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subIL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2732,14 +2465,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Subtract]"></a><a id="subLD:BLDD[Subtract]"></a>
+      <a id="subLD:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Double,Double]"></a><a id="subLD:BinOp[Subtract,Long,Double,Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subLD:org.saddle.ops.BinOp.BLDD[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subLD:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Double,Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2748,14 +2481,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subLD</span><span class="result">: <a href="#BLDD[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Double,Double]" class="extmbr" name="org.saddle.ops.BinOp.BLDD">BLDD</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subLD</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Subtract]"></a><a id="subLI:BLIL[Subtract]"></a>
+      <a id="subLI:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Int,Long]"></a><a id="subLI:BinOp[Subtract,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subLI:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2764,14 +2497,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#subLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="subLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Subtract]"></a><a id="subLL:BLLL[Subtract]"></a>
+      <a id="subLL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Long,Long]"></a><a id="subLL:BinOp[Subtract,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#subLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.Subtract]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#subLL:org.saddle.ops.BinOp[org.saddle.ops.Subtract,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2780,7 +2513,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">subLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>]</span>
+        <span class="name">subLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="Subtract.html" class="extype" name="org.saddle.ops.Subtract">Subtract</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
@@ -2816,10 +2549,10 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.saddle.ops.BinOp#ushII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ushII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitUShr]"></a><a id="ushII:BIII[BitUShr]"></a>
+    </li><li name="org.saddle.ops.BinOp#ushrII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ushrII:org.saddle.ops.BinOp[org.saddle.ops.BitUShr,Int,Int,Int]"></a><a id="ushrII:BinOp[BitUShr,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#ushII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitUShr]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#ushrII:org.saddle.ops.BinOp[org.saddle.ops.BitUShr,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2828,23 +2561,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">ushII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitUShr.html" class="extype" name="org.saddle.ops.BitUShr">BitUShr</a>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.ops.BinOp#ushLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ushLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitUShr]"></a><a id="ushLI:BLIL[BitUShr]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#ushLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitUShr]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ushLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitUShr.html" class="extype" name="org.saddle.ops.BitUShr">BitUShr</a>]</span>
+        <span class="name">ushrII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitUShr.html" class="extype" name="org.saddle.ops.BitUShr">BitUShr</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
@@ -2933,9 +2650,9 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
       
       
     </li><li name="org.saddle.ops.BinOp#xorII" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xorII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitXor]"></a><a id="xorII:BIII[BitXor]"></a>
+      <a id="xorII:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Int,Int,Int]"></a><a id="xorII:BinOp[BitXor,Int,Int,Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#xorII:org.saddle.ops.BinOp.BIII[org.saddle.ops.BitXor]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#xorII:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Int,Int,Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2944,14 +2661,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">xorII</span><span class="result">: <a href="#BIII[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Int,Int]" class="extmbr" name="org.saddle.ops.BinOp.BIII">BIII</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>]</span>
+        <span class="name">xorII</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#xorIL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xorIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitXor]"></a><a id="xorIL:BILL[BitXor]"></a>
+      <a id="xorIL:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Int,Long,Long]"></a><a id="xorIL:BinOp[BitXor,Int,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#xorIL:org.saddle.ops.BinOp.BILL[org.saddle.ops.BitXor]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#xorIL:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Int,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2960,14 +2677,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">xorIL</span><span class="result">: <a href="#BILL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Int,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BILL">BILL</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>]</span>
+        <span class="name">xorIL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#xorLI" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xorLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitXor]"></a><a id="xorLI:BLIL[BitXor]"></a>
+      <a id="xorLI:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Long,Int,Long]"></a><a id="xorLI:BinOp[BitXor,Long,Int,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#xorLI:org.saddle.ops.BinOp.BLIL[org.saddle.ops.BitXor]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#xorLI:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Long,Int,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2976,14 +2693,14 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">xorLI</span><span class="result">: <a href="#BLIL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Int,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLIL">BLIL</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>]</span>
+        <span class="name">xorLI</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
     </li><li name="org.saddle.ops.BinOp#xorLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="xorLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitXor]"></a><a id="xorLL:BLLL[BitXor]"></a>
+      <a id="xorLL:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Long,Long,Long]"></a><a id="xorLL:BinOp[BitXor,Long,Long,Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html#xorLL:org.saddle.ops.BinOp.BLLL[org.saddle.ops.BitXor]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOp$.html#xorLL:org.saddle.ops.BinOp[org.saddle.ops.BitXor,Long,Long,Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -2992,7 +2709,7 @@ for others we must check for the appropriate sentinel value.</p><p>Note scala.Fu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">xorLL</span><span class="result">: <a href="#BLLL[T&lt;:org.saddle.ops.OpType]=org.saddle.ops.BinOp[T,Long,Long,Long]" class="extmbr" name="org.saddle.ops.BinOp.BLLL">BLLL</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>]</span>
+        <span class="name">xorLL</span><span class="result">: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<a href="BitXor.html" class="extype" name="org.saddle.ops.BitXor">BitXor</a>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       
