@@ -1785,6 +1785,24 @@ percentile function: see: http://en.wikipedia.org/wiki/Percentile</p></dd></dl><
       </span>
       
       <p class="shortcomment cmt">Access an unboxed element of a Vec[A] at a single location</p><div class="fullcomment"><div class="comment cmt"><p>Access an unboxed element of a Vec[A] at a single location</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>offset into Vec</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecTime">VecTime</a> → <a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#reshape" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reshape(rows:Int,columns:Int):org.saddle.Mat[T]"></a><a id="reshape(Int,Int):Mat[DateTime]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecTime.html#reshape(rows:Int,columns:Int):org.saddle.Mat[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reshape</span><span class="params">(<span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>, <span name="columns">columns: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.joda.time.DateTime">DateTime</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Reshapes the Vec into a Mat</p><div class="fullcomment"><div class="comment cmt"><p>Reshapes the Vec into a Mat</p><p>May not copy. The new Mat instance may share data
+with this Vec.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecTime#reversed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reversed:org.saddle.vec.VecTime"></a><a id="reversed:VecTime"></a>
       <span class="permalink">
@@ -2187,6 +2205,60 @@ If <code>needsCopy</code> is true then the backing array is not contiguous
       </span>
       
       <p class="shortcomment cmt">Additive inverse of Vec with numeric elements</p><div class="fullcomment"><div class="comment cmt"><p>Additive inverse of Vec with numeric elements</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecTime">VecTime</a> → <a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="update(slice:org.saddle.index.Slice[Int],value:org.saddle.Vec[T]):Unit"></a><a id="update(Slice[Int],Vec[DateTime]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecTime.html#update(slice:org.saddle.index.Slice[Int],value:org.saddle.Vec[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="slice">slice: <a href="../index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="value">value: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.joda.time.DateTime">DateTime</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a range in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a range in the Vec</p><p>Mutates the underlying array
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="update(slice:org.saddle.index.Slice[Int],value:T):Unit"></a><a id="update(Slice[Int],DateTime):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecTime.html#update(slice:org.saddle.index.Slice[Int],value:T):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="slice">slice: <a href="../index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="value">value: <span class="extype" name="org.joda.time.DateTime">DateTime</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a range in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a range in the Vec</p><p>Mutates the underlying array
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="update(offset:Int,value:T):Unit"></a><a id="update(Int,DateTime):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecTime.html#update(offset:Int,value:T):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="offset">offset: <span class="extype" name="scala.Int">Int</span></span>, <span name="value">value: <span class="extype" name="org.joda.time.DateTime">DateTime</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a location in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a location in the Vec</p><p>Mutates the underlying array
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="VecDefault.html" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#updated" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="updated(offset:Array[Int],value:T):org.saddle.Vec[T]"></a><a id="updated(Array[Int],DateTime):Vec[DateTime]"></a>
       <span class="permalink">

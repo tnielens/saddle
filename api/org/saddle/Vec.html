@@ -1332,6 +1332,24 @@ false iff 0 until length map (raw) == the backing array
       </span>
       
       <p class="shortcomment cmt">Access an unboxed element of a Vec[A] at a single location</p><div class="fullcomment"><div class="comment cmt"><p>Access an unboxed element of a Vec[A] at a single location</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>offset into Vec</p></dd></dl></div>
+    </li><li name="org.saddle.Vec#reshape" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="reshape(rows:Int,cols:Int):org.saddle.Mat[T]"></a><a id="reshape(Int,Int):Mat[T]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#reshape(rows:Int,cols:Int):org.saddle.Mat[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">reshape</span><span class="params">(<span name="rows">rows: <span class="extype" name="scala.Int">Int</span></span>, <span name="cols">cols: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="org.saddle.Mat">Mat</a>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Reshapes the Vec into a Mat</p><div class="fullcomment"><div class="comment cmt"><p>Reshapes the Vec into a Mat</p><p>May not copy. The new Mat instance may share data
+with this Vec.
+</p></div></div>
     </li><li name="org.saddle.Vec#reversed" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="reversed:org.saddle.Vec[T]"></a><a id="reversed:Vec[T]"></a>
       <span class="permalink">
@@ -1658,6 +1676,57 @@ v.take(<span class="num">0</span>,<span class="num">1</span>) == v(<span class="
       </span>
       
       <p class="shortcomment cmt">Additive inverse of Vec with numeric elements</p>
+    </li><li name="org.saddle.Vec#update" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="update(slice:org.saddle.index.Slice[Int],value:org.saddle.Vec[T]):Unit"></a><a id="update(Slice[Int],Vec[T]):Unit"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#update(slice:org.saddle.index.Slice[Int],value:org.saddle.Vec[T]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="slice">slice: <a href="index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="value">value: <a href="" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a range in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a range in the Vec</p><p>Mutates the underlying array
+</p></div></div>
+    </li><li name="org.saddle.Vec#update" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="update(slice:org.saddle.index.Slice[Int],value:T):Unit"></a><a id="update(Slice[Int],T):Unit"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#update(slice:org.saddle.index.Slice[Int],value:T):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="slice">slice: <a href="index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="value">value: <span class="extype" name="org.saddle.Vec.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a range in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a range in the Vec</p><p>Mutates the underlying array
+</p></div></div>
+    </li><li name="org.saddle.Vec#update" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="update(offset:Int,value:T):Unit"></a><a id="update(Int,T):Unit"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#update(offset:Int,value:T):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">update</span><span class="params">(<span name="offset">offset: <span class="extype" name="scala.Int">Int</span></span>, <span name="value">value: <span class="extype" name="org.saddle.Vec.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Updates (overwrites) a location in the Vec</p><div class="fullcomment"><div class="comment cmt"><p>Updates (overwrites) a location in the Vec</p><p>Mutates the underlying array
+</p></div></div>
     </li><li name="org.saddle.Vec#updated" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="updated(offsets:Array[Int],value:T):org.saddle.Vec[T]"></a><a id="updated(Array[Int],T):Vec[T]"></a>
       <span class="permalink">
