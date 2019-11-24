@@ -358,8 +358,8 @@ are specialized for numeric types.
                         <a href="package$$ArrToVec.html" title="">ArrToVec</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Buffer$.html" title=""></a>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">Buffer</a>
+                        <a class="class" href="Buffer.html" title=""></a>
+                        <a href="Buffer.html" title="">Buffer</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Frame$.html" title=""></a>
                         <a class="class" href="Frame.html" title="Frame is an immutable container for 2D data which is indexed along both axes (rows, columns) by associated keys (i.e., indexes)."></a>
@@ -426,8 +426,8 @@ are specialized for numeric types.
                         <a href="Vec.html" title="Vec is an immutable container for 1D homogeneous data (a &quot;vector&quot;).">Vec</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]"></a>
-                        <a href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]">VecDoubleOps</a>
+                        <a class="class" href="" title="Specialized methods for Vec[Double]"></a>
+                        <a href="" title="Specialized methods for Vec[Double]">VecDoubleOps</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="package$$na$.html" title="na provides syntactic sugar for constructing primitives recognized as NA."></a>
@@ -439,30 +439,30 @@ are specialized for numeric types.
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <a href="Buffer$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
+        <div class="big-circle class">c</div>
         <p id="owner"><a href="../index.html" class="extype" name="org">org</a>.<a href="index.html" class="extype" name="org.saddle">saddle</a></p>
-        <h1><a href="Buffer$.html" title="See companion object">Buffer</a><span class="permalink">
-      <a href="../../org/saddle/Buffer.html" title="Permalink">
+        <h1>VecDoubleOps<span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="Buffer$.html" title="See companion object">object Buffer</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier">implicit </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Buffer</span><span class="tparams">[<span name="V">V</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">VecDoubleOps</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Specialized methods for Vec[Double]</p><p>Methods in this class do not filter out NAs, e.g.
+Vec(NA,1d).max2 == NA rather than 1d
+</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -492,7 +492,7 @@ are specialized for numeric types.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.saddle.Buffer"><span>Buffer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.saddle.VecDoubleOps"><span>VecDoubleOps</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -512,10 +512,10 @@ are specialized for numeric types.
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="org.saddle.Buffer#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(array:Array[V],length:Int)(implicitctV:scala.reflect.ClassTag[V]):org.saddle.Buffer[V]"></a><a id="&lt;init&gt;:Buffer[V]"></a>
+              <ol><li name="org.saddle.VecDoubleOps#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(self:org.saddle.Vec[Double]):org.saddle.package.VecDoubleOps"></a><a id="&lt;init&gt;:VecDoubleOps"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#&lt;init&gt;(array:Array[V],length:Int)(implicitctV:scala.reflect.ClassTag[V]):org.saddle.Buffer[V]" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#&lt;init&gt;(self:org.saddle.Vec[Double]):org.saddle.package.VecDoubleOps" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -524,7 +524,7 @@ are specialized for numeric types.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Buffer</span><span class="params">(<span name="array">array: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>, <span name="length">length: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctV">ctV: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>)</span>
+        <span class="name">VecDoubleOps</span><span class="params">(<span name="self">self: <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span>
       </span>
       
       
@@ -541,7 +541,7 @@ are specialized for numeric types.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -557,7 +557,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html###():Int" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -570,26 +570,10 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.saddle.Buffer#+=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="+=(elem:V):Buffer.this.type"></a><a id="+=(V):Buffer.this.type"></a>
-      <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#+=(elem:V):Buffer.this.type" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $plus$eq" class="name">+=</span><span class="params">(<span name="elem">elem: <span class="extype" name="org.saddle.Buffer.V">V</span></span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.Buffer">Buffer</a>.this.type</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -602,26 +586,10 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.saddle.Buffer#array" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="array:Array[V]"></a>
-      <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#array:Array[V]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">var</span>
-      </span>
-      <span class="symbol">
-        <span class="name">array</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -637,7 +605,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#clone():Object" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -658,26 +626,10 @@ are specialized for numeric types.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="org.saddle.Buffer#ctV" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ctV:scala.reflect.ClassTag[V]"></a><a id="ctV:ClassTag[V]"></a>
+    </li><li name="org.saddle.VecDoubleOps#demeaned" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="demeaned:org.saddle.Vec[Double]"></a><a id="demeaned:Vec[Double]"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#ctV:scala.reflect.ClassTag[V]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ctV</span><span class="result">: <span class="extype" name="scala.reflect.ClassTag">ClassTag</span>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>
-      </span>
-      
-      
-    </li><li name="org.saddle.Buffer#ensureLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ensureLength(n:Long):org.saddle.Buffer.Dummy[V]"></a><a id="ensureLength(Long):Dummy[V]"></a>
-      <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#ensureLength(n:Long):org.saddle.Buffer.Dummy[V]" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#demeaned:org.saddle.Vec[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -686,14 +638,14 @@ are specialized for numeric types.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ensureLength</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <a href="Buffer$$Dummy.html" class="extype" name="org.saddle.Buffer.Dummy">Dummy</a>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>
+        <span class="name">demeaned</span><span class="result">: <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Grow if necessary the underlying array to accomodate at least n elements.</p>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -709,7 +661,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -725,7 +677,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#finalize():Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -747,7 +699,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#getClass():Class[_]" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -766,7 +718,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#hashCode():Int" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -785,7 +737,7 @@ are specialized for numeric types.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -798,26 +750,58 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="org.saddle.Buffer#length" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="length:Int"></a>
+    </li><li name="org.saddle.VecDoubleOps#max2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="max2:Double"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#length:Int" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#max2:Double" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">var</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">length</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">max2</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.VecDoubleOps#mean2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mean2:Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#mean2:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mean2</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.VecDoubleOps#min2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="min2:Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#min2:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">min2</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       
       
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -833,7 +817,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#notify():Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -852,7 +836,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#notifyAll():Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -868,10 +852,93 @@ are specialized for numeric types.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.saddle.VecDoubleOps#pearson" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="pearson(other:org.saddle.Vec[Double]):Double"></a><a id="pearson(Vec[Double]):Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#pearson(other:org.saddle.Vec[Double]):Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pearson</span><span class="params">(<span name="other">other: <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">One pass Pearson correlation coefficient.</p><div class="fullcomment"><div class="comment cmt"><p>One pass Pearson correlation coefficient. Does not filter out NAs.
+https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2008/086212.pdf
+</p></div></div>
+    </li><li name="org.saddle.VecDoubleOps#sampleCovariance" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sampleCovariance(other:org.saddle.Vec[Double]):Double"></a><a id="sampleCovariance(Vec[Double]):Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#sampleCovariance(other:org.saddle.Vec[Double]):Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sampleCovariance</span><span class="params">(<span name="other">other: <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">One pass covariance of two vectors</p><div class="fullcomment"><div class="comment cmt"><p>One pass covariance of two vectors</p><p>https://prod-ng.sandia.gov/techlib-noauth/access-control.cgi/2008/086212.pdf
+</p></div></div>
+    </li><li name="org.saddle.VecDoubleOps#sampleStandardDeviation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sampleStandardDeviation:Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#sampleStandardDeviation:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sampleStandardDeviation</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.VecDoubleOps#sampleVariance" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sampleVariance:Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#sampleVariance:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sampleVariance</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.VecDoubleOps#sum2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sum2:Double"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#sum2:Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sum2</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -884,26 +951,10 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="org.saddle.Buffer#toArray" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="toArray:Array[V]"></a>
-      <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#toArray:Array[V]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toArray</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.Buffer.V">V</span>]</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#toString():String" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -919,7 +970,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#wait():Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -941,7 +992,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -963,7 +1014,7 @@ are specialized for numeric types.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Buffer.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>

@@ -420,6 +420,10 @@ are specialized for numeric types.</p>
                         <a href="Vec.html" title="Vec is an immutable container for 1D homogeneous data (a &quot;vector&quot;).">Vec</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]"></a>
+                        <a href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]">VecDoubleOps</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="package$$na$.html" title="na provides syntactic sugar for constructing primitives recognized as NA."></a>
                         <a href="package$$na$.html" title="na provides syntactic sugar for constructing primitives recognized as NA.">na</a>
                       </li>
@@ -917,6 +921,24 @@ Vec[<span class="std">Int</span>](<span class="num">1</span>,<span class="num">2
 Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>,<span class="num">4</span>) * <span class="num">2</span> == Vec(<span class="num">2</span>,<span class="num">4</span>,<span class="num">6</span>,<span class="num">8</span>)</pre><p>Note, Vec is implicitly convertible to an array for convenience; this could be
 abused to mutate the contents of the Vec. Try to avoid this!
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Type of elements within the Vec</p></dd></dl></div>
+    </li><li name="org.saddle.VecDoubleOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecDoubleOpsextendsAnyRef"></a><a id="VecDoubleOps:VecDoubleOps"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/package$$VecDoubleOps.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Specialized methods for Vec[Double]" href="package$$VecDoubleOps.html"><span class="name">VecDoubleOps</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Specialized methods for Vec[Double]</p><div class="fullcomment"><div class="comment cmt"><p>Specialized methods for Vec[Double]</p><p>Methods in this class do not filter out NAs, e.g.
+Vec(NA,1d).max2 == NA rather than 1d
+</p></div></div>
     </li></ol>
             </div>
 
