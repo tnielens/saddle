@@ -104,10 +104,10 @@
 the overhead of boxing and unboxing.</p><p>Basic operations also aim to be robust to missing values (NA's)</p><p>The building blocks are intended to be easily composed.</p><p>The foundational building blocks are:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Index.html" class="extype" name="org.saddle.Index">org.saddle.Index</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Inspiration for Saddle comes from many sources, including the R programming language, the
 pandas data analysis library for Python, and the Scala collections library.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="org">org</a></dd></dl></div>
-    </li><li name="org.saddle.linalg" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="linalg"></a><a id="linalg:linalg"></a>
+    </li><li name="org.saddle.ops" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ops"></a><a id="ops:ops"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/index.html" title="Permalink">
+      <a href="../../../org/saddle/ops/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -116,241 +116,47 @@ pandas data analysis library for Python, and the Scala collections library.
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="index.html"><span class="name">linalg</span></a>
+        <a title="Provides type aliases for a few basic operations" href="index.html"><span class="name">ops</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
-    </li><li class="current-entities indented3">
+      <p class="shortcomment cmt">Provides type aliases for a few basic operations
+</p><div class="fullcomment"><div class="comment cmt"><p>Provides type aliases for a few basic operations
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace" visbl="pub" class="indented4 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="BinOpVecInPlaceextendsAnyRef"></a><a id="BinOpVecInPlace:BinOpVecInPlace"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BinOpVecInPlace.html"><span class="name">BinOpVecInPlace</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle.ops">ops</a></dd></dl></div>
+    </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="AtxA.html" title=""></a>
-                        <a href="AtxA.html" title="">AtxA</a>
-                      </li><li class="current-entities indented3">
+                        <a class="class" href="BinOpVecInPlace$VecSclrElemOpIp.html" title=""></a>
+                        <a href="BinOpVecInPlace$VecSclrElemOpIp.html" title="">VecSclrElemOpIp</a>
+                      </li><li class="current-entities indented4">
                         <span class="separator"></span>
-                        <a class="trait" href="AtxB.html" title=""></a>
-                        <a href="AtxB.html" title="">AtxB</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AtxBt.html" title=""></a>
-                        <a href="AtxBt.html" title="">AtxBt</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AtxV.html" title=""></a>
-                        <a href="AtxV.html" title="">AtxV</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AxAt.html" title=""></a>
-                        <a href="AxAt.html" title="">AxAt</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AxB.html" title=""></a>
-                        <a href="AxB.html" title="">AxB</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AxBt.html" title=""></a>
-                        <a href="AxBt.html" title="">AxBt</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AxDiag.html" title=""></a>
-                        <a href="AxDiag.html" title="">AxDiag</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="AxV.html" title=""></a>
-                        <a href="AxV.html" title="">AxV</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Cholesky.html" title=""></a>
-                        <a href="Cholesky.html" title="">Cholesky</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="ColSums.html" title=""></a>
-                        <a href="ColSums.html" title="">ColSums</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="DPotrfException.html" title=""></a>
-                        <a href="DPotrfException.html" title="">DPotrfException</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Diag.html" title=""></a>
-                        <a href="Diag.html" title="">Diag</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="DiagAtxA.html" title=""></a>
-                        <a href="DiagAtxA.html" title="">DiagAtxA</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="DiagAxAt.html" title=""></a>
-                        <a href="DiagAxAt.html" title="">DiagAxAt</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="DiagXAInverseXt.html" title=""></a>
-                        <a href="DiagXAInverseXt.html" title="">DiagXAInverseXt</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="DiagxA.html" title=""></a>
-                        <a href="DiagxA.html" title="">DiagxA</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EigNS.html" title=""></a>
-                        <a href="EigNS.html" title="">EigNS</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EigNSTrunc.html" title=""></a>
-                        <a href="EigNSTrunc.html" title="">EigNSTrunc</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EigS.html" title=""></a>
-                        <a href="EigS.html" title="">EigS</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EigSTrunc.html" title=""></a>
-                        <a href="EigSTrunc.html" title="">EigSTrunc</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="EigValSymTrunc.html" title=""></a>
-                        <a href="EigValSymTrunc.html" title="">EigValSymTrunc</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="EigenDecompositionNonSymmetric.html" title=""></a>
-                        <a href="EigenDecompositionNonSymmetric.html" title="">EigenDecompositionNonSymmetric</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="EigenDecompositionSymmetric.html" title=""></a>
-                        <a href="EigenDecompositionSymmetric.html" title="">EigenDecompositionSymmetric</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="GeneralSVD.html" title=""></a>
-                        <a href="GeneralSVD.html" title="">GeneralSVD</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="GeneralSVDTrunc.html" title=""></a>
-                        <a href="GeneralSVDTrunc.html" title="">GeneralSVDTrunc</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="GeneralSolve.html" title=""></a>
-                        <a href="GeneralSolve.html" title="">GeneralSolve</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="InvertPDCholesky.html" title=""></a>
-                        <a href="InvertPDCholesky.html" title="">InvertPDCholesky</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="InvertWithLU.html" title=""></a>
-                        <a href="InvertWithLU.html" title="">InvertWithLU</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatBinOp.html" title=""></a>
-                        <a href="MatBinOp.html" title="">MatBinOp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatGemmOp.html" title=""></a>
-                        <a href="MatGemmOp.html" title="">MatGemmOp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatGemmSelfOp.html" title=""></a>
-                        <a href="MatGemmSelfOp.html" title="">MatGemmSelfOp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatLinalgOps.html" title=""></a>
-                        <a href="MatLinalgOps.html" title="">MatLinalgOps</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="MatPimp.html" title=""></a>
-                        <a href="MatPimp.html" title="">MatPimp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatUnaryOp.html" title=""></a>
-                        <a href="MatUnaryOp.html" title="">MatUnaryOp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatUnaryOp1Scalar.html" title=""></a>
-                        <a href="MatUnaryOp1Scalar.html" title="">MatUnaryOp1Scalar</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="MatUnaryOp1ScalarTarget.html" title=""></a>
-                        <a href="MatUnaryOp1ScalarTarget.html" title="">MatUnaryOp1ScalarTarget</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="OpImpl.html" title=""></a>
-                        <a href="OpImpl.html" title="">OpImpl</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="RowSums.html" title=""></a>
-                        <a href="RowSums.html" title="">RowSums</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="SVDResult.html" title=""></a>
-                        <a href="SVDResult.html" title="">SVDResult</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="SingularValues.html" title=""></a>
-                        <a href="SingularValues.html" title="">SingularValues</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="SolveLowerTriangular.html" title=""></a>
-                        <a href="SolveLowerTriangular.html" title="">SolveLowerTriangular</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="SolveUpperTriangular.html" title=""></a>
-                        <a href="SolveUpperTriangular.html" title="">SolveUpperTriangular</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="TestPD.html" title=""></a>
-                        <a href="TestPD.html" title="">TestPD</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="Trace.html" title=""></a>
-                        <a href="Trace.html" title="">Trace</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="VecBinOp.html" title=""></a>
-                        <a href="VecBinOp.html" title="">VecBinOp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="VecPimp.html" title=""></a>
-                        <a href="VecPimp.html" title="">VecPimp</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAtxApbC.html" title=""></a>
-                        <a href="aAtxApbC.html" title="">aAtxApbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="" title=""></a>
-                        <a href="" title="">aAtxBpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAtxBtpbC.html" title=""></a>
-                        <a href="aAtxBtpbC.html" title="">aAtxBtpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAtxVpbC.html" title=""></a>
-                        <a href="aAtxVpbC.html" title="">aAtxVpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAxAtpbC.html" title=""></a>
-                        <a href="aAxAtpbC.html" title="">aAxAtpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAxBpbC.html" title=""></a>
-                        <a href="aAxBpbC.html" title="">aAxBpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAxBtpbC.html" title=""></a>
-                        <a href="aAxBtpbC.html" title="">aAxBtpbC</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="aAxVpbC.html" title=""></a>
-                        <a href="aAxVpbC.html" title="">aAxVpbC</a>
+                        <a class="class" href="" title=""></a>
+                        <a href="" title="">VecVecElemOpIp</a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="trait type">
+            <body class="class type">
       <div id="definition">
-        <div class="big-circle trait">t</div>
-        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.linalg">linalg</a></p>
-        <h1>aAtxBpbC<span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html" title="Permalink">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.ops">ops</a>.<a href="BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></p>
+        <h1>VecVecElemOpIp<span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -359,11 +165,11 @@ pandas data analysis library for Python, and the Scala collections library.
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">aAtxBpbC</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">VecVecElemOpIp</span><span class="tparams">[<span name="OP">OP &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]]</span>
       </span>
       </h4>
 
@@ -372,7 +178,7 @@ pandas data analysis library for Python, and the Scala collections library.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -398,7 +204,7 @@ pandas data analysis library for Python, and the Scala collections library.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.saddle.linalg.aAtxBpbC"><span>aAtxBpbC</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp"><span>VecVecElemOpIp</span></li><li class="in" name="org.saddle.ops.BinOpInPlace"><span>BinOpInPlace</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -416,7 +222,26 @@ pandas data analysis library for Python, and the Scala collections library.
 
       <div id="template">
         <div id="allMembers">
-        
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(op:org.saddle.ops.BinOp[OP,A,B,A]):BinOpVecInPlace.this.VecVecElemOpIp[OP,A,B]"></a><a id="&lt;init&gt;:VecVecElemOpIp[OP,A,B]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#&lt;init&gt;(op:org.saddle.ops.BinOp[OP,A,B,A]):BinOpVecInPlace.this.VecVecElemOpIp[OP,A,B]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVecElemOpIp</span><span class="params">(<span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>, <span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>, <span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>]</span>)</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -428,7 +253,7 @@ pandas data analysis library for Python, and the Scala collections library.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -444,7 +269,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html###():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -460,7 +285,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -473,10 +298,26 @@ pandas data analysis library for Python, and the Scala collections library.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(v1:org.saddle.Vec[A],v2:org.saddle.Vec[B]):Unit"></a><a id="apply(Vec[A],Vec[B]):Unit"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#apply(v1:org.saddle.Vec[A],v2:org.saddle.Vec[B]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="v1">v1: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>]</span>, <span name="v2">v2: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a> → <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -492,7 +333,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#clone():Object" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -516,7 +357,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -532,7 +373,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -548,7 +389,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#finalize():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -570,7 +411,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -589,7 +430,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#hashCode():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -608,7 +449,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -624,7 +465,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -640,7 +481,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#notify():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -659,7 +500,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -678,7 +519,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -694,7 +535,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#toString():String" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -710,7 +551,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#wait():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -732,7 +573,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -754,7 +595,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/linalg/aAtxBpbC.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -785,7 +626,9 @@ pandas data analysis library for Python, and the Scala collections library.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="org.saddle.ops.BinOpInPlace">
+              <h3>Inherited from <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]]</h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

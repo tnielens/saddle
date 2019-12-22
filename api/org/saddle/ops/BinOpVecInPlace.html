@@ -124,8 +124,8 @@ pandas data analysis library for Python, and the Scala collections library.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="" title=""></a>
-                        <a href="" title="">Add</a>
+                        <a class="trait" href="Add.html" title=""></a>
+                        <a href="Add.html" title="">Add</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="AndOp.html" title=""></a>
@@ -160,8 +160,8 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a href="BinOpVec.html" title="Provides concrete implementations of binary operations for org.saddle.Vec; these instances provide implicit support for org.saddle.ops.NumericOps methods which are inherited by Vec.">BinOpVec</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="trait" href="BinOpVecInPlace.html" title=""></a>
-                        <a href="BinOpVecInPlace.html" title="">BinOpVecInPlace</a>
+                        <a class="trait" href="" title=""></a>
+                        <a href="" title="">BinOpVecInPlace</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BitAnd.html" title=""></a>
@@ -271,8 +271,8 @@ pandas data analysis library for Python, and the Scala collections library.
       <div id="definition">
         <div class="big-circle trait">t</div>
         <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.ops">ops</a></p>
-        <h1>Add<span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html" title="Permalink">
+        <h1>BinOpVecInPlace<span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -285,7 +285,7 @@ pandas data analysis library for Python, and the Scala collections library.
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Add</span><span class="result"> extends <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>
+        <span class="name">BinOpVecInPlace</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
 
@@ -294,8 +294,13 @@ pandas data analysis library for Python, and the Scala collections library.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a>, <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="../Vec$.html" class="extype" name="org.saddle.Vec">Vec</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -320,7 +325,7 @@ pandas data analysis library for Python, and the Scala collections library.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.saddle.ops.Add"><span>Add</span></li><li class="in" name="org.saddle.ops.ScalarOp"><span>ScalarOp</span></li><li class="in" name="org.saddle.ops.OpType"><span>OpType</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.saddle.ops.BinOpVecInPlace"><span>BinOpVecInPlace</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -340,7 +345,42 @@ pandas data analysis library for Python, and the Scala collections library.
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]"></a><a id="VecSclrElemOpIp[OP&lt;:ScalarOp,A,B]:VecSclrElemOpIp[OP,A,B]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecSclrElemOpIp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BinOpVecInPlace$VecSclrElemOpIp.html"><span class="name">VecSclrElemOpIp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.OP">OP</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.A">A</span>], <span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.B">B</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]"></a><a id="VecVecElemOpIp[OP&lt;:ScalarOp,A,B]:VecVecElemOpIp[OP,A,B]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BinOpVecInPlace$VecVecElemOpIp.html"><span class="name">VecVecElemOpIp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]]</span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
 
         
 
@@ -350,7 +390,7 @@ pandas data analysis library for Python, and the Scala collections library.
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -366,7 +406,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html###():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -382,7 +422,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -395,10 +435,234 @@ pandas data analysis library for Python, and the Scala collections library.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpBBBIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Boolean,Boolean]"></a><a id="VecSclrElmOpBBBIp[Op&lt;:ScalarOp](BinOp[Op,Boolean,Boolean,Boolean]):VecSclrElemOpIp[Op,Boolean,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Boolean,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpBBBIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDDDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Double]"></a><a id="VecSclrElmOpDDDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Double]):VecSclrElemOpIp[Op,Double,Double]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDDDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDIDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Int]"></a><a id="VecSclrElmOpDIDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Double]):VecSclrElemOpIp[Op,Double,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDIDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDLDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Long]"></a><a id="VecSclrElmOpDLDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):VecSclrElemOpIp[Op,Double,Long]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDLDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpIIIIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Int,Int]"></a><a id="VecSclrElmOpIIIIp[Op&lt;:ScalarOp](BinOp[Op,Int,Int,Int]):VecSclrElemOpIp[Op,Int,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Int,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpIIIIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpLILIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Int]"></a><a id="VecSclrElmOpLILIp[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Long]):VecSclrElemOpIp[Op,Long,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpLILIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpLLLIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecSclrElmOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Long]"></a><a id="VecSclrElmOpLLLIp[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Long]):VecSclrElemOpIp[Op,Long,Long]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecSclrElmOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpLLLIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecSclrElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVecElemOpBBBIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVecElemOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Boolean,Boolean]"></a><a id="VecVecElemOpBBBIp[Op&lt;:ScalarOp](BinOp[Op,Boolean,Boolean,Boolean]):VecVecElemOpIp[Op,Boolean,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVecElemOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Boolean,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVecElemOpBBBIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDDDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Double]"></a><a id="VecVelElemOpDDDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Double]):VecVecElemOpIp[Op,Double,Double]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDDDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDIDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Int]"></a><a id="VecVelElemOpDIDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Double]):VecVecElemOpIp[Op,Double,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDIDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDLDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Long]"></a><a id="VecVelElemOpDLDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):VecVecElemOpIp[Op,Double,Long]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDLDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpIIIIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Int,Int]"></a><a id="VecVelElemOpIIIIp[Op&lt;:ScalarOp](BinOp[Op,Int,Int,Int]):VecVecElemOpIp[Op,Int,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Int,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpIIIIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpLILIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Int]"></a><a id="VecVelElemOpLILIp[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Long]):VecVecElemOpIp[Op,Long,Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpLILIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpLLLIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecVelElemOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Long]"></a><a id="VecVelElemOpLLLIp[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Long]):VecVecElemOpIp[Op,Long,Long]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#VecVelElemOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpLLLIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="BinOpVecInPlace$VecVecElemOpIp.html" class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -414,7 +678,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#clone():Object" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,7 +702,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -454,7 +718,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -470,7 +734,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#finalize():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -492,7 +756,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#getClass():Class[_]" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -511,7 +775,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#hashCode():Int" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -530,7 +794,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -546,7 +810,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -562,7 +826,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#notify():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -581,7 +845,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#notifyAll():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -600,7 +864,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -616,7 +880,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#toString():String" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -632,7 +896,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#wait():Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -654,7 +918,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -676,7 +940,7 @@ pandas data analysis library for Python, and the Scala collections library.
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/Add.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOpVecInPlace.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -707,11 +971,7 @@ pandas data analysis library for Python, and the Scala collections library.
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.saddle.ops.ScalarOp">
-              <h3>Inherited from <a href="ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></h3>
-            </div><div class="parent" name="org.saddle.ops.OpType">
-              <h3>Inherited from <a href="OpType.html" class="extype" name="org.saddle.ops.OpType">OpType</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

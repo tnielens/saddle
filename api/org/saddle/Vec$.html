@@ -457,7 +457,7 @@ are specialized for numeric types.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Vec</span><span class="result"> extends <a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></span>
+        <span class="name">Vec</span><span class="result"> extends <a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a> with <a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></span>
       </span>
       </h4>
 
@@ -466,7 +466,7 @@ are specialized for numeric types.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a>, <a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -492,7 +492,7 @@ are specialized for numeric types.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="org.saddle.Vec"><span>Vec</span></li><li class="in" name="org.saddle.ops.BinOpVec"><span>BinOpVec</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="org.saddle.Vec"><span>Vec</span></li><li class="in" name="org.saddle.ops.BinOpVecInPlace"><span>BinOpVecInPlace</span></li><li class="in" name="org.saddle.ops.BinOpVec"><span>BinOpVec</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -594,6 +594,38 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]"></a><a id="VecSclrElemOpIp[OP&lt;:ScalarOp,A,B]:VecSclrElemOpIp[OP,A,B]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/ops/BinOpVecInPlace$VecSclrElemOpIp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ops/BinOpVecInPlace$VecSclrElemOpIp.html"><span class="name">VecSclrElemOpIp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="ops/BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.OP">OP</span>, <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.A">A</span>], <span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp.B">B</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]"></a><a id="VecVecElemOpIp[OP&lt;:ScalarOp,A,B]:VecVecElemOpIp[OP,A,B]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/ops/BinOpVecInPlace$VecVecElemOpIp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ops/BinOpVecInPlace$VecVecElemOpIp.html"><span class="name">VecVecElemOpIp</span></a><span class="tparams">[<span name="OP">OP &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>, <span name="A">A</span>, <span name="B">B</span>]</span><span class="result"> extends <a href="ops/BinOpInPlace.html" class="extype" name="org.saddle.ops.BinOpInPlace">BinOpInPlace</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.OP">OP</span>, <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.A">A</span>], <a href="Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp.B">B</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -666,6 +698,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpBBBIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Boolean,Boolean]"></a><a id="VecSclrElmOpBBBIp[Op&lt;:ScalarOp](BinOp[Op,Boolean,Boolean,Boolean]):VecSclrElemOpIp[Op,Boolean,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Boolean,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpBBBIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpDDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpDDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Double,Double,Boolean]"></a><a id="VecSclrElmOpDDB[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Boolean]):VecSclrElemOp[Op,Double,Double,Boolean]"></a>
       <span class="permalink">
@@ -698,6 +746,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDDDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Double]"></a><a id="VecSclrElmOpDDDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Double]):VecSclrElemOpIp[Op,Double,Double]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDDDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpDIB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpDIB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Double,Int,Boolean]"></a><a id="VecSclrElmOpDIB[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Boolean]):VecSclrElemOp[Op,Double,Int,Boolean]"></a>
       <span class="permalink">
@@ -730,6 +794,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDIDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Int]"></a><a id="VecSclrElmOpDIDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Double]):VecSclrElemOpIp[Op,Double,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDIDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpDLB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpDLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Double,Long,Boolean]"></a><a id="VecSclrElmOpDLB[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Boolean]):VecSclrElemOp[Op,Double,Long,Boolean]"></a>
       <span class="permalink">
@@ -762,6 +842,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpDLDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Long]"></a><a id="VecSclrElmOpDLDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):VecSclrElemOpIp[Op,Double,Long]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Double,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpDLDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpIDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpIDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Double,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Int,Double,Boolean]"></a><a id="VecSclrElmOpIDB[Op&lt;:ScalarOp](BinOp[Op,Int,Double,Boolean]):VecSclrElemOp[Op,Int,Double,Boolean]"></a>
       <span class="permalink">
@@ -826,6 +922,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpIIIIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Int,Int]"></a><a id="VecSclrElmOpIIIIp[Op&lt;:ScalarOp](BinOp[Op,Int,Int,Int]):VecSclrElemOpIp[Op,Int,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Int,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpIIIIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpILB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpILB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Long,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Int,Long,Boolean]"></a><a id="VecSclrElmOpILB[Op&lt;:ScalarOp](BinOp[Op,Int,Long,Boolean]):VecSclrElemOp[Op,Int,Long,Boolean]"></a>
       <span class="permalink">
@@ -922,6 +1034,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpLILIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Int]"></a><a id="VecSclrElmOpLILIp[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Long]):VecSclrElemOpIp[Op,Long,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpLILIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecSclrElmOpLLB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecSclrElmOpLLB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Boolean]):BinOpVec.this.VecSclrElemOp[Op,Long,Long,Boolean]"></a><a id="VecSclrElmOpLLB[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Boolean]):VecSclrElemOp[Op,Long,Long,Boolean]"></a>
       <span class="permalink">
@@ -954,6 +1082,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecSclrElmOpLLLIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecSclrElmOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Long]"></a><a id="VecSclrElmOpLLLIp[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Long]):VecSclrElemOpIp[Op,Long,Long]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecSclrElmOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecSclrElemOpIp[Op,Long,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecSclrElmOpLLLIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="#VecSclrElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],B]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecSclrElemOpIp">VecSclrElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecSclrElmOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVecDotOpDDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVecDotOpDDD(implicitopA:org.saddle.ops.BinOp[org.saddle.ops.Add,Double,Double,Double],implicitopM:org.saddle.ops.BinOp[org.saddle.ops.Multiply,Double,Double,Double]):BinOpVec.this.VecVecDot[Double,Double,Double]"></a><a id="VecVecDotOpDDD(BinOp[Add,Double,Double,Double],BinOp[Multiply,Double,Double,Double]):VecVecDot[Double,Double,Double]"></a>
       <span class="permalink">
@@ -1114,6 +1258,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVecElemOpBBBIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVecElemOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Boolean,Boolean]"></a><a id="VecVecElemOpBBBIp[Op&lt;:ScalarOp](BinOp[Op,Boolean,Boolean,Boolean]):VecVecElemOpIp[Op,Boolean,Boolean]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVecElemOpBBBIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Boolean,Boolean,Boolean]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Boolean,Boolean]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVecElemOpBBBIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpBBBIp.Op">Op</span>, <span class="extype" name="scala.Boolean">Boolean</span>, <span class="extype" name="scala.Boolean">Boolean</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVecElemOpDDB" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVecElemOpDDB[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Boolean]):BinOpVec.this.VecVecElemOp[Op,Double,Double,Boolean]"></a><a id="VecVecElemOpDDB[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Boolean]):VecVecElemOp[Op,Double,Double,Boolean]"></a>
       <span class="permalink">
@@ -1418,6 +1578,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDDDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Double]"></a><a id="VecVelElemOpDDDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Double,Double]):VecVecElemOpIp[Op,Double,Double]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpDDDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Double,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Double]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDDDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDDDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVelElemOpDID" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVelElemOpDID[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVec.this.VecVecElemOp[Op,Double,Int,Double]"></a><a id="VecVelElemOpDID[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Double]):VecVecElemOp[Op,Double,Int,Double]"></a>
       <span class="permalink">
@@ -1434,6 +1610,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDIDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Int]"></a><a id="VecVelElemOpDIDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Int,Double]):VecVecElemOpIp[Op,Double,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpDIDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Int,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDIDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDIDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVelElemOpDLD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVelElemOpDLD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVec.this.VecVecElemOp[Op,Double,Long,Double]"></a><a id="VecVelElemOpDLD[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):VecVecElemOp[Op,Double,Long,Double]"></a>
       <span class="permalink">
@@ -1450,6 +1642,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpDLDIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Long]"></a><a id="VecVelElemOpDLDIp[Op&lt;:ScalarOp](BinOp[Op,Double,Long,Double]):VecVecElemOpIp[Op,Double,Long]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpDLDIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Double,Long,Double]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Double,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpDLDIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Double">Double</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpDLDIp.Op">Op</span>, <span class="extype" name="scala.Double">Double</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVelElemOpIDD" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVelElemOpIDD[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Double,Double]):BinOpVec.this.VecVecElemOp[Op,Int,Double,Double]"></a><a id="VecVelElemOpIDD[Op&lt;:ScalarOp](BinOp[Op,Int,Double,Double]):VecVecElemOp[Op,Int,Double,Double]"></a>
       <span class="permalink">
@@ -1482,6 +1690,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpIIIIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Int,Int]"></a><a id="VecVelElemOpIIIIp[Op&lt;:ScalarOp](BinOp[Op,Int,Int,Int]):VecVecElemOpIp[Op,Int,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpIIIIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Int,Int]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Int,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpIIIIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpIIIIp.Op">Op</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVelElemOpILL" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVelElemOpILL[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Int,Long,Long]):BinOpVec.this.VecVecElemOp[Op,Int,Long,Long]"></a><a id="VecVelElemOpILL[Op&lt;:ScalarOp](BinOp[Op,Int,Long,Long]):VecVecElemOp[Op,Int,Long,Long]"></a>
       <span class="permalink">
@@ -1530,6 +1754,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpLILIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Int]"></a><a id="VecVelElemOpLILIp[Op&lt;:ScalarOp](BinOp[Op,Long,Int,Long]):VecVecElemOpIp[Op,Long,Int]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpLILIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Int,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpLILIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLILIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.ops.BinOpVec#VecVelElemOpLLL" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="VecVelElemOpLLL[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVec.this.VecVecElemOp[Op,Long,Long,Long]"></a><a id="VecVelElemOpLLL[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Long]):VecVecElemOp[Op,Long,Long,Long]"></a>
       <span class="permalink">
@@ -1546,6 +1786,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></dd></dl></div>
+    </li><li name="org.saddle.ops.BinOpVecInPlace#VecVelElemOpLLLIp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VecVelElemOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Long]"></a><a id="VecVelElemOpLLLIp[Op&lt;:ScalarOp](BinOp[Op,Long,Long,Long]):VecVecElemOpIp[Op,Long,Long]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec$.html#VecVelElemOpLLLIp[Op&lt;:org.saddle.ops.ScalarOp](implicitop:org.saddle.ops.BinOp[Op,Long,Long,Long]):BinOpVecInPlace.this.VecVecElemOpIp[Op,Long,Long]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">VecVelElemOpLLLIp</span><span class="tparams">[<span name="Op">Op &lt;: <a href="ops/ScalarOp.html" class="extype" name="org.saddle.ops.ScalarOp">ScalarOp</a></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="op">op: <a href="ops/BinOp.html" class="extype" name="org.saddle.ops.BinOp">BinOp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>)</span><span class="result">: <a href="#VecVecElemOpIp[OP&lt;:org.saddle.ops.ScalarOp,A,B]extendsBinOpInPlace[OP,org.saddle.Vec[A],org.saddle.Vec[B]]" class="extmbr" name="org.saddle.ops.BinOpVecInPlace.VecVecElemOpIp">VecVecElemOpIp</a>[<span class="extype" name="org.saddle.ops.BinOpVecInPlace.VecVelElemOpLLLIp.Op">Op</span>, <span class="extype" name="scala.Long">Long</span>, <span class="extype" name="scala.Long">Long</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></dd></dl></div>
     </li><li name="org.saddle.Vec#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply[T](values:T*)(implicitevidence$1:org.saddle.ST[T]):org.saddle.Vec[T]"></a><a id="apply[T](T*)(ST[T]):Vec[T]"></a>
       <span class="permalink">
@@ -1910,7 +2166,9 @@ Vec(<span class="std">Seq</span>(<span class="num">1</span>,<span class="num">2<
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="org.saddle.ops.BinOpVec">
+        <div class="parent" name="org.saddle.ops.BinOpVecInPlace">
+              <h3>Inherited from <a href="ops/BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a></h3>
+            </div><div class="parent" name="org.saddle.ops.BinOpVec">
               <h3>Inherited from <a href="ops/BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
