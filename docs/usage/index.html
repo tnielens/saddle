@@ -159,20 +159,22 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>vec<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">20</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res6: Vec[Double] = [20 x 1]
-</span><span style="color:#75715e">// 0.8954
-</span><span style="color:#75715e">// 0.4425
-</span><span style="color:#75715e">// 0.4557
-</span><span style="color:#75715e">// 0.1608
-</span><span style="color:#75715e">// 0.8220
+</span><span style="color:#75715e">// 0.2678
+</span><span style="color:#75715e">// 0.8356
+</span><span style="color:#75715e">// 0.6670
+</span><span style="color:#75715e">// 0.8242
+</span><span style="color:#75715e">// 0.8209
 </span><span style="color:#75715e">//  ... 
-</span><span style="color:#75715e">// 0.1963
-</span><span style="color:#75715e">// 0.4871
-</span><span style="color:#75715e">// 0.7888
-</span><span style="color:#75715e">// 0.0122
-</span><span style="color:#75715e">// 0.1905
+</span><span style="color:#75715e">// 0.2943
+</span><span style="color:#75715e">// 0.4150
+</span><span style="color:#75715e">// 0.6008
+</span><span style="color:#75715e">// 0.6668
+</span><span style="color:#75715e">// 0.0366
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Operations:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6</span><span style="color:#f92672">)</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
+
+<span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res7: Vec[Int] = [3 x 1]
 </span><span style="color:#75715e">// 5
 </span><span style="color:#75715e">// 7
@@ -190,23 +192,49 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">//  32
 </span><span style="color:#75715e">// 729
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
+<p>Note above, that you have to import that <code>BinOp</code> instances.</p>
+
+<p>An alternative set of instances are also available which inline the innermost in Mat and Vec operations:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// The macros package contains instances where the innermost loop is inlined.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> org.saddle._
+<span style="color:#66d9ef">import</span> org.saddle.macros.BinOps._  
+<span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6</span><span style="color:#f92672">)</span>
+<span style="color:#75715e">// res11: Vec[Int] = [3 x 1]
+</span><span style="color:#75715e">// 5
+</span><span style="color:#75715e">// 7
+</span><span style="color:#75715e">// 9
+</span><span style="color:#75715e">// 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6</span><span style="color:#f92672">)</span>
+<span style="color:#75715e">// res12: Vec[Int] = [3 x 1]
+</span><span style="color:#75715e">//  4
+</span><span style="color:#75715e">// 10
+</span><span style="color:#75715e">// 18
+</span><span style="color:#75715e">// 
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#f92672">**</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">5</span><span style="color:#f92672">,</span><span style="color:#ae81ff">6</span><span style="color:#f92672">)</span>
+<span style="color:#75715e">// res13: Vec[Int] = [3 x 1]
+</span><span style="color:#75715e">//   1
+</span><span style="color:#75715e">//  32
+</span><span style="color:#75715e">// 729
+</span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Slicing:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res10: scalar.Scalar[Int] = Value(3)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle._
+<span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
+<span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
+<span style="color:#75715e">// res15: scalar.Scalar[Int] = Value(3)
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>raw<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>  
-<span style="color:#75715e">// res11: Int = 3  
+<span style="color:#75715e">// res16: Int = 3  
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>apply<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res12: Vec[Int] = [2 x 1]
+<span style="color:#75715e">// res17: Vec[Int] = [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 3
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>apply<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">*)</span>
-<span style="color:#75715e">// res13: Vec[Int] = [2 x 1]
+<span style="color:#75715e">// res18: Vec[Int] = [2 x 1]
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 3
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>apply<span style="color:#f92672">(*</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res14: Vec[Int] = [2 x 1]
+<span style="color:#75715e">// res19: Vec[Int] = [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
@@ -219,7 +247,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 <p>Let’s look at a few constructions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we already know we can convert a Vec
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">32</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res15: Series[Int, Int] = [3 x 1]
+<span style="color:#75715e">// res20: Series[Int, Int] = [3 x 1]
 </span><span style="color:#75715e">// 0 -&gt; 32
 </span><span style="color:#75715e">// 1 -&gt; 12
 </span><span style="color:#75715e">// 2 -&gt;  9
@@ -227,7 +255,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// we can pass a pair of tuples
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res16: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res21: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt;  3
@@ -235,7 +263,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// any series of tuples will work, eg:
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">List</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">:</span> <span style="color:#66d9ef">_</span><span style="color:#66d9ef">*</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res17: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res22: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt;  3
@@ -243,7 +271,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// can pass data and index separately:
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res18: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res23: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt;  3
@@ -251,11 +279,11 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// you can create an empty Series like so:
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">.</span>empty<span style="color:#f92672">[</span><span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">Int</span><span style="color:#f92672">]</span>
-<span style="color:#75715e">// res19: Series[String, Int] = Empty Series
+<span style="color:#75715e">// res24: Series[String, Int] = Empty Series
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// supplied order is maintained:
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res20: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res25: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// a -&gt;  3
@@ -263,7 +291,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// unlike map, multiple keys are entirely fine:
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res21: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res26: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// a -&gt;  3
@@ -280,14 +308,14 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// get the values or index
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>values
-<span style="color:#75715e">// res22: Vec[Int] = [4 x 1]
+<span style="color:#75715e">// res27: Vec[Int] = [4 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 3
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>index
-<span style="color:#75715e">// res23: Index[String] = [Index 4 x 1]
+<span style="color:#75715e">// res28: Index[String] = [Index 4 x 1]
 </span><span style="color:#75715e">// c
 </span><span style="color:#75715e">// b
 </span><span style="color:#75715e">// a
@@ -296,10 +324,10 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// extract value by numerical offset
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res24: scalar.Scalar[Int] = Value(2)
+<span style="color:#75715e">// res29: scalar.Scalar[Int] = Value(2)
 </span><span style="color:#75715e"></span>
  q<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res25: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res30: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// b -&gt;  3
@@ -307,10 +335,10 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or extract key
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>keyAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res26: scalar.Scalar[String] = Value(&#34;a&#34;)
+<span style="color:#75715e">// res31: scalar.Scalar[String] = Value(&#34;a&#34;)
 </span><span style="color:#75715e"></span>
  q<span style="color:#f92672">.</span>keyAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res27: Index[String] = [Index 3 x 1]
+<span style="color:#75715e">// res32: Index[String] = [Index 3 x 1]
 </span><span style="color:#75715e">// a
 </span><span style="color:#75715e">// b
 </span><span style="color:#75715e">// b
@@ -318,7 +346,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// sort by index ordering
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>sortedIx
-<span style="color:#75715e">// res28: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res33: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
@@ -327,7 +355,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// sort by value ordering
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>sorted
-<span style="color:#75715e">// res29: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res34: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  3
@@ -336,13 +364,13 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// extract elements matching the index
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res30: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res35: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  q<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res31: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res36: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
@@ -350,7 +378,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// notice ordering subtleties:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res32: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res37: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// a -&gt;  2
@@ -358,19 +386,19 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// get first or last values
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>first
-<span style="color:#75715e">// res33: scalar.Scalar[Int] = Value(1)
+<span style="color:#75715e">// res38: scalar.Scalar[Int] = Value(1)
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>last
-<span style="color:#75715e">// res34: scalar.Scalar[Int] = Value(4)
+<span style="color:#75715e">// res39: scalar.Scalar[Int] = Value(4)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or key
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>firstKey
-<span style="color:#75715e">// res35: scalar.Scalar[String] = Value(&#34;c&#34;)
+<span style="color:#75715e">// res40: scalar.Scalar[String] = Value(&#34;c&#34;)
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>lastKey
-<span style="color:#75715e">// res36: scalar.Scalar[String] = Value(&#34;b&#34;)
+<span style="color:#75715e">// res41: scalar.Scalar[String] = Value(&#34;b&#34;)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// &#34;reindex&#34; to a new index:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>reindex<span style="color:#f92672">(</span><span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res37: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res42: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// d -&gt; NA
@@ -378,7 +406,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or just by a sequence of keys:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>reindex<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res38: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res43: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// d -&gt; NA
@@ -386,7 +414,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// notice that &#39;slicing&#39; ignores unknown keys:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res39: Series[String, Int] = [1 x 1]
+<span style="color:#75715e">// res44: Series[String, Int] = [1 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we cannot reindex with &#34;b&#34;, because it isn&#39;t unique.
 </span><span style="color:#75715e">// (the problem is, which &#34;b&#34; would we choose?)
@@ -398,10 +426,10 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// 	at org.saddle.index.IndexAny.getIndexer(IndexAny.scala:29)
 </span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:246)
 </span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:255)
-</span><span style="color:#75715e">// 	at repl.Session$App$$anonfun$42.apply(usage.md:150)
-</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> 	at repl<span style="color:#f92672">.</span><span style="color:#a6e22e">Session$App$$anonfun$42</span><span style="color:#f92672">.</span>apply<span style="color:#f92672">(</span>usage<span style="color:#f92672">.</span>md<span style="color:#66d9ef">:</span><span style="color:#960050;background-color:#1e0010">150</span><span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we can &#34;reset&#34; the index to integer labels
+</span><span style="color:#75715e">// 	at repl.Session$App14$$anonfun$45.apply(usage.md:184)
+</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> 	at repl<span style="color:#f92672">.</span><span style="color:#a6e22e">Session$App14$$anonfun$45</span><span style="color:#f92672">.</span>apply<span style="color:#f92672">(</span>usage<span style="color:#f92672">.</span>md<span style="color:#66d9ef">:</span><span style="color:#960050;background-color:#1e0010">184</span><span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we can &#34;reset&#34; the index to integer labels
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>resetIndex
-<span style="color:#75715e">// res40: Series[Int, Int] = [4 x 1]
+<span style="color:#75715e">// res45: Series[Int, Int] = [4 x 1]
 </span><span style="color:#75715e">// 0 -&gt;  1
 </span><span style="color:#75715e">// 1 -&gt;  3
 </span><span style="color:#75715e">// 2 -&gt;  2
@@ -410,7 +438,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or to a new index altogether
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>setIndex<span style="color:#f92672">(</span><span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;w&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;y&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;z&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res41: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res46: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// w -&gt;  1
 </span><span style="color:#75715e">// x -&gt;  3
 </span><span style="color:#75715e">// y -&gt;  2
@@ -426,7 +454,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> s<span style="color:#f92672">.</span>sliceBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res42: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res47: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// c -&gt;  1
@@ -434,13 +462,13 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// syntactic sugar is provided:
 </span><span style="color:#75715e"></span> s<span style="color:#f92672">.</span>sliceBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span> <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res43: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res48: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> s<span style="color:#f92672">.</span>sliceBy<span style="color:#f92672">(*</span> <span style="color:#f92672">-&gt;</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res44: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res49: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
@@ -449,83 +477,83 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 <span style="color:#75715e">// where slice is by offset, exclusive by default, and the
 </span><span style="color:#75715e">// index doesn&#39;t have to be sorted:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>slice<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res45: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res50: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// there are head/tail methods:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>head<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res46: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res51: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>tail<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res47: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res52: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Aside from extracting values, there are many fun ways to compute with Series. Try the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">q<span style="color:#f92672">.</span>mapValues<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res48: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res53: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// a -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  5
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>mapIndex<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res49: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res54: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// cx -&gt;  1
 </span><span style="color:#75715e">// bx -&gt;  3
 </span><span style="color:#75715e">// ax -&gt;  2
 </span><span style="color:#75715e">// bx -&gt;  4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>shift<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res50: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res55: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt; NA
 </span><span style="color:#75715e">// b -&gt;  1
 </span><span style="color:#75715e">// a -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>filter<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res51: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res56: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>filterIx<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res52: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res57: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>filterAt <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> loc <span style="color:#66d9ef">=&gt;</span> loc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">&amp;&amp;</span> loc <span style="color:#f92672">!=</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res53: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res58: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>find<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res54: Vec[Int] = [1 x 1]
+<span style="color:#75715e">// res59: Vec[Int] = [1 x 1]
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>findKey <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">=&gt;</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res55: Index[String] = [Index 2 x 1]
+<span style="color:#75715e">// res60: Index[String] = [Index 2 x 1]
 </span><span style="color:#75715e">// b
 </span><span style="color:#75715e">// a
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>findOneKey <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">=&gt;</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res56: scalar.Scalar[String] = Value(&#34;b&#34;)
+<span style="color:#75715e">// res61: scalar.Scalar[String] = Value(&#34;b&#34;)
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>minKey
-<span style="color:#75715e">// res57: scalar.Scalar[String] = Value(&#34;c&#34;)
+<span style="color:#75715e">// res62: scalar.Scalar[String] = Value(&#34;c&#34;)
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>contains<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res58: Boolean = true
+<span style="color:#75715e">// res63: Boolean = true
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>scanLeft<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> <span style="color:#f92672">(</span>acc<span style="color:#f92672">,</span> v<span style="color:#f92672">)</span> <span style="color:#66d9ef">=&gt;</span> acc <span style="color:#f92672">+</span> v <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res59: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res64: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// a -&gt;  6
 </span><span style="color:#75715e">// b -&gt; 10
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>reversed
-<span style="color:#75715e">// res60: Series[String, Int] = [4 x 1]
+<span style="color:#75715e">// res65: Series[String, Int] = [4 x 1]
 </span><span style="color:#75715e">// b -&gt;  4
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  3
@@ -540,21 +568,21 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// b -&gt; NA
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>ma<span style="color:#f92672">.</span>hasNA
-<span style="color:#75715e">// res61: Boolean = true
+<span style="color:#75715e">// res66: Boolean = true
 </span><span style="color:#75715e"></span>ma<span style="color:#f92672">.</span>dropNA
-<span style="color:#75715e">// res62: Series[String, Int] = [2 x 1]
+<span style="color:#75715e">// res67: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 q<span style="color:#f92672">.</span>rolling<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>minKey<span style="color:#f92672">)</span>
-<span style="color:#75715e">// res63: Series[String, scalar.Scalar[String]] = [3 x 1]
+<span style="color:#75715e">// res68: Series[String, scalar.Scalar[String]] = [3 x 1]
 </span><span style="color:#75715e">// b -&gt;  c
 </span><span style="color:#75715e">// a -&gt;  a
 </span><span style="color:#75715e">// b -&gt;  a
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>splitAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res64: (Series[String, Int], Series[String, Int]) = (
+<span style="color:#75715e">// res69: (Series[String, Int], Series[String, Int]) = (
 </span><span style="color:#75715e">//   [2 x 1]
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  3
@@ -565,7 +593,7 @@ q<span style="color:#f92672">.</span>rolling<span style="color:#f92672">(</span>
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e">// )
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>sortedIx<span style="color:#f92672">.</span>splitBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res65: (Series[String, Int], Series[String, Int]) = (
+<span style="color:#75715e">// res70: (Series[String, Int], Series[String, Int]) = (
 </span><span style="color:#75715e">//   [1 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// ,
@@ -577,14 +605,14 @@ q<span style="color:#f92672">.</span>rolling<span style="color:#f92672">(</span>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span> <span style="color:#f92672">)</span></code></pre></div>
 <p>We can of course convert to a Vec or a Seq if we need to. The Series.toSeq method yields a sequence of key/value tuples.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">q<span style="color:#f92672">.</span>toVec
-<span style="color:#75715e">// res66: Vec[Int] = [4 x 1]
+<span style="color:#75715e">// res71: Vec[Int] = [4 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 3
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>toSeq
-<span style="color:#75715e">// res67: IndexedSeq[(String, Int)] = Vector(
+<span style="color:#75715e">// res72: IndexedSeq[(String, Int)] = Vector(
 </span><span style="color:#75715e">//   (&#34;c&#34;, 1),
 </span><span style="color:#75715e">//   (&#34;b&#34;, 3),
 </span><span style="color:#75715e">//   (&#34;a&#34;, 2),
@@ -592,14 +620,14 @@ q<span style="color:#f92672">.</span>rolling<span style="color:#f92672">(</span>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span> <span style="color:#f92672">)</span></code></pre></div>
 <p>We can also group by key in order to transform or combine the groupings, which themselves are Series. For example:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">q<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">.</span>combine<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>sum<span style="color:#f92672">)</span>
-<span style="color:#75715e">// res68: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res73: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  2
 </span><span style="color:#75715e">// b -&gt;  7
 </span><span style="color:#75715e">// c -&gt;  1
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 q<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">.</span>transform<span style="color:#f92672">(</span>s <span style="color:#66d9ef">=&gt;</span> s <span style="color:#f92672">-</span> s<span style="color:#f92672">.</span>mean<span style="color:#f92672">)</span>
-<span style="color:#75715e">// res69: Series[String, Double] = [4 x 1]
+<span style="color:#75715e">// res74: Series[String, Double] = [4 x 1]
 </span><span style="color:#75715e">// c -&gt;  0.0000
 </span><span style="color:#75715e">// b -&gt; -0.5000
 </span><span style="color:#75715e">// a -&gt;  0.0000
@@ -625,7 +653,7 @@ q<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">.</span>
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 a <span style="color:#f92672">+</span> b
-<span style="color:#75715e">// res70: Series[String, Int] = [6 x 1]
+<span style="color:#75715e">// res75: Series[String, Int] = [6 x 1]
 </span><span style="color:#75715e">// a -&gt; NA
 </span><span style="color:#75715e">// b -&gt;  9
 </span><span style="color:#75715e">// c -&gt;  4
@@ -650,7 +678,7 @@ a <span style="color:#f92672">+</span> b
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 c <span style="color:#f92672">+</span> d
-<span style="color:#75715e">// res71: Series[String, Int] = [6 x 1]
+<span style="color:#75715e">// res76: Series[String, Int] = [6 x 1]
 </span><span style="color:#75715e">// a -&gt; NA
 </span><span style="color:#75715e">// b -&gt;  9
 </span><span style="color:#75715e">// b -&gt;  6
@@ -662,7 +690,7 @@ c <span style="color:#f92672">+</span> d
 
 <p>We mentioned joins. Let’s look at a few join operations; the result is a Frame, which we will touch on a bit later. These are similar in nature to SQL joins.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">a<span style="color:#f92672">.</span>join<span style="color:#f92672">(</span>b<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res72: Frame[String, Int, Int] = [4 x 2]
+<span style="color:#75715e">// res77: Frame[String, Int, Int] = [4 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -672,7 +700,7 @@ c <span style="color:#f92672">+</span> d
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  a<span style="color:#f92672">.</span>join<span style="color:#f92672">(</span>b<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">RightJoin</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res73: Frame[String, Int, Int] = [5 x 2]
+<span style="color:#75715e">// res78: Frame[String, Int, Int] = [5 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  4  5 
@@ -683,7 +711,7 @@ c <span style="color:#f92672">+</span> d
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  a<span style="color:#f92672">.</span>join<span style="color:#f92672">(</span>b<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">InnerJoin</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res74: Frame[String, Int, Int] = [3 x 2]
+<span style="color:#75715e">// res79: Frame[String, Int, Int] = [3 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  4  5 
@@ -692,7 +720,7 @@ c <span style="color:#f92672">+</span> d
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  a<span style="color:#f92672">.</span>join<span style="color:#f92672">(</span>b<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">OuterJoin</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res75: Frame[String, Int, Int] = [6 x 2]
+<span style="color:#75715e">// res80: Frame[String, Int, Int] = [6 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -712,87 +740,87 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <p>Let’s start off with construction:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle._
  <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res76: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res81: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// all same:
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">)))</span>
-<span style="color:#75715e">// res77: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res82: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res78: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res83: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">)))</span>
-<span style="color:#75715e">// res79: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res84: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// identity matrix:
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>ident<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res80: Mat[Double] = [2 x 2]
+<span style="color:#75715e">// res85: Mat[Double] = [2 x 2]
 </span><span style="color:#75715e">// 1.0000 0.0000 
 </span><span style="color:#75715e">// 0.0000 1.0000 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// empty matrix:
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">.</span>empty<span style="color:#f92672">[</span><span style="color:#66d9ef">Double</span><span style="color:#f92672">]</span>
-<span style="color:#75715e">// res81: Mat[Double] = [0 x 0]
+<span style="color:#75715e">// res86: Mat[Double] = [0 x 0]
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// zeros:
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">[</span><span style="color:#66d9ef">Int</span><span style="color:#f92672">](</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res82: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res87: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 0 0 
 </span><span style="color:#75715e">// 0 0 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Again, sometimes we want to create instances filled with random observations. As to Vec, we can do the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>       
-<span style="color:#75715e">// res83: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.0846 0.5046 
-</span><span style="color:#75715e">// 0.3553 0.2022 
+<span style="color:#75715e">// res88: Mat[Double] = [2 x 2]
+</span><span style="color:#75715e">// 0.2394 0.8188 
+</span><span style="color:#75715e">// 0.9585 0.5421 
 </span><span style="color:#75715e">//        
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randp<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random positive doubles
-</span><span style="color:#75715e">// res84: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.1521 0.8034 
-</span><span style="color:#75715e">// 0.1686 0.9577 
+</span><span style="color:#75715e">// res89: Mat[Double] = [2 x 2]
+</span><span style="color:#75715e">// 0.2759 0.0470 
+</span><span style="color:#75715e">// 0.6520 0.6967 
 </span><span style="color:#75715e">//       // random positive doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random normally distributed doubles
-</span><span style="color:#75715e">// res85: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.0028  0.5718 
-</span><span style="color:#75715e">// 0.9262 -0.7475 
+</span><span style="color:#75715e">// res90: Mat[Double] = [2 x 2]
+</span><span style="color:#75715e">// 0.3946 0.0054 
+</span><span style="color:#75715e">// 1.0434 3.4430 
 </span><span style="color:#75715e">//       // random normally distributed doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn2<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">12</span><span style="color:#f92672">)</span> <span style="color:#75715e">// random normally distributed with mean=3, stdev=12
-</span><span style="color:#75715e">// res86: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 1.6458  4.2607 
-</span><span style="color:#75715e">// 6.3628 -6.2630 
+</span><span style="color:#75715e">// res91: Mat[Double] = [2 x 2]
+</span><span style="color:#75715e">// 17.5735 -10.3406 
+</span><span style="color:#75715e">//  1.9661  -0.2933 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are a few other factory methods available:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res87: Mat[Double] = [2 x 2]
+<span style="color:#75715e">// res92: Mat[Double] = [2 x 2]
 </span><span style="color:#75715e">// 1.0000 1.0000 
 </span><span style="color:#75715e">// 1.0000 1.0000 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>zeros<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res88: Mat[Double] = [2 x 2]
+<span style="color:#75715e">// res93: Mat[Double] = [2 x 2]
 </span><span style="color:#75715e">// 0.0000 0.0000 
 </span><span style="color:#75715e">// 0.0000 0.0000 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>diag<span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res89: Mat[Double] = [2 x 2]
+<span style="color:#75715e">// res94: Mat[Double] = [2 x 2]
 </span><span style="color:#75715e">// 1.0000 0.0000 
 </span><span style="color:#75715e">// 0.0000 2.0000 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Let’s look at some basic operations with Mat. As with Vec, you may perform calculations on two Mat instances, or on a Mat and a scalar value.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// element-wise multiplication
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res90: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res95: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 4  2 
 </span><span style="color:#75715e">// 6 12 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
@@ -800,7 +828,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.linalg._
 <span style="color:#75715e">// matrix multiplication
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">2</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">3</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">4</span>d<span style="color:#f92672">))</span> mm <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">4</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">1</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">2</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">3</span>d<span style="color:#f92672">))</span>
-<span style="color:#75715e">// res91: Mat[Double] = [2 x 2]
+<span style="color:#75715e">// res96: Mat[Double] = [2 x 2]
 </span><span style="color:#75715e">//  8.0000  7.0000 
 </span><span style="color:#75715e">// 20.0000 15.0000 
 </span><span style="color:#75715e">// 
@@ -808,24 +836,24 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 
 <span style="color:#75715e">// matrix-vector multiplication
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">2</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">3</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">4</span>d<span style="color:#f92672">))</span> mv <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span>d<span style="color:#f92672">,</span><span style="color:#ae81ff">1</span>d<span style="color:#f92672">)</span>
-<span style="color:#75715e">// res92: Vec[Double] = [2 x 1]
+<span style="color:#75715e">// res97: Vec[Double] = [2 x 1]
 </span><span style="color:#75715e">//  4.0000
 </span><span style="color:#75715e">// 10.0000
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// as expected
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
-<span style="color:#75715e">// res93: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res98: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 2 4 
 </span><span style="color:#75715e">// 6 8 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
-<span style="color:#75715e">// res94: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res99: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 5 6 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">))</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>
-<span style="color:#75715e">// res95: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res100: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">//  4  8 
 </span><span style="color:#75715e">// 12 16 
 </span><span style="color:#75715e">// 
@@ -833,7 +861,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// transpose
 </span><span style="color:#75715e"></span> <span style="color:#a6e22e">Mat</span><span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">)).</span>T
-<span style="color:#75715e">// res96: Mat[Int] = [2 x 2]
+<span style="color:#75715e">// res101: Mat[Int] = [2 x 2]
 </span><span style="color:#75715e">// 1 3 
 </span><span style="color:#75715e">// 2 4 
 </span><span style="color:#75715e">// 
@@ -845,49 +873,49 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>numRows
-<span style="color:#75715e">// res97: Int = 2
+<span style="color:#75715e">// res102: Int = 2
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>numCols
-<span style="color:#75715e">// res98: Int = 2
+<span style="color:#75715e">// res103: Int = 2
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>isSquare
-<span style="color:#75715e">// res99: Boolean = true
+<span style="color:#75715e">// res104: Boolean = true
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>isEmpty
-<span style="color:#f92672">//</span> res100<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span></code></pre></div>
+<span style="color:#f92672">//</span> res105<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span></code></pre></div>
 <p>There are a few ways to extract values from a Mat.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">m<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res101: scalar.Scalar[Int] = Value(2)
+<span style="color:#75715e">// res106: scalar.Scalar[Int] = Value(2)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// be careful with this one!
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>raw<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res102: Int = 2
+<span style="color:#75715e">// res107: Int = 2
 </span><span style="color:#75715e"></span>
  m<span style="color:#f92672">.</span>takeRows<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res103: Mat[Int] = [1 x 2]
+<span style="color:#75715e">// res108: Mat[Int] = [1 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  m<span style="color:#f92672">.</span>withoutRows<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res104: Mat[Int] = [1 x 2]
+<span style="color:#75715e">// res109: Mat[Int] = [1 x 2]
 </span><span style="color:#75715e">// 3 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  m<span style="color:#f92672">.</span>takeCols<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res105: Mat[Int] = [2 x 1]
+<span style="color:#75715e">// res110: Mat[Int] = [2 x 1]
 </span><span style="color:#75715e">// 1 
 </span><span style="color:#75715e">// 3 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  m<span style="color:#f92672">.</span>col<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res106: Vec[Int] = [2 x 1]
+<span style="color:#75715e">// res111: Vec[Int] = [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 3
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>row<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res107: Vec[Int] = [2 x 1]
+<span style="color:#75715e">// res112: Vec[Int] = [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>rows<span style="color:#f92672">()</span>
-<span style="color:#75715e">// res108: IndexedSeq[Vec[Int]] = Vector(
+<span style="color:#75715e">// res113: IndexedSeq[Vec[Int]] = Vector(
 </span><span style="color:#75715e">//   [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 2
@@ -898,7 +926,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e">// )
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>cols<span style="color:#f92672">()</span>
-<span style="color:#75715e">// res109: IndexedSeq[Vec[Int]] = Vector(
+<span style="color:#75715e">// res114: IndexedSeq[Vec[Int]] = Vector(
 </span><span style="color:#75715e">//   [2 x 1]
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 3
@@ -916,19 +944,19 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  m2<span style="color:#f92672">.</span>rowsWithNA
-<span style="color:#75715e">// res110: Set[Int] = Set(1)
+<span style="color:#75715e">// res115: Set[Int] = Set(1)
 </span><span style="color:#75715e"></span> m2<span style="color:#f92672">.</span>dropRowsWithNA
-<span style="color:#75715e">// res111: Mat[Int] = [1 x 2]
+<span style="color:#75715e">// res116: Mat[Int] = [1 x 2]
 </span><span style="color:#75715e">// 1 2 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> m2<span style="color:#f92672">.</span>reshape<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">4</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res112: Mat[Int] = [1 x 4]
+<span style="color:#75715e">// res117: Mat[Int] = [1 x 4]
 </span><span style="color:#75715e">// 1 2 NA 4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">).</span>roundTo<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res113: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.4900 0.6800 
-</span><span style="color:#75715e">// 0.7100 0.5700 
+<span style="color:#75715e">// res118: Mat[Double] = [2 x 2]
+</span><span style="color:#75715e">// 0.5700 0.4100 
+</span><span style="color:#75715e">// 0.1300 0.0100 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <h3 id="homogeneous-table-with-row-and-column-index-data-frame-frame-rx-cx-t">Homogeneous table with row and column index (data frame) : Frame[RX,CX,T]</h3>
 
@@ -959,7 +987,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span>v<span style="color:#f92672">,</span> u<span style="color:#f92672">)</span>                                    <span style="color:#75715e">// two-column frame
-</span><span style="color:#75715e">// res114: Frame[Int, Int, Int] = [2 x 2]
+</span><span style="color:#75715e">// res119: Frame[Int, Int, Int] = [2 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1  3 
@@ -967,7 +995,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//                                     // two-column frame
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span> <span style="color:#f92672">-&gt;</span> v<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;y&#34;</span> <span style="color:#f92672">-&gt;</span> u<span style="color:#f92672">)</span>                      <span style="color:#75715e">// with column index
-</span><span style="color:#75715e">// res115: Frame[Int, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res120: Frame[Int, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1  3 
@@ -975,7 +1003,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//                       // with column index
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span>s2<span style="color:#f92672">,</span> t<span style="color:#f92672">)</span>                                    <span style="color:#75715e">// aligned along rows
-</span><span style="color:#75715e">// res116: Frame[String, Int, Int] = [3 x 2]
+</span><span style="color:#75715e">// res121: Frame[String, Int, Int] = [3 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -984,7 +1012,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//                                     // aligned along rows
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span> <span style="color:#f92672">-&gt;</span> s2<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;y&#34;</span> <span style="color:#f92672">-&gt;</span> t<span style="color:#f92672">)</span>                      <span style="color:#75715e">// with column index
-</span><span style="color:#75715e">// res117: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res122: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -993,7 +1021,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//                       // with column index
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span>s2<span style="color:#f92672">,</span> t<span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;y&#34;</span><span style="color:#f92672">))</span>              <span style="color:#75715e">// explicit column index
-</span><span style="color:#75715e">// res118: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res123: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1002,7 +1030,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//               // explicit column index
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span>v<span style="color:#f92672">,</span> u<span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;y&#34;</span><span style="color:#f92672">))</span> <span style="color:#75715e">// row &amp; col indexes specified explicitly
-</span><span style="color:#75715e">// res119: Frame[Int, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res124: Frame[Int, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1  3 
@@ -1010,7 +1038,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//  // row &amp; col indexes specified explicitly
 </span><span style="color:#75715e"></span>
  <span style="color:#a6e22e">Frame</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span>v<span style="color:#f92672">,</span> u<span style="color:#f92672">),</span> <span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">))</span>              <span style="color:#75715e">// col index specified
-</span><span style="color:#75715e">// res120: Frame[Int, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res125: Frame[Int, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       a  b 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1  3 
@@ -1029,7 +1057,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>
  f<span style="color:#f92672">.</span>setRowIndex<span style="color:#f92672">(</span>org<span style="color:#f92672">.</span>saddle<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">IndexIntRange</span><span style="color:#f92672">(</span>f<span style="color:#f92672">.</span>numRows<span style="color:#f92672">))</span>
-<span style="color:#75715e">// res121: Frame[Int, String, Int] = [3 x 2]
+<span style="color:#75715e">// res126: Frame[Int, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1 NA 
@@ -1037,7 +1065,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 2 -&gt; NA  4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>setColIndex<span style="color:#f92672">(</span><span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;p&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;q&#34;</span><span style="color:#f92672">))</span>
-<span style="color:#75715e">// res122: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res127: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       p  q 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1045,7 +1073,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>resetRowIndex
-<span style="color:#75715e">// res123: Frame[Int, String, Int] = [3 x 2]
+<span style="color:#75715e">// res128: Frame[Int, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// 0 -&gt;  1 NA 
@@ -1053,7 +1081,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 2 -&gt; NA  4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>resetColIndex
-<span style="color:#75715e">// res124: Frame[String, Int, Int] = [3 x 2]
+<span style="color:#75715e">// res129: Frame[String, Int, Int] = [3 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1064,7 +1092,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 
 <p>You also have the following index transformation tools at hand:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>mapRowIndex <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> rx <span style="color:#66d9ef">=&gt;</span> rx<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res125: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res130: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//        x  y 
 </span><span style="color:#75715e">//       -- -- 
 </span><span style="color:#75715e">// a1 -&gt;  1 NA 
@@ -1072,7 +1100,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c1 -&gt; NA  4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>f<span style="color:#f92672">.</span>mapColIndex <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> cx <span style="color:#66d9ef">=&gt;</span> cx<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res126: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res131: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//      x2 y2 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1081,19 +1109,19 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Let’s next look at how to extract data from the Frame.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>rowAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>    <span style="color:#75715e">// extract row at offset 2, as Series
-</span><span style="color:#75715e">// res127: Series[String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res132: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// x -&gt; NA
 </span><span style="color:#75715e">// y -&gt;  4
 </span><span style="color:#75715e">//     // extract row at offset 2, as Series
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rowAt<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>  <span style="color:#75715e">// extract frame of rows 1 &amp; 2
-</span><span style="color:#75715e">// res128: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res133: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//   // extract frame of rows 1 &amp; 2
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rowAt<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span> <span style="color:#75715e">// extract frame of rows 1 &amp; 2
-</span><span style="color:#75715e">// res129: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res134: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  2  3 
@@ -1101,13 +1129,13 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">//  // extract frame of rows 1 &amp; 2
 </span><span style="color:#75715e"></span>
  f<span style="color:#f92672">.</span>colAt<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>    <span style="color:#75715e">// extract col at offset 1, as Series
-</span><span style="color:#75715e">// res130: Series[String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res135: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt; NA
 </span><span style="color:#75715e">// b -&gt;  3
 </span><span style="color:#75715e">// c -&gt;  4
 </span><span style="color:#75715e">//     // extract col at offset 1, as Series
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>colAt<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>  <span style="color:#75715e">// extract frame of cols 1 &amp; 2
-</span><span style="color:#75715e">// res131: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res136: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1115,7 +1143,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//   // extract frame of cols 1 &amp; 2
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>colAt<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">-&gt;</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span> <span style="color:#75715e">// extract frame of cols 1 &amp; 2
-</span><span style="color:#75715e">// res132: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res137: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1124,15 +1152,15 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>rowAt and colAt are used under the hood for the at extractor:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>              <span style="color:#75715e">// Scalar value
-</span><span style="color:#75715e">// res133: scalar.Scalar[Int] = Value(3)              // Scalar value
+</span><span style="color:#75715e">// res138: scalar.Scalar[Int] = Value(3)              // Scalar value
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">),</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>    <span style="color:#75715e">// extract rows 1,2 of column 0
-</span><span style="color:#75715e">// res134: Series[String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res139: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt; NA
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>If you want more control over slicing, you can use these methods:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>colSlice<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>        <span style="color:#75715e">// frame slice consisting of column 0
-</span><span style="color:#75715e">// res135: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res140: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1140,7 +1168,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA 
 </span><span style="color:#75715e">//         // frame slice consisting of column 0
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rowSlice<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// row slice from 0 until 3, striding by 2
-</span><span style="color:#75715e">// res136: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res141: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1148,13 +1176,13 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Of course, this is an bi-indexed data structure, so we can use its indexes to select out data using keys:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>row<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span>             <span style="color:#75715e">// row series &#39;a&#39;, with all columns
-</span><span style="color:#75715e">// res137: Frame[String, String, Int] = [1 x 2]
+</span><span style="color:#75715e">// res142: Frame[String, String, Int] = [1 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">//              // row series &#39;a&#39;, with all columns
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>col<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>             <span style="color:#75715e">// col series &#39;x&#39;, with all rows
-</span><span style="color:#75715e">// res138: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res143: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1162,21 +1190,21 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA 
 </span><span style="color:#75715e">//              // col series &#39;x&#39;, with all rows
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>row<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">)</span>        <span style="color:#75715e">// select two rows
-</span><span style="color:#75715e">// res139: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res144: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//         // select two rows
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>row<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">-&gt;</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>        <span style="color:#75715e">// slice two rows (index must be sorted)
-</span><span style="color:#75715e">// res140: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res145: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">//         // slice two rows (index must be sorted)
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>row<span style="color:#f92672">(</span><span style="color:#a6e22e">Seq</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">)</span><span style="color:#66d9ef">:_</span><span style="color:#66d9ef">*</span><span style="color:#f92672">)</span>   <span style="color:#75715e">// another way to select
-</span><span style="color:#75715e">// res141: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res146: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1184,13 +1212,13 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>A more explict way to slice with keys is as follows, and you can specify whether the right bound is inclusive or exclusive. Again, to slice, the index keys must be ordered.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>rowSliceBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> inclusive<span style="color:#66d9ef">=</span><span style="color:#66d9ef">false</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res142: Frame[String, String, Int] = [1 x 2]
+<span style="color:#75715e">// res147: Frame[String, String, Int] = [1 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>colSliceBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">,</span> inclusive<span style="color:#66d9ef">=</span><span style="color:#66d9ef">true</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res143: Frame[String, String, Int] = [3 x 1]
+<span style="color:#75715e">// res148: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1199,20 +1227,20 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>The row and col methods are used under the hood for the apply method:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>             <span style="color:#75715e">// extract a one-element frame by keys
-</span><span style="color:#75715e">// res144: Frame[String, String, Int] = [1 x 1]
+</span><span style="color:#75715e">// res149: Frame[String, String, Int] = [1 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
 </span><span style="color:#75715e">//              // extract a one-element frame by keys
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">-&gt;</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>        <span style="color:#75715e">// two-row, one-column frame
-</span><span style="color:#75715e">// res145: Frame[String, String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res150: Frame[String, String, Int] = [2 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
 </span><span style="color:#75715e">// b -&gt;  2 
 </span><span style="color:#75715e">//         // two-row, one-column frame
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">).</span>toArray<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>   <span style="color:#75715e">// same as above, but extracting, not slicing
-</span><span style="color:#75715e">// res146: Frame[String, String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res151: Frame[String, String, Int] = [2 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1222,7 +1250,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 
 <p>You can also split up the Frame by key or index:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>colSplitAt<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>          <span style="color:#75715e">// split into two frames at column 1
-</span><span style="color:#75715e">// res147: (Frame[String, String, Int], Frame[String, String, Int]) = (
+</span><span style="color:#75715e">// res152: (Frame[String, String, Int], Frame[String, String, Int]) = (
 </span><span style="color:#75715e">//   [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
@@ -1239,7 +1267,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e">// )          // split into two frames at column 1
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>colSplitBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;y&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res148: (Frame[String, String, Int], Frame[String, String, Int]) = (
+<span style="color:#75715e">// res153: (Frame[String, String, Int], Frame[String, String, Int]) = (
 </span><span style="color:#75715e">//   [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
@@ -1257,7 +1285,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// )
 </span><span style="color:#75715e"></span>
  f<span style="color:#f92672">.</span>rowSplitAt<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res149: (Frame[String, String, Int], Frame[String, String, Int]) = (
+<span style="color:#75715e">// res154: (Frame[String, String, Int], Frame[String, String, Int]) = (
 </span><span style="color:#75715e">//   [1 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
@@ -1271,7 +1299,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e">// )
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rowSplitBy<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res150: (Frame[String, String, Int], Frame[String, String, Int]) = (
+<span style="color:#75715e">// res155: (Frame[String, String, Int], Frame[String, String, Int]) = (
 </span><span style="color:#75715e">//   [1 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
@@ -1286,21 +1314,21 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span> <span style="color:#f92672">)</span></code></pre></div>
 <p>You extract some number of rows or columns:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>head<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>                <span style="color:#75715e">// operates on rows
-</span><span style="color:#75715e">// res151: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res156: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">//                 // operates on rows
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>tail<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res152: Frame[String, String, Int] = [2 x 2]
+<span style="color:#75715e">// res157: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>headCol<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>             <span style="color:#75715e">// operates on cols
-</span><span style="color:#75715e">// res153: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res158: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1308,7 +1336,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA 
 </span><span style="color:#75715e">//              // operates on cols
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>tailCol<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res154: Frame[String, String, Int] = [3 x 1]
+<span style="color:#75715e">// res159: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       y 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt; NA 
@@ -1317,23 +1345,23 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Or the first &amp; last of some key (which is helpful when you’ve got a multi-key index):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>first<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>              <span style="color:#75715e">// first row indexed by &#34;b&#34; key
-</span><span style="color:#75715e">// res155: Series[String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res160: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// x -&gt;  2
 </span><span style="color:#75715e">// y -&gt;  3
 </span><span style="color:#75715e">//               // first row indexed by &#34;b&#34; key
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>last<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>               <span style="color:#75715e">// last row indexed by &#34;b&#34; key
-</span><span style="color:#75715e">// res156: Series[String, Int] = [2 x 1]
+</span><span style="color:#75715e">// res161: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// x -&gt;  2
 </span><span style="color:#75715e">// y -&gt;  3
 </span><span style="color:#75715e">//                // last row indexed by &#34;b&#34; key
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>firstCol<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res157: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res162: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt; NA
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>lastCol<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;x&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res158: Series[String, Int] = [3 x 1]
+<span style="color:#75715e">// res163: Series[String, Int] = [3 x 1]
 </span><span style="color:#75715e">// a -&gt;  1
 </span><span style="color:#75715e">// b -&gt;  2
 </span><span style="color:#75715e">// c -&gt; NA
@@ -1341,9 +1369,9 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <p>There are a few other methods of extracting data:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.linalg._
  f<span style="color:#f92672">.</span>filter <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> s <span style="color:#66d9ef">=&gt;</span> s<span style="color:#f92672">.</span>toVec<span style="color:#f92672">.</span>map<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>toDouble<span style="color:#f92672">).</span>mean2 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2.0</span> <span style="color:#f92672">}</span>  <span style="color:#75715e">// any column whose series satisfies predicate
-</span><span style="color:#75715e">// res159: Frame[String, String, Int] = Empty Frame  // any column whose series satisfies predicate
+</span><span style="color:#75715e">// res164: Frame[String, String, Int] = Empty Frame  // any column whose series satisfies predicate
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>filterIx <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">=&gt;</span> x <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;x&#34;</span> <span style="color:#f92672">}</span>    <span style="color:#75715e">// col where index matches key &#34;x&#34;
-</span><span style="color:#75715e">// res160: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res165: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1351,7 +1379,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// c -&gt; NA 
 </span><span style="color:#75715e">//     // col where index matches key &#34;x&#34;
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>where<span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">))</span>            <span style="color:#75715e">// extract second column
-</span><span style="color:#75715e">// res161: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res166: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       y 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt; NA 
@@ -1366,16 +1394,16 @@ rwhere</code></pre></div>
 
 <p>You can drop cols (rows) containing any NA values:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>dropNA
-<span style="color:#75715e">// res162: Frame[String, String, Int] = Empty Frame
+<span style="color:#75715e">// res167: Frame[String, String, Int] = Empty Frame
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rdropNA
-<span style="color:#75715e">// res163: Frame[String, String, Int] = [1 x 2]
+<span style="color:#75715e">// res168: Frame[String, String, Int] = [1 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Let’s take a look at some operations we can do with Frames. We can do all the normal binary math operations with Frames, with either a scalar value or with another Frame. When two frames are involved, they are reindexed along both axes to match the outer join of their indices, but any missing observation in either will carry through the calculations.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-<span style="color:#75715e">// res164: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res169: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  2 NA 
@@ -1383,7 +1411,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA  5 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f <span style="color:#f92672">*</span> f
-<span style="color:#75715e">// res165: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res170: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1398,7 +1426,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// d -&gt; 10 
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> f <span style="color:#f92672">+</span> g                      <span style="color:#75715e">// one non-NA entry, (&#34;b&#34;, &#34;y&#34;, 8)
-</span><span style="color:#75715e">// res166: Frame[String, String, Int] = [4 x 2]
+</span><span style="color:#75715e">// res171: Frame[String, String, Int] = [4 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt; NA NA 
@@ -1408,7 +1436,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>You can effectively supply your own binary frame operation using joinMap, which lets you control the join style on rows and columns:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>joinMap<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> rhow<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">,</span> chow<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> <span style="color:#f92672">(</span>x<span style="color:#f92672">,</span> y<span style="color:#f92672">)</span> <span style="color:#66d9ef">=&gt;</span> x <span style="color:#f92672">+</span> y <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res167: Frame[String, String, Int] = [3 x 2]
+<span style="color:#75715e">// res172: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt; NA NA 
@@ -1435,7 +1463,7 @@ rwhere</code></pre></div>
 
 <p>We can sort a frame in various ways:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>sortedRIx                <span style="color:#75715e">// sorted by row index
-</span><span style="color:#75715e">// res168: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res173: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1443,7 +1471,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//                 // sorted by row index
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>sortedCIx                <span style="color:#75715e">// sorted by col index
-</span><span style="color:#75715e">// res169: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res174: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1451,7 +1479,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//                 // sorted by col index
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>sortedRows<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>          <span style="color:#75715e">// sort rows by (primary) col 0 and (secondary) col 1
-</span><span style="color:#75715e">// res170: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res175: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// c -&gt; NA  4 
@@ -1459,7 +1487,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">//           // sort rows by (primary) col 0 and (secondary) col 1
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>sortedCols<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>          <span style="color:#75715e">// sort cols by (primary) row 1 and (secondary) row 0
-</span><span style="color:#75715e">// res171: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res176: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1468,7 +1496,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>We can also sort by an ordering provided by the result of a function acting on rows or cols:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>sortedRowsBy <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> r <span style="color:#66d9ef">=&gt;</span> r<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">}</span>   <span style="color:#75715e">// sort rows by first element of row
-</span><span style="color:#75715e">// res172: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res177: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// c -&gt; NA  4 
@@ -1476,7 +1504,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">//    // sort rows by first element of row
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>sortedColsBy <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> c <span style="color:#66d9ef">=&gt;</span> c<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">}</span>   <span style="color:#75715e">// sort cols by first element of col
-</span><span style="color:#75715e">// res173: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res178: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       y  x 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt; NA  1 
@@ -1485,7 +1513,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are several mapping functions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>mapValues <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> t <span style="color:#66d9ef">=&gt;</span> t <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">}</span>        <span style="color:#75715e">// add one to each element of frame
-</span><span style="color:#75715e">// res174: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res179: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  2 NA 
@@ -1494,7 +1522,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">//         // add one to each element of frame
 </span><span style="color:#75715e"></span> <span style="color:#66d9ef">import</span> org.saddle.linalg._
  f<span style="color:#f92672">.</span>mapVec <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> v <span style="color:#66d9ef">=&gt;</span> v<span style="color:#f92672">.</span>map<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>toDouble<span style="color:#f92672">).</span>demeaned <span style="color:#f92672">}</span>      <span style="color:#75715e">// map over each col vec of the frame
-</span><span style="color:#75715e">// res175: Frame[String, String, Double] = [3 x 2]
+</span><span style="color:#75715e">// res180: Frame[String, String, Double] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt; NA NA 
@@ -1502,12 +1530,12 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA NA 
 </span><span style="color:#75715e">//       // map over each col vec of the frame
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>reduce <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> s <span style="color:#66d9ef">=&gt;</span> s<span style="color:#f92672">.</span>toVec<span style="color:#f92672">.</span>map<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>toDouble<span style="color:#f92672">).</span>mean2 <span style="color:#f92672">}</span>          <span style="color:#75715e">// collapse each col series to a single value
-</span><span style="color:#75715e">// res176: Series[String, Double] = [2 x 1]
+</span><span style="color:#75715e">// res181: Series[String, Double] = [2 x 1]
 </span><span style="color:#75715e">// x -&gt; NA
 </span><span style="color:#75715e">// y -&gt; NA
 </span><span style="color:#75715e">//           // collapse each col series to a single value
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>transform <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> s <span style="color:#66d9ef">=&gt;</span> s<span style="color:#f92672">.</span>reversed <span style="color:#f92672">}</span>   <span style="color:#75715e">// transform each series; outerjoin results
-</span><span style="color:#75715e">// res177: Frame[String, String, Int] = [3 x 2]
+</span><span style="color:#75715e">// res182: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// c -&gt; NA  4 
@@ -1519,14 +1547,14 @@ rwhere</code></pre></div>
  f.mask(Vec(false, true, true))         // mask out rows 1 &amp; 2 (keep row 0)</code></pre></div>
 <p>Columns (rows) containing only NA values can be dropped as follows:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>mask<span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">)).</span>rsqueeze   <span style="color:#75715e">// drop rows containing NA values
-</span><span style="color:#75715e">// res178: Frame[String, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res183: Frame[String, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  2  3 
 </span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//    // drop rows containing NA values
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rmask<span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#66d9ef">false</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">)).</span>squeeze          <span style="color:#75715e">// takes &#34;x&#34; column
-</span><span style="color:#75715e">// res179: Frame[String, String, Int] = [3 x 1]
+</span><span style="color:#75715e">// res184: Frame[String, String, Int] = [3 x 1]
 </span><span style="color:#75715e">//       x 
 </span><span style="color:#75715e">//      -- 
 </span><span style="color:#75715e">// a -&gt;  1 
@@ -1536,14 +1564,14 @@ rwhere</code></pre></div>
 <p>We can groupBy in order to combine or transform:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.linalg._
  f<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">).</span>combine<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>count<span style="color:#f92672">)</span>       <span style="color:#75715e">// # obs in each column that have/not row key &#34;a&#34;
-</span><span style="color:#75715e">// res180: Frame[Boolean, String, Int] = [2 x 2]
+</span><span style="color:#75715e">// res185: Frame[Boolean, String, Int] = [2 x 2]
 </span><span style="color:#75715e">//           x  y 
 </span><span style="color:#75715e">//          -- -- 
 </span><span style="color:#75715e">// false -&gt;  1  2 
 </span><span style="color:#75715e">//  true -&gt;  1  0 
 </span><span style="color:#75715e">//        // # obs in each column that have/not row key &#34;a&#34;
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>groupBy<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">).</span>transform<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>map<span style="color:#f92672">(</span><span style="color:#66d9ef">_</span><span style="color:#f92672">.</span>toDouble<span style="color:#f92672">).</span>demeaned<span style="color:#f92672">)</span>  <span style="color:#75715e">// contrived, but you get the idea hopefully!
-</span><span style="color:#75715e">// res181: Frame[String, String, Double] = [3 x 2]
+</span><span style="color:#75715e">// res186: Frame[String, String, Double] = [3 x 2]
 </span><span style="color:#75715e">//           x       y 
 </span><span style="color:#75715e">//      ------ ------- 
 </span><span style="color:#75715e">// a -&gt; 0.0000      NA 
@@ -1552,7 +1580,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>We can join against another frame, or against a series.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>rconcat<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>              
-<span style="color:#75715e">// res182: Frame[String, String, Int] = [3 x 3]
+<span style="color:#75715e">// res187: Frame[String, String, Int] = [3 x 3]
 </span><span style="color:#75715e">//       x  y  y 
 </span><span style="color:#75715e">//      -- -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA NA 
@@ -1560,7 +1588,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA  4 NA 
 </span><span style="color:#75715e">//               
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>concat<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>              
-<span style="color:#75715e">// res183: Frame[String, String, Int] = [5 x 2]
+<span style="color:#75715e">// res188: Frame[String, String, Int] = [5 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1570,7 +1598,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// d -&gt; NA 10 
 </span><span style="color:#75715e">//               
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>cbind<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>              
-<span style="color:#75715e">// res184: Frame[String, String, Int] = [3 x 3]
+<span style="color:#75715e">// res189: Frame[String, String, Int] = [3 x 3]
 </span><span style="color:#75715e">//       x  y  y 
 </span><span style="color:#75715e">//      -- -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA NA 
@@ -1578,7 +1606,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// c -&gt; NA  4 NA 
 </span><span style="color:#75715e">//               
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>rbind<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>              
-<span style="color:#75715e">// res185: Frame[String, String, Int] = [5 x 2]
+<span style="color:#75715e">// res190: Frame[String, String, Int] = [5 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
@@ -1589,7 +1617,7 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Btw, to join a Frame to a series, the call looks like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">s<span style="color:#f92672">.</span>joinF<span style="color:#f92672">(</span>g<span style="color:#f92672">,</span> how<span style="color:#66d9ef">=</span>index<span style="color:#f92672">.</span><span style="color:#a6e22e">LeftJoin</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res186: Frame[String, Int, Int] = [3 x 2]
+<span style="color:#75715e">// res191: Frame[String, Int, Int] = [3 x 2]
 </span><span style="color:#75715e">//       0  1 
 </span><span style="color:#75715e">//      -- -- 
 </span><span style="color:#75715e">// b -&gt;  3  5 

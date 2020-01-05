@@ -122,6 +122,22 @@ pandas data analysis library for Python, and the Scala collections library.
       <p class="shortcomment cmt">Provides type aliases for a few basic operations
 </p><div class="fullcomment"><div class="comment cmt"><p>Provides type aliases for a few basic operations
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.ops.macroImpl" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="macroImpl"></a><a id="macroImpl:macroImpl"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/macroImpl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="macroImpl/index.html"><span class="name">macroImpl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle.ops">ops</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Add.html" title=""></a>
@@ -131,7 +147,7 @@ pandas data analysis library for Python, and the Scala collections library.
                         <a class="trait" href="AndOp.html" title=""></a>
                         <a href="AndOp.html" title="">AndOp</a>
                       </li><li class="current-entities indented3">
-                        <a class="object" href="BinOp$.html" title="Contains implementations of primitive binary ops that are NA-aware"></a>
+                        <span class="separator"></span>
                         <a class="trait" href="" title="Concrete implementations of BinOp provide primitive-specialized support for performing binary operations on elements of the following objects, as well as the objects themselves:"></a>
                         <a href="" title="Concrete implementations of BinOp provide primitive-specialized support for performing binary operations on elements of the following objects, as well as the objects themselves:">BinOp</a>
                       </li><li class="current-entities indented3">
@@ -162,6 +178,10 @@ pandas data analysis library for Python, and the Scala collections library.
                         <span class="separator"></span>
                         <a class="trait" href="BinOpVecInPlace.html" title=""></a>
                         <a href="BinOpVecInPlace.html" title="">BinOpVecInPlace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="BinOps$.html" title="Contains implementations of primitive binary ops that are NA-aware"></a>
+                        <a href="BinOps$.html" title="Contains implementations of primitive binary ops that are NA-aware">BinOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BitAnd.html" title=""></a>
@@ -269,16 +289,14 @@ pandas data analysis library for Python, and the Scala collections library.
           <div id="content">
             <body class="trait type">
       <div id="definition">
-        <a href="BinOp$.html" title="See companion object"><div class="big-circle trait-companion-object">t</div></a>
+        <div class="big-circle trait">t</div>
         <p id="owner"><a href="../../index.html" class="extype" name="org">org</a>.<a href="../index.html" class="extype" name="org.saddle">saddle</a>.<a href="index.html" class="extype" name="org.saddle.ops">ops</a></p>
-        <h1><a href="BinOp$.html" title="See companion object">BinOp</a><span class="permalink">
+        <h1>BinOp<span class="permalink">
       <a href="../../../org/saddle/ops/BinOp.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="BinOp$.html" title="See companion object">object BinOp</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -293,7 +311,7 @@ pandas data analysis library for Python, and the Scala collections library.
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Concrete implementations of BinOp provide primitive-specialized support for performing
-binary operations on elements of the following objects, as well as the objects themselves:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Appropriate BinOp instances are made available in an implicit context in order for the
+binary operations on elements of the following objects, as well as the objects themselves:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Appropriate BinOp instances have to be made available in an implicit context in order for the
 <a href="NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">org.saddle.ops.NumericOps</a> methods inherited by the structures above to operate in a
 seamless fashion.</p><p>For example:</p><pre>Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>) * Vec(<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>) == Vec(<span class="num">4</span>,<span class="num">10</span>,<span class="num">18</span>)</pre><p>The multiplication above relies on two BinOp implementations: the first is BinOp[Multiply, Vec, Vec, Vec],
 whose implementation in turn relies on BinOp[Multiply, Int, Int, Int].

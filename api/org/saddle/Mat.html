@@ -232,6 +232,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.macros" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="macros"></a><a id="macros:macros"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/macros/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="macros/index.html"><span class="name">macros</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li name="org.saddle.mat" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mat"></a><a id="mat:mat"></a>
       <span class="permalink">
@@ -361,6 +377,14 @@ are specialized for numeric types.
                         <a class="class" href="Buffer.html" title=""></a>
                         <a href="Buffer.html" title="">Buffer</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="FourInPlaceScalarLongOpBench.html" title=""></a>
+                        <a href="FourInPlaceScalarLongOpBench.html" title="">FourInPlaceScalarLongOpBench</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="FourInPlaceScalarOpBench.html" title=""></a>
+                        <a href="FourInPlaceScalarOpBench.html" title="">FourInPlaceScalarOpBench</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="Frame$.html" title=""></a>
                         <a class="class" href="Frame.html" title="Frame is an immutable container for 2D data which is indexed along both axes (rows, columns) by associated keys (i.e., indexes)."></a>
                         <a href="Frame.html" title="Frame is an immutable container for 2D data which is indexed along both axes (rows, columns) by associated keys (i.e., indexes).">Frame</a>
@@ -421,6 +445,14 @@ are specialized for numeric types.
                         <a class="class" href="Series.html" title="Series is an immutable container for 1D homogeneous data which is indexed by a an associated sequence of keys."></a>
                         <a href="Series.html" title="Series is an immutable container for 1D homogeneous data which is indexed by a an associated sequence of keys.">Series</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="SingleInPlaceScalarOpBench.html" title=""></a>
+                        <a href="SingleInPlaceScalarOpBench.html" title="">SingleInPlaceScalarOpBench</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="TwoInPlaceScalarOpBench.html" title=""></a>
+                        <a href="TwoInPlaceScalarOpBench.html" title="">TwoInPlaceScalarOpBench</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="Vec$.html" title=""></a>
                         <a class="trait" href="Vec.html" title="Vec is an immutable container for 1D homogeneous data (a &quot;vector&quot;)."></a>
                         <a href="Vec.html" title="Vec is an immutable container for 1D homogeneous data (a &quot;vector&quot;).">Vec</a>
@@ -453,7 +485,7 @@ are specialized for numeric types.
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
@@ -525,9 +557,9 @@ mutable data structure.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.saddle.Mat#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(r:Int,c:Int,values:Array[T],scalarTag:org.saddle.scalar.ScalarTag[T]):org.saddle.Mat[T]"></a><a id="&lt;init&gt;:Mat[T]"></a>
+      <a id="&lt;init&gt;(numRows:Int,numCols:Int,values:Array[T],scalarTag:org.saddle.scalar.ScalarTag[T]):org.saddle.Mat[T]"></a><a id="&lt;init&gt;:Mat[T]"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Mat.html#&lt;init&gt;(r:Int,c:Int,values:Array[T],scalarTag:org.saddle.scalar.ScalarTag[T]):org.saddle.Mat[T]" title="Permalink">
+      <a href="../../org/saddle/Mat.html#&lt;init&gt;(numRows:Int,numCols:Int,values:Array[T],scalarTag:org.saddle.scalar.ScalarTag[T]):org.saddle.Mat[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -536,7 +568,7 @@ mutable data structure.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Mat</span><span class="params">(<span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="values">values: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.Mat.T">T</span>]</span>, <span name="scalarTag">scalarTag: <a href="scalar/ScalarTag.html" class="extype" name="org.saddle.scalar.ScalarTag">ScalarTag</a>[<span class="extype" name="org.saddle.Mat.T">T</span>]</span>)</span>
+        <span class="name">Mat</span><span class="params">(<span name="numRows">numRows: <span class="extype" name="scala.Int">Int</span></span>, <span name="numCols">numCols: <span class="extype" name="scala.Int">Int</span></span>, <span name="values">values: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.Mat.T">T</span>]</span>, <span name="scalarTag">scalarTag: <a href="scalar/ScalarTag.html" class="extype" name="org.saddle.scalar.ScalarTag">ScalarTag</a>[<span class="extype" name="org.saddle.Mat.T">T</span>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -1751,7 +1783,7 @@ f must return a Vec with numCols elements
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">numCols</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
@@ -1767,7 +1799,7 @@ f must return a Vec with numCols elements
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">numRows</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
@@ -2218,7 +2250,7 @@ Mutations to this array are visible to this Mat</p><p>Elements are laid out in r
       </span>
       
       
-    </li><li name="org.saddle.Mat#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="org.saddle.Mat#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(r:Int,c:Int,v:T):Unit"></a><a id="update(Int,Int,T):Unit"></a>
       <span class="permalink">
       <a href="../../org/saddle/Mat.html#update(r:Int,c:Int,v:T):Unit" title="Permalink">
@@ -2233,7 +2265,10 @@ Mutations to this array are visible to this Mat</p><p>Elements are laid out in r
         <span class="name">update</span><span class="params">(<span name="r">r: <span class="extype" name="scala.Int">Int</span></span>, <span name="c">c: <span class="extype" name="scala.Int">Int</span></span>, <span name="v">v: <span class="extype" name="org.saddle.Mat.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">

@@ -232,6 +232,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.macros" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="macros"></a><a id="macros:macros"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/macros/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../macros/index.html"><span class="name">macros</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li name="org.saddle.mat" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mat"></a><a id="mat:mat"></a>
       <span class="permalink">
@@ -266,6 +282,22 @@ are specialized for numeric types.
       <p class="shortcomment cmt">Provides type aliases for a few basic operations
 </p><div class="fullcomment"><div class="comment cmt"><p>Provides type aliases for a few basic operations
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.ops.macroImpl" visbl="pub" class="indented4 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="macroImpl"></a><a id="macroImpl:macroImpl"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/ops/macroImpl/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="macroImpl/index.html"><span class="name">macroImpl</span></a>
+      </span>
+      
+      
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="Add.html" title=""></a>
@@ -275,7 +307,7 @@ are specialized for numeric types.
                         <a class="trait" href="AndOp.html" title=""></a>
                         <a href="AndOp.html" title="">AndOp</a>
                       </li><li class="current-entities indented3">
-                        <a class="object" href="BinOp$.html" title="Contains implementations of primitive binary ops that are NA-aware"></a>
+                        <span class="separator"></span>
                         <a class="trait" href="BinOp.html" title="Concrete implementations of BinOp provide primitive-specialized support for performing binary operations on elements of the following objects, as well as the objects themselves:"></a>
                         <a href="BinOp.html" title="Concrete implementations of BinOp provide primitive-specialized support for performing binary operations on elements of the following objects, as well as the objects themselves:">BinOp</a>
                       </li><li class="current-entities indented3">
@@ -306,6 +338,10 @@ are specialized for numeric types.
                         <span class="separator"></span>
                         <a class="trait" href="BinOpVecInPlace.html" title=""></a>
                         <a href="BinOpVecInPlace.html" title="">BinOpVecInPlace</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="BinOps$.html" title="Contains implementations of primitive binary ops that are NA-aware"></a>
+                        <a href="BinOps$.html" title="Contains implementations of primitive binary ops that are NA-aware">BinOps</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="BitAnd.html" title=""></a>
@@ -638,7 +674,7 @@ are specialized for numeric types.
       
       <p class="shortcomment cmt">Concrete implementations of BinOp provide primitive-specialized support for performing
 binary operations on elements of the following objects, as well as the objects themselves:</p><div class="fullcomment"><div class="comment cmt"><p>Concrete implementations of BinOp provide primitive-specialized support for performing
-binary operations on elements of the following objects, as well as the objects themselves:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Appropriate BinOp instances are made available in an implicit context in order for the
+binary operations on elements of the following objects, as well as the objects themselves:</p><ul><li><a href="../Vec.html" class="extype" name="org.saddle.Vec">org.saddle.Vec</a></li><li><a href="../Series.html" class="extype" name="org.saddle.Series">org.saddle.Series</a></li><li><a href="../Mat.html" class="extype" name="org.saddle.Mat">org.saddle.Mat</a></li><li><a href="../Frame.html" class="extype" name="org.saddle.Frame">org.saddle.Frame</a></li></ul><p>Appropriate BinOp instances have to be made available in an implicit context in order for the
 <a href="NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">org.saddle.ops.NumericOps</a> methods inherited by the structures above to operate in a
 seamless fashion.</p><p>For example:</p><pre>Vec(<span class="num">1</span>,<span class="num">2</span>,<span class="num">3</span>) * Vec(<span class="num">4</span>,<span class="num">5</span>,<span class="num">6</span>) == Vec(<span class="num">4</span>,<span class="num">10</span>,<span class="num">18</span>)</pre><p>The multiplication above relies on two BinOp implementations: the first is BinOp[Multiply, Vec, Vec, Vec],
 whose implementation in turn relies on BinOp[Multiply, Int, Int, Int].
@@ -1235,10 +1271,10 @@ object.
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="org.saddle.ops.BinOp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="BinOp"></a><a id="BinOp:BinOp"></a>
+                <li name="org.saddle.ops.BinOps" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="BinOps"></a><a id="BinOps:BinOps"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/ops/BinOp$.html" title="Permalink">
+      <a href="../../../org/saddle/ops/BinOps$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1247,7 +1283,7 @@ object.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Contains implementations of primitive binary ops that are NA-aware" href="BinOp$.html"><span class="name">BinOp</span></a>
+        <a title="Contains implementations of primitive binary ops that are NA-aware" href="BinOps$.html"><span class="name">BinOps</span></a><span class="result"> extends <a href="BinOpMat.html" class="extype" name="org.saddle.ops.BinOpMat">BinOpMat</a> with <a href="BinOpMatInPlace.html" class="extype" name="org.saddle.ops.BinOpMatInPlace">BinOpMatInPlace</a> with <a href="BinOpVec.html" class="extype" name="org.saddle.ops.BinOpVec">BinOpVec</a> with <a href="BinOpVecInPlace.html" class="extype" name="org.saddle.ops.BinOpVecInPlace">BinOpVecInPlace</a> with <a href="BinOpFrame.html" class="extype" name="org.saddle.ops.BinOpFrame">BinOpFrame</a> with <a href="BinOpSeries.html" class="extype" name="org.saddle.ops.BinOpSeries">BinOpSeries</a></span>
       </span>
       
       <p class="shortcomment cmt">Contains implementations of primitive binary ops that are NA-aware</p><div class="fullcomment"><div class="comment cmt"><p>Contains implementations of primitive binary ops that are NA-aware</p><p>Double primitive has NA bit pattern baked into its representation, but
