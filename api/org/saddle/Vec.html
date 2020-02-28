@@ -1809,6 +1809,23 @@ Ignores invalid offsets in the array
       
       <p class="shortcomment cmt">Returns a new Vec with the value at <code>offset</code> set to <code>value</code></p><div class="fullcomment"><div class="comment cmt"><p>Returns a new Vec with the value at <code>offset</code> set to <code>value</code></p><p>Copies before mutating.
 </p></div></div>
+    </li><li name="org.saddle.Vec#view" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="view(offsets1:Array[Int]):org.saddle.Vec[T]"></a><a id="view(Array[Int]):Vec[T]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#view(offsets1:Array[Int]):org.saddle.Vec[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">view</span><span class="params">(<span name="offsets1">offsets1: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Creates a view into original vector at arbitrary indexes.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a view into original vector at arbitrary indexes. Data is not copied.
+</p></div><dl class="paramcmts block"><dt class="param">offsets1</dt><dd class="cmt"><p>indexes into the original array</p></dd></dl></div>
     </li><li name="org.saddle.Vec#where" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="where(pred:org.saddle.Vec[Boolean]):org.saddle.Vec[T]"></a><a id="where(Vec[Boolean]):Vec[T]"></a>
       <span class="permalink">
