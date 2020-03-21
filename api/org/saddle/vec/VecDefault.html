@@ -672,9 +672,9 @@ pandas data analysis library for Python, and the Scala collections library.
       
       <p class="shortcomment cmt">Bit-wise EXCLUSIVE OR</p><div class="fullcomment"><div class="comment cmt"><p>Bit-wise EXCLUSIVE OR</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ops/NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">NumericOps</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(rng:org.saddle.index.Slice[Int]):org.saddle.Vec[T]"></a><a id="apply(Slice[Int]):Vec[T]"></a>
+      <a id="apply(loc:Int):T"></a><a id="apply(Int):T"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/vec/VecDefault.html#apply(rng:org.saddle.index.Slice[Int]):org.saddle.Vec[T]" title="Permalink">
+      <a href="../../../org/saddle/vec/VecDefault.html#apply(loc:Int):T" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -683,66 +683,10 @@ pandas data analysis library for Python, and the Scala collections library.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="rng">rng: <a href="../index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
+        <span class="name">apply</span><span class="params">(<span name="loc">loc: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="org.saddle.vec.VecDefault.T">T</span></span>
       </span>
       
-      <p class="shortcomment cmt">Slice a Vec at a bound of locations, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Slice a Vec at a bound of locations, e.g.</p><p>val v = Vec(1,2,3,4,5)
-v(1-&gt;3) == Vec(2,3,4)
-</p></div><dl class="paramcmts block"><dt class="param">rng</dt><dd class="cmt"><p>evaluates to IRange</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
-    </li><li name="org.saddle.vec.VecDefault#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(locs:Array[Int]):org.saddle.Vec[T]"></a><a id="apply(Array[Int]):Vec[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/vec/VecDefault.html#apply(locs:Array[Int]):org.saddle.Vec[T]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="locs">locs: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Slice a Vec at a sequence of locations, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Slice a Vec at a sequence of locations, e.g.</p><p>val v = Vec(1,2,3,4,5)
-v(Array(1,3)) == Vec(2,4)
-</p></div><dl class="paramcmts block"><dt class="param">locs</dt><dd class="cmt"><p>locations at which to slice</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
-    </li><li name="org.saddle.vec.VecDefault#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(locs:org.saddle.Vec[Int]):org.saddle.Vec[T]"></a><a id="apply(Vec[Int]):Vec[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/vec/VecDefault.html#apply(locs:org.saddle.Vec[Int]):org.saddle.Vec[T]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="locs">locs: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Slice a Vec at a sequence of locations, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Slice a Vec at a sequence of locations, e.g.</p><p>val v = Vec(1,2,3,4,5)
-v(Vec(1,3)) == Vec(2,4)
-</p></div><dl class="paramcmts block"><dt class="param">locs</dt><dd class="cmt"><p>locations at which to slice</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
-    </li><li name="org.saddle.vec.VecDefault#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(locs:Int*):org.saddle.Vec[T]"></a><a id="apply(Int*):Vec[T]"></a>
-      <span class="permalink">
-      <a href="../../../org/saddle/vec/VecDefault.html#apply(locs:Int*):org.saddle.Vec[T]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="locs">locs: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Slice a Vec at a sequence of locations, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Slice a Vec at a sequence of locations, e.g.</p><p>val v = Vec(1,2,3,4,5)
-v(1,3) == Vec(2,4)
-</p></div><dl class="paramcmts block"><dt class="param">locs</dt><dd class="cmt"><p>locations at which to slice</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+      <p class="shortcomment cmt">Same as raw</p><div class="fullcomment"><div class="comment cmt"><p>Same as raw</p></div><dl class="paramcmts block"><dt class="param">loc</dt><dd class="cmt"><p>offset into Vec</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#argmax" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="argmax(implicitna:org.saddle.NUM[T],implicitst:org.saddle.ST[T],implicitord:org.saddle.ORD[T]):Int"></a><a id="argmax(NUM[T],ST[T],ORD[T]):Int"></a>
       <span class="permalink">
@@ -2018,6 +1962,40 @@ referring to this.filterFoldLeft boxes
       </span>
       
       <p class="shortcomment cmt">Return last n elements</p><div class="fullcomment"><div class="comment cmt"><p>Return last n elements</p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>Number of elements to access</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#take" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="take(rng:org.saddle.index.Slice[Int]):org.saddle.Vec[T]"></a><a id="take(Slice[Int]):Vec[T]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecDefault.html#take(rng:org.saddle.index.Slice[Int]):org.saddle.Vec[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">take</span><span class="params">(<span name="rng">rng: <a href="../index/Slice.html" class="extype" name="org.saddle.index.Slice">Slice</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Slice a Vec at a bound of locations, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Slice a Vec at a bound of locations, e.g.</p><p>val v = Vec(1,2,3,4,5)
+v(1-&gt;3) == Vec(2,3,4)
+</p></div><dl class="paramcmts block"><dt class="param">rng</dt><dd class="cmt"><p>evaluates to IRange</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#take" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="take(locs:Int*):org.saddle.Vec[T]"></a><a id="take(Int*):Vec[T]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecDefault.html#take(locs:Int*):org.saddle.Vec[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">take</span><span class="params">(<span name="locs">locs: <span class="extype" name="scala.Int">Int</span>*</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#take" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="take(locs:Array[Int]):org.saddle.Vec[T]"></a><a id="take(Array[Int]):Vec[T]"></a>
       <span class="permalink">
