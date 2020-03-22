@@ -240,6 +240,8 @@ lazy val docs = project
   .in(file("saddle-docs"))
   .dependsOn(core, linalg, circe, binary)
   .settings(
+    unidocProjectFilter in (ScalaUnidoc, unidoc) :=
+      (inAnyProject -- inProjects(coreJS, circeJS, binaryJS)),
     publishArtifact := false,
     moduleName := "saddle-docs",
     mdocVariables := Map(
