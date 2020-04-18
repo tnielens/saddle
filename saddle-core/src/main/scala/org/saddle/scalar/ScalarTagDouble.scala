@@ -49,6 +49,10 @@ object ScalarTagDouble extends ScalarTag[Double] {
   def show(v: Double) =
     if (isMissing(v)) "%s" format "NA" else "%.4f" format (v)
 
+  override def strListLossless(v: Double) = List(asString(v))
+
+  override def asString(v: Double) = v.toString
+
   override def runtimeClass = classOf[Double]
 
   def makeBuf(sz: Int = org.saddle.Buffer.INIT_CAPACITY) =

@@ -17,11 +17,27 @@ package org.saddle.csv
 
 import org.specs2.ScalaCheck
 import org.specs2.mutable.Specification
-import org.saddle.{Index, Vec, Frame, na, ST}
+import org.saddle.{Index, Vec, Frame, na, ST, Series}
 
 class CsvCheck extends Specification with ScalaCheck {
   val crlf = "\r\n"
   val lf = "\n"
+
+  "csv write string NAs (represented as nulls) " in {
+    val expect = Frame("abc" -> Series("a", null, "b"))
+    val parsedBack = CsvParser
+      .parseSource[String](
+        scala.io.Source
+          .fromString(new String(CsvWriter.writeFrameToArray(expect)))
+      )
+      .right
+      .get
+      .withColIndex(0)
+      .withRowIndex(0)
+      .mapRowIndex(_.toInt)
+
+    parsedBack must_== expect.mapVec(_.fillNA(_ => "NA"))
+  }
 
   "csv string parsing and writing works" in {
 

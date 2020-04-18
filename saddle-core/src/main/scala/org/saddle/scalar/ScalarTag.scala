@@ -43,9 +43,14 @@ trait ScalarTag[@spec(Boolean, Int, Long, Float, Double) T]
   def isTuple: Boolean = false
   def isDouble: Boolean = false
 
-  def strList = (v: T) => List(show(v))
+  def strList(v: T) = List(show(v))
+  def strListLossless(v: T) = strList(v)
 
+  /* Not necessarily loss-less (e.g. rounds) */
   def show(v: T): String
+
+  /* Must hold: parse(asString(v)) == v */
+  def asString(v: T): String = show(v)
 
   // Workaround: Scala types Any, AnyRef, AnyVal all have runtimeClass java.lang.Object; workaround continues
   // via ScalarTag implicit resolution hierarchy below.

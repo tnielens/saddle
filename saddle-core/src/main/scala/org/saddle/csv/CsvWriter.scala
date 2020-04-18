@@ -130,6 +130,8 @@ object CsvWriter {
     val separ = settings.separChar.toString
     val quote = settings.quoteChar.toString
 
+    val stT = implicitly[ST[T]]
+
     def quotify(seq: Seq[String]): Seq[String] = {
       if (settings.useQuote)
         seq.map { s =>
@@ -156,9 +158,9 @@ object CsvWriter {
           stream write {
             val seq =
               if (!withRowIx)
-                colIxSeq.map(csm.strList(_)(i))
+                colIxSeq.map(csm.strListLossless(_)(i))
               else
-                lead ++: frame.colIx.toSeq.map(csm.strList(_)(i))
+                lead ++: frame.colIx.toSeq.map(csm.strListLossless(_)(i))
 
             quotify(seq).mkString(separ).getBytes(settings.encoding)
           }
@@ -175,9 +177,9 @@ object CsvWriter {
           stream write {
             val seq =
               if (!withRowIx)
-                row.values.toSeq.map(_.toString)
+                row.values.toSeq.map(stT.asString)
               else
-                rsm.strList(ridx) ++: row.values.toSeq.map(_.toString)
+                List(rsm.asString(ridx)) ++: row.values.toSeq.map(stT.asString)
 
             quotify(seq).mkString(separ).getBytes(settings.encoding)
           }
