@@ -45,4 +45,29 @@ class BinarySuite extends AnyFunSuite {
         .get == frame.toMat
     )
   }
+  test("2x3 string NAs (nulls)") {
+    val frame = Frame(
+      Mat(Vec("1", "2"), Vec(null, "4"), Vec("5", "6")),
+      Index("r1", "r2"),
+      Index("c1", "c2", "c3")
+    )
+    assert(
+      implicitly[Decoder[Frame[String, String, String]]]
+        .decodeJson(frame.asJson)
+        .right
+        .get == frame
+    )
+    assert(
+      implicitly[Decoder[Series[String, String]]]
+        .decodeJson(frame.rowAt(0).asJson)
+        .right
+        .get == frame.rowAt(0)
+    )
+    assert(
+      implicitly[Decoder[Mat[String]]]
+        .decodeJson(frame.toMat.asJson)
+        .right
+        .get == frame.toMat
+    )
+  }
 }

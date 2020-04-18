@@ -5,14 +5,20 @@ import _root_.io.circe.{Encoder, Decoder}
 package object circe {
 
   implicit def indexEncoder[T: Encoder]: Encoder[Index[T]] =
-    Encoder.encodeSeq[T].contramap(_.toSeq)
-  implicit def indexDecoder[T: Decoder: ST: ORD]: Decoder[Index[T]] =
-    Decoder.decodeSeq[T].map(v => Index(v: _*))
+    Encoder.encodeSeq[Option[T]].contramap(_.toSeq.map(Option(_)))
+  implicit def indexDecoder[T: Decoder: ST: ORD]: Decoder[Index[T]] = {
+    val missing = implicitly[ST[T]].missing
+    Decoder
+      .decodeSeq[Option[T]]
+      .map(v => Index(v.map(_.getOrElse(missing)): _*))
+  }
 
   implicit def vecEncoder[T: Encoder]: Encoder[Vec[T]] =
-    Encoder.encodeSeq[T].contramap(_.toSeq)
-  implicit def vecDecoder[T: Decoder: ST]: Decoder[Vec[T]] =
-    Decoder.decodeSeq[T].map(v => Vec(v: _*))
+    Encoder.encodeSeq[Option[T]].contramap(_.toSeq.map(Option(_)))
+  implicit def vecDecoder[T: Decoder: ST]: Decoder[Vec[T]] = {
+    val missing = implicitly[ST[T]].missing
+    Decoder.decodeSeq[Option[T]].map(v => Vec(v.map(_.getOrElse(missing)): _*))
+  }
 
   implicit def matEncoder[T: Encoder]: Encoder[Mat[T]] =
     implicitly[Encoder[(Int, Int, Vec[T])]]
