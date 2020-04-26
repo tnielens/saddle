@@ -25,16 +25,24 @@ import scala.{specialized => spec}
 import java.nio.CharBuffer
 import java.io.File
 import java.nio.charset.Charset
+import java.nio.charset.CharsetDecoder
+import java.nio.charset.CodingErrorAction
 
 /**
   * Csv parsing utilities
   */
 object CsvParser {
 
+  val asciiSilentCharsetDecoder = Charset
+    .forName("US-ASCII")
+    .newDecoder()
+    .onMalformedInput(CodingErrorAction.REPLACE)
+    .onUnmappableCharacter(CodingErrorAction.REPLACE)
+
   def readFile(
       file: File,
-      bufferSize: Int = 8192,
-      charset: Charset = Charset.forName("US-ASCII")
+      bufferSize: Int,
+      charset: CharsetDecoder
   ): Iterator[CharBuffer] = {
     val buffer = java.nio.ByteBuffer.allocate(bufferSize)
     val is = new java.io.FileInputStream(file)
@@ -109,10 +117,11 @@ object CsvParser {
       quoteChar: Char = '"',
       recordSeparator: String = "\r\n",
       bufferSize: Int = 8192,
-      maxLines: Long = Long.MaxValue
+      maxLines: Long = Long.MaxValue,
+      charsetDecoder: CharsetDecoder = asciiSilentCharsetDecoder
   )(implicit st: ST[T]): Either[String, Frame[Int, Int, T]] =
     parseFromIterator(
-      readFile(file, bufferSize),
+      readFile(file, bufferSize, charsetDecoder),
       cols,
       fieldSeparator,
       quoteChar,
@@ -127,10 +136,11 @@ object CsvParser {
       quoteChar: Char = '"',
       recordSeparator: String = "\r\n",
       bufferSize: Int = 8192,
-      maxLines: Long = Long.MaxValue
+      maxLines: Long = Long.MaxValue,
+      charsetDecoder: CharsetDecoder = asciiSilentCharsetDecoder
   )(implicit st: ST[T]): Either[String, Frame[Int, String, T]] =
     parseFromIterator(
-      readFile(file, bufferSize),
+      readFile(file, bufferSize, charsetDecoder),
       cols,
       fieldSeparator,
       quoteChar,
@@ -269,9 +279,7 @@ object CsvParser {
 
         if (errorMessage.nonEmpty) Left(errorMessage)
         else {
-          val columns = bufdata map { b =>
-            Vec(b.toArray)
-          }
+          val columns = bufdata map { b => Vec(b.toArray) }
 
           if (columns.map(_.length).distinct.size != 1)
             Left(s"Uneven length ${columns.map(_.length).toVector} columns")
