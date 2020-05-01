@@ -18,6 +18,7 @@ package org.saddle.index
 import scala.language.higherKinds
 
 import org.saddle.{Index, ST, ORD, Vec}
+import cats.kernel.instances.tuple._
 
 /**
   * An IndexMaker takes some input of type I and returns an Index whose

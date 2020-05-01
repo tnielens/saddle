@@ -16,6 +16,7 @@
 package org.saddle.index
 
 import org.saddle.{ST, ORD}
+import cats.kernel.instances.tuple._
 
 /**
   * A Melter operates on a Tuple,,N,, and a Tuple,,M,, and produces a Tuple,,N+M,, which is
@@ -57,22 +58,17 @@ trait MelterLowerPriority {
   */
 trait MelterLowPriority extends MelterLowerPriority {
   implicit def melt1_2[A: ST: ORD, B: ST: ORD, C: ST: ORD] = makeMelter {
-    (a: A, b: (B, C)) =>
-      (a, b._1, b._2)
+    (a: A, b: (B, C)) => (a, b._1, b._2)
   }
   implicit def melt1_3[A: ST: ORD, B: ST: ORD, C: ST: ORD, D: ST: ORD] =
-    makeMelter { (a: A, b: (B, C, D)) =>
-      (a, b._1, b._2, b._3)
-    }
+    makeMelter { (a: A, b: (B, C, D)) => (a, b._1, b._2, b._3) }
   implicit def melt1_4[
       A: ST: ORD,
       B: ST: ORD,
       C: ST: ORD,
       D: ST: ORD,
       E: ST: ORD
-  ] = makeMelter { (a: A, b: (B, C, D, E)) =>
-    (a, b._1, b._2, b._3, b._4)
-  }
+  ] = makeMelter { (a: A, b: (B, C, D, E)) => (a, b._1, b._2, b._3, b._4) }
   implicit def melt1_5[
       A: ST: ORD,
       B: ST: ORD,
@@ -121,22 +117,17 @@ trait MelterLowPriority extends MelterLowerPriority {
   }
 
   implicit def melt2_1[A: ST: ORD, B: ST: ORD, C: ST: ORD] = makeMelter {
-    (a: (A, B), b: C) =>
-      (a._1, a._2, b)
+    (a: (A, B), b: C) => (a._1, a._2, b)
   }
   implicit def melt3_1[A: ST: ORD, B: ST: ORD, C: ST: ORD, D: ST: ORD] =
-    makeMelter { (a: (A, B, C), b: D) =>
-      (a._1, a._2, a._3, b)
-    }
+    makeMelter { (a: (A, B, C), b: D) => (a._1, a._2, a._3, b) }
   implicit def melt4_1[
       A: ST: ORD,
       B: ST: ORD,
       C: ST: ORD,
       D: ST: ORD,
       E: ST: ORD
-  ] = makeMelter { (a: (A, B, C, D), b: E) =>
-    (a._1, a._2, a._3, a._4, b)
-  }
+  ] = makeMelter { (a: (A, B, C, D), b: E) => (a._1, a._2, a._3, a._4, b) }
   implicit def melt5_1[
       A: ST: ORD,
       B: ST: ORD,
@@ -190,9 +181,7 @@ trait MelterLowPriority extends MelterLowerPriority {
   */
 object Melter extends MelterLowPriority {
   implicit def melt2_2[A: ST: ORD, B: ST: ORD, C: ST: ORD, D: ST: ORD] =
-    makeMelter { (a: (A, B), b: (C, D)) =>
-      (a._1, a._2, b._1, b._2)
-    }
+    makeMelter { (a: (A, B), b: (C, D)) => (a._1, a._2, b._1, b._2) }
 
   implicit def melt2_3[
       A: ST: ORD,
@@ -200,18 +189,14 @@ object Melter extends MelterLowPriority {
       C: ST: ORD,
       D: ST: ORD,
       E: ST: ORD
-  ] = makeMelter { (a: (A, B), b: (C, D, E)) =>
-    (a._1, a._2, b._1, b._2, b._3)
-  }
+  ] = makeMelter { (a: (A, B), b: (C, D, E)) => (a._1, a._2, b._1, b._2, b._3) }
   implicit def melt3_2[
       A: ST: ORD,
       B: ST: ORD,
       C: ST: ORD,
       D: ST: ORD,
       E: ST: ORD
-  ] = makeMelter { (a: (A, B, C), b: (C, D)) =>
-    (a._1, a._2, a._3, b._1, b._2)
-  }
+  ] = makeMelter { (a: (A, B, C), b: (C, D)) => (a._1, a._2, a._3, b._1, b._2) }
 
   implicit def melt2_4[
       A: ST: ORD,

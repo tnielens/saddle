@@ -26,8 +26,11 @@ import org.saddle.locator.Locator
 /**
   * Index with double keys
   */
-class IndexDouble(keys: Vec[Double]) extends Index[Double] {
+class IndexDouble(keys: Vec[Double], val ord: ORD[Double])
+    extends Index[Double] {
   val scalarTag = ScalarTagDouble
+
+  implicit private def o = ord
 
   private lazy val (kmap, IndexProperties(contiguous, monotonic)) =
     IndexImpl.keys2map(this)
@@ -58,7 +61,7 @@ class IndexDouble(keys: Vec[Double]) extends Index[Double] {
 
   def argSort: Array[Int] = array.argsort(keys.toArray)
 
-  def reversed: Index[Double] = new IndexDouble(toVec.reversed)
+  def reversed: Index[Double] = new IndexDouble(toVec.reversed, ord)
 
   def join(other: Index[Double], how: JoinType = LeftJoin): ReIndexer[Double] =
     JoinerImpl.join(this, other, how)
@@ -78,7 +81,7 @@ class IndexDouble(keys: Vec[Double]) extends Index[Double] {
   }
 
   def slice(from: Int, until: Int, stride: Int): Index[Double] = {
-    new IndexDouble(keys.slice(from, until, stride))
+    new IndexDouble(keys.slice(from, until, stride), ord)
   }
 
   // find the first location whereby an insertion would maintain a sorted index

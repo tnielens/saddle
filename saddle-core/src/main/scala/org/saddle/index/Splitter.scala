@@ -16,6 +16,7 @@
 package org.saddle.index
 
 import org.saddle.{Index, ST, ORD}
+import cats.kernel.instances.tuple._
 
 /**
   * A Splitter operates on an input index whose elements have arity N, and yields the following

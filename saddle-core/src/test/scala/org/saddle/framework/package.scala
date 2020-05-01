@@ -24,11 +24,11 @@ package object framework {
     arbVectorOfN[S](100)
 
   /** Yield an arbitrary Series of 100 values. */
-  implicit def arbSeries[X: Gen: Ordering: ClassTag, S: ClassTag: Gen]
+  implicit def arbSeries[X: Gen: ORD: ClassTag, S: ClassTag: Gen]
       : Arbitrary[Series[X, S]] = arbSeriesOfN[X, S](100)
 
   /** Yield an arbitrary 10 x 100 Frame. */
-  implicit def arbFrame[X: Gen: Ordering: ClassTag, S: ClassTag: Gen]
+  implicit def arbFrame[X: Gen: ORD: ClassTag, S: ClassTag: Gen]
       : Arbitrary[Frame[X, Int, S]] = arbFrameOfN[X, S](10, 100)
 
   /** A generator for doubles with bounds at .5 the size of the min/max valyes. */
@@ -46,7 +46,7 @@ package object framework {
     Gen.listOfN(cols, genVectorOfN[S](rows)).map(v => Mat(v: _*))
 
   /** A generator for Series of an arbitrary size. */
-  def genSeriesOfN[X: Gen: Ordering: ScalarTag, S: Gen: ScalarTag](
+  def genSeriesOfN[X: Gen: ORD: ScalarTag, S: Gen: ScalarTag](
       size: Int
   ): Gen[Series[X, S]] =
     for {
@@ -55,7 +55,7 @@ package object framework {
     } yield Series(dateTime.zip(value): _*)
 
   /** A generator for FrameS of an arbitrary size. */
-  def genFrameOfN[X: Gen: Ordering: ScalarTag, S: Gen: ScalarTag](
+  def genFrameOfN[X: Gen: ORD: ScalarTag, S: Gen: ScalarTag](
       dsize: Int,
       ssize: Int
   ): Gen[Frame[X, Int, S]] =
@@ -70,12 +70,12 @@ package object framework {
     Arbitrary(genVectorOfN[S](size))
 
   /** Yield an arbitrary Series of 100 values. */
-  def arbSeriesOfN[X: Gen: Ordering: ClassTag, S: ClassTag: Gen](
+  def arbSeriesOfN[X: Gen: ORD: ClassTag, S: ClassTag: Gen](
       size: Int
   ): Arbitrary[Series[X, S]] = Arbitrary(genSeriesOfN[X, S](size))
 
   /** Yield an arbitrary 100 x 100 Series. */
-  def arbFrameOfN[X: Gen: Ordering: ClassTag, S: ClassTag: Gen](
+  def arbFrameOfN[X: Gen: ORD: ClassTag, S: ClassTag: Gen](
       cols: Int,
       rows: Int
   ): Arbitrary[Frame[X, Int, S]] = Arbitrary(genFrameOfN[X, S](cols, rows))

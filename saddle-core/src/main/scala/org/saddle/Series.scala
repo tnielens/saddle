@@ -24,6 +24,7 @@ import scalar.{Scalar, NA}
 import java.io.OutputStream
 import org.saddle.mat.MatCols
 import org.saddle.locator.Locator
+import cats.kernel.instances.int.catsKernelStdOrderForInt
 
 /**
   * `Series` is an immutable container for 1D homogeneous data which is indexed by a
@@ -501,7 +502,7 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   /**
     * Return key corresponding to minimum value in series
     */
-  def minKey(implicit num: NUM[T], ord: ORD[T]): Scalar[X] =
+  def minKey(implicit num: NUM[T]): Scalar[X] =
     array.argmin(values.toArray) match {
       case -1   => NA
       case _ @i => index.at(i)
@@ -510,7 +511,7 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   /**
     * Return key corresponding to maximum value in series
     */
-  def maxKey(implicit num: NUM[T], ord: ORD[T]): Scalar[X] =
+  def maxKey(implicit num: NUM[T]): Scalar[X] =
     array.argmax(values.toArray) match {
       case -1   => NA
       case _ @i => index.at(i)
@@ -1049,7 +1050,7 @@ object Series extends BinOpSeries {
     * @tparam T Type of values
     */
   def apply[@spec(Int, Long, Double) T: ST](values: Vec[T]): Series[Int, T] =
-    new Series[Int, T](values, new IndexIntRange(values.length))
+    new Series[Int, T](values, IndexIntRange(values.length))
 
   /**
     * Factory method to create a Series from a sequence of values; keys are integer offsets
@@ -1057,7 +1058,7 @@ object Series extends BinOpSeries {
     * @tparam T Type of values
     */
   def apply[@spec(Int, Long, Double) T: ST](values: T*): Series[Int, T] =
-    new Series[Int, T](Vec(values: _*), new IndexIntRange(values.length))
+    new Series[Int, T](Vec(values: _*), IndexIntRange(values.length))
 
   /**
     * Factory method to create a Series from a sequence of key/value pairs

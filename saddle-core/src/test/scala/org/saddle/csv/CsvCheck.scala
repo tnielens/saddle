@@ -18,7 +18,7 @@ package org.saddle.csv
 import org.specs2.ScalaCheck
 import org.specs2.mutable.Specification
 import org.saddle.{Index, Vec, Frame, na, ST, Series}
-
+import cats.kernel.instances.all._
 class CsvCheck extends Specification with ScalaCheck {
   val crlf = "\r\n"
   val lf = "\n"

@@ -949,6 +949,7 @@ class MatPimp(val self: Mat[Double]) {
 
     if (!success) throw new RuntimeException("Eigen decomposition failed")
 
+    import cats.kernel.instances.double.catsKernelStdOrderForDouble
     val reindex = org.saddle.array.argsort(wr).reverse
     val wr2: Vec[Double] = Vec(wr).take(reindex)
     val wi2: Vec[Double] = Vec(wi).take(reindex)
@@ -1258,9 +1259,7 @@ class MatPimp(val self: Mat[Double]) {
    * Computes the Cholesky factors and sums their log
    */
   def determinantPD: Option[Double] = {
-    choleskyLower.map { mat =>
-      mat.diag.map(math.log10).sum * 2
-    }
+    choleskyLower.map { mat => mat.diag.map(math.log10).sum * 2 }
   }
 
   /* Solves A x t(X) = t(B) for X

@@ -21,6 +21,7 @@ import org.saddle.index.{SliceAll, Slice, SliceFrom, SliceTo}
 // some typeclass interfaces we'll alias
 import org.saddle.scalar.ScalarTag
 import scala.reflect.ClassTag
+import cats.kernel.Order
 
 /**
   * == Saddle ==
@@ -54,7 +55,7 @@ package object saddle {
   /**
     * Shorthand for ordering typeclass
     */
-  type ORD[C] = Ordering[C]
+  type ORD[C] = Order[C]
 
   /**
     * Shorthand for numeric typeclass
@@ -273,6 +274,7 @@ package object saddle {
       s: Seq[(RX, CX, T)]
   ) {
     def toFrame = {
+      import cats.kernel.instances.tuple._
       val grp = s.map { case (r, c, v) => ((r, c), v) }
       grp.toSeries.pivot
     }

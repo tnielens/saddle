@@ -2,6 +2,7 @@ package org.saddle
 
 import org.specs2.mutable.Specification
 import scalar.Scalar
+import cats.kernel.instances.all._
 
 /**
   * User: Adam Klein

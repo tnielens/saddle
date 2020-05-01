@@ -17,37 +17,33 @@ package org.saddle.array
 
 import org.saddle.vec.VecBool
 import org.saddle.ORD
-import spire.std.byte._
-import spire.std.int._
-import spire.std.long._
-import spire.std.double._
-import spire.std.char._
-import spire.std.short._
-import spire.std.float._
+
 import spire.math.MergeSort
 
 /**
   * Typeclass interface for sorting implementations
   */
 trait Sorter[T] {
-  def argSorted(arr: Array[T]): Array[Int]
-  def sorted(arr: Array[T]): Array[T]
+  def argSorted(arr: Array[T])(implicit ord: ORD[T]): Array[Int]
+  def sorted(arr: Array[T])(implicit ord: ORD[T]): Array[T]
 }
 
 object Sorter {
   object boolSorter extends Sorter[Boolean] {
-    def argSorted(arr: Array[Boolean]) = VecBool.argSort(arr)
-    def sorted(arr: Array[Boolean]) = VecBool.sort(arr)
+    def argSorted(arr: Array[Boolean])(implicit ord: ORD[Boolean]) =
+      VecBool.argSort(arr)
+    def sorted(arr: Array[Boolean])(implicit ord: ORD[Boolean]) =
+      VecBool.sort(arr)
   }
 
   object byteSorter extends Sorter[Byte] {
-    def argSorted(arr: Array[Byte]) = {
+    def argSorted(arr: Array[Byte])(implicit ord: ORD[Byte]) = {
       val res = range(0, arr.length)
       PermuteMergeSort.sort(arr, res)
       res
     }
 
-    def sorted(arr: Array[Byte]) = {
+    def sorted(arr: Array[Byte])(implicit ord: ORD[Byte]) = {
       val res = arr.clone()
       MergeSort.sort(res)
       res
@@ -55,13 +51,13 @@ object Sorter {
   }
 
   object charSorter extends Sorter[Char] {
-    def argSorted(arr: Array[Char]) = {
+    def argSorted(arr: Array[Char])(implicit ord: ORD[Char]) = {
       val res = range(0, arr.length)
       PermuteMergeSort.sort(arr, res)
       res
     }
 
-    def sorted(arr: Array[Char]) = {
+    def sorted(arr: Array[Char])(implicit ord: ORD[Char]) = {
       val res = arr.clone()
       MergeSort.sort(res)
       res
@@ -69,13 +65,13 @@ object Sorter {
   }
 
   object shortSorter extends Sorter[Short] {
-    def argSorted(arr: Array[Short]) = {
+    def argSorted(arr: Array[Short])(implicit ord: ORD[Short]) = {
       val res = range(0, arr.length)
       PermuteMergeSort.sort(arr, res)
       res
     }
 
-    def sorted(arr: Array[Short]) = {
+    def sorted(arr: Array[Short])(implicit ord: ORD[Short]) = {
       val res = arr.clone()
       MergeSort.sort(res)
       res
@@ -83,13 +79,13 @@ object Sorter {
   }
 
   object intSorter extends Sorter[Int] {
-    def argSorted(arr: Array[Int]) = {
+    def argSorted(arr: Array[Int])(implicit ord: ORD[Int]) = {
       val res = range(0, arr.length)
       PermuteMergeSort.sort(arr, res)
       res
     }
 
-    def sorted(arr: Array[Int]) = {
+    def sorted(arr: Array[Int])(implicit ord: ORD[Int]) = {
       val res = arr.clone()
       MergeSort.sort(res)
       res
@@ -97,14 +93,14 @@ object Sorter {
   }
 
   object floatSorter extends Sorter[Float] {
-    def argSorted(arr: Array[Float]) = {
+    def argSorted(arr: Array[Float])(implicit ord: ORD[Float]) = {
       val tmp = nanToNegInf(arr) // fastutil sorts NaN to PosInf
       val res = range(0, arr.length)
       PermuteMergeSort.sort(tmp, res)
       res
     }
 
-    def sorted(arr: Array[Float]) = {
+    def sorted(arr: Array[Float])(implicit ord: ORD[Float]) = {
       val res = nanToNegInf(arr)
       MergeSort.sort(res)
       res
@@ -112,13 +108,13 @@ object Sorter {
   }
 
   object longSorter extends Sorter[Long] {
-    def argSorted(arr: Array[Long]) = {
+    def argSorted(arr: Array[Long])(implicit ord: ORD[Long]) = {
       val res = range(0, arr.length)
       PermuteMergeSort.sort(arr, res)
       res
     }
 
-    def sorted(arr: Array[Long]) = {
+    def sorted(arr: Array[Long])(implicit ord: ORD[Long]) = {
       val res = arr.clone()
       MergeSort.sort(res)
       res
@@ -126,14 +122,14 @@ object Sorter {
   }
 
   object doubleSorter extends Sorter[Double] {
-    def argSorted(arr: Array[Double]) = {
+    def argSorted(arr: Array[Double])(implicit ord: ORD[Double]) = {
       val tmp = nanToNegInf(arr) // fastutil sorts NaN to PosInf
       val res = range(0, arr.length)
       PermuteMergeSort.sort(tmp, res)
       res
     }
 
-    def sorted(arr: Array[Double]) = {
+    def sorted(arr: Array[Double])(implicit ord: ORD[Double]) = {
       val res = nanToNegInf(arr)
       MergeSort.sort(res)
       res
@@ -162,15 +158,15 @@ object Sorter {
     tmp
   }
 
-  def anySorter[T: ORD] = new Sorter[T] {
-    def argSorted(arr: Array[T]) = {
+  def anySorter[T] = new Sorter[T] {
+    def argSorted(arr: Array[T])(implicit ord: ORD[T]) = {
       val res = range(0, arr.length)
-      val cmp = implicitly[ORD[T]]
-      res.sortWith((a, b) => cmp.compare(arr(a), arr(b)) < 0)
+      res.sortWith((a, b) => ord.compare(arr(a), arr(b)) < 0)
     }
 
-    def sorted(arr: Array[T]) = {
+    def sorted(arr: Array[T])(implicit ord: ORD[T]) = {
       val res = arr.clone()
+      implicit val o = ord.toOrdering
       res.sorted
     }
   }

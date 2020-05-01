@@ -16,6 +16,7 @@
 package org.saddle.index
 
 import org.saddle.{ST, ORD, Index}
+import cats.kernel.instances.tuple._
 
 /**
   * A Stacker operates on two input Index instances and produces a new output Index

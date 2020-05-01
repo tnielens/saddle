@@ -29,7 +29,7 @@ class CsvCheck extends Specification with ScalaCheck {
     os.write(text.getBytes("US-ASCII"))
     os.close
     val text2 = CsvParser
-      .readFile(tmp, bufferSize = 2)
+      .readFile(tmp, bufferSize = 2, CsvParser.asciiSilentCharsetDecoder)
       .map(_.toString)
       .mkString
     text must_== text2
@@ -41,7 +41,7 @@ class CsvCheck extends Specification with ScalaCheck {
     os.write(text.getBytes("UTF-16"))
     os.close
     val text2 = CsvParser
-      .readFile(tmp, bufferSize = 2, Charset.forName("UTF-16"))
+      .readFile(tmp, bufferSize = 2, Charset.forName("UTF-16").newDecoder)
       .map(_.toString)
       .mkString
     text must_== text2

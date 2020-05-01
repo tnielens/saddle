@@ -21,6 +21,7 @@ import org.saddle.scalar._
 import org.joda.time._
 import scala.{specialized => spec}
 import org.saddle.time._
+import cats.kernel.instances.all._
 
 /**
   * A compact native int representation of posix times at millisecond resolution which

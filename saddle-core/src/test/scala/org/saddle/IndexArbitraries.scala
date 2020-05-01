@@ -16,7 +16,7 @@
 package org.saddle
 
 import org.scalacheck.Gen
-
+import cats.kernel.instances.all._
 object IndexArbitraries {
 
   // Generates int index with duplicates

@@ -26,8 +26,11 @@ import org.saddle.locator.Locator
   * is the default when creating a Saddle object such as [[org.saddle.Series]] which
   * requires and index and one is not supplied.
   */
-class IndexIntRange(val length: Int, val from: Int = 0) extends Index[Int] {
+class IndexIntRange(val length: Int, val from: Int = 0, val ord: ORD[Int])
+    extends Index[Int] {
   require(length >= 0, "Length must be non-negative!")
+
+  private implicit def o = ord
 
   @transient lazy val scalarTag = ScalarTagInt
 
@@ -101,7 +104,8 @@ class IndexIntRange(val length: Int, val from: Int = 0) extends Index[Int] {
     if (stride == 1)
       new IndexIntRange(
         math.min(length, until - from),
-        math.max(this.from + math.max(from, 0), 0)
+        math.max(this.from + math.max(from, 0), 0),
+        ord
       )
     else
       genIdx.slice(from, until, stride)
@@ -133,5 +137,10 @@ class IndexIntRange(val length: Int, val from: Int = 0) extends Index[Int] {
 }
 
 object IndexIntRange {
-  def apply(length: Int, from: Int = 0) = new IndexIntRange(length, from)
+  def apply(length: Int, from: Int = 0) =
+    new IndexIntRange(
+      length,
+      from,
+      cats.kernel.instances.int.catsKernelStdOrderForInt
+    )
 }

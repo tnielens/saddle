@@ -671,7 +671,7 @@ package object array {
   /**
     * Return the integer offset of the minimum element, or -1 for an empty array
     */
-  def argmin[@spec(Int, Long, Double) T: ST: ORD: NUM](arr: Array[T]): Int = {
+  def argmin[@spec(Int, Long, Double) T: ST: NUM](arr: Array[T]): Int = {
     val sca = implicitly[ST[T]]
     val sz = arr.length
     if (sz == 0) -1
@@ -693,7 +693,7 @@ package object array {
   /**
     * Return the integer offset of the maximum element, or -1 for an empty array
     */
-  def argmax[@spec(Int, Long, Double) T: ST: ORD: NUM](arr: Array[T]): Int = {
+  def argmax[@spec(Int, Long, Double) T: ST: NUM](arr: Array[T]): Int = {
     val sca = implicitly[ST[T]]
     val sz = arr.length
     if (sz == 0) -1

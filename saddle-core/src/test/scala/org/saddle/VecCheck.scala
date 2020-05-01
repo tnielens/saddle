@@ -21,6 +21,7 @@ import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
 import org.saddle.scalar.Value
 import org.saddle.ops.BinOps._
+import cats.kernel.instances.all._
 
 /**
   * Test on properties of Vec

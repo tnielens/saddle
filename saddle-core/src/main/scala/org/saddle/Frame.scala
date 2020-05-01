@@ -33,6 +33,8 @@ import org.saddle.ops.{NumericOps, BinOpFrame}
 import scalar.Scalar
 import java.io.OutputStream
 import org.saddle.mat.MatCols
+import cats.kernel.instances.tuple._
+import cats.kernel.instances.int.catsKernelStdOrderForInt
 
 /**
   * `Frame` is an immutable container for 2D data which is indexed along both axes
@@ -775,7 +777,7 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     var j = locs.length - 1
     while (j >= 0) {
       val tosort = colAt(locs(j)).values.take(order)
-      val reordr = Index(tosort).argSort
+      val reordr = array.argsort(tosort)
       order = array.take(order, reordr, sys.error("Logic error"))
       j -= 1
     }
@@ -811,6 +813,7 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     * @tparam Q Result type of the function
     */
   def sortedRowsBy[Q: ORD](f: Series[CX, T] => Q): Frame[RX, CX, T] = {
+    implicit val o = implicitly[ORD[Q]].toOrdering
     val perm = array.range(0, numRows).sortBy((i: Int) => f(rowAt(i)))
     rowAt(perm)
   }
@@ -823,6 +826,7 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     * @tparam Q Result type of the function
     */
   def sortedColsBy[Q: ORD](f: Series[RX, T] => Q): Frame[RX, CX, T] = {
+    implicit val o = implicitly[ORD[Q]].toOrdering
     val perm = array.range(0, numCols).sortBy((i: Int) => f(colAt(i)))
     colAt(perm)
   }
@@ -1927,8 +1931,8 @@ object Frame extends BinOpFrame {
   def apply[T: ST](values: Mat[T]): Frame[Int, Int, T] =
     apply(
       values,
-      new IndexIntRange(values.numRows),
-      new IndexIntRange(values.numCols)
+      IndexIntRange(values.numRows),
+      IndexIntRange(values.numCols)
     )
 
   /**

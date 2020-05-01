@@ -19,7 +19,7 @@ import org.specs2.mutable.Specification
 import org.specs2.ScalaCheck
 import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
-
+import cats.kernel.instances.all._
 import org.joda.time._
 import org.saddle.time._
 
@@ -290,9 +290,7 @@ class SeriesCheck extends Specification with ScalaCheck {
 
     "pivot/melt are opposites" in {
       implicit val frame = Arbitrary(FrameArbitraries.frameDoubleWithNA)
-      forAll { (f: Frame[Int, Int, Double]) =>
-        f.melt.pivot must_== f
-      }
+      forAll { (f: Frame[Int, Int, Double]) => f.melt.pivot must_== f }
     }
 
   }
@@ -312,8 +310,9 @@ class SeriesCheck extends Specification with ScalaCheck {
           val idx = Gen.listOfN(3, Gen.choose(0, s.length - 1))
           forAll(idx) { i =>
             val res = s.take(i.toArray)
-            val exp = s.slice(i(0), i(0) + 1) concat s.slice(i(1), i(1) + 1) concat s
-              .slice(i(2), i(2) + 1)
+            val exp =
+              s.slice(i(0), i(0) + 1) concat s.slice(i(1), i(1) + 1) concat s
+                .slice(i(2), i(2) + 1)
             res must_== exp
           }
         }

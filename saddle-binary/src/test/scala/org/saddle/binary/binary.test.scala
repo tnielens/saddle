@@ -16,6 +16,7 @@
 package org.saddle.binary
 import org.saddle._
 import org.scalatest.funsuite.AnyFunSuite
+import cats.kernel.instances.all._
 
 class BinarySuite extends AnyFunSuite {
   test("2x3") {

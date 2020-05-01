@@ -27,6 +27,8 @@ import java.io.File
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
 import java.nio.charset.CodingErrorAction
+import cats.kernel.instances.string.catsKernelStdOrderForString
+import cats.kernel.instances.int.catsKernelStdOrderForInt
 
 /**
   * Csv parsing utilities
