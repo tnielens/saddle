@@ -16,12 +16,12 @@
 package org.saddle.binary
 import org.saddle.{Buffer => _, _}
 import org.saddle.scalar._
+import org.saddle.order._
 import java.nio._
 import scala.util.{Left, Right, Either}
 import java.nio.channels.ReadableByteChannel
 import Writer._
 import org.saddle.index.IndexIntRange
-
 
 object Reader {
 

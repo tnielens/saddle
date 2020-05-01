@@ -15,6 +15,7 @@
  **/
 package org.saddle.array
 
+import org.saddle.order._
 import org.saddle._
 import org.specs2.ScalaCheck
 import org.specs2.mutable.Specification

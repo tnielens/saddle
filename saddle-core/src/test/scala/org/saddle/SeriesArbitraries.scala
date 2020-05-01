@@ -16,6 +16,7 @@
 package org.saddle
 
 import org.scalacheck.Gen
+import org.saddle.order._
 
 object SeriesArbitraries {
 

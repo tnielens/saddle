@@ -33,6 +33,7 @@ import org.saddle.ops.{NumericOps, BinOpFrame}
 import scalar.Scalar
 import java.io.OutputStream
 import org.saddle.mat.MatCols
+import org.saddle.order._
 
 /**
   * `Frame` is an immutable container for 2D data which is indexed along both axes
