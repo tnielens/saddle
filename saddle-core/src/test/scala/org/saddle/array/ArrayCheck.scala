@@ -20,7 +20,6 @@ import org.specs2.ScalaCheck
 import org.specs2.mutable.Specification
 import org.scalacheck.Gen
 import org.scalacheck.Prop._
-import cats.kernel.instances.all._
 
 /**
   * Test properties of array package

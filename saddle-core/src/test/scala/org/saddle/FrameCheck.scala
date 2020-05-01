@@ -20,7 +20,7 @@ import org.specs2.ScalaCheck
 import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
 import org.saddle.ops.BinOps._
-import cats.kernel.instances.all._
+
 class FrameCheck extends Specification with ScalaCheck {
 
   "Frame Tests" in {

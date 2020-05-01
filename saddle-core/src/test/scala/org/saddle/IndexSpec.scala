@@ -2,7 +2,6 @@ package org.saddle
 
 import org.specs2.mutable.Specification
 import scalar.Scalar
-import cats.kernel.instances.all._
 import org.saddle.scalar.ScalarTagInt
 import cats.kernel.Order
 

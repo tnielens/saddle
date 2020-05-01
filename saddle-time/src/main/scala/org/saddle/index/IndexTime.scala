@@ -25,7 +25,6 @@ import org.joda.time._
 
 import org.saddle.vec.VecTime
 import org.saddle.time._
-import cats.kernel.instances.all._
 import cats.kernel.Order
 
 /**

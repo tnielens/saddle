@@ -22,7 +22,6 @@ import org.saddle.vec.VecTime
 import org.saddle.index.IndexTime
 import scala.Some
 import org.saddle.scalar.ScalarTagTime
-import cats.kernel.instances.all._
 import cats.kernel.Order
 
 /**

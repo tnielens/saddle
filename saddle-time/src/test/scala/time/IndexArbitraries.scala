@@ -18,7 +18,6 @@ package org.saddle
 import org.scalacheck.Gen
 import org.joda.time._
 import org.saddle.time._
-import cats.kernel.instances.all._
 
 object IndexArbitraries {
 

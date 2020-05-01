@@ -49,7 +49,7 @@ import cats.kernel.Order
   * Inspiration for Saddle comes from many sources, including the R programming language, the
   * pandas data analysis library for Python, and the Scala collections library.
   */
-package object saddle {
+package object saddle extends saddle.util.OrderInstances {
   // ********************** Some type aliases, save our fingers in typing
 
   /**
@@ -274,7 +274,6 @@ package object saddle {
       s: Seq[(RX, CX, T)]
   ) {
     def toFrame = {
-      import cats.kernel.instances.tuple._
       val grp = s.map { case (r, c, v) => ((r, c), v) }
       grp.toSeries.pivot
     }
