@@ -15,7 +15,6 @@
   */
 package org.saddle.circe
 import org.saddle._
-import cats.kernel.instances.all._
 import _root_.io.circe.syntax._
 import _root_.io.circe._
 import org.scalatest.funsuite.AnyFunSuite

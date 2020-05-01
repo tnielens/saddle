@@ -22,7 +22,6 @@ import org.saddle.array.Sorter
 import org.joda.time.format.DateTimeFormat
 import org.saddle.vec.VecTime
 import org.saddle.index.IndexTime
-import cats.kernel.instances.all._
 
 /**
   * DateTime ScalarTag

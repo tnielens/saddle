@@ -15,7 +15,7 @@
  **/
 package org.saddle.csv
 
-import org.saddle.{Frame, Vec, ST}
+import org.saddle.{Frame, Vec, ST, Index, stringOrd, intOrd}
 import org.saddle.Index
 import collection.mutable.ArrayBuffer
 import scala.annotation.tailrec
@@ -27,8 +27,6 @@ import java.io.File
 import java.nio.charset.Charset
 import java.nio.charset.CharsetDecoder
 import java.nio.charset.CodingErrorAction
-import cats.kernel.instances.string.catsKernelStdOrderForString
-import cats.kernel.instances.int.catsKernelStdOrderForInt
 
 /**
   * Csv parsing utilities

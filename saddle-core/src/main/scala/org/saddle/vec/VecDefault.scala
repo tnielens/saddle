@@ -22,7 +22,7 @@ import org.saddle.{ST, Vec, array, NUM, util, ORD, PctMethod, RankTie, Mat}
 import org.saddle.index.Slice
 import org.saddle.index.IndexIntRange
 import java.io.OutputStream
-import cats.kernel.instances.double.catsKernelStdOrderForDouble
+import org.saddle.util.order._
 
 class VecDefault[@spec(Boolean, Int, Long, Double) T](
     values: Array[T],

@@ -19,7 +19,6 @@ import org.specs2.mutable.Specification
 import org.specs2.ScalaCheck
 import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
-import cats.kernel.instances.all._
 import org.joda.time._
 import org.saddle.time._
 

@@ -18,7 +18,7 @@ package org.saddle
 import org.specs2.mutable.Specification
 import org.saddle.index.InnerJoin
 import org.saddle.ops.BinOps._
-import cats.kernel.instances.all._
+
 import cats.kernel.Order
 
 /**
