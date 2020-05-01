@@ -22,6 +22,7 @@ import org.saddle.index.{SliceAll, Slice, SliceFrom, SliceTo}
 import org.saddle.scalar.ScalarTag
 import scala.reflect.ClassTag
 import cats.kernel.Order
+import org.saddle.order._
 
 /**
   * == Saddle ==
@@ -49,7 +50,7 @@ import cats.kernel.Order
   * Inspiration for Saddle comes from many sources, including the R programming language, the
   * pandas data analysis library for Python, and the Scala collections library.
   */
-package object saddle extends saddle.util.OrderInstances {
+package object saddle {
   // ********************** Some type aliases, save our fingers in typing
 
   /**

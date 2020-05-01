@@ -23,6 +23,7 @@ import org.saddle.index.IndexTime
 import scala.Some
 import org.saddle.scalar.ScalarTagTime
 import cats.kernel.Order
+import org.saddle.order._
 
 /**
   * Functionality to assist in TimeSeries related operations

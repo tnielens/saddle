@@ -3,8 +3,6 @@ package org.saddle.util
 import org.saddle.ORD
 import cats.kernel.Order
 
-object order extends OrderInstances
-
 trait OrderInstances {
   implicit def intOrd: ORD[Int] =
     cats.kernel.instances.int.catsKernelStdOrderForInt

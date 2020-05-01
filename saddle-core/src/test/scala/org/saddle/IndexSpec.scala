@@ -4,6 +4,7 @@ import org.specs2.mutable.Specification
 import scalar.Scalar
 import org.saddle.scalar.ScalarTagInt
 import cats.kernel.Order
+import org.saddle.order._
 
 /**
   * User: Adam Klein

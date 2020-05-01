@@ -17,6 +17,7 @@ package org.saddle.stats
 
 import scala.{specialized => spec}
 import org.saddle._
+import org.saddle.order._
 import org.saddle.scalar._
 
 /**

@@ -15,7 +15,8 @@
  **/
 package org.saddle.csv
 
-import org.saddle.{Frame, Vec, ST, Index, stringOrd, intOrd}
+import org.saddle.{Frame, Vec, ST, Index}
+import org.saddle.order._
 import org.saddle.Index
 import collection.mutable.ArrayBuffer
 import scala.annotation.tailrec

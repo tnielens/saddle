@@ -15,6 +15,7 @@
  **/
 package org.saddle
 
+import org.saddle.order._
 import org.scalacheck.Gen
 
 object IndexArbitraries {

@@ -18,6 +18,7 @@ package org.saddle.index
 import scala.{specialized => spec}
 
 import org.saddle._
+import org.saddle.order._
 import org.saddle.scalar._
 import org.saddle.locator._
 
