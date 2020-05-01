@@ -25,6 +25,8 @@ import org.joda.time._
 
 import org.saddle.vec.VecTime
 import org.saddle.time._
+import cats.kernel.instances.all._
+import cats.kernel.Order
 
 /**
   * A compact native int representation of posix times at millisecond resolution which
@@ -49,6 +51,9 @@ class IndexTime(
   private def t2l(t: DateTime) =
     if (scalarTag.isMissing(t)) lmf.missing else t.getMillis
   private def il2it(l: Index[Long]) = new IndexTime(l, tzone)
+
+  implicit val ord: ORD[DateTime] =
+    Order.fromOrdering(implicitly[Ordering[DateTime]])
 
   @transient lazy private val _locator = new Locator[DateTime] {
     lazy val _keys = times.uniques.map(l2t)
@@ -187,6 +192,8 @@ object IndexTime {
     */
   def make(rrule: RRule, start: DateTime, end: DateTime): Index[DateTime] = {
     import time._
+    implicit val ord: ORD[DateTime] =
+      Order.fromOrdering(implicitly[Ordering[DateTime]])
     Index((rrule.copy(count = None) withUntil end from start).toSeq: _*)
   }
 

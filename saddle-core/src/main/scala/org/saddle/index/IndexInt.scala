@@ -26,8 +26,10 @@ import org.saddle.locator.Locator
 /**
   * Index with integer keys
   */
-class IndexInt(keys: Vec[Int]) extends Index[Int] {
+class IndexInt(keys: Vec[Int], val ord: ORD[Int]) extends Index[Int] {
   val scalarTag = ScalarTagInt
+
+  private implicit def o = ord
 
   private lazy val (lmap, IndexProperties(contiguous, monotonic)) =
     IndexImpl.keys2map(this)
@@ -58,7 +60,7 @@ class IndexInt(keys: Vec[Int]) extends Index[Int] {
 
   def argSort: Array[Int] = array.argsort(keys.toArray)
 
-  def reversed: Index[Int] = new IndexInt(toVec.reversed)
+  def reversed: Index[Int] = new IndexInt(toVec.reversed, ord)
 
   def join(other: Index[Int], how: JoinType = LeftJoin): ReIndexer[Int] =
     JoinerImpl.join(this, other, how)
@@ -78,7 +80,7 @@ class IndexInt(keys: Vec[Int]) extends Index[Int] {
   }
 
   def slice(from: Int, until: Int, stride: Int): Index[Int] = {
-    new IndexInt(keys.slice(from, until, stride))
+    new IndexInt(keys.slice(from, until, stride), ord)
   }
 
   // find the first location whereby an insertion would maintain a sorted index

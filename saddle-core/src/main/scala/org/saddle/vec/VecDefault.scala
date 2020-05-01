@@ -22,6 +22,7 @@ import org.saddle.{ST, Vec, array, NUM, util, ORD, PctMethod, RankTie, Mat}
 import org.saddle.index.Slice
 import org.saddle.index.IndexIntRange
 import java.io.OutputStream
+import cats.kernel.instances.double.catsKernelStdOrderForDouble
 
 class VecDefault[@spec(Boolean, Int, Long, Double) T](
     values: Array[T],
@@ -361,7 +362,7 @@ class VecDefault[@spec(Boolean, Int, Long, Double) T](
     * @param rng evaluates to IRange
     */
   def take(rng: Slice[Int]): Vec[T] = {
-    val idx = new IndexIntRange(length)
+    val idx = IndexIntRange(length)
     val pair = rng(idx)
     slice(pair._1, pair._2)
   }
@@ -598,6 +599,7 @@ class VecDefault[@spec(Boolean, Int, Long, Double) T](
           case PctMethod.Excel => (tile / 100.0) * (c - 1.0) + 1.0
           case PctMethod.NIST  => (tile / 100.0) * (c + 1.0)
         }
+
         val s = vf.sorted
         val k = math.floor(n).toInt
         val d = n - k

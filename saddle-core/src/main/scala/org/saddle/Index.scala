@@ -52,6 +52,8 @@ trait Index[@spec(Boolean, Int, Long, Double) T] {
     */
   def scalarTag: ScalarTag[T]
 
+  def ord: ORD[T]
+
   /**
     * Convert Index to a [[org.saddle.Vec]]
     */

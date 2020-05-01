@@ -20,6 +20,7 @@ import org.specs2.ScalaCheck
 import org.specs2.mutable.Specification
 import org.scalacheck.Gen
 import org.scalacheck.Prop._
+import cats.kernel.instances.all._
 
 /**
   * Test properties of array package
@@ -65,7 +66,6 @@ class ArrayCheck extends Specification with ScalaCheck {
     "insertion sort" in {
       forAll { (arr1: Seq[Int]) =>
         val p = Array.ofDim[Int](arr1.size)
-        import spire.std.int._
         array.PermuteInsertionSort.sort(arr1.toArray, 0, arr1.size, p)
         p must_== arr1.toArray.zipWithIndex.sortBy(_._1).map(_._2)
       }

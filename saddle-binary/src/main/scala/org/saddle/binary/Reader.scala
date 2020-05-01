@@ -21,6 +21,7 @@ import scala.util.{Left, Right, Either}
 import java.nio.channels.ReadableByteChannel
 import Writer._
 import org.saddle.index.IndexIntRange
+import cats.kernel.instances.all._
 
 object Reader {
 

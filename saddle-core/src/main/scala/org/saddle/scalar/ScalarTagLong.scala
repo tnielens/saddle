@@ -55,7 +55,7 @@ object ScalarTagLong extends ScalarTag[Long] {
   def makeVec(arr: Array[Long]) = Vec(arr)(this)
   def makeMat(r: Int, c: Int, arr: Array[Long]) = Mat(r, c, arr)(this)
   def makeIndex(vec: Vec[Long])(implicit ord: ORD[Long]): Index[Long] =
-    new IndexLong(vec)
+    new IndexLong(vec, ord)
   def makeSorter(implicit ord: ORD[Long]): Sorter[Long] = Sorter.longSorter
 
   def concat(arrs: IndexedSeq[Vec[Long]]): Vec[Long] =

@@ -17,6 +17,7 @@ package org.saddle
 
 import org.specs2.mutable.Specification
 import org.saddle.ops.BinOps._
+import cats.kernel.instances.all._
 class SeriesSpec extends Specification {
   "table works" in {
     Series.table(Vec(4, 1, 2, 2, 1, 3, 1)) must_== Series(

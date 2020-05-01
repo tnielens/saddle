@@ -18,6 +18,7 @@ package org.saddle.stats
 import scala.{specialized => spec}
 import org.saddle._
 import org.saddle.scalar._
+import cats.kernel.instances.all._
 
 /**
   * Statistical methods made available on numeric Vec objects via enrichment.

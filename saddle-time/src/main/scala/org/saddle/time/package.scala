@@ -22,6 +22,8 @@ import org.saddle.vec.VecTime
 import org.saddle.index.IndexTime
 import scala.Some
 import org.saddle.scalar.ScalarTagTime
+import cats.kernel.instances.all._
+import cats.kernel.Order
 
 /**
   * Functionality to assist in TimeSeries related operations
@@ -160,9 +162,8 @@ package object time {
         isTime: Boolean = false
     ): Vec[Int] =
       if (chrono != ISO_CHRONO_UTC || !isTime)
-        times.map { (ms: Long) =>
-          field.get(ms)
-        } else
+        times.map { (ms: Long) => field.get(ms) }
+      else
         getFieldFast(field)
 
     protected def extractor(unit: Long, range: Long): Vec[Int] = times.map {
@@ -182,8 +183,8 @@ package object time {
       */
     protected def getFieldFast(fld: DateTimeField): Vec[Int] = {
       val unit: Long = fld.getDurationField.getUnitMillis
-      val range
-          : Long = fld.getRangeDurationField.getUnitMillis / fld.getDurationField.getUnitMillis
+      val range: Long =
+        fld.getRangeDurationField.getUnitMillis / fld.getDurationField.getUnitMillis
       extractor(unit, range)
     }
   }
@@ -230,6 +231,9 @@ package object time {
     def compare(x: DateTime, y: DateTime) = x.compareTo(y)
   }
 
+  implicit val ord: ORD[DateTime] =
+    Order.fromOrdering(implicitly[Ordering[DateTime]])
+
   // Convenience methods for constructing ReadablePeriod instances
 
   def years(i: Int) = Years.years(i)
@@ -253,6 +257,8 @@ package object time {
     * @param end   The latest datetime on or before which to end the recurrence
     */
   def make(rrule: RRule, start: DateTime, end: DateTime): Index[DateTime] = {
+    implicit val ord: ORD[DateTime] =
+      Order.fromOrdering(implicitly[Ordering[DateTime]])
     Index((rrule.copy(count = None) withUntil end from start).toSeq: _*)
   }
 }

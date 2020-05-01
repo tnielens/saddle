@@ -61,7 +61,7 @@ object ScalarTagDouble extends ScalarTag[Double] {
   def makeVec(arr: Array[Double]) = Vec(arr)(this)
   def makeMat(r: Int, c: Int, arr: Array[Double]) = Mat(r, c, arr)(this)
   def makeIndex(vec: Vec[Double])(implicit ord: ORD[Double]): Index[Double] =
-    new IndexDouble(vec)
+    new IndexDouble(vec, ord)
   def makeSorter(implicit ord: ORD[Double]): Sorter[Double] =
     Sorter.doubleSorter
 

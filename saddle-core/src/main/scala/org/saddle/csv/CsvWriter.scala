@@ -21,6 +21,7 @@ import java.io.{OutputStream, BufferedOutputStream, FileOutputStream}
 import org.saddle.{UTF8, ST, ORD, Series, Frame}
 import org.saddle.scalar.ScalarTag
 import java.io.ByteArrayOutputStream
+import cats.kernel.instances.int.catsKernelStdOrderForInt
 
 /**
   * Settings for writing a CSV file
