@@ -3,7 +3,14 @@ title: 'Usage'
 weight: 2
 ---
 
-The following documentation is taken from the original Saddle documentation at [http://saddle.github.io/doc/quickstart.html](http://saddle.github.io/doc/quickstart.html), and fed into [mdoc](https://scalameta.org/mdoc/).
+### Imports
+You most likely need the following two imports:
+```scala
+import org.saddle._
+import org.saddle.order._
+```
+
+However if you already imported the `cats` Order typeclass instances, then the first is enough. 
 
 ### 1D vector: Vec[T]
 
@@ -61,6 +68,7 @@ The key type of a must have a natural ordering (ie, an Ordering of that type wit
 Let’s look at a few constructions:
 
 ```scala mdoc
+import org.saddle.order._
 // we already know we can convert a Vec
 Series(Vec(32, 12, 9))
 
