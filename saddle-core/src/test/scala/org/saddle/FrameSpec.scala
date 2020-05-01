@@ -19,6 +19,8 @@ import org.specs2.mutable.Specification
 import org.saddle.index.InnerJoin
 import org.saddle.ops.BinOps._
 import cats.kernel.instances.all._
+import cats.kernel.Order
+
 /**
   * Specs for a Frame
   */
@@ -180,14 +182,36 @@ class FrameSpec extends Specification {
   "sortedCIx" in {
     testFrame.reindexCol(cix = Index(3, 2, 5, 1)).sortedCIx must_== testFrame
   }
+  "sortedRIxReverse" in {
+    testFrame
+      .reindexRow(rix = Index(4, 2, 5, 1))
+      .sortedRIxReverse must_== testFrame.toRowSeq.reverse.toFrame.T
+  }
+  "sortedCIxReverse" in {
+    testFrame
+      .reindexCol(cix = Index(3, 2, 5, 1))
+      .sortedCIxReverse must_== testFrame.toColSeq.reverse.toFrame
+  }
   "sortedRows" in {
     Frame(1 -> Series(4, 3, 2, 1)).sortedRows(0) must_== Frame(
       1 -> Series(3 -> 1, 2 -> 2, 1 -> 3, 0 -> 4)
     )
   }
+  "sortedRows custom ord" in {
+    val ord = Order.reverse(cats.kernel.instances.int.catsKernelStdOrderForInt)
+    Frame(1 -> Series(4, 3, 2, 1)).sortedRows(0)(ord) must_== Frame(
+      1 -> Series(0 -> 4, 1 -> 3, 2 -> 2, 3 -> 1)
+    )
+  }
   "sortedCols" in {
     Frame(1 -> Series(4, 3, 2, 1)).T.sortedCols(0) must_== Frame(
       1 -> Series(3 -> 1, 2 -> 2, 1 -> 3, 0 -> 4)
+    ).T
+  }
+  "sortedCols custom ord" in {
+    val ord = Order.reverse(cats.kernel.instances.int.catsKernelStdOrderForInt)
+    Frame(1 -> Series(4, 3, 2, 1)).T.sortedCols(0)(ord) must_== Frame(
+      1 -> Series(0 -> 4, 1 -> 3, 2 -> 2, 3 -> 1)
     ).T
   }
   "sortedColsBy" in {

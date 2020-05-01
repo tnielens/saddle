@@ -755,6 +755,15 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     }
 
   /**
+    * Create a new Frame whose rows are sorted according to the reverse of row
+    * index keys
+    */
+  def sortedRIxReverse: Frame[RX, CX, T] = {
+    val taker = rowIx.argSort.reverse
+    Frame(values.map(_.take(taker)), rowIx.take(taker), colIx)
+  }
+
+  /**
     * Create a new Frame whose cols are sorted according to the col
     * index keys
     */
@@ -764,6 +773,15 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
       val taker = colIx.argSort
       Frame(values.take(taker), rowIx, colIx.take(taker))
     }
+
+  /**
+    * Create a new Frame whose cols are sorted according to the reveverse of col
+    * index keys
+    */
+  def sortedCIxReverse: Frame[RX, CX, T] = {
+    val taker = colIx.argSort.reverse
+    Frame(values.take(taker), rowIx, colIx.take(taker))
+  }
 
   /**
     * Create a new Frame whose rows are sorted primarily on the values

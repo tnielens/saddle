@@ -3,6 +3,8 @@ package org.saddle
 import org.specs2.mutable.Specification
 import scalar.Scalar
 import cats.kernel.instances.all._
+import org.saddle.scalar.ScalarTagInt
+import cats.kernel.Order
 
 /**
   * User: Adam Klein
@@ -289,6 +291,19 @@ class IndexSpec extends Specification {
       res.index must_== Index(1, 1, 2, 2, 0, 3)
       res.lTake.get must_== Array(0, 1, 2, 2, 3, -1)
       res.rTake.get must_== Array(0, 0, 2, 3, -1, 1)
+    }
+
+    "Sort" in {
+      val ix1 = Index(3, 4, 1, 2)
+      ix1.sorted must_== Index(1, 2, 3, 4)
+    }
+
+    "Sort by reversed ord" in {
+      val st = ScalarTagInt
+      val ord =
+        Order.reverse(cats.kernel.instances.int.catsKernelStdOrderForInt)
+      val ix1 = Index.apply(3, 4, 1, 2)(st, ord)
+      ix1.sorted must_== Index(4, 3, 2, 1)
     }
   }
 }
