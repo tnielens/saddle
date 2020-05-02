@@ -22,6 +22,7 @@ import org.scalacheck.Prop._
 import org.saddle.scalar.Value
 import org.saddle.ops.BinOps._
 import org.saddle.order._
+import org.saddle.util.DoubleTotalOrder
 
 /**
   * Test on properties of Vec
@@ -284,10 +285,10 @@ class VecCheck extends Specification with ScalaCheck {
     "sorted works" in {
       forAll { (v: Vec[Double]) =>
         val res = v.sorted
-        val exp = Vec(v.contents.sorted)
+        val exp = Vec(v.contents.sorted(DoubleTotalOrder.toOrdering))
         val nas = v.length - v.count
 
-        res.slice(nas, res.length) must_== exp.slice(0, res.length - nas)
+        res.slice(0, res.length - nas) must_== exp.slice(0, res.length - nas)
       }
     }
 
