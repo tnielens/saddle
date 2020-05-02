@@ -2,18 +2,71 @@ package org.saddle.util
 
 import org.saddle.ORD
 import cats.kernel.Order
+import cats.kernel.Hash
+
+/**
+  * An Order[Double] instance which produces a total order by ordering NaNs above
+  * all other Doubles
+  *
+  * Contrary to the specification of cats, the DoubleOrdering in cats.kernel
+  * is not total because NaN is not ordered (all comparisons return false).
+  * This behaviour is consistent with IEEE-754, but not very practical.
+  *
+  * java.lang.Double.compare orders NaN to be largest of all Doubles.
+  *
+  * See https://github.com/scala/scala/pull/8721
+  * See https://github.com/scala/scala/blob/39e82c3f904380f0b40d106723747faf881640d4/src/library/scala/math/Ordering.scala#L465
+  *
+  */
+object DoubleTotalOrder extends Order[Double] with Hash[Double] {
+
+  def hash(x: Double): Int = x.hashCode()
+  def compare(x: Double, y: Double): Int =
+    java.lang.Double.compare(x, y)
+
+  override def eqv(x: Double, y: Double): Boolean = compare(x, y) == 0
+  override def neqv(x: Double, y: Double): Boolean = !eqv(x, y)
+  override def gt(x: Double, y: Double): Boolean = compare(x, y) > 0
+  override def gteqv(x: Double, y: Double): Boolean = compare(x, y) >= 0
+  override def lt(x: Double, y: Double): Boolean = compare(x, y) < 0
+  override def lteqv(x: Double, y: Double): Boolean = compare(x, y) <= 0
+
+  override def min(x: Double, y: Double): Double =
+    if (gteqv(x, y)) x else y
+  override def max(x: Double, y: Double): Double =
+    if (lteqv(x, y)) x else y
+}
+
+/** See DoubleTotalOrder
+  */
+object FloatTotalOrder extends Order[Float] with Hash[Float] {
+
+  def hash(x: Float): Int = x.hashCode()
+  def compare(x: Float, y: Float): Int =
+    java.lang.Float.compare(x, y)
+
+  override def eqv(x: Float, y: Float): Boolean = compare(x, y) == 0
+  override def neqv(x: Float, y: Float): Boolean = !eqv(x, y)
+  override def gt(x: Float, y: Float): Boolean = compare(x, y) > 0
+  override def gteqv(x: Float, y: Float): Boolean = compare(x, y) >= 0
+  override def lt(x: Float, y: Float): Boolean = compare(x, y) < 0
+  override def lteqv(x: Float, y: Float): Boolean = compare(x, y) <= 0
+
+  override def min(x: Float, y: Float): Float =
+    if (gteqv(x, y)) x else y
+  override def max(x: Float, y: Float): Float =
+    if (lteqv(x, y)) x else y
+}
 
 trait OrderInstances {
   implicit def intOrd: ORD[Int] =
     cats.kernel.instances.int.catsKernelStdOrderForInt
   implicit def longOrd: ORD[Long] =
     cats.kernel.instances.long.catsKernelStdOrderForLong
-  implicit def doubleOrd: ORD[Double] =
-    cats.kernel.instances.double.catsKernelStdOrderForDouble
+  implicit def doubleOrd: ORD[Double] = DoubleTotalOrder
   implicit def charOrd: ORD[Char] =
     cats.kernel.instances.char.catsKernelStdOrderForChar
-  implicit def floatOrd: ORD[Float] =
-    cats.kernel.instances.float.catsKernelStdOrderForFloat
+  implicit def floatOrd: ORD[Float] = FloatTotalOrder
   implicit def byteOrd: ORD[Byte] =
     cats.kernel.instances.byte.catsKernelStdOrderForByte
   implicit def shortOrd: ORD[Short] =
