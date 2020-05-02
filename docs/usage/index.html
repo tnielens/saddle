@@ -119,7 +119,16 @@
 <div class="content anchor-link-enabled">
   
 
-<p>The following documentation is taken from the original Saddle documentation at <a href="http://saddle.github.io/doc/quickstart.html">http://saddle.github.io/doc/quickstart.html</a>, and fed into <a href="https://scalameta.org/mdoc/">mdoc</a>.</p>
+<h3 id="imports">Imports</h3>
+
+<p>You most likely need the following two imports:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle._
+<span style="color:#66d9ef">import</span> org.saddle.order._</code></pre></div>
+<p>Note that <code>org.saddle.order._</code> imports <code>cats.kernel.Order[_]</code> typeclass instances into the scope.
+If you import cats instances an other way then you should not import <code>org.saddle.order._</code>.</p>
+
+<p>The <code>Order[Double]</code> and <code>Order[Float]</code> instances in <code>org.saddle.order</code> define a total ordering and
+order <code>NaN</code> above all other values, consistent with <code>java.lang.Double.compare</code>.</p>
 
 <h3 id="1d-vector-vec-t">1D vector: Vec[T]</h3>
 
@@ -159,17 +168,17 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>vec<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">20</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res6: Vec[Double] = [20 x 1]
-</span><span style="color:#75715e">// 0.4601
-</span><span style="color:#75715e">// 0.0537
-</span><span style="color:#75715e">// 0.3700
-</span><span style="color:#75715e">// 0.5237
-</span><span style="color:#75715e">// 0.2608
+</span><span style="color:#75715e">// 0.7744
+</span><span style="color:#75715e">// 0.3327
+</span><span style="color:#75715e">// 0.8845
+</span><span style="color:#75715e">// 0.5323
+</span><span style="color:#75715e">// 0.8422
 </span><span style="color:#75715e">//  ... 
-</span><span style="color:#75715e">// 0.9102
-</span><span style="color:#75715e">// 0.3734
-</span><span style="color:#75715e">// 0.8726
-</span><span style="color:#75715e">// 0.8397
-</span><span style="color:#75715e">// 0.3923
+</span><span style="color:#75715e">// 0.4796
+</span><span style="color:#75715e">// 0.2557
+</span><span style="color:#75715e">// 0.3271
+</span><span style="color:#75715e">// 0.1282
+</span><span style="color:#75715e">// 0.5226
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Operations:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
@@ -247,7 +256,8 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 <p>The key type of a must have a natural ordering (ie, an Ordering of that type within the implicit scope). However, the Series maintains the order in which its data was supplied unless ordered othewise.</p>
 
 <p>Let’s look at a few constructions:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we already know we can convert a Vec
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.order._
+<span style="color:#75715e">// we already know we can convert a Vec
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Series</span><span style="color:#f92672">(</span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">32</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">,</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">))</span>
 <span style="color:#75715e">// res21: Series[Int, Int] = [3 x 1]
 </span><span style="color:#75715e">// 0 -&gt; 32
@@ -423,13 +433,13 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>reindex<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// java.lang.IllegalArgumentException: requirement failed: Could not reindex unambiguously
 </span><span style="color:#75715e">// 	at scala.Predef$.require(Predef.scala:281)
-</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer(Index.scala:390)
-</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer$(Index.scala:386)
+</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer(Index.scala:392)
+</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer$(Index.scala:388)
 </span><span style="color:#75715e">// 	at org.saddle.index.IndexAny.getIndexer(IndexAny.scala:29)
-</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:246)
-</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:255)
-</span><span style="color:#75715e">// 	at repl.Session$App14$$anonfun$46.apply(usage.md:187)
-</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> 	at repl<span style="color:#f92672">.</span><span style="color:#a6e22e">Session$App14$$anonfun$46</span><span style="color:#f92672">.</span>apply<span style="color:#f92672">(</span>usage<span style="color:#f92672">.</span>md<span style="color:#66d9ef">:</span><span style="color:#960050;background-color:#1e0010">187</span><span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we can &#34;reset&#34; the index to integer labels
+</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:247)
+</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:256)
+</span><span style="color:#75715e">// 	at repl.Session$App14$$anonfun$46.apply(usage.md:190)
+</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> 	at repl<span style="color:#f92672">.</span><span style="color:#a6e22e">Session$App14$$anonfun$46</span><span style="color:#f92672">.</span>apply<span style="color:#f92672">(</span>usage<span style="color:#f92672">.</span>md<span style="color:#66d9ef">:</span><span style="color:#960050;background-color:#1e0010">190</span><span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we can &#34;reset&#34; the index to integer labels
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>resetIndex
 <span style="color:#75715e">// res46: Series[Int, Int] = [4 x 1]
 </span><span style="color:#75715e">// 0 -&gt;  1
@@ -785,23 +795,23 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <p>Again, sometimes we want to create instances filled with random observations. As to Vec, we can do the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>       
 <span style="color:#75715e">// res89: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.9311 0.6425 
-</span><span style="color:#75715e">// 0.4566 0.9780 
+</span><span style="color:#75715e">// 0.9835 0.5674 
+</span><span style="color:#75715e">// 0.6376 0.9264 
 </span><span style="color:#75715e">//        
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randp<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random positive doubles
 </span><span style="color:#75715e">// res90: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.8716 0.6322 
-</span><span style="color:#75715e">// 0.2670 0.4503 
+</span><span style="color:#75715e">// 0.1818 0.4167 
+</span><span style="color:#75715e">// 0.8467 0.1837 
 </span><span style="color:#75715e">//       // random positive doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random normally distributed doubles
 </span><span style="color:#75715e">// res91: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">//  0.5828 1.5176 
-</span><span style="color:#75715e">// -0.5365 1.9790 
+</span><span style="color:#75715e">// 1.0069 -0.5076 
+</span><span style="color:#75715e">// 0.3942 -1.0364 
 </span><span style="color:#75715e">//       // random normally distributed doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn2<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">12</span><span style="color:#f92672">)</span> <span style="color:#75715e">// random normally distributed with mean=3, stdev=12
 </span><span style="color:#75715e">// res92: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// -9.6050  1.3582 
-</span><span style="color:#75715e">//  1.8971 10.6264 
+</span><span style="color:#75715e">// -16.3064   9.9144 
+</span><span style="color:#75715e">//  11.2851 -26.4905 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are a few other factory methods available:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
@@ -957,8 +967,8 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">).</span>roundTo<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res119: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.4700 0.1700 
-</span><span style="color:#75715e">// 0.8800 0.5600 
+</span><span style="color:#75715e">// 0.7100 0.5500 
+</span><span style="color:#75715e">// 0.1300 0.9000 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <h3 id="homogeneous-table-with-row-and-column-index-data-frame-frame-rx-cx-t">Homogeneous table with row and column index (data frame) : Frame[RX,CX,T]</h3>
 
@@ -1501,17 +1511,17 @@ rwhere</code></pre></div>
 </span><span style="color:#75715e">// res178: Frame[String, String, Int] = [3 x 2]
 </span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
-</span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">// a -&gt;  1 NA 
 </span><span style="color:#75715e">// b -&gt;  2  3 
+</span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e">//    // sort rows by first element of row
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>sortedColsBy <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> c <span style="color:#66d9ef">=&gt;</span> c<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">}</span>   <span style="color:#75715e">// sort cols by first element of col
 </span><span style="color:#75715e">// res179: Frame[String, String, Int] = [3 x 2]
-</span><span style="color:#75715e">//       y  x 
+</span><span style="color:#75715e">//       x  y 
 </span><span style="color:#75715e">//      -- -- 
-</span><span style="color:#75715e">// a -&gt; NA  1 
-</span><span style="color:#75715e">// b -&gt;  3  2 
-</span><span style="color:#75715e">// c -&gt;  4 NA 
+</span><span style="color:#75715e">// a -&gt;  1 NA 
+</span><span style="color:#75715e">// b -&gt;  2  3 
+</span><span style="color:#75715e">// c -&gt; NA  4 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are several mapping functions:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>mapValues <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> t <span style="color:#66d9ef">=&gt;</span> t <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">}</span>        <span style="color:#75715e">// add one to each element of frame

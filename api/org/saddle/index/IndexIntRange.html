@@ -309,9 +309,9 @@ requires and index and one is not supplied.
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="org.saddle.index.IndexIntRange#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(length:Int,from:Int):org.saddle.index.IndexIntRange"></a><a id="&lt;init&gt;:IndexIntRange"></a>
+      <a id="&lt;init&gt;(length:Int,from:Int,ord:org.saddle.ORD[Int]):org.saddle.index.IndexIntRange"></a><a id="&lt;init&gt;:IndexIntRange"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/index/IndexIntRange.html#&lt;init&gt;(length:Int,from:Int):org.saddle.index.IndexIntRange" title="Permalink">
+      <a href="../../../org/saddle/index/IndexIntRange.html#&lt;init&gt;(length:Int,from:Int,ord:org.saddle.ORD[Int]):org.saddle.index.IndexIntRange" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -320,7 +320,7 @@ requires and index and one is not supplied.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IndexIntRange</span><span class="params">(<span name="length">length: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>)</span>
+        <span class="name">IndexIntRange</span><span class="params">(<span name="length">length: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">0</span></span>, <span name="ord">ord: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span>
       </span>
       
       
@@ -609,7 +609,7 @@ entry in <code>uniques</code> occurs within the index.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">distinct</span><span class="params">(<span class="implicit">implicit </span><span name="st">st: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="ord">ord: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.index.IndexIntRange">IndexIntRange</a></span>
+        <span class="name">distinct</span><span class="params">(<span class="implicit">implicit </span><span name="st">st: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="ord">ord: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.index.IndexIntRange">IndexIntRange</a></span>
       </span>
       
       <p class="shortcomment cmt">Return the index of distinct values.</p><div class="fullcomment"><div class="comment cmt"><p>Return the index of distinct values. Keeps order of first occurences.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.index.IndexIntRange">IndexIntRange</a> → <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a></dd></dl></div>
@@ -1115,7 +1115,7 @@ must already be sorted.</p></div><dl class="paramcmts block"><dt class="param">t
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>)</span><span class="result">: <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>
+        <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>, <span name="arg1">arg1: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>)</span><span class="result">: <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a>[<span class="extype" name="org.saddle.index.IndexIntRange.map.B">B</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Map over the elements in the Index, producing a new Index, similar to Map in the
@@ -1212,6 +1212,22 @@ Returns <code>current</code> if it is the last.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="org.saddle.index.IndexIntRange#ord" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ord:org.saddle.ORD[Int]"></a><a id="ord:ORD[Int]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/index/IndexIntRange.html#ord:org.saddle.ORD[Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ord</span><span class="result">: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.index.IndexIntRange">IndexIntRange</a> → <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a></dd></dl></div>
     </li><li name="org.saddle.Index#prev" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="prev(current:org.saddle.scalar.Scalar[T]):org.saddle.scalar.Scalar[T]"></a><a id="prev(Scalar[Int]):Scalar[Int]"></a>
       <span class="permalink">
@@ -1582,7 +1598,7 @@ duplicates.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">uniques</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <a href="../index.html#ORD[C]=Ordering[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="tag">tag: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">uniques</span><span class="params">(<span class="implicit">implicit </span><span name="ord">ord: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="tag">tag: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="result">: <a href="../Index.html" class="extype" name="org.saddle.Index">Index</a>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns an array of unique keys in the Index, in the order in which they
