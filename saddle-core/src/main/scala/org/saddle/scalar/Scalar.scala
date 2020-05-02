@@ -63,13 +63,13 @@ object Scalar {
     if (x == null || st.isMissing(x)) NA else Value(x)
 
   /**
-    * Provides comparisons of Scalars, where NA always evaluates as less than non-NA
+    * Provides comparisons of Scalars, where NA always evaluates as greater than non-NA
     */
   implicit def ord[T: ORD] = new ORD[Scalar[T]] {
     def compare(x: Scalar[T], y: Scalar[T]): Int = (x, y) match {
       case (NA, NA) => 0
-      case (NA, _)  => -1
-      case (_, NA)  => 1
+      case (NA, _)  => 1
+      case (_, NA)  => -1
       case (_, _)   => implicitly[ORD[T]].compare(x.get, y.get)
     }
   }
