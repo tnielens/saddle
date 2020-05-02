@@ -34,6 +34,8 @@ import scalar.Scalar
 import java.io.OutputStream
 import org.saddle.mat.MatCols
 import org.saddle.order._
+import _root_.cats.kernel.Order
+import org.saddle.array.Sorter.intSorter
 
 /**
   * `Frame` is an immutable container for 2D data which is indexed along both axes
@@ -829,9 +831,11 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     *          ordering
     * @tparam Q Result type of the function
     */
-  def sortedRowsBy[Q: ORD](f: Series[CX, T] => Q): Frame[RX, CX, T] = {
-    implicit val o = implicitly[ORD[Q]].toOrdering
-    val perm = array.range(0, numRows).sortBy((i: Int) => f(rowAt(i)))
+  def sortedRowsBy[@spec(Int, Long, Double) Q: ORD](
+      f: Series[CX, T] => Q
+  ): Frame[RX, CX, T] = {
+    val perm =
+      intSorter.sorted(array.range(0, numRows))(Order.by(i => f(rowAt(i))))
     rowAt(perm)
   }
 
@@ -842,9 +846,11 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     *          ordering
     * @tparam Q Result type of the function
     */
-  def sortedColsBy[Q: ORD](f: Series[RX, T] => Q): Frame[RX, CX, T] = {
-    implicit val o = implicitly[ORD[Q]].toOrdering
-    val perm = array.range(0, numCols).sortBy((i: Int) => f(colAt(i)))
+  def sortedColsBy[@spec(Int, Long, Double) Q: ORD](
+      f: Series[RX, T] => Q
+  ): Frame[RX, CX, T] = {
+    val perm =
+      intSorter.sorted(array.range(0, numCols))(Order.by(i => f(colAt(i))))
     colAt(perm)
   }
 

@@ -26,6 +26,7 @@ import spire.math.MergeSort
 trait Sorter[T] {
   def argSorted(arr: Array[T])(implicit ord: ORD[T]): Array[Int]
   def sorted(arr: Array[T])(implicit ord: ORD[T]): Array[T]
+  // def sortBy[Q](arr: Array[T])(f: T => Q)(implicit ord: ORD[Q]): Array[T]
 }
 
 object Sorter {
@@ -34,6 +35,7 @@ object Sorter {
       VecBool.argSort(arr)
     def sorted(arr: Array[Boolean])(implicit ord: ORD[Boolean]) =
       VecBool.sort(arr)
+
   }
 
   object byteSorter extends Sorter[Byte] {
@@ -94,9 +96,8 @@ object Sorter {
 
   object floatSorter extends Sorter[Float] {
     def argSorted(arr: Array[Float])(implicit ord: ORD[Float]) = {
-      val tmp = arr.clone
       val res = range(0, arr.length)
-      PermuteMergeSort.sort(tmp, res)
+      PermuteMergeSort.sort(arr, res)
       res
     }
 
@@ -123,9 +124,8 @@ object Sorter {
 
   object doubleSorter extends Sorter[Double] {
     def argSorted(arr: Array[Double])(implicit ord: ORD[Double]) = {
-      val tmp = arr.clone()
       val res = range(0, arr.length)
-      PermuteMergeSort.sort(tmp, res)
+      PermuteMergeSort.sort(arr, res)
       res
     }
 
@@ -139,13 +139,20 @@ object Sorter {
   def anySorter[T] = new Sorter[T] {
     def argSorted(arr: Array[T])(implicit ord: ORD[T]) = {
       val res = range(0, arr.length)
-      res.sortWith((a, b) => ord.compare(arr(a), arr(b)) < 0)
+      PermuteMergeSort.sort(arr, res)
+      res
     }
 
     def sorted(arr: Array[T])(implicit ord: ORD[T]) = {
-      val res = arr.clone()
-      implicit val o = ord.toOrdering
-      res.sorted
+      val res = arr.clone
+      val offsets = argSorted(arr)
+      var i = 0
+      while (i < offsets.length) {
+        val idx = offsets(i)
+        res(i) = arr(idx)
+        i += 1
+      }
+      res
     }
   }
 }

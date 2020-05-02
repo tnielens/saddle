@@ -27,6 +27,22 @@ import org.scalacheck.Prop._
   */
 class ArrayCheck extends Specification with ScalaCheck {
 
+  "double order" in {
+    forAll { (a: Double, b: Double) =>
+      org.saddle.util.DoubleTotalOrder
+        .gteqv(a, b) must_== org.saddle.util.DoubleTotalOrder.toOrdering
+        .gteq(a, b)
+    }
+  }
+  "double order" in {
+    forAll { (a: Double) =>
+      val b = Double.NaN
+      org.saddle.util.DoubleTotalOrder
+        .gteqv(a, b) must_== org.saddle.util.DoubleTotalOrder.toOrdering
+        .gteq(a, b)
+    }
+  }
+
   "sort int" in {
     forAll { (ar: Array[Int]) => array.sort(ar) must_== ar.sorted }
   }
@@ -53,44 +69,64 @@ class ArrayCheck extends Specification with ScalaCheck {
   }
 
   "sort Double NaN" in {
-    (array
-      .sort(
-        Array(
-          1d,
-          Double.PositiveInfinity,
-          Double.NegativeInfinity,
-          Double.NaN,
-          2d
-        )
-      )
-      .deep
-      .toString) must_== (Array(
+    val arr = Array(
+      1d,
+      Double.PositiveInfinity,
+      Double.NegativeInfinity,
+      Double.NaN,
+      2d
+    )
+    val exp = Array(
       Double.NegativeInfinity,
       1d,
       2d,
       Double.PositiveInfinity,
       Double.NaN
-    ).deep.toString)
+    )
+    array
+      .sort(arr)
+      .deep
+      .toString must_== exp.deep.toString
   }
-  "sort FloatNaN NaN" in {
+  "sort Double NaN" in {
+    val arr = Array(
+      1d,
+      Double.PositiveInfinity,
+      Double.NegativeInfinity,
+      Double.NaN,
+      2d
+    )
     (array
       .sort(
-        Array(
-          1f,
-          Float.PositiveInfinity,
-          Float.NegativeInfinity,
-          Float.NaN,
-          2f
-        )
+        arr
       )
       .deep
-      .toString) must_== (Array(
+      .toString) must_== (arr
+      .sorted(implicitly[ORD[Double]].toOrdering)
+      .deep
+      .toString)
+  }
+  "sort FloatNaN NaN" in {
+    val arr = Array(
+      1f,
+      Float.PositiveInfinity,
+      Float.NegativeInfinity,
+      Float.NaN,
+      2f
+    )
+    val exp = Array(
       Float.NegativeInfinity,
       1f,
       2f,
       Float.PositiveInfinity,
       Float.NaN
-    ).deep.toString)
+    )
+    (array
+      .sort(
+        arr
+      )
+      .deep
+      .toString) must_== (exp.deep.toString)
   }
 
   "sum works for" in {

@@ -9,7 +9,6 @@
 package org.saddle.array
 
 import spire.algebra.Order
-import scala.reflect.ClassTag
 import scala.{specialized => sp}
 
 /**
@@ -68,7 +67,7 @@ object PermuteMergeSort {
   @inline final def startWidth: Int = 8
   @inline final def startStep: Int = 16
 
-  final def sort[@sp A: Order: ClassTag](
+  final def sort[@sp A: Order](
       data: Array[A],
       perm: Array[Int]
   ): Unit = {
