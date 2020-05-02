@@ -94,14 +94,14 @@ object Sorter {
 
   object floatSorter extends Sorter[Float] {
     def argSorted(arr: Array[Float])(implicit ord: ORD[Float]) = {
-      val tmp = nanToNegInf(arr) // fastutil sorts NaN to PosInf
+      val tmp = arr.clone
       val res = range(0, arr.length)
       PermuteMergeSort.sort(tmp, res)
       res
     }
 
     def sorted(arr: Array[Float])(implicit ord: ORD[Float]) = {
-      val res = nanToNegInf(arr)
+      val res = arr.clone
       MergeSort.sort(res)
       res
     }
@@ -123,39 +123,17 @@ object Sorter {
 
   object doubleSorter extends Sorter[Double] {
     def argSorted(arr: Array[Double])(implicit ord: ORD[Double]) = {
-      val tmp = nanToNegInf(arr) // fastutil sorts NaN to PosInf
+      val tmp = arr.clone()
       val res = range(0, arr.length)
       PermuteMergeSort.sort(tmp, res)
       res
     }
 
     def sorted(arr: Array[Double])(implicit ord: ORD[Double]) = {
-      val res = nanToNegInf(arr)
+      val res = arr.clone()
       MergeSort.sort(res)
       res
     }
-  }
-
-  private def nanToNegInf(arr: Array[Double]): Array[Double] = {
-    val tmp = arr.clone()
-    var i = 0
-    while (i < tmp.length) {
-      val ti = tmp(i)
-      if (ti != ti) tmp(i) = Double.NegativeInfinity
-      i += 1
-    }
-    tmp
-  }
-
-  private def nanToNegInf(arr: Array[Float]): Array[Float] = {
-    val tmp = arr.clone()
-    var i = 0
-    while (i < tmp.length) {
-      val ti = tmp(i)
-      if (ti != ti) tmp(i) = Float.NegativeInfinity
-      i += 1
-    }
-    tmp
   }
 
   def anySorter[T] = new Sorter[T] {

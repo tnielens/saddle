@@ -27,6 +27,72 @@ import org.scalacheck.Prop._
   */
 class ArrayCheck extends Specification with ScalaCheck {
 
+  "sort int" in {
+    forAll { (ar: Array[Int]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort long" in {
+    forAll { (ar: Array[Long]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort bool" in {
+    forAll { (ar: Array[Boolean]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort short" in {
+    forAll { (ar: Array[Short]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort byte" in {
+    forAll { (ar: Array[Byte]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort double" in {
+    forAll { (ar: Array[Double]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort float" in {
+    forAll { (ar: Array[Float]) => array.sort(ar) must_== ar.sorted }
+  }
+  "sort String" in {
+    forAll { (ar: Array[String]) => array.sort(ar) must_== ar.sorted }
+  }
+
+  "sort Double NaN" in {
+    (array
+      .sort(
+        Array(
+          1d,
+          Double.PositiveInfinity,
+          Double.NegativeInfinity,
+          Double.NaN,
+          2d
+        )
+      )
+      .deep
+      .toString) must_== (Array(
+      Double.NegativeInfinity,
+      1d,
+      2d,
+      Double.PositiveInfinity,
+      Double.NaN
+    ).deep.toString)
+  }
+  "sort FloatNaN NaN" in {
+    (array
+      .sort(
+        Array(
+          1f,
+          Float.PositiveInfinity,
+          Float.NegativeInfinity,
+          Float.NaN,
+          2f
+        )
+      )
+      .deep
+      .toString) must_== (Array(
+      Float.NegativeInfinity,
+      1f,
+      2f,
+      Float.PositiveInfinity,
+      Float.NaN
+    ).deep.toString)
+  }
+
   "sum works for" in {
     "array of doubles" in {
       def arrAndLocs =
