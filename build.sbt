@@ -211,7 +211,8 @@ lazy val spireJS = project
   )
   .settings(
     target := file("spire-prng/targetJS"),
-    fork := false
+    fork := false,
+    coverageEnabled := false
   )
   .enablePlugins(ScalaJSPlugin)
 
@@ -225,9 +226,10 @@ lazy val coreJS = project
     libraryDependencies ++= Seq(
       "org.typelevel" %%% "cats-core" % "2.1.1",
       "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-      "org.specs2" %%% "specs2-core" % "4.8.3" % "test",
-      "org.specs2" %%% "specs2-scalacheck" % "4.8.3" % "test"
-    )
+      "org.specs2" %%% "specs2-core" % "4.9.4" % "test",
+      "org.specs2" %%% "specs2-scalacheck" % "4.9.4" % "test"
+    ),
+    coverageEnabled := false
   )
   .dependsOn(spireJS)
   .enablePlugins(ScalaJSPlugin)
@@ -240,7 +242,8 @@ lazy val binaryJS = project
     libraryDependencies ++= Seq(
       "com.lihaoyi" %%% "ujson" % "1.1.0",
       "org.scalatest" %%% "scalatest" % scalaTestVersion % "test"
-    )
+    ),
+    coverageEnabled := false
   )
   .settings(target := file("saddle-binary/targetJS"), fork := false)
   .dependsOn(coreJS)
@@ -254,7 +257,8 @@ lazy val circeJS = project
     libraryDependencies ++= Seq(
       "io.circe" %%% "circe-core" % "0.13.0",
       "org.scalatest" %%% "scalatest" % scalaTestVersion % "test"
-    )
+    ),
+    coverageEnabled := false
   )
   .settings(target := file("saddle-circe/targetJS"), fork := false)
   .dependsOn(coreJS)
