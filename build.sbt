@@ -265,7 +265,7 @@ lazy val docs = project
   .dependsOn(core, linalg, circe, binary)
   .settings(
     unidocProjectFilter in (ScalaUnidoc, unidoc) :=
-      (inAnyProject -- inProjects(coreJS, circeJS, binaryJS)),
+      (inAnyProject -- inProjects(coreJS, circeJS, binaryJS, spireJS)),
     publishArtifact := false,
     moduleName := "saddle-docs",
     mdocVariables := Map(
@@ -296,7 +296,9 @@ lazy val root = (project in file("."))
     inlinedOps,
     coreJS,
     binaryJS,
-    circeJS
+    circeJS,
+    spire,
+    spireJS
   )
 
 parallelExecution in ThisBuild := false
