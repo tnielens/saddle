@@ -125,6 +125,14 @@ are specialized for numeric types.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="object" href="InsertionSort$.html" title="An implementation of insertion sort."></a>
+                        <a href="InsertionSort$.html" title="An implementation of insertion sort.">InsertionSort</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="MergeSort$.html" title="In-place merge sort implementation."></a>
+                        <a href="MergeSort$.html" title="In-place merge sort implementation.">MergeSort</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="object" href="PermuteInsertionSort$.html" title="An implementation of insertion sort."></a>
                         <a href="PermuteInsertionSort$.html" title="An implementation of insertion sort.">PermuteInsertionSort</a>
                       </li><li class="current-entities indented3">
@@ -273,6 +281,22 @@ are specialized for numeric types.
       </span>
       <span class="symbol">
         <a title="" href="../mat/index.html"><span class="name">mat</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.npy" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="npy"></a><a id="npy:npy"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/npy/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../npy/index.html"><span class="name">npy</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
@@ -499,7 +523,7 @@ are specialized for numeric types.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">argmax</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">argmax</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.argmax.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <p class="shortcomment cmt">Return the integer offset of the maximum element, or -1 for an empty array
@@ -516,7 +540,7 @@ are specialized for numeric types.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">argmin</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+        <span class="name">argmin</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.argmin.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
       </span>
       
       <p class="shortcomment cmt">Return the integer offset of the minimum element, or -1 for an empty array
@@ -710,9 +734,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random doubles on [min,until)
 </p>
     </li><li name="org.saddle.array#randDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randDouble(sz:Int,min:Double,until:Double,rng:spire.random.Generator):Array[Double]"></a><a id="randDouble(Int,Double,Double,Generator):Array[Double]"></a>
+      <a id="randDouble(sz:Int,min:Double,until:Double,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randDouble(Int,Double,Double,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,min:Double,until:Double,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,min:Double,until:Double,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -721,7 +745,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="min">min: <span class="extype" name="scala.Double">Double</span></span>, <span name="until">until: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="min">min: <span class="extype" name="scala.Double">Double</span></span>, <span name="until">until: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random doubles on [min,until)
@@ -744,9 +768,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random doubles on [0,n)
 </p>
     </li><li name="org.saddle.array#randDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randDouble(sz:Int,n:Double,rng:spire.random.Generator):Array[Double]"></a><a id="randDouble(Int,Double,Generator):Array[Double]"></a>
+      <a id="randDouble(sz:Int,n:Double,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randDouble(Int,Double,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,n:Double,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,n:Double,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -755,7 +779,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="n">n: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="n">n: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random doubles on [0,n)
@@ -778,9 +802,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random doubles on [0,1)
 </p>
     </li><li name="org.saddle.array#randDouble" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randDouble(sz:Int,rng:spire.random.Generator):Array[Double]"></a><a id="randDouble(Int,Generator):Array[Double]"></a>
+      <a id="randDouble(sz:Int,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randDouble(Int,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randDouble(sz:Int,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -789,7 +813,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randDouble</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random doubles on [0,1)
@@ -812,9 +836,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random positive doubles on (0, 1]
 </p>
     </li><li name="org.saddle.array#randDoublePos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randDoublePos(sz:Int,rng:spire.random.Generator):Array[Double]"></a><a id="randDoublePos(Int,Generator):Array[Double]"></a>
+      <a id="randDoublePos(sz:Int,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randDoublePos(Int,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randDoublePos(sz:Int,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randDoublePos(sz:Int,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -823,7 +847,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randDoublePos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randDoublePos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random positive doubles on (0, 1]
@@ -846,9 +870,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random integers in [from,to]
 </p>
     </li><li name="org.saddle.array#randInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randInt(sz:Int,from:Int,to:Int,rng:spire.random.Generator):Array[Int]"></a><a id="randInt(Int,Int,Int,Generator):Array[Int]"></a>
+      <a id="randInt(sz:Int,from:Int,to:Int,rng:spireshaded.random.Generator):Array[Int]"></a><a id="randInt(Int,Int,Int,Generator):Array[Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randInt(sz:Int,from:Int,to:Int,rng:spire.random.Generator):Array[Int]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randInt(sz:Int,from:Int,to:Int,rng:spireshaded.random.Generator):Array[Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -857,7 +881,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randInt</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="to">to: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">randInt</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Int">Int</span></span>, <span name="to">to: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random integers in [from,to]
@@ -880,9 +904,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random integers
 </p>
     </li><li name="org.saddle.array#randInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randInt(sz:Int,rng:spire.random.Generator):Array[Int]"></a><a id="randInt(Int,Generator):Array[Int]"></a>
+      <a id="randInt(sz:Int,rng:spireshaded.random.Generator):Array[Int]"></a><a id="randInt(Int,Generator):Array[Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randInt(sz:Int,rng:spire.random.Generator):Array[Int]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randInt(sz:Int,rng:spireshaded.random.Generator):Array[Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -891,7 +915,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randInt</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">randInt</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random integers
@@ -914,9 +938,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random positive integers
 </p>
     </li><li name="org.saddle.array#randIntPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randIntPos(sz:Int,rng:spire.random.Generator):Array[Int]"></a><a id="randIntPos(Int,Generator):Array[Int]"></a>
+      <a id="randIntPos(sz:Int,rng:spireshaded.random.Generator):Array[Int]"></a><a id="randIntPos(Int,Generator):Array[Int]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randIntPos(sz:Int,rng:spire.random.Generator):Array[Int]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randIntPos(sz:Int,rng:spireshaded.random.Generator):Array[Int]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -925,7 +949,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randIntPos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
+        <span class="name">randIntPos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random positive integers
@@ -948,9 +972,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of a random long integers in [from,to]
 </p>
     </li><li name="org.saddle.array#randLong" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randLong(sz:Int,from:Long,to:Long,rng:spire.random.Generator):Array[Long]"></a><a id="randLong(Int,Long,Long,Generator):Array[Long]"></a>
+      <a id="randLong(sz:Int,from:Long,to:Long,rng:spireshaded.random.Generator):Array[Long]"></a><a id="randLong(Int,Long,Long,Generator):Array[Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randLong(sz:Int,from:Long,to:Long,rng:spire.random.Generator):Array[Long]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randLong(sz:Int,from:Long,to:Long,rng:spireshaded.random.Generator):Array[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -959,7 +983,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randLong</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Long">Long</span></span>, <span name="to">to: <span class="extype" name="scala.Long">Long</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">randLong</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="from">from: <span class="extype" name="scala.Long">Long</span></span>, <span name="to">to: <span class="extype" name="scala.Long">Long</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of a random long integers in [from,to]
@@ -982,9 +1006,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of a random long integers
 </p>
     </li><li name="org.saddle.array#randLong" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randLong(sz:Int,rng:spire.random.Generator):Array[Long]"></a><a id="randLong(Int,Generator):Array[Long]"></a>
+      <a id="randLong(sz:Int,rng:spireshaded.random.Generator):Array[Long]"></a><a id="randLong(Int,Generator):Array[Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randLong(sz:Int,rng:spire.random.Generator):Array[Long]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randLong(sz:Int,rng:spireshaded.random.Generator):Array[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -993,7 +1017,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randLong</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">randLong</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of a random long integers
@@ -1016,9 +1040,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random long positive integers
 </p>
     </li><li name="org.saddle.array#randLongPos" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randLongPos(sz:Int,rng:spire.random.Generator):Array[Long]"></a><a id="randLongPos(Int,Generator):Array[Long]"></a>
+      <a id="randLongPos(sz:Int,rng:spireshaded.random.Generator):Array[Long]"></a><a id="randLongPos(Int,Generator):Array[Long]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randLongPos(sz:Int,rng:spire.random.Generator):Array[Long]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randLongPos(sz:Int,rng:spireshaded.random.Generator):Array[Long]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1027,7 +1051,7 @@ so as to produce a new array.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randLongPos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
+        <span class="name">randLongPos</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random long positive integers
@@ -1050,9 +1074,9 @@ so as to produce a new array.</p>
       <p class="shortcomment cmt">Generate an array of random doubles which is normally distributed
 with a mean of zero and stdev of one.</p>
     </li><li name="org.saddle.array#randNormal" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randNormal(sz:Int,rng:spire.random.Generator):Array[Double]"></a><a id="randNormal(Int,Generator):Array[Double]"></a>
+      <a id="randNormal(sz:Int,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randNormal(Int,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randNormal(sz:Int,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randNormal(sz:Int,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1061,7 +1085,7 @@ with a mean of zero and stdev of one.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randNormal</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randNormal</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random doubles which is normally distributed
@@ -1084,9 +1108,9 @@ with a mean of zero and stdev of one.</p>
       <p class="shortcomment cmt">Generate an array of random doubles which is normally distributed
 with a mean of mu and stdev of sigma.</p>
     </li><li name="org.saddle.array#randNormal2" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="randNormal2(sz:Int,mu:Double,sigma:Double,rng:spire.random.Generator):Array[Double]"></a><a id="randNormal2(Int,Double,Double,Generator):Array[Double]"></a>
+      <a id="randNormal2(sz:Int,mu:Double,sigma:Double,rng:spireshaded.random.Generator):Array[Double]"></a><a id="randNormal2(Int,Double,Double,Generator):Array[Double]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#randNormal2(sz:Int,mu:Double,sigma:Double,rng:spire.random.Generator):Array[Double]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#randNormal2(sz:Int,mu:Double,sigma:Double,rng:spireshaded.random.Generator):Array[Double]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1095,7 +1119,7 @@ with a mean of mu and stdev of sigma.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">randNormal2</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="mu">mu: <span class="extype" name="scala.Double">Double</span></span>, <span name="sigma">sigma: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">randNormal2</span><span class="params">(<span name="sz">sz: <span class="extype" name="scala.Int">Int</span></span>, <span name="mu">mu: <span class="extype" name="scala.Double">Double</span></span>, <span name="sigma">sigma: <span class="extype" name="scala.Double">Double</span></span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Generate an array of random doubles which is normally distributed
@@ -1189,9 +1213,9 @@ follows:</p><ul><li>0 to 2</li><li>1 to 0</li><li>2 to 1</li></ul><p>For example
       <p class="shortcomment cmt">Return a uniform random permutation of the array
 </p>
     </li><li name="org.saddle.array#shuffle" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="shuffle[T](arr:Array[T],rng:spire.random.Generator)(implicitevidence$2:org.saddle.ST[T]):Array[T]"></a><a id="shuffle[T](Array[T],Generator)(ST[T]):Array[T]"></a>
+      <a id="shuffle[T](arr:Array[T],rng:spireshaded.random.Generator)(implicitevidence$2:org.saddle.ST[T]):Array[T]"></a><a id="shuffle[T](Array[T],Generator)(ST[T]):Array[T]"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/index.html#shuffle[T](arr:Array[T],rng:spire.random.Generator)(implicitevidence$2:org.saddle.ST[T]):Array[T]" title="Permalink">
+      <a href="../../../org/saddle/array/index.html#shuffle[T](arr:Array[T],rng:spireshaded.random.Generator)(implicitevidence$2:org.saddle.ST[T]):Array[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1200,7 +1224,7 @@ follows:</p><ul><li>0 to 2</li><li>1 to 0</li><li>2 to 1</li></ul><p>For example
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">shuffle</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>, <span name="rng">rng: <span class="extype" name="spire.random.Generator">Generator</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>
+        <span class="name">shuffle</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>, <span name="rng">rng: <a href="../../../spireshaded/random/Generator.html" class="extype" name="spireshaded.random.Generator">Generator</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.shuffle.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Return a uniform random permutation of the array
@@ -1236,7 +1260,7 @@ implementation wherever possible.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sum</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>, <span name="offsets">offsets: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="missing">missing: ⇒ <span class="extype" name="org.saddle.array.sum.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.saddle.array.sum.T">T</span></span>
+        <span class="name">sum</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="arr">arr: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>, <span name="offsets">offsets: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="missing">missing: ⇒ <span class="extype" name="org.saddle.array.sum.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>, <span name="arg1">arg1: <a href="../index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.array.sum.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="org.saddle.array.sum.T">T</span></span>
       </span>
       
       <p class="shortcomment cmt">Compute the sum of the array at particular offets.</p><div class="fullcomment"><div class="comment cmt"><p>Compute the sum of the array at particular offets. If any of the offets is -1,
@@ -1294,6 +1318,43 @@ output[O]. Eg, Array(2,0,1) permutes locations as follows:</p><ul><li>2 to 0</li
       
       <p class="shortcomment cmt">Repeat elements of the array some number of times
 </p>
+    </li><li name="org.saddle.array.InsertionSort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InsertionSort"></a><a id="InsertionSort:InsertionSort"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/array/InsertionSort$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="An implementation of insertion sort." href="InsertionSort$.html"><span class="name">InsertionSort</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">An implementation of insertion sort.</p><div class="fullcomment"><div class="comment cmt"><p>An implementation of insertion sort.</p><p>Works well for small arrays but due to quadratic complexity is not generally optimal.
+</p></div></div>
+    </li><li name="org.saddle.array.MergeSort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MergeSort"></a><a id="MergeSort:MergeSort"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/array/MergeSort$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="In-place merge sort implementation." href="MergeSort$.html"><span class="name">MergeSort</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">In-place merge sort implementation.</p><div class="fullcomment"><div class="comment cmt"><p>In-place merge sort implementation. This sort is stable but does mutate
+the given array. It is an in-place sort but it does allocate a temporary
+array of the same size as the input. It uses InsertionSort for sorting very
+small arrays.
+</p></div></div>
     </li><li name="org.saddle.array.PermuteInsertionSort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="PermuteInsertionSort"></a><a id="PermuteInsertionSort:PermuteInsertionSort"></a>
       <span class="permalink">

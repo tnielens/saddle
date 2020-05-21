@@ -264,6 +264,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.npy" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="npy"></a><a id="npy:npy"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/npy/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../npy/index.html"><span class="name">npy</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li name="org.saddle.ops" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ops"></a><a id="ops:ops"></a>
       <span class="permalink">
@@ -360,12 +376,20 @@ are specialized for numeric types.
                         <a href="DoubleMap.html" title="">DoubleMap</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="DoubleTotalOrder$.html" title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles"></a>
-                        <a href="DoubleTotalOrder$.html" title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles">DoubleTotalOrder</a>
+                        <a class="object" href="DoubleTotalOrder$.html" title=""></a>
+                        <a href="DoubleTotalOrder$.html" title="">DoubleTotalOrder</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="FloatTotalOrder$.html" title="See DoubleTotalOrder"></a>
-                        <a href="FloatTotalOrder$.html" title="See DoubleTotalOrder">FloatTotalOrder</a>
+                        <a class="trait" href="DoubleTotalOrderTrait.html" title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles"></a>
+                        <a href="DoubleTotalOrderTrait.html" title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles">DoubleTotalOrderTrait</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="FloatTotalOrder$.html" title=""></a>
+                        <a href="FloatTotalOrder$.html" title="">FloatTotalOrder</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="FloatTotalOrderTrait.html" title="See DoubleTotalOrder"></a>
+                        <a href="FloatTotalOrderTrait.html" title="See DoubleTotalOrder">FloatTotalOrderTrait</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="IntMap.html" title=""></a>
@@ -493,6 +517,44 @@ are specialized for numeric types.
       </span>
       
       
+    </li><li name="org.saddle.util.DoubleTotalOrderTrait" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DoubleTotalOrderTraitextendsOrder[Double]withHash[Double]"></a><a id="DoubleTotalOrderTrait:DoubleTotalOrderTrait"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/util/DoubleTotalOrderTrait.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles" href="DoubleTotalOrderTrait.html"><span class="name">DoubleTotalOrderTrait</span></a><span class="result"> extends <span class="extype" name="cats.kernel.Order">Order</span>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="cats.kernel.Hash">Hash</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An Order[Double] instance which produces a total order by ordering NaNs above
+all other Doubles</p><div class="fullcomment"><div class="comment cmt"><p>An Order[Double] instance which produces a total order by ordering NaNs above
+all other Doubles</p><p>Contrary to the specification of cats, the DoubleOrdering in cats.kernel
+is not total because NaN is not ordered (all comparisons return false).
+This behaviour is consistent with IEEE-754, but not very practical.</p><p>java.lang.Double.compare orders NaN to be largest of all Doubles.</p><p>See https://github.com/scala/scala/pull/8721
+See https://github.com/scala/scala/blob/39e82c3f904380f0b40d106723747faf881640d4/src/library/scala/math/Ordering.scala#L465</p></div></div>
+    </li><li name="org.saddle.util.FloatTotalOrderTrait" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FloatTotalOrderTraitextendsOrder[Float]withHash[Float]"></a><a id="FloatTotalOrderTrait:FloatTotalOrderTrait"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/util/FloatTotalOrderTrait.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="See DoubleTotalOrder" href="FloatTotalOrderTrait.html"><span class="name">FloatTotalOrderTrait</span></a><span class="result"> extends <span class="extype" name="cats.kernel.Order">Order</span>[<span class="extype" name="scala.Float">Float</span>] with <span class="extype" name="cats.kernel.Hash">Hash</span>[<span class="extype" name="scala.Float">Float</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">See DoubleTotalOrder
+</p>
     </li><li name="org.saddle.util.IntMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IntMapextendsAnyRef"></a><a id="IntMap:IntMap"></a>
       <span class="permalink">
@@ -633,7 +695,7 @@ that generates a string at each offset, and inserting a break string if count &g
 intelligently promoting primitive types where possible.</p><div class="fullcomment"><div class="comment cmt"><p>Provides a way to append two arrays of possibly different types together by
 intelligently promoting primitive types where possible.</p><p>Key method is Concat.append(array1, array2)
 </p></div></div>
-    </li><li name="org.saddle.util.DoubleTotalOrder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.saddle.util.DoubleTotalOrder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DoubleTotalOrder"></a><a id="DoubleTotalOrder:DoubleTotalOrder"></a>
       <span class="permalink">
       <a href="../../../org/saddle/util/DoubleTotalOrder$.html" title="Permalink">
@@ -645,15 +707,10 @@ intelligently promoting primitive types where possible.</p><p>Key method is Conc
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="An Order[Double] instance which produces a total order by ordering NaNs above all other Doubles" href="DoubleTotalOrder$.html"><span class="name">DoubleTotalOrder</span></a><span class="result"> extends <span class="extype" name="cats.kernel.Order">Order</span>[<span class="extype" name="scala.Double">Double</span>] with <span class="extype" name="cats.kernel.Hash">Hash</span>[<span class="extype" name="scala.Double">Double</span>]</span>
+        <a title="" href="DoubleTotalOrder$.html"><span class="name">DoubleTotalOrder</span></a><span class="result"> extends <a href="DoubleTotalOrderTrait.html" class="extype" name="org.saddle.util.DoubleTotalOrderTrait">DoubleTotalOrderTrait</a></span>
       </span>
       
-      <p class="shortcomment cmt">An Order[Double] instance which produces a total order by ordering NaNs above
-all other Doubles</p><div class="fullcomment"><div class="comment cmt"><p>An Order[Double] instance which produces a total order by ordering NaNs above
-all other Doubles</p><p>Contrary to the specification of cats, the DoubleOrdering in cats.kernel
-is not total because NaN is not ordered (all comparisons return false).
-This behaviour is consistent with IEEE-754, but not very practical.</p><p>java.lang.Double.compare orders NaN to be largest of all Doubles.</p><p>See https://github.com/scala/scala/pull/8721
-See https://github.com/scala/scala/blob/39e82c3f904380f0b40d106723747faf881640d4/src/library/scala/math/Ordering.scala#L465</p></div></div>
+      
     </li><li name="org.saddle.util.FloatTotalOrder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FloatTotalOrder"></a><a id="FloatTotalOrder:FloatTotalOrder"></a>
       <span class="permalink">
@@ -666,11 +723,10 @@ See https://github.com/scala/scala/blob/39e82c3f904380f0b40d106723747faf881640d4
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="See DoubleTotalOrder" href="FloatTotalOrder$.html"><span class="name">FloatTotalOrder</span></a><span class="result"> extends <span class="extype" name="cats.kernel.Order">Order</span>[<span class="extype" name="scala.Float">Float</span>] with <span class="extype" name="cats.kernel.Hash">Hash</span>[<span class="extype" name="scala.Float">Float</span>]</span>
+        <a title="" href="FloatTotalOrder$.html"><span class="name">FloatTotalOrder</span></a><span class="result"> extends <a href="FloatTotalOrderTrait.html" class="extype" name="org.saddle.util.FloatTotalOrderTrait">FloatTotalOrderTrait</a></span>
       </span>
       
-      <p class="shortcomment cmt">See DoubleTotalOrder
-</p>
+      
     </li><li name="org.saddle.util.LongMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LongMap"></a><a id="LongMap:LongMap"></a>
       <span class="permalink">

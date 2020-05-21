@@ -121,25 +121,25 @@
 
 <p>Add any of these lines to your build.sbt:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// The core library
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-core&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-core&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Inlined binary operation instances for Mat and Vec
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-ops-inlined&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-ops-inlined&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Linear algebra interface to BLAS
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-linalg&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-linalg&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Binary representation of data fames and matrices
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-binary&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-binary&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Circe Encoder and Decoder instances
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-circe&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-circe&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Interface to joda time (not maintained)
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-time&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-time&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span>
 <span style="color:#75715e">// Interface to EJML (not maintained)
-</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-stats&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+3-69126640-SNAPSHOT&#34;</span></code></pre></div>
+</span><span style="color:#75715e"></span>libraryDependencies <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#34;io.github.pityka&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;saddle-stats&#34;</span> <span style="color:#f92672">%</span> <span style="color:#e6db74">&#34;2.0.0-M24+10-63b35830-SNAPSHOT&#34;</span></code></pre></div>
 <h3 id="dependencies">Dependencies</h3>
 
 <p>The actively maintained artifacts have minimal dependencies:</p>
 
 <ul>
-<li><code>saddle-core</code> depends on <a href="https://github.com/typelevel/spire">spire</a>, thereby transitively on cats-2</li>
+<li><code>saddle-core</code> depends on <a href="https://github.com/typelevel/cats">cats-kernel</a></li>
 <li><code>saddle-linalg</code> depends on <a href="https://github.com/fommil/netlib-java">netlib-java</a></li>
 <li><code>saddle-binary</code> depends on <a href="http://www.lihaoyi.com/upickle/">ujson</a></li>
 <li><code>saddle-circe</code> depends on <a href="https://github.com/circe/circe">circe</a></li>

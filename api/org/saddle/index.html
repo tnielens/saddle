@@ -262,6 +262,22 @@ are specialized for numeric types.</p>
       </span>
       
       
+    </li><li name="org.saddle.npy" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="npy"></a><a id="npy:npy"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/npy/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="npy/index.html"><span class="name">npy</span></a>
+      </span>
+      
+      
     </li><li name="org.saddle.ops" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ops"></a><a id="ops:ops"></a>
       <span class="permalink">
@@ -400,6 +416,10 @@ are specialized for numeric types.</p>
                         <a href="Mat.html" title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;).">Mat</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="Numeric.html" title=""></a>
+                        <a href="Numeric.html" title="">Numeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="package$$OptionToScalar.html" title=""></a>
                         <a href="package$$OptionToScalar.html" title="">OptionToScalar</a>
                       </li><li class="current-entities indented2">
@@ -466,6 +486,22 @@ are specialized for numeric types.</p>
                         <span class="separator"></span>
                         <a class="class" href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]"></a>
                         <a href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]">VecDoubleOps</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="doubleIsNumeric$.html" title=""></a>
+                        <a href="doubleIsNumeric$.html" title="">doubleIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="floatIsNumeric$.html" title=""></a>
+                        <a href="floatIsNumeric$.html" title="">floatIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="intIsNumeric$.html" title=""></a>
+                        <a href="intIsNumeric$.html" title="">intIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="longIsNumeric$.html" title=""></a>
+                        <a href="longIsNumeric$.html" title="">longIsNumeric</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="package$$na$.html" title="na provides syntactic sugar for constructing primitives recognized as NA."></a>
@@ -795,9 +831,9 @@ to induce this conversion to do more complex linear algebra, or to work with a
 mutable data structure.
 </p></div></div>
     </li><li name="org.saddle.NUM" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="NUM[C]=spire.math.Numeric[C]"></a><a id="NUM[C]:NUM[C]"></a>
+      <a id="NUM[C]=org.saddle.Numeric[C]"></a><a id="NUM[C]:NUM[C]"></a>
       <span class="permalink">
-      <a href="../../org/saddle/index.html#NUM[C]=spire.math.Numeric[C]" title="Permalink">
+      <a href="../../org/saddle/index.html#NUM[C]=org.saddle.Numeric[C]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -806,11 +842,27 @@ mutable data structure.
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">NUM</span><span class="tparams">[<span name="C">C</span>]</span><span class="result alias"> = <span class="extype" name="spire.math.Numeric">Numeric</span>[<span class="extype" name="org.saddle.NUM.C">C</span>]</span>
+        <span class="name">NUM</span><span class="tparams">[<span name="C">C</span>]</span><span class="result alias"> = <a href="Numeric.html" class="extype" name="org.saddle.Numeric">Numeric</a>[<span class="extype" name="org.saddle.NUM.C">C</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Shorthand for numeric typeclass
 </p>
+    </li><li name="org.saddle.Numeric" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Numeric[T]extendsorg.saddle.ORD[T]"></a><a id="Numeric[T]:Numeric[T]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Numeric.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Numeric.html"><span class="name">Numeric</span></a><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <a href="#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.Numeric.T">T</span>]</span>
+      </span>
+      
+      
     </li><li name="org.saddle.ORD" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ORD[C]=cats.kernel.Order[C]"></a><a id="ORD[C]:ORD[C]"></a>
       <span class="permalink">
@@ -1239,6 +1291,70 @@ Vec(NA,1d).max2 == NA rather than 1d
       </span>
       
       <p class="shortcomment cmt">Allow timing of an operation</p><div class="fullcomment"><div class="comment cmt"><p>Allow timing of an operation</p><pre>clock { bigMat.T dot bigMat }</pre></div></div>
+    </li><li name="org.saddle#doubleOrd" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doubleOrd:org.saddle.doubleIsNumeric.type"></a><a id="doubleOrd:doubleIsNumeric.type"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/index.html#doubleOrd:org.saddle.doubleIsNumeric.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doubleOrd</span><span class="result">: <a href="doubleIsNumeric$.html" class="extype" name="org.saddle.doubleIsNumeric">doubleIsNumeric</a>.type</span>
+      </span>
+      
+      
+    </li><li name="org.saddle#floatOrd" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="floatOrd:org.saddle.floatIsNumeric.type"></a><a id="floatOrd:floatIsNumeric.type"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/index.html#floatOrd:org.saddle.floatIsNumeric.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">floatOrd</span><span class="result">: <a href="floatIsNumeric$.html" class="extype" name="org.saddle.floatIsNumeric">floatIsNumeric</a>.type</span>
+      </span>
+      
+      
+    </li><li name="org.saddle#intOrd" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="intOrd:org.saddle.intIsNumeric.type"></a><a id="intOrd:intIsNumeric.type"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/index.html#intOrd:org.saddle.intIsNumeric.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intOrd</span><span class="result">: <a href="intIsNumeric$.html" class="extype" name="org.saddle.intIsNumeric">intIsNumeric</a>.type</span>
+      </span>
+      
+      
+    </li><li name="org.saddle#longOrd" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="longOrd:org.saddle.longIsNumeric.type"></a><a id="longOrd:longIsNumeric.type"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/index.html#longOrd:org.saddle.longIsNumeric.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">longOrd</span><span class="result">: <a href="longIsNumeric$.html" class="extype" name="org.saddle.longIsNumeric">longIsNumeric</a>.type</span>
+      </span>
+      
+      
     </li><li name="org.saddle#pair2Slice" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="pair2Slice[T](p:(T,T)):org.saddle.index.SliceDefault[T]"></a><a id="pair2Slice[T]((T,T)):SliceDefault[T]"></a>
       <span class="permalink">
@@ -1432,6 +1548,70 @@ and Series as constructor parameters, leaving their internal representations unc
       </span>
       <span class="symbol">
         <a title="" href="Vec$.html"><span class="name">Vec</span></a>
+      </span>
+      
+      
+    </li><li name="org.saddle.doubleIsNumeric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="doubleIsNumeric"></a><a id="doubleIsNumeric:doubleIsNumeric"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/doubleIsNumeric$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="doubleIsNumeric$.html"><span class="name">doubleIsNumeric</span></a><span class="result"> extends <a href="Numeric.html" class="extype" name="org.saddle.Numeric">Numeric</a>[<span class="extype" name="scala.Double">Double</span>] with <a href="util/DoubleTotalOrderTrait.html" class="extype" name="org.saddle.util.DoubleTotalOrderTrait">DoubleTotalOrderTrait</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.floatIsNumeric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="floatIsNumeric"></a><a id="floatIsNumeric:floatIsNumeric"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/floatIsNumeric$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="floatIsNumeric$.html"><span class="name">floatIsNumeric</span></a><span class="result"> extends <a href="Numeric.html" class="extype" name="org.saddle.Numeric">Numeric</a>[<span class="extype" name="scala.Float">Float</span>] with <a href="util/FloatTotalOrderTrait.html" class="extype" name="org.saddle.util.FloatTotalOrderTrait">FloatTotalOrderTrait</a></span>
+      </span>
+      
+      
+    </li><li name="org.saddle.intIsNumeric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="intIsNumeric"></a><a id="intIsNumeric:intIsNumeric"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/intIsNumeric$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="intIsNumeric$.html"><span class="name">intIsNumeric</span></a><span class="result"> extends <a href="Numeric.html" class="extype" name="org.saddle.Numeric">Numeric</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      
+      
+    </li><li name="org.saddle.longIsNumeric" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="longIsNumeric"></a><a id="longIsNumeric:longIsNumeric"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/longIsNumeric$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="longIsNumeric$.html"><span class="name">longIsNumeric</span></a><span class="result"> extends <a href="Numeric.html" class="extype" name="org.saddle.Numeric">Numeric</a>[<span class="extype" name="scala.Long">Long</span>]</span>
       </span>
       
       

@@ -264,6 +264,22 @@ are specialized for numeric types.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
+    </li><li name="org.saddle.npy" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="npy"></a><a id="npy:npy"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/npy/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="npy/index.html"><span class="name">npy</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li name="org.saddle.ops" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ops"></a><a id="ops:ops"></a>
       <span class="permalink">
@@ -406,6 +422,10 @@ are specialized for numeric types.
                         <a href="Mat.html" title="Mat is an immutable container for 2D homogeneous data (a &quot;matrix&quot;).">Mat</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="Numeric.html" title=""></a>
+                        <a href="Numeric.html" title="">Numeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="package$$OptionToScalar.html" title=""></a>
                         <a href="package$$OptionToScalar.html" title="">OptionToScalar</a>
                       </li><li class="current-entities indented2">
@@ -472,6 +492,22 @@ are specialized for numeric types.
                         <span class="separator"></span>
                         <a class="class" href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]"></a>
                         <a href="package$$VecDoubleOps.html" title="Specialized methods for Vec[Double]">VecDoubleOps</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="doubleIsNumeric$.html" title=""></a>
+                        <a href="doubleIsNumeric$.html" title="">doubleIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="floatIsNumeric$.html" title=""></a>
+                        <a href="floatIsNumeric$.html" title="">floatIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="intIsNumeric$.html" title=""></a>
+                        <a href="intIsNumeric$.html" title="">intIsNumeric</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="longIsNumeric$.html" title=""></a>
+                        <a href="longIsNumeric$.html" title="">longIsNumeric</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="package$$na$.html" title="na provides syntactic sugar for constructing primitives recognized as NA."></a>
@@ -2267,7 +2303,7 @@ true on a value, is masked with NA</p></div><dl class="paramcmts block"><dt clas
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">max</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
+        <span class="name">max</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Max of the elements of each column, ignoring NA values
@@ -2284,7 +2320,7 @@ true on a value, is masked with NA</p></div><dl class="paramcmts block"><dt clas
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">mean</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">mean</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Mean of each column
@@ -2301,7 +2337,7 @@ true on a value, is masked with NA</p></div><dl class="paramcmts block"><dt clas
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">median</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="scala.Double">Double</span>]</span>
+        <span class="name">median</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="scala.Double">Double</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Median of each column
@@ -2343,7 +2379,7 @@ the corresponding keys.</p><p>For example, given:</p><pre>Frame(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">min</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
+        <span class="name">min</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Min of the elements of each column, ignoring NA values
@@ -2480,7 +2516,7 @@ the corresponding keys.</p><p>For example, given:</p><pre>Frame(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prod</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
+        <span class="name">prod</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Product of the elements of each column, ignoring NA values
@@ -3368,7 +3404,7 @@ does the reverse of unstack.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sum</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=spire.math.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
+        <span class="name">sum</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Frame.T">T</span>]</span>)</span><span class="result">: <a href="Series.html" class="extype" name="org.saddle.Series">Series</a>[<span class="extype" name="org.saddle.Frame.CX">CX</span>, <span class="extype" name="org.saddle.Frame.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Sum of the elements of each column, ignoring NA values

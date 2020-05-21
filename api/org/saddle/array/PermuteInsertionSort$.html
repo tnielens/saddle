@@ -125,6 +125,14 @@ are specialized for numeric types.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="org.saddle">saddle</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="object" href="InsertionSort$.html" title="An implementation of insertion sort."></a>
+                        <a href="InsertionSort$.html" title="An implementation of insertion sort.">InsertionSort</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="MergeSort$.html" title="In-place merge sort implementation."></a>
+                        <a href="MergeSort$.html" title="In-place merge sort implementation.">MergeSort</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="object" href="" title="An implementation of insertion sort."></a>
                         <a href="" title="An implementation of insertion sort.">PermuteInsertionSort</a>
                       </li><li class="current-entities indented3">
@@ -472,9 +480,9 @@ are specialized for numeric types.
               
         </dd></dl></div>
     </li><li name="org.saddle.array.PermuteInsertionSort#sort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="sort[A](data:Array[A],start:Int,end:Int,perm:Array[Int])(implicito:spire.algebra.Order[A]):Unit"></a><a id="sort[A](Array[A],Int,Int,Array[Int])(Order[A]):Unit"></a>
+      <a id="sort[A](data:Array[A],start:Int,end:Int,perm:Array[Int])(implicito:org.saddle.ORD[A]):Unit"></a><a id="sort[A](Array[A],Int,Int,Array[Int])(ORD[A]):Unit"></a>
       <span class="permalink">
-      <a href="../../../org/saddle/array/PermuteInsertionSort$.html#sort[A](data:Array[A],start:Int,end:Int,perm:Array[Int])(implicito:spire.algebra.Order[A]):Unit" title="Permalink">
+      <a href="../../../org/saddle/array/PermuteInsertionSort$.html#sort[A](data:Array[A],start:Int,end:Int,perm:Array[Int])(implicito:org.saddle.ORD[A]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -483,7 +491,7 @@ are specialized for numeric types.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sort</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="data">data: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.PermuteInsertionSort.sort.A">A</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="end">end: <span class="extype" name="scala.Int">Int</span></span>, <span name="perm">perm: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="o">o: <span class="extype" name="spire.algebra.Order">Order</span>[<span class="extype" name="org.saddle.array.PermuteInsertionSort.sort.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">sort</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="data">data: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="org.saddle.array.PermuteInsertionSort.sort.A">A</span>]</span>, <span name="start">start: <span class="extype" name="scala.Int">Int</span></span>, <span name="end">end: <span class="extype" name="scala.Int">Int</span></span>, <span name="perm">perm: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="scala.Int">Int</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="o">o: <a href="../index.html#ORD[C]=cats.kernel.Order[C]" class="extmbr" name="org.saddle.ORD">ORD</a>[<span class="extype" name="org.saddle.array.PermuteInsertionSort.sort.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Uses insertion sort on <code>data</code> to sort the entries from the index <code>start</code>
