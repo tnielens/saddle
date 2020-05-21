@@ -1,6 +1,6 @@
 package spireshaded
 package math
-
+import scala.language.implicitConversions
 object ULong {
   @inline final def apply(n: Long): ULong = new ULong(n)
 

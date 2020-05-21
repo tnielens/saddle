@@ -2,7 +2,6 @@ package spireshaded
 package util
 
 import java.nio.ByteBuffer
-import scala.language.experimental.macros
 
 /**
   * These methods are all big-endian.

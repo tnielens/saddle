@@ -198,6 +198,7 @@ lazy val circe = project
 
 lazy val spire = project
   .in(file("spire-prng"))
+  .settings(commonSettings: _*)
   .settings(
     name := "saddle-spire-prng",
     scalaVersion := scalaVersionInBuild
@@ -205,6 +206,7 @@ lazy val spire = project
 
 lazy val spireJS = project
   .in(file("spire-prng"))
+  .settings(commonSettings: _*)
   .settings(
     name := "saddle-spire-prng-js",
     scalaVersion := scalaVersionInBuild
