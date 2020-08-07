@@ -1,4 +1,4 @@
-lazy val scalaTestVersion = "3.2.0"
+lazy val scalaTestVersion = "3.2.1"
 lazy val scalaVersionInBuild = "2.12.12"
 
 lazy val commonSettings = Seq(
