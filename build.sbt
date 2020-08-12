@@ -76,7 +76,10 @@ lazy val commonSettings = Seq(
       </developers>
   },
   fork := true,
-  cancelable in Global := true
+  cancelable in Global := true,
+  mimaPreviousArtifacts := previousStableVersion.value
+    .map(organization.value %% name.value % _)
+    .toSet
 )
 
 lazy val core = crossProject(JSPlatform, JVMPlatform)
