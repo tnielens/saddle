@@ -1,3 +1,5 @@
+import com.typesafe.tools.mima.core._
+
 lazy val scalaTestVersion = "3.2.1"
 lazy val scalaVersionInBuild = "2.12.12"
 
@@ -79,7 +81,12 @@ lazy val commonSettings = Seq(
   cancelable in Global := true,
   mimaPreviousArtifacts := previousStableVersion.value
     .map(organization.value %% name.value % _)
-    .toSet
+    .toSet,
+  mimaBinaryIssueFilters ++= Seq(
+    ProblemFilters.exclude[ReversedMissingMethodProblem](
+      "org.saddle.Vec.zipMapIdx"
+    )
+  )
 )
 
 lazy val core = crossProject(JSPlatform, JVMPlatform)
