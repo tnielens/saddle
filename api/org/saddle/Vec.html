@@ -1419,9 +1419,9 @@ with this Vec.
       <p class="shortcomment cmt">Yield a Vec whose elements have been reversed from their original order
 </p>
     </li><li name="org.saddle.Vec#rolling" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="rolling[B](winSz:Int,f:org.saddle.Vec[T]=&gt;B)(implicitevidence$12:org.saddle.ST[B]):org.saddle.Vec[B]"></a><a id="rolling[B](Int,(Vec[T])⇒B)(ST[B]):Vec[B]"></a>
+      <a id="rolling[B](winSz:Int,f:org.saddle.Vec[T]=&gt;B)(implicitevidence$13:org.saddle.ST[B]):org.saddle.Vec[B]"></a><a id="rolling[B](Int,(Vec[T])⇒B)(ST[B]):Vec[B]"></a>
       <span class="permalink">
-      <a href="../../org/saddle/Vec.html#rolling[B](winSz:Int,f:org.saddle.Vec[T]=&gt;B)(implicitevidence$12:org.saddle.ST[B]):org.saddle.Vec[B]" title="Permalink">
+      <a href="../../org/saddle/Vec.html#rolling[B](winSz:Int,f:org.saddle.Vec[T]=&gt;B)(implicitevidence$13:org.saddle.ST[B]):org.saddle.Vec[B]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1744,7 +1744,8 @@ v.take(<span class="num">0</span>,<span class="num">1</span>) == v(<span class="
         <span class="name">toSeq</span><span class="result">: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Converts Vec to an indexed sequence (default implementation is immutable.Vector)</p>
+      <p class="shortcomment cmt">Converts Vec to an indexed sequence (default implementation is immutable.Vector)
+</p>
     </li><li name="org.saddle.Vec#unary_-" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="unary_-()(implicitnum:org.saddle.NUM[T]):org.saddle.Vec[T]"></a><a id="unary_-()(NUM[T]):Vec[T]"></a>
       <span class="permalink">
@@ -1760,7 +1761,8 @@ v.take(<span class="num">0</span>,<span class="num">1</span>) == v(<span class="
         <span title="gt4s: unary_$minus" class="name">unary_-</span><span class="params">()</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="index.html#NUM[C]=org.saddle.Numeric[C]" class="extmbr" name="org.saddle.NUM">NUM</a>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.Vec.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Additive inverse of Vec with numeric elements</p>
+      <p class="shortcomment cmt">Additive inverse of Vec with numeric elements
+</p>
     </li><li name="org.saddle.Vec#update" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="update(slice:org.saddle.index.Slice[Int],value:org.saddle.Vec[T]):Unit"></a><a id="update(Slice[Int],Vec[T]):Unit"></a>
       <span class="permalink">
@@ -1916,6 +1918,22 @@ elements NOT specified in list.
       
       <p class="shortcomment cmt">Zips Vec with another Vec and applies a function to the paired elements.</p><div class="fullcomment"><div class="comment cmt"><p>Zips Vec with another Vec and applies a function to the paired elements. If either of the pair is NA, the
 result is forced to NA.</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>Parameter of other Vec</p></dd><dt class="tparam">C</dt><dd class="cmt"><p>Result of function</p></dd><dt class="param">other</dt><dd class="cmt"><p>Vec[B]</p></dd><dt class="param">f</dt><dd class="cmt"><p>Function (A, B) =&gt; C</p></dd></dl></div>
+    </li><li name="org.saddle.Vec#zipMapIdx" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="zipMapIdx[C](f:(T,Int)=&gt;C)(implicitevidence$12:org.saddle.ST[C]):org.saddle.Vec[C]"></a><a id="zipMapIdx[C]((T,Int)⇒C)(ST[C]):Vec[C]"></a>
+      <span class="permalink">
+      <a href="../../org/saddle/Vec.html#zipMapIdx[C](f:(T,Int)=&gt;C)(implicitevidence$12:org.saddle.ST[C]):org.saddle.Vec[C]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zipMapIdx</span><span class="tparams">[<span name="C">C</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="org.saddle.Vec.T">T</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <span class="extype" name="org.saddle.Vec.zipMapIdx.C">C</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="index.html#ST[C]=org.saddle.scalar.ScalarTag[C]" class="extmbr" name="org.saddle.ST">ST</a>[<span class="extype" name="org.saddle.Vec.zipMapIdx.C">C</span>]</span>)</span><span class="result">: <a href="" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.Vec.zipMapIdx.C">C</span>]</span>
+      </span>
+      
+      
     </li></ol>
             </div>
 
