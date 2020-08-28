@@ -1612,6 +1612,22 @@ false iff 0 until length map raw toArray structurally equals the backing array
       </span>
       
       <p class="shortcomment cmt">Outer product</p><div class="fullcomment"><div class="comment cmt"><p>Outer product</p></div><dl class="paramcmts block"><dt class="tparam">B</dt><dd class="cmt"><p>type of the other operand</p></dd><dt class="tparam">That</dt><dd class="cmt"><p>result type of operation</p></dd><dt class="param">other</dt><dd class="cmt"><p>other operand instance</p></dd><dt class="param">op</dt><dd class="cmt"><p>implicit evidence for operation between this and other</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../ops/NumericOps.html" class="extype" name="org.saddle.ops.NumericOps">NumericOps</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#partition" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="partition(pred:org.saddle.Vec[Boolean]):(org.saddle.Vec[T],org.saddle.Vec[T])"></a><a id="partition(Vec[Boolean]):(Vec[T],Vec[T])"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecDefault.html#partition(pred:org.saddle.Vec[Boolean]):(org.saddle.Vec[T],org.saddle.Vec[T])" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">partition</span><span class="params">(<span name="pred">pred: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: (<a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>], <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>])</span>
+      </span>
+      
+      <p class="shortcomment cmt">Return Vec whose elements are selected via negating a Vec of booleans (where that Vec holds the value true)</p><div class="fullcomment"><div class="comment cmt"><p>Return Vec whose elements are selected via negating a Vec of booleans (where that Vec holds the value true)</p></div><dl class="paramcmts block"><dt class="param">pred</dt><dd class="cmt"><p>Predicate vector: Vec[Boolean]</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#percentile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="percentile(tile:Double,method:org.saddle.PctMethod)(implicitna:org.saddle.NUM[T]):Double"></a><a id="percentile(Double,PctMethod)(NUM[T]):Double"></a>
       <span class="permalink">
@@ -2308,6 +2324,22 @@ Ignores invalid offsets in the array
       </span>
       
       <p class="shortcomment cmt">Return Vec whose elements are selected via a Vec of booleans (where that Vec holds the value true)</p><div class="fullcomment"><div class="comment cmt"><p>Return Vec whose elements are selected via a Vec of booleans (where that Vec holds the value true)</p></div><dl class="paramcmts block"><dt class="param">pred</dt><dd class="cmt"><p>Predicate vector: Vec[Boolean]</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
+    </li><li name="org.saddle.vec.VecDefault#whereNot" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="whereNot(pred:org.saddle.Vec[Boolean]):org.saddle.Vec[T]"></a><a id="whereNot(Vec[Boolean]):Vec[T]"></a>
+      <span class="permalink">
+      <a href="../../../org/saddle/vec/VecDefault.html#whereNot(pred:org.saddle.Vec[Boolean]):org.saddle.Vec[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">whereNot</span><span class="params">(<span name="pred">pred: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="scala.Boolean">Boolean</span>]</span>)</span><span class="result">: <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a>[<span class="extype" name="org.saddle.vec.VecDefault.T">T</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Return Vec whose elements are selected via negating a Vec of booleans (where that Vec holds the value true)</p><div class="fullcomment"><div class="comment cmt"><p>Return Vec whose elements are selected via negating a Vec of booleans (where that Vec holds the value true)</p></div><dl class="paramcmts block"><dt class="param">pred</dt><dd class="cmt"><p>Predicate vector: Vec[Boolean]</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="org.saddle.vec.VecDefault">VecDefault</a> → <a href="../Vec.html" class="extype" name="org.saddle.Vec">Vec</a></dd></dl></div>
     </li><li name="org.saddle.vec.VecDefault#without" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="without(locs:Array[Int]):org.saddle.Vec[T]"></a><a id="without(Array[Int]):Vec[T]"></a>
       <span class="permalink">
