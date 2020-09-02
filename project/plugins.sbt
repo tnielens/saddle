@@ -10,7 +10,7 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 
 addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.2.6")
 
-addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.3.7")
+addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.0")
 
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.1.1")
 
