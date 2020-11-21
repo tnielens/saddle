@@ -11,7 +11,7 @@ jobs:
       - uses: olafurpg/setup-scala@v10
       - uses: actions/setup-node@v1
       - uses: olafurpg/setup-gpg@v3
-      - uses: peaceiris/actions-hugo@v2.2.2
+      - uses: peaceiris/actions-hugo@v2.4.13
         with: 
           hugo-version: '0.59.1'
           extended: true
