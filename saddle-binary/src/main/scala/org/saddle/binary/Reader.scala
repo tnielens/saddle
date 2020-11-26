@@ -1,5 +1,4 @@
-/**
-  * Copyright (c) 2019 Saddle Development Team
+/** Copyright (c) 2019 Saddle Development Team
   *
   * Licensed under the Apache License, Version 2.0 (the "License");
   * you may not use this file except in compliance with the License.
@@ -199,12 +198,14 @@ object Reader {
 
   class ByteChannel(src: ByteBuffer) extends ReadableByteChannel {
     def read(dst: ByteBuffer) = {
-      var i = 0
-      while (dst.hasRemaining() && src.hasRemaining()) {
-        dst.put(src.get)
-        i += 1
-      }
-      i
+      val n1 = dst.remaining
+      val n2 = src.remaining
+      val m = math.min(n1, n2)
+      val l = src.limit
+      src.limit(src.position() + m)
+      dst.put(src)
+      src.limit(l)
+      m
     }
     def isOpen(): Boolean = true
     def close(): Unit = ()
