@@ -168,17 +168,17 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>vec<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">20</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res6: Vec[Double] = [20 x 1]
-</span><span style="color:#75715e">// 0.8483
-</span><span style="color:#75715e">// 0.7907
-</span><span style="color:#75715e">// 0.9237
-</span><span style="color:#75715e">// 0.8840
-</span><span style="color:#75715e">// 0.9964
+</span><span style="color:#75715e">// 0.9884
+</span><span style="color:#75715e">// 0.1142
+</span><span style="color:#75715e">// 0.9416
+</span><span style="color:#75715e">// 0.2954
+</span><span style="color:#75715e">// 0.3449
 </span><span style="color:#75715e">//  ... 
-</span><span style="color:#75715e">// 0.9864
-</span><span style="color:#75715e">// 0.4031
-</span><span style="color:#75715e">// 0.8799
-</span><span style="color:#75715e">// 0.6056
-</span><span style="color:#75715e">// 0.7440
+</span><span style="color:#75715e">// 0.3644
+</span><span style="color:#75715e">// 0.1787
+</span><span style="color:#75715e">// 0.7033
+</span><span style="color:#75715e">// 0.7901
+</span><span style="color:#75715e">// 0.5095
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Operations:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
@@ -795,23 +795,23 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <p>Again, sometimes we want to create instances filled with random observations. As to Vec, we can do the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>       
 <span style="color:#75715e">// res89: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.7570 0.9677 
-</span><span style="color:#75715e">// 0.2908 0.5212 
+</span><span style="color:#75715e">// 0.8166 0.5752 
+</span><span style="color:#75715e">// 0.5609 0.9401 
 </span><span style="color:#75715e">//        
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randp<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random positive doubles
 </span><span style="color:#75715e">// res90: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.6127 0.9568 
-</span><span style="color:#75715e">// 0.8997 0.3826 
+</span><span style="color:#75715e">// 0.7453 0.5836 
+</span><span style="color:#75715e">// 0.3663 0.5911 
 </span><span style="color:#75715e">//       // random positive doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random normally distributed doubles
 </span><span style="color:#75715e">// res91: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// -0.1223 -1.0354 
-</span><span style="color:#75715e">//  1.1443 -1.4590 
+</span><span style="color:#75715e">// -0.2991  0.6393 
+</span><span style="color:#75715e">//  0.4221 -0.2932 
 </span><span style="color:#75715e">//       // random normally distributed doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn2<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">12</span><span style="color:#f92672">)</span> <span style="color:#75715e">// random normally distributed with mean=3, stdev=12
 </span><span style="color:#75715e">// res92: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// -12.7781 20.3212 
-</span><span style="color:#75715e">//  -9.7081  8.2153 
+</span><span style="color:#75715e">// -15.5279   2.2684 
+</span><span style="color:#75715e">//  -7.2882 -17.8260 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are a few other factory methods available:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
@@ -967,8 +967,8 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">).</span>roundTo<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res119: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.4300 0.4700 
-</span><span style="color:#75715e">// 0.3600 0.8500 
+</span><span style="color:#75715e">// 0.2600 0.6600 
+</span><span style="color:#75715e">// 0.0700 0.1100 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <h3 id="homogeneous-table-with-row-and-column-index-data-frame-frame-rx-cx-t">Homogeneous table with row and column index (data frame) : Frame[RX,CX,T]</h3>
 
