@@ -275,7 +275,7 @@ lazy val docs = project
   .dependsOn(coreJVM, linalg, circeJVM, binary)
   .settings(
     unidocProjectFilter in (ScalaUnidoc, unidoc) :=
-      (inAnyProject -- inProjects(coreJS, circeJS, spireJS)),
+      (inAnyProject -- inProjects(coreJS, circeJS, spireJS, io.js)),
     publishArtifact := false,
     moduleName := "saddle-docs",
     mdocVariables := Map(
