@@ -168,17 +168,17 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>vec<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">20</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res6: Vec[Double] = [20 x 1]
-</span><span style="color:#75715e">// 0.2097
-</span><span style="color:#75715e">// 0.6404
-</span><span style="color:#75715e">// 0.3731
-</span><span style="color:#75715e">// 0.2370
-</span><span style="color:#75715e">// 0.2693
+</span><span style="color:#75715e">// 0.2334
+</span><span style="color:#75715e">// 0.4665
+</span><span style="color:#75715e">// 0.4232
+</span><span style="color:#75715e">// 0.0146
+</span><span style="color:#75715e">// 0.7567
 </span><span style="color:#75715e">//  ... 
-</span><span style="color:#75715e">// 0.6614
-</span><span style="color:#75715e">// 0.7138
-</span><span style="color:#75715e">// 0.0225
-</span><span style="color:#75715e">// 0.8350
-</span><span style="color:#75715e">// 0.4957
+</span><span style="color:#75715e">// 0.6580
+</span><span style="color:#75715e">// 0.9604
+</span><span style="color:#75715e">// 0.5100
+</span><span style="color:#75715e">// 0.5201
+</span><span style="color:#75715e">// 0.9962
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>Operations:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
@@ -229,7 +229,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">import</span> org.saddle._
 <span style="color:#66d9ef">import</span> org.saddle.ops.BinOps._
 <span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span> <span style="color:#75715e">// Boxes and keeps NA
-</span><span style="color:#75715e">// res15: scalar.Scalar[Int] = Value(3) // Boxes and keeps NA
+</span><span style="color:#75715e">// res15: scalar.Scalar[Int] = Value(el = 3) // Boxes and keeps NA
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>raw<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>  
 <span style="color:#75715e">// res16: Int = 3  
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">Vec</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">).</span>apply<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span> <span style="color:#75715e">// same as raw
@@ -336,7 +336,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// extract value by numerical offset
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res30: scalar.Scalar[Int] = Value(2)
+<span style="color:#75715e">// res30: scalar.Scalar[Int] = Value(el = 2)
 </span><span style="color:#75715e"></span>
  q<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res31: Series[String, Int] = [3 x 1]
@@ -347,7 +347,7 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or extract key
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>keyAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res32: scalar.Scalar[String] = Value(&#34;a&#34;)
+<span style="color:#75715e">// res32: scalar.Scalar[String] = Value(el = &#34;a&#34;)
 </span><span style="color:#75715e"></span>
  q<span style="color:#f92672">.</span>keyAt<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res33: Index[String] = [Index 3 x 1]
@@ -398,15 +398,15 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// get first or last values
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>first
-<span style="color:#75715e">// res39: scalar.Scalar[Int] = Value(1)
+<span style="color:#75715e">// res39: scalar.Scalar[Int] = Value(el = 1)
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>last
-<span style="color:#75715e">// res40: scalar.Scalar[Int] = Value(4)
+<span style="color:#75715e">// res40: scalar.Scalar[Int] = Value(el = 4)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// or key
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>firstKey
-<span style="color:#75715e">// res41: scalar.Scalar[String] = Value(&#34;c&#34;)
+<span style="color:#75715e">// res41: scalar.Scalar[String] = Value(el = &#34;c&#34;)
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>lastKey
-<span style="color:#75715e">// res42: scalar.Scalar[String] = Value(&#34;b&#34;)
+<span style="color:#75715e">// res42: scalar.Scalar[String] = Value(el = &#34;b&#34;)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// &#34;reindex&#34; to a new index:
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>reindex<span style="color:#f92672">(</span><span style="color:#a6e22e">Index</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">))</span>
@@ -432,12 +432,12 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// (the problem is, which &#34;b&#34; would we choose?)
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>reindex<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// java.lang.IllegalArgumentException: requirement failed: Could not reindex unambiguously
-</span><span style="color:#75715e">// 	at scala.Predef$.require(Predef.scala:281)
-</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer(Index.scala:392)
-</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer$(Index.scala:388)
+</span><span style="color:#75715e">// 	at scala.Predef$.require(Predef.scala:338)
+</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer(Index.scala:356)
+</span><span style="color:#75715e">// 	at org.saddle.Index.getIndexer$(Index.scala:352)
 </span><span style="color:#75715e">// 	at org.saddle.index.IndexAny.getIndexer(IndexAny.scala:29)
-</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:247)
-</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:256)
+</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:225)
+</span><span style="color:#75715e">// 	at org.saddle.Series$mcI$sp.reindex$mcI$sp(Series.scala:233)
 </span><span style="color:#75715e">// 	at repl.MdocSession$App14$$anonfun$46.apply(usage.md:190)
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span> 	at repl<span style="color:#f92672">.</span><span style="color:#a6e22e">MdocSession$App14$$anonfun$46</span><span style="color:#f92672">.</span>apply<span style="color:#f92672">(</span>usage<span style="color:#f92672">.</span>md<span style="color:#66d9ef">:</span><span style="color:#960050;background-color:#1e0010">190</span><span style="color:#f92672">)</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#75715e">// we can &#34;reset&#34; the index to integer labels
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>resetIndex
@@ -552,9 +552,9 @@ vec<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><
 </span><span style="color:#75715e">// a
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>findOneKey <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> x <span style="color:#66d9ef">=&gt;</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">||</span> x <span style="color:#f92672">==</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">}</span>
-<span style="color:#75715e">// res62: scalar.Scalar[String] = Value(&#34;b&#34;)
+<span style="color:#75715e">// res62: scalar.Scalar[String] = Value(el = &#34;b&#34;)
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>minKey
-<span style="color:#75715e">// res63: scalar.Scalar[String] = Value(&#34;c&#34;)
+<span style="color:#75715e">// res63: scalar.Scalar[String] = Value(el = &#34;c&#34;)
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>contains<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res64: Boolean = true
 </span><span style="color:#75715e"></span>q<span style="color:#f92672">.</span>scanLeft<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#66d9ef">case</span> <span style="color:#f92672">(</span>acc<span style="color:#f92672">,</span> v<span style="color:#f92672">)</span> <span style="color:#66d9ef">=&gt;</span> acc <span style="color:#f92672">+</span> v <span style="color:#f92672">}</span>
@@ -624,7 +624,7 @@ q<span style="color:#f92672">.</span>rolling<span style="color:#f92672">(</span>
 </span><span style="color:#75715e">// 4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> q<span style="color:#f92672">.</span>toSeq
-<span style="color:#75715e">// res73: IndexedSeq[(String, Int)] = Vector(
+<span style="color:#75715e">// res73: IndexedSeq[(String, Int)] = ArraySeq(
 </span><span style="color:#75715e">//   (&#34;c&#34;, 1),
 </span><span style="color:#75715e">//   (&#34;b&#34;, 3),
 </span><span style="color:#75715e">//   (&#34;a&#34;, 2),
@@ -795,23 +795,23 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <p>Again, sometimes we want to create instances filled with random observations. As to Vec, we can do the following:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>       
 <span style="color:#75715e">// res89: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.2359 0.2607 
-</span><span style="color:#75715e">// 0.6541 0.5202 
+</span><span style="color:#75715e">// 0.1567 0.6686 
+</span><span style="color:#75715e">// 0.0559 0.8173 
 </span><span style="color:#75715e">//        
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randp<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random positive doubles
 </span><span style="color:#75715e">// res90: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.2853 0.2239 
-</span><span style="color:#75715e">// 0.5032 0.4774 
+</span><span style="color:#75715e">// 0.0698 0.3802 
+</span><span style="color:#75715e">// 0.9940 0.1691 
 </span><span style="color:#75715e">//       // random positive doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>      <span style="color:#75715e">// random normally distributed doubles
 </span><span style="color:#75715e">// res91: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// -0.0668 -1.2504 
-</span><span style="color:#75715e">// -0.6033 -0.0551 
+</span><span style="color:#75715e">// -0.4580 0.5268 
+</span><span style="color:#75715e">//  0.3785 1.3531 
 </span><span style="color:#75715e">//       // random normally distributed doubles
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>randn2<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">3</span><span style="color:#f92672">,</span><span style="color:#ae81ff">12</span><span style="color:#f92672">)</span> <span style="color:#75715e">// random normally distributed with mean=3, stdev=12
 </span><span style="color:#75715e">// res92: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 22.8438 -3.7197 
-</span><span style="color:#75715e">//  7.9516 -6.6804 
+</span><span style="color:#75715e">//  5.3787 -0.4003 
+</span><span style="color:#75715e">// 16.0933  1.6719 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>There are a few other factory methods available:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">mat<span style="color:#f92672">.</span>ones<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
@@ -894,7 +894,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 <span style="color:#f92672">//</span> res106<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span></code></pre></div>
 <p>There are a few ways to extract values from a Mat.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">m<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
-<span style="color:#75715e">// res107: scalar.Scalar[Int] = Value(2)
+<span style="color:#75715e">// res107: scalar.Scalar[Int] = Value(el = 2)
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">// be careful with this one!
 </span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>raw<span style="color:#f92672">(</span><span style="color:#ae81ff">0</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>
@@ -926,7 +926,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 1
 </span><span style="color:#75715e">// 2
 </span><span style="color:#75715e">// 
-</span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>rows<span style="color:#f92672">()</span>
+</span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>rows
 <span style="color:#75715e">// res114: IndexedSeq[Vec[Int]] = Vector(
 </span><span style="color:#75715e">//   [2 x 1]
 </span><span style="color:#75715e">// 1
@@ -937,7 +937,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 4
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e">// )
-</span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>cols<span style="color:#f92672">()</span>
+</span><span style="color:#75715e"></span> m<span style="color:#f92672">.</span>cols
 <span style="color:#75715e">// res115: IndexedSeq[Vec[Int]] = Vector(
 </span><span style="color:#75715e">//   [2 x 1]
 </span><span style="color:#75715e">// 1
@@ -967,8 +967,8 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e">// 
 </span><span style="color:#75715e"></span> mat<span style="color:#f92672">.</span>rand<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">).</span>roundTo<span style="color:#f92672">(</span><span style="color:#ae81ff">2</span><span style="color:#f92672">)</span>
 <span style="color:#75715e">// res119: Mat[Double] = [2 x 2]
-</span><span style="color:#75715e">// 0.2100 0.6500 
-</span><span style="color:#75715e">// 0.1600 0.5500 
+</span><span style="color:#75715e">// 0.7900 0.9200 
+</span><span style="color:#75715e">// 0.1900 0.7200 
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <h3 id="homogeneous-table-with-row-and-column-index-data-frame-frame-rx-cx-t">Homogeneous table with row and column index (data frame) : Frame[RX,CX,T]</h3>
 
@@ -1164,7 +1164,7 @@ If you want to use a BLAS, you can take a look in <code>saddle-linalg</code>.</p
 </span><span style="color:#75715e"></span><span style="color:#f92672">//</span></code></pre></div>
 <p>rowAt and colAt are used under the hood for the at extractor:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">f<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">1</span><span style="color:#f92672">)</span>              <span style="color:#75715e">// Scalar value
-</span><span style="color:#75715e">// res139: scalar.Scalar[Int] = Value(3)              // Scalar value
+</span><span style="color:#75715e">// res139: scalar.Scalar[Int] = Value(el = 3)              // Scalar value
 </span><span style="color:#75715e"></span> f<span style="color:#f92672">.</span>at<span style="color:#f92672">(</span><span style="color:#a6e22e">Array</span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span><span style="color:#f92672">,</span><span style="color:#ae81ff">2</span><span style="color:#f92672">),</span> <span style="color:#ae81ff">0</span><span style="color:#f92672">)</span>    <span style="color:#75715e">// extract rows 1,2 of column 0
 </span><span style="color:#75715e">// res140: Series[String, Int] = [2 x 1]
 </span><span style="color:#75715e">// b -&gt;  2
