@@ -266,6 +266,9 @@ lazy val docs = project
   .dependsOn(coreJVM, linalg, circeJVM, binary)
   .settings(
     scalaVersion := scalaVersionInBuild,
+    scalacOptions ++= Seq(
+      "-language:postfixOps"
+    ),
     unidocProjectFilter in (ScalaUnidoc, unidoc) :=
       (inAnyProject -- inProjects(coreJS, circeJS, spireJS, io.js)),
     publishArtifact := false,
