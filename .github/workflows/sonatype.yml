@@ -15,11 +15,10 @@ jobs:
         with: 
           hugo-version: '0.59.1'
           extended: true
-      - name: Publish 2.13
+      - name: Publish
         run: |
           git ls-remote --get-url origin
           sbt -J-Xmx3000m test coreJVM/mimaReportBinaryIssues linalg/mimaReportBinaryIssues ci-release
-          sbt -J-Xmx3000m ++2.12.13! test coreJVM/mimaReportBinaryIssues linalg/mimaReportBinaryIssues ci-release
         env:
           PGP_PASSPHRASE: ${{ secrets.PGP_PASSPHRASE }}
           PGP_SECRET: ${{ secrets.PGP_SECRET }}
