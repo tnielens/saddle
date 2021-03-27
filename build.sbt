@@ -17,6 +17,7 @@ lazy val commonSettings = Seq(
     "-feature", // Emit warning and location for usages of features that should be imported explicitly.
     "-language:postfixOps",
     "-language:existentials",
+    "-language:higherKinds",
     "-unchecked", // Enable additional warnings where generated code depends on assumptions.
     "-Xfatal-warnings", // Fail the compilation if there are any warnings.
     "-Xlint:adapted-args", // Warn if an argument list is modified to match the receiver.
@@ -89,6 +90,7 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.2",
       "org.typelevel" %% "cats-kernel" % "2.4.2",
       "org.scala-lang" % "scala-reflect" % scalaVersion.value,
       "org.specs2" %% "specs2-core" % "4.10.6" % "test",
@@ -99,6 +101,7 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
     fork := false,
     coverageEnabled := false,
     libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %%% "scala-collection-compat" % "2.4.2",
       "org.typelevel" %%% "cats-core" % "2.4.2",
       "org.scala-lang" % "scala-reflect" % scalaVersion.value,
       "org.specs2" %%% "specs2-core" % "4.9.4" % "test",
@@ -155,6 +158,7 @@ lazy val time = project
   .settings(
     name := "saddle-time",
     libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.2",
       "joda-time" % "joda-time" % "2.1",
       "org.joda" % "joda-convert" % "1.2",
       "org.scala-saddle" % "google-rfc-2445" % "20110304",

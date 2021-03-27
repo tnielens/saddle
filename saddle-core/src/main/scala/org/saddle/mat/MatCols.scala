@@ -17,7 +17,8 @@ package org.saddle.mat
 import scala.{specialized => spec}
 import org.saddle.{ST, Vec, array, Mat}
 import org.saddle.scalar.Scalar
-import scala.collection.immutable.ArraySeq
+import scala.collection.compat._
+import immutable.ArraySeq
 
 /** An IndexedSeq of Vecs which must all have the same length; a container for
   * 2D data for a Frame.
