@@ -73,7 +73,7 @@ lazy val commonSettings = Seq(
   fork := true,
   cancelable in Global := true,
   mimaPreviousArtifacts := Set(
-    // organization.value %% moduleName.value % "2.0.0"
+    organization.value %% moduleName.value % "2.2.5"
   ),
   mimaBinaryIssueFilters ++= Seq(
     ProblemFilters.exclude[ReversedMissingMethodProblem](
