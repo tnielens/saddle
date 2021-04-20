@@ -1,6 +1,6 @@
 import com.typesafe.tools.mima.core._
 
-lazy val scalaTestVersion = "3.2.7"
+lazy val scalaTestVersion = "3.2.8"
 lazy val scalaVersionInBuild = "2.13.5"
 
 lazy val commonSettings = Seq(
