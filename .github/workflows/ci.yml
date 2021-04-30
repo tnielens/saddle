@@ -15,9 +15,3 @@ jobs:
       run: sbt -J-Xmx3000m clean test docs/mdoc coreJVM/mimaReportBinaryIssues linalg/mimaReportBinaryIssues 
     - name: Compile 2.12
       run: sbt -J-Xmx3000m ++2.12.13! clean test docs/mdoc coreJVM/mimaReportBinaryIssues linalg/mimaReportBinaryIssues 
-    - name: Codecov
-      uses: codecov/codecov-action@v1.0.2
-      if: github.actor == 'pityka'
-      with:
-        token: ${{secrets.CODECOV_TOKEN}}
-
