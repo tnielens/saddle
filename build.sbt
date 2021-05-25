@@ -1,10 +1,10 @@
 import com.typesafe.tools.mima.core._
 
 lazy val scalaTestVersion = "3.2.9"
-lazy val scalaVersionInBuild = "2.13.5"
+lazy val scalaVersionInBuild = "2.13.6"
 
 lazy val commonSettings = Seq(
-  crossScalaVersions := Seq("2.13.5", "2.12.13"),
+  crossScalaVersions := Seq("2.13.6", "2.12.13"),
   scalaVersion := scalaVersionInBuild,
   parallelExecution in Test := false,
   scalacOptions ++= Seq(
@@ -78,8 +78,18 @@ lazy val commonSettings = Seq(
   mimaBinaryIssueFilters ++= Seq(
     ProblemFilters.exclude[ReversedMissingMethodProblem](
       "org.saddle.Vec.zipMapIdx"
-    )
+    ),
+    ProblemFilters.exclude[MissingClassProblem]("org.saddle.ops.macroImpl.*")
   )
+)
+
+lazy val specs = List(
+  ("org.specs2" %% "specs2-core" % "4.12.0" % "test"),
+  ("org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test")
+)
+
+lazy val scalaTest = List(
+  "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 )
 
 lazy val core = crossProject(JSPlatform, JVMPlatform)
@@ -92,19 +102,14 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
   .jvmSettings(
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.4",
-      "org.typelevel" %% "cats-kernel" % "2.6.0",
-      "org.scala-lang" % "scala-reflect" % scalaVersion.value,
-      "org.specs2" %% "specs2-core" % "4.12.0" % "test",
-      "org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test"
-    )
+      "org.typelevel" %% "cats-kernel" % "2.6.1"
+    ) ++ specs
   )
   .jsSettings(
     fork := false,
-    coverageEnabled := false,
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %%% "scala-collection-compat" % "2.4.4",
-      "org.typelevel" %%% "cats-core" % "2.6.0",
-      "org.scala-lang" % "scala-reflect" % scalaVersion.value,
+      "org.typelevel" %%% "cats-core" % "2.6.1",
       "org.specs2" %%% "specs2-core" % "4.9.4" % "test",
       "org.specs2" %%% "specs2-scalacheck" % "4.9.4" % "test"
     )
@@ -124,26 +129,30 @@ lazy val coreJVMTests = project
     skip in publish := true
   )
   .settings(
-    libraryDependencies ++= Seq(
-      "org.typelevel" %% "cats-core" % "2.6.0",
-      "org.specs2" %% "specs2-core" % "4.12.0" % "test",
-      "org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test",
-      "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
-    )
+    libraryDependencies ++= specs ++ scalaTest
   )
   .dependsOn(coreJVM, binary)
 
+lazy val inlinedOpsMacroImpl = project
+  .in(file("saddle-ops-inlined-macroimpl"))
+  .settings(commonSettings: _*)
+  .settings(
+    crossScalaVersions := Seq("2.13.6", "2.12.13"),
+    name := "saddle-ops-inlined-macroimpl",
+    libraryDependencies ++= Seq(
+      "org.scala-lang" % "scala-reflect" % scalaVersion.value
+    ) ++ specs
+  )
+  .dependsOn(coreJVM % "compile->compile;test->test")
 lazy val inlinedOps = project
   .in(file("saddle-ops-inlined"))
   .settings(commonSettings: _*)
   .settings(
+    crossScalaVersions := Seq("2.13.6", "2.12.13"),
     name := "saddle-ops-inlined",
-    libraryDependencies ++= Seq(
-      "org.specs2" %% "specs2-core" % "4.12.0" % "test",
-      "org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test"
-    )
+    libraryDependencies ++= specs
   )
-  .dependsOn(coreJVM % "compile->compile;test->test")
+  .dependsOn(inlinedOpsMacroImpl % "compile->compile;test->test")
 
 lazy val bench =
   project
@@ -162,10 +171,8 @@ lazy val time = project
       "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.4",
       "joda-time" % "joda-time" % "2.1",
       "org.joda" % "joda-convert" % "1.2",
-      "org.scala-saddle" % "google-rfc-2445" % "20110304",
-      "org.specs2" %% "specs2-core" % "4.12.0" % "test",
-      "org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test"
-    )
+      "org.scala-saddle" % "google-rfc-2445" % "20110304"
+    ) ++ specs
   )
   .dependsOn(coreJVM)
 
@@ -175,10 +182,8 @@ lazy val stats = project
   .settings(
     name := "saddle-stats",
     libraryDependencies ++= Seq(
-      "org.apache.commons" % "commons-math" % "2.2" % "test",
-      "org.specs2" %% "specs2-core" % "4.12.0" % "test",
-      "org.specs2" %% "specs2-scalacheck" % "4.12.0" % "test"
-    )
+      "org.apache.commons" % "commons-math" % "2.2" % "test"
+    ) ++ specs
   )
   .dependsOn(coreJVM)
 
@@ -189,9 +194,8 @@ lazy val linalg = project
     name := "saddle-linalg",
     libraryDependencies ++= Seq(
       "com.github.fommil.netlib" % "all" % "1.1.2" pomOnly (),
-      "net.sourceforge.f2j" % "arpack_combined_all" % "0.1",
-      "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
-    )
+      "net.sourceforge.f2j" % "arpack_combined_all" % "0.1"
+    ) ++ scalaTest
   )
   .dependsOn(coreJVM, inlinedOps)
 
@@ -203,9 +207,8 @@ lazy val binary = project
   )
   .settings(
     libraryDependencies ++= Seq(
-      "com.lihaoyi" %% "ujson" % "1.3.15",
-      "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
-    )
+      "com.lihaoyi" %% "ujson" % "1.3.15"
+    ) ++ scalaTest
   )
   .dependsOn(coreJVM)
 
@@ -218,13 +221,11 @@ lazy val circe = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "io.circe" %% "circe-core" % "0.13.0",
-      "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
-    )
+      "io.circe" %% "circe-core" % "0.13.0"
+    ) ++ scalaTest
   )
   .jsSettings(
     fork := false,
-    coverageEnabled := false,
     libraryDependencies ++= Seq(
       "io.circe" %%% "circe-core" % "0.13.0",
       "org.scalatest" %%% "scalatest" % scalaTestVersion % "test"
@@ -245,7 +246,6 @@ lazy val spire = crossProject(JSPlatform, JVMPlatform)
     scalaVersion := scalaVersionInBuild
   )
   .jsSettings(
-    coverageEnabled := false,
     fork := false
   )
 
@@ -262,7 +262,6 @@ lazy val io = crossProject(JSPlatform, JVMPlatform)
     scalaVersion := scalaVersionInBuild
   )
   .jsSettings(
-    coverageEnabled := false,
     fork := false
   )
 
