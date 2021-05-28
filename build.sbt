@@ -4,7 +4,7 @@ lazy val scalaTestVersion = "3.2.9"
 lazy val scalaVersionInBuild = "2.13.6"
 
 lazy val commonSettings = Seq(
-  crossScalaVersions := Seq("2.13.6", "2.12.13"),
+  crossScalaVersions := Seq("2.13.6", "2.12.14"),
   scalaVersion := scalaVersionInBuild,
   parallelExecution in Test := false,
   scalacOptions ++= Seq(
@@ -137,7 +137,7 @@ lazy val inlinedOpsMacroImpl = project
   .in(file("saddle-ops-inlined-macroimpl"))
   .settings(commonSettings: _*)
   .settings(
-    crossScalaVersions := Seq("2.13.6", "2.12.13"),
+    crossScalaVersions := Seq("2.13.6", "2.12.14"),
     name := "saddle-ops-inlined-macroimpl",
     libraryDependencies ++= Seq(
       "org.scala-lang" % "scala-reflect" % scalaVersion.value
@@ -148,7 +148,7 @@ lazy val inlinedOps = project
   .in(file("saddle-ops-inlined"))
   .settings(commonSettings: _*)
   .settings(
-    crossScalaVersions := Seq("2.13.6", "2.12.13"),
+    crossScalaVersions := Seq("2.13.6", "2.12.14"),
     name := "saddle-ops-inlined",
     libraryDependencies ++= specs
   )
