@@ -101,14 +101,14 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.4",
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0",
       "org.typelevel" %% "cats-kernel" % "2.6.1"
     ) ++ specs
   )
   .jsSettings(
     fork := false,
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %%% "scala-collection-compat" % "2.4.4",
+      "org.scala-lang.modules" %%% "scala-collection-compat" % "2.5.0",
       "org.typelevel" %%% "cats-core" % "2.6.1",
       "org.specs2" %%% "specs2-core" % "4.9.4" % "test",
       "org.specs2" %%% "specs2-scalacheck" % "4.9.4" % "test"
@@ -168,7 +168,7 @@ lazy val time = project
   .settings(
     name := "saddle-time",
     libraryDependencies ++= Seq(
-      "org.scala-lang.modules" %% "scala-collection-compat" % "2.4.4",
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0",
       "joda-time" % "joda-time" % "2.1",
       "org.joda" % "joda-convert" % "1.2",
       "org.scala-saddle" % "google-rfc-2445" % "20110304"
