@@ -17,6 +17,12 @@ package org.saddle
 import org.specs2.mutable.Specification
 
 class VecSpec extends Specification {
+  "sum a single NA" in {
+    Vec(Double.NaN).sum.isNaN must_== true
+  }
+  "prod a single NA" in {
+    Vec(Double.NaN).prod.isNaN must_== true
+  }
   "reshape" in {
     Vec(1, 2, 3, 4, 5, 6).reshape(2, 3) must_== Mat(
       Vec(1, 2, 3),

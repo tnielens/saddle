@@ -560,12 +560,14 @@ class VecDefault[@spec(Boolean, Int, Long, Double) T](
     * referring to this.filterFoldLeft boxes
     */
   def sum(implicit na: NUM[T], st: ST[T]): T =
-    VecImpl.filterFoldLeft(this)(st.notMissing)(st.zero)((a, b) =>
+    if (count == 0) st.missing 
+    else VecImpl.filterFoldLeft(this)(st.notMissing)(st.zero)((a, b) =>
       na.plus(a, b)
     )
 
   def prod(implicit na: NUM[T], st: ST[T]): T =
-    VecImpl.filterFoldLeft(this)(st.notMissing)(st.one)((a, b) =>
+    if (count == 0) st.missing
+    else VecImpl.filterFoldLeft(this)(st.notMissing)(st.one)((a, b) =>
       na.times(a, b)
     )
 
