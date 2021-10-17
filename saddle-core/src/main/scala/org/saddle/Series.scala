@@ -162,7 +162,7 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   }
 
   /** Alias for `first`. If a key exists, get the value associated with the
-    * first occurence of that key.
+    * first occurrence of that key.
     * @return
     */
   def get(key: X): Scalar[T] = {
