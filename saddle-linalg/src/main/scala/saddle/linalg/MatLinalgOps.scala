@@ -238,7 +238,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      b.numRows, //ldb
+      b.numRows, // ldb
       0.0, // c
       result, // c data
       b.numCols
@@ -268,7 +268,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       0.0, // c
       result, // c data
       b.numCols
@@ -299,7 +299,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      b.numCols, //ldb
+      b.numCols, // ldb
       0.0, // c
       result, // c data
       b.numRows
@@ -330,7 +330,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       0.0, // c
       result, // c data
       b.numRows
@@ -371,7 +371,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      b.numRows, //ldb
+      b.numRows, // ldb
       beta, // c
       result, // c data
       b.numCols
@@ -407,7 +407,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       beta, // c
       result, // c data
       b.numCols
@@ -443,7 +443,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      b.numCols, //ldb
+      b.numCols, // ldb
       beta, // c
       result, // c data
       b.numRows
@@ -478,7 +478,7 @@ class MatPimp(val self: Mat[Double]) {
       b.toArray, // op(a) data
       b.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       beta, // c
       result, // c data
       b.numRows
@@ -503,7 +503,7 @@ class MatPimp(val self: Mat[Double]) {
       a.toArray, // op(a) data
       a.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       0.0, // c
       result, // c data
       a.numCols
@@ -532,7 +532,7 @@ class MatPimp(val self: Mat[Double]) {
       a.toArray, // op(a) data
       a.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       beta, // c
       result, // c data
       a.numCols
@@ -558,7 +558,7 @@ class MatPimp(val self: Mat[Double]) {
       a.toArray, // op(a) data
       a.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       0.0, // c
       result, // c data
       a.numRows
@@ -698,7 +698,7 @@ class MatPimp(val self: Mat[Double]) {
       a.toArray, // op(a) data
       a.numCols, // lda
       a.toArray, // op(b) data
-      a.numCols, //ldb
+      a.numCols, // ldb
       beta, // c
       result, // c data
       a.numRows

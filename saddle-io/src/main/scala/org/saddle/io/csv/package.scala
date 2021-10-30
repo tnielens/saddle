@@ -281,7 +281,7 @@ package object csv {
             state = 5
           }
         }
-      } else if (state == 2) { //quoted data
+      } else if (state == 2) { // quoted data
         if (chr == quoteChar) {
           state = 3
         }
