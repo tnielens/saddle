@@ -309,8 +309,6 @@ class IndexCheck extends Specification with ScalaCheck {
         (ix.length > 0) ==> {
           val uq = ix.uniques.toVec 
           val c = ix.counts.toVec
-          println(uq)
-          println(c)
           assert(uq.length == c.length)
           uq.zipMap(c)((k,c) => ix.count(k) == c ).countT must_== uq.length
         }
