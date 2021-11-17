@@ -110,7 +110,7 @@ object Vec {
   *   Vec(1d,2,3).raw(0) == 1d
   * }}}
   *
-  * `Vec` may be used in arithemetic expressions which operate on two `Vec`s or
+  * `Vec` may be used in arithmetic expressions which operate on two `Vec`s or
   * on a `Vec` and a scalar value. A few examples:
   *
   * {{{

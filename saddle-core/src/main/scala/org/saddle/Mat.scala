@@ -42,7 +42,7 @@ import org.saddle.mat.{MatImpl, MatMath}
   *   m.raw(0,0) == 1d
   * }}}
   *
-  * `Mat` may be used in arithemetic expressions which operate on two `Mat`s or
+  * `Mat` may be used in arithmetic expressions which operate on two `Mat`s or
   * on a `Mat` and a primitive value. A fe examples:
   *
   * {{{
