@@ -15,10 +15,10 @@ Introduction
 ============
 
 Saddle is a data manipulation library for Scala that provides array-backed,
-indexed, one- and two-dimensional data structures that are judiciously
+indexed, one- and two-dimensional data structures that are 
 specialized on JVM primitives to avoid the overhead of boxing and unboxing.
 
-Saddle offers vectorized numerical calculations, automatic alignment of data
+Saddle offers numerical calculations, automatic alignment of data
 along indices, robustness to missing (N/A) values, and facilities for I/O.
 
 Saddle draws inspiration from several sources, among them the R programming
