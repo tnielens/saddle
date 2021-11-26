@@ -8,7 +8,7 @@ contentDir = "../saddle-docs/target/mdoc"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "monokai"
+pygmentsStyle = "friendly"
 pygmentsUseClasses = false
 
 # Controls how many words are printed in the content summary on the docs homepage.
