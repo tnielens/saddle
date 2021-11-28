@@ -1,0 +1,79 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Saddle"
+titleSeparator = "-"
+titleAddition = "Modern Documentation Theme"
+description = "Saddle is a data manipulation library for Scala that provides array-backed, indexed, one- and two-dimensional data structures."
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["doks.png"]
+ogLocale = "en_US"
+domainTLD = "pityka.github.io"
+titleHome = "Saddle"
+
+## Twitter Cards
+# twitterSite = "@getdoks"
+# twitterCreator = "@henkverlinde"
+
+## JSON-LD
+# schemaType = "Person"
+# schemaType = "Organization"
+# schemaName = "Doks"
+# schemaAuthor = "Henk Verlinde"
+# schemaAuthorTwitter = "https://twitter.com/henkverlinde"
+# schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+# schemaAuthorGitHub = "https://github.com/h-enk"
+# schemaLocale = "en-US"
+# schemaLogo = "logo-doks.png"
+# schemaLogoWidth = 512
+# schemaLogoHeight = 512
+# schemaImage = "doks.png"
+# schemaImageWidth = 1280
+# schemaImageHeight = 640
+# schemaTwitter = "https://twitter.com/getdoks"
+# schemaLinkedIn = ""
+# schemaGitHub = "https://github.com/h-enk/doks"
+# schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Footer
+footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+
+# Feed
+copyRight = "Copyright (c) 2013- Saddle developers"
+
+# Edit Page
+docsRepo = "https://github.com/pityka/saddle/docs"
+docsRepoBranch = "master"
+editPage = true
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = false
+  highLight = true
+  kaTex = false
+  collapsibleSidebar = true
+  multilingualMode = false
+  docsVersioning = false
