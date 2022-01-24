@@ -1,6 +1,6 @@
 import com.typesafe.tools.mima.core._
 
-lazy val scalaTestVersion = "3.2.10"
+lazy val scalaTestVersion = "3.2.11"
 lazy val scalaVersionInBuild = "2.13.6"
 
 ThisBuild / versionScheme := Some("early-semver")
