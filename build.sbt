@@ -8,6 +8,7 @@ ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / libraryDependencySchemes ++= Seq(
   "io.circe" %% "circe-core" % "always",
   "io.circe" %% "circe-numbers" % "always",
+  "com.lihaoyi" %% "ujson" % "early-semver",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "early-semver"
 )
 
