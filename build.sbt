@@ -6,10 +6,11 @@ lazy val scalaVersionInBuild = "2.13.6"
 ThisBuild / versionScheme := Some("early-semver")
 
 ThisBuild / libraryDependencySchemes ++= Seq(
-  "io.circe" %% "circe-core" % "always",
-  "io.circe" %% "circe-numbers" % "always",
-  "com.lihaoyi" %% "ujson" % "early-semver",
-  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "early-semver"
+  "io.circe" % "circe-core" % "always",
+  "io.circe" % "circe-numbers" % "always",
+  "org.typelevel" % "cats-core" % "early-semver",
+  "org.typelevel" % "cats-kernel" % "early-semver",
+  "com.github.plokhotnyuk.jsoniter-scala" % "jsoniter-scala-core" % "early-semver"
 )
 
 ThisBuild / versionPolicyIntention := Compatibility.BinaryAndSourceCompatible
