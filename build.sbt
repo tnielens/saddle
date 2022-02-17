@@ -195,6 +195,17 @@ lazy val time = project
   )
   .dependsOn(coreJVM)
 
+lazy val jtime = project
+  .in(file("saddle-jtime"))
+  .settings(commonSettings: _*)
+  .settings(
+    name := "saddle-jtime",
+    libraryDependencies ++= Seq(
+      "org.scala-lang.modules" %% "scala-collection-compat" % "2.5.0",
+    ) ++ specs
+  )
+  .dependsOn(coreJVM)
+
 lazy val stats = project
   .in(file("saddle-stats"))
   .settings(commonSettings: _*)
