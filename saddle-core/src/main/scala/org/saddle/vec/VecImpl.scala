@@ -430,4 +430,46 @@ private[saddle] object VecImpl {
     }
     Vec(buf)
   }
+
+  def ffill[@spec(Boolean, Int, Long, Double) A: ST](
+      vec: Vec[A],
+      limit: Int
+  ): Vec[A] = {
+
+    val buf = vec.contents
+    var i = 0
+    val l = vec.length
+    val s = implicitly[ST[A]]
+
+    while (i < l) {
+      while (i < l && s.isMissing(buf(i))) {
+        i += 1
+      }
+      if (i < l) {
+        val lastNotMissing = buf(i)
+        i += 1
+        while (i < l && s.notMissing(buf(i))) {
+          i += 1
+        }
+        var remaining = limit
+        while (
+          i < l
+          && (limit == 0 || remaining > 0)
+          && s.isMissing(buf(i))
+        ) {
+          buf(i) = lastNotMissing
+          remaining -= 1
+          i += 1
+        }
+      }
+    }
+    Vec(buf)
+  }
+
+  def bfill[@spec(Boolean, Int, Long, Double) A: ST](
+      vec: Vec[A],
+      limit: Int
+  ): Vec[A] = {
+    ffill(vec.reversed, limit).reversed
+  }
 }
