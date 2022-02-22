@@ -394,6 +394,22 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   def fillNA(f: X => T): Series[X, T] =
     Series(VecImpl.seriesfillNA(index.toVec, values)(f), index)
 
+  /** Fill NA values by propagating defined values forward.
+    *
+    * @param limit 
+    *   If > 0, propagate over a maximum of `limit` consecutive NA values.
+    */
+  def ffill(limit: Int = 0): Series[X, T] =
+    Series(VecImpl.ffill(values, limit), index)
+
+  /** Fill NA values by propagating defined values backward.
+    *
+    * @param limit 
+    *   If > 0, propagate over a maximum of `limit` consecutive NA values.
+    */
+  def bfill(limit: Int = 0): Series[X, T] =
+    Series(VecImpl.bfill(values, limit), index)
+
   /** Creates a Series having the same values but excluding all key/value pairs
     * in which the value is NA.
     */
