@@ -19,7 +19,7 @@ ThisBuild / versionPolicyIgnoredInternalDependencyVersions := Some(
 lazy val commonSettings = Seq(
   crossScalaVersions := Seq("2.13.6", "2.12.15"),
   scalaVersion := scalaVersionInBuild,
-  parallelExecution in Test := false,
+  Test / parallelExecution := false,
   scalacOptions ++= Seq(
     "-opt:l:method",
     "-opt:l:inline",
@@ -57,11 +57,11 @@ lazy val commonSettings = Seq(
     "-Ywarn-unused:patvars", // Warn if a variable bound in a pattern is unused.
     "-Ywarn-unused:privates" // Warn if a private member is unused.
   ),
-  scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings"))
+  Compile / console / scalacOptions ~= (_ filterNot (_ == "-Xfatal-warnings"))
 ) ++ Seq(
   organization := "io.github.pityka",
   licenses += ("MIT", url("https://opensource.org/licenses/MIT")),
-  pomExtra in Global := {
+  Global / pomExtra := {
     <url>https://github.com/pityka/saddle</url>
       <developers>
         <developer>
@@ -84,7 +84,7 @@ lazy val commonSettings = Seq(
       </developers>
   },
   fork := true,
-  cancelable in Global := true,
+  Global / cancelable := true,
   mimaBinaryIssueFilters ++= Seq(
     ProblemFilters.exclude[ReversedMissingMethodProblem](
       "org.saddle.Vec.zipMapIdx"
@@ -142,7 +142,7 @@ lazy val coreJVMTests = project
   .settings(
     name := "saddle-core-jvm-test",
     publishArtifact := false,
-    skip in publish := true
+    publish / skip := true
   )
   .settings(
     libraryDependencies ++= specs ++ scalaTest
@@ -174,7 +174,7 @@ lazy val bench =
   project
     .in(file("saddle-jmh"))
     .settings(commonSettings: _*)
-    .settings(skip in publish := true)
+    .settings(publish / skip := true)
     .dependsOn(coreJVM, inlinedOps, linalg)
     .enablePlugins(JmhPlugin)
 
@@ -315,7 +315,7 @@ lazy val docs = project
     scalacOptions ++= Seq(
       "-language:postfixOps"
     ),
-    unidocProjectFilter in (ScalaUnidoc, unidoc) :=
+     ScalaUnidoc / unidoc / unidocProjectFilter :=
       (inAnyProject -- inProjects(
         coreJS,
         circeJS,
@@ -329,8 +329,8 @@ lazy val docs = project
     mdocVariables := Map(
       "VERSION" -> version.value
     ),
-    target in (ScalaUnidoc, unidoc) := (baseDirectory in LocalRootProject).value / "website" / "static" / "api",
-    cleanFiles += (target in (ScalaUnidoc, unidoc)).value
+    ScalaUnidoc / unidoc / target  := (LocalRootProject / baseDirectory).value / "website" / "static" / "api",
+    cleanFiles += (ScalaUnidoc / unidoc / target).value
   )
   .enablePlugins(MdocPlugin, ScalaUnidocPlugin)
 
@@ -345,17 +345,17 @@ lazy val root = (project in file("."))
   .settings(
     testJVM := {
       List(
-        (test in Test in coreJVM).value,
-        (test in Test in coreJVMTests).value,
-        (test in Test in time).value,
-        (test in Test in stats).value,
-        (test in Test in linalg).value,
-        (test in Test in binary).value,
-        (test in Test in circeJVM).value,
-        (test in Test in jsoniter.jvm).value,
-        (test in Test in inlinedOps).value,
-        (test in Test in spireJVM).value,
-        (test in Test in io.jvm).value
+        (coreJVM / Test / test).value,
+        (coreJVMTests / Test / test).value,
+        (time / Test / test).value,
+        (stats / Test / test).value,
+        (linalg / Test / test).value,
+        (binary / Test / test).value,
+        (circeJVM / Test / test).value,
+        (jsoniter.jvm / Test / test).value,
+        (inlinedOps / Test / test).value,
+        (spireJVM / Test / test).value,
+        (io.jvm / Test / test).value
       )
     }
   )
@@ -380,4 +380,4 @@ lazy val root = (project in file("."))
     inlinedOpsMacroImpl
   )
 
-parallelExecution in ThisBuild := false
+ThisBuild / parallelExecution := false
