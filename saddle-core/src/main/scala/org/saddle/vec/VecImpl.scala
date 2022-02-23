@@ -470,6 +470,33 @@ private[saddle] object VecImpl {
       vec: Vec[A],
       limit: Int
   ): Vec[A] = {
-    ffill(vec.reversed, limit).reversed
+    
+    val buf = vec.contents
+    var i = vec.length-1
+    val s = implicitly[ST[A]]
+
+    while (i >= 0) {
+      while (i >= 0 && s.isMissing(buf(i))) {
+        i -= 1
+      }
+      if (i >= 0) {
+        val lastNotMissing = buf(i)
+        i -= 1
+        while (i >= 0 && s.notMissing(buf(i))) {
+          i -= 1
+        }
+        var remaining = limit
+        while (
+          i >= 0
+          && (limit == 0 || remaining > 0)
+          && s.isMissing(buf(i))
+        ) {
+          buf(i) = lastNotMissing
+          remaining -= 1
+          i -= 1
+        }
+      }
+    }
+    Vec(buf)
   }
 }
