@@ -89,8 +89,8 @@ lazy val commonSettings = Seq(
   Global / cancelable := true,
   mimaBinaryIssueFilters ++= Seq(
     ProblemFilters.exclude[ReversedMissingMethodProblem](
-      "org.saddle.Vec.zipMapIdx"
-    ),
+      "*"
+    ), 
     ProblemFilters.exclude[MissingClassProblem]("org.saddle.ops.macroImpl.*"),
     ProblemFilters.exclude[IncompatibleMethTypeProblem](
       "org.saddle.binary.Reader#ByteChannel.this"
