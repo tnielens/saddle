@@ -17,6 +17,8 @@ package org.saddle.vec
 import scala.{specialized => spec}
 import org.saddle.{ST, Vec}
 import org.saddle.Buffer
+import org.saddle.vec.VecImpl.Fill.Forward
+import org.saddle.vec.VecImpl.Fill.Backward
 
 // Specialized method implementations for code reuse in implementations of Vec; NA-safe
 private[saddle] object VecImpl {
@@ -431,72 +433,65 @@ private[saddle] object VecImpl {
     Vec(buf)
   }
 
-  def ffill[@spec(Boolean, Int, Long, Double) A: ST](
+  sealed trait Fill
+  object Fill {
+    object Forward extends Fill
+    object Backward extends Fill
+  }
+
+  def fillNA[@spec(Boolean, Int, Long, Double) A: ST](
       vec: Vec[A],
+      method: Fill,
       limit: Int
   ): Vec[A] = {
-
+    val step = method match {
+      case Forward  => 1
+      case Backward => -1
+    }
     val buf = vec.contents
-    var i = 0
     val l = vec.length
+    val end = method match {
+      case Forward  => l
+      case Backward => -1
+    }
+    var i = method match {
+      case Forward  => 0
+      case Backward => l - 1
+    }
     val s = implicitly[ST[A]]
 
-    while (i < l) {
-      while (i < l && s.isMissing(buf(i))) {
-        i += 1
+    while (i != end) {
+      while (i != end && s.isMissing(buf(i))) {
+        i += step
       }
-      if (i < l) {
+      if (i != end) {
         val lastNotMissing = buf(i)
-        i += 1
-        while (i < l && s.notMissing(buf(i))) {
+        i += step
+        while (i != end && s.notMissing(buf(i))) {
           i += 1
         }
         var remaining = limit
         while (
-          i < l
+          i != end
           && (limit == 0 || remaining > 0)
           && s.isMissing(buf(i))
         ) {
           buf(i) = lastNotMissing
           remaining -= 1
-          i += 1
+          i += step
         }
       }
     }
     Vec(buf)
   }
 
-  def bfill[@spec(Boolean, Int, Long, Double) A: ST](
+  def fillForward[@spec(Boolean, Int, Long, Double) A: ST](
       vec: Vec[A],
       limit: Int
-  ): Vec[A] = {
-    
-    val buf = vec.contents
-    var i = vec.length-1
-    val s = implicitly[ST[A]]
+  ): Vec[A] = fillNA(vec, Fill.Forward, limit)
 
-    while (i >= 0) {
-      while (i >= 0 && s.isMissing(buf(i))) {
-        i -= 1
-      }
-      if (i >= 0) {
-        val lastNotMissing = buf(i)
-        i -= 1
-        while (i >= 0 && s.notMissing(buf(i))) {
-          i -= 1
-        }
-        var remaining = limit
-        while (
-          i >= 0
-          && (limit == 0 || remaining > 0)
-          && s.isMissing(buf(i))
-        ) {
-          buf(i) = lastNotMissing
-          remaining -= 1
-          i -= 1
-        }
-      }
-    }
-    Vec(buf)
-  }
+  def fillBackward[@spec(Boolean, Int, Long, Double) A: ST](
+      vec: Vec[A],
+      limit: Int
+  ): Vec[A] = fillNA(vec, Fill.Backward, limit)
 }

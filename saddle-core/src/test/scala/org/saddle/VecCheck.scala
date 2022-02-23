@@ -345,38 +345,38 @@ class VecCheck extends Specification with ScalaCheck {
       }
     }
 
-    "ffill fills values forward" in {
+    "fillForward fills values forward" in {
       val v = Vec[Int](1, na, na, 2, na, na)
-      v.ffill() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
+      v.fillForward() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
     }
 
-    "ffill fills values forward until the limit if greater than 0" in {
+    "fillForward fills values forward until the limit if greater than 0" in {
       val v = Vec[Int](1, na, na, 2, na, na, na)
-      v.ffill(0) mustEqual Vec[Int](1, 1, 1, 2, 2, 2, 2)
-      v.ffill(1) mustEqual Vec[Int](1, 1, na, 2, 2, na, na)
-      v.ffill(2) mustEqual Vec[Int](1, 1, 1, 2, 2, 2, na)
+      v.fillForward(0) mustEqual Vec[Int](1, 1, 1, 2, 2, 2, 2)
+      v.fillForward(1) mustEqual Vec[Int](1, 1, na, 2, 2, na, na)
+      v.fillForward(2) mustEqual Vec[Int](1, 1, 1, 2, 2, 2, na)
     }
 
-    "ffill fills values forward only" in {
+    "fillForward fills values forward only" in {
       val v = Vec[Int](na, na, 2, na, na)
-      v.ffill() mustEqual Vec[Int](na, na, 2, 2, 2)
+      v.fillForward() mustEqual Vec[Int](na, na, 2, 2, 2)
     }
 
-    "bfill fills values backward" in {
+    "fillBackward fills values backward" in {
       val v = Vec[Int](na, na, 1, na, na, 2)
-      v.bfill() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
+      v.fillBackward() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
     }
 
-    "bfill fills values backward until the limit if greater than 0" in {
+    "fillBackword fills values backward until the limit if greater than 0" in {
       val v = Vec[Int](na, na, na, 2, na, na, 1)
-      v.bfill(0) mustEqual Vec[Int](2, 2, 2, 2, 1, 1, 1)
-      v.bfill(1) mustEqual Vec[Int](na, na, 2, 2, na, 1, 1)
-      v.bfill(2) mustEqual Vec[Int](na, 2, 2, 2, 1, 1, 1)
+      v.fillBackward(0) mustEqual Vec[Int](2, 2, 2, 2, 1, 1, 1)
+      v.fillBackward(1) mustEqual Vec[Int](na, na, 2, 2, na, 1, 1)
+      v.fillBackward(2) mustEqual Vec[Int](na, 2, 2, 2, 1, 1, 1)
     }
 
-    "bfill fills values backward only" in {
+    "fillBackward fills values backward only" in {
       val v = Vec[Int](na, na, 2, na, na)
-      v.bfill() mustEqual Vec[Int](2, 2, 2, na, na)
+      v.fillBackward() mustEqual Vec[Int](2, 2, 2, na, na)
     }
 
     "sliceAt works" in {
