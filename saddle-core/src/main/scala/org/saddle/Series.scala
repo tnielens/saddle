@@ -399,16 +399,16 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
     * @param limit 
     *   If > 0, propagate over a maximum of `limit` consecutive NA values.
     */
-  def ffill(limit: Int = 0): Series[X, T] =
-    Series(VecImpl.ffill(values, limit), index)
+  def fillForward(limit: Int = 0): Series[X, T] =
+    Series(VecImpl.fillForward(values, limit), index)
 
   /** Fill NA values by propagating defined values backward.
     *
     * @param limit 
     *   If > 0, propagate over a maximum of `limit` consecutive NA values.
     */
-  def bfill(limit: Int = 0): Series[X, T] =
-    Series(VecImpl.bfill(values, limit), index)
+  def fillBackward(limit: Int = 0): Series[X, T] =
+    Series(VecImpl.fillBackward(values, limit), index)
 
   /** Creates a Series having the same values but excluding all key/value pairs
     * in which the value is NA.

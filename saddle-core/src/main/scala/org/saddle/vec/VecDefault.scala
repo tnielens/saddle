@@ -527,9 +527,9 @@ class VecDefault[@spec(Boolean, Int, Long, Double) T](
     */
   def fillNA(f: Int => T): Vec[T] = VecImpl.vecfillNA(this)(f)(scalarTag)
 
-  def ffill(limit: Int): Vec[T] = VecImpl.ffill(this, limit)
+  def fillForward(limit: Int): Vec[T] = VecImpl.fillForward(this, limit)
 
-  def bfill(limit: Int): Vec[T] = VecImpl.bfill(this, limit)
+  def fillBackward(limit: Int): Vec[T] = VecImpl.fillBackward(this, limit)
 
   /** Converts Vec to an indexed sequence (default implementation is
     * immutable.Vector)
