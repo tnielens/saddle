@@ -90,7 +90,7 @@ lazy val commonSettings = Seq(
   mimaBinaryIssueFilters ++= Seq(
     ProblemFilters.exclude[ReversedMissingMethodProblem](
       "*"
-    ), 
+    ),
     ProblemFilters.exclude[MissingClassProblem]("org.saddle.ops.macroImpl.*"),
     ProblemFilters.exclude[IncompatibleMethTypeProblem](
       "org.saddle.binary.Reader#ByteChannel.this"
@@ -142,8 +142,8 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %%% "scala-collection-compat" % "2.5.0",
       "org.typelevel" %%% "cats-core" % "2.6.1",
-      "org.specs2" %%% "specs2-core" % "4.13.3" % "test",
-      "org.specs2" %%% "specs2-scalacheck" % "4.13.3" % "test"
+      "org.specs2" %%% "specs2-core" % "4.14.1" % "test",
+      "org.specs2" %%% "specs2-scalacheck" % "4.14.1" % "test"
     )
   )
   .dependsOn(spire, io)
@@ -331,7 +331,7 @@ lazy val docs = project
     scalacOptions ++= Seq(
       "-language:postfixOps"
     ),
-     ScalaUnidoc / unidoc / unidocProjectFilter :=
+    ScalaUnidoc / unidoc / unidocProjectFilter :=
       (inAnyProject -- inProjects(
         coreJS,
         circeJS,
@@ -345,7 +345,7 @@ lazy val docs = project
     mdocVariables := Map(
       "VERSION" -> version.value
     ),
-    ScalaUnidoc / unidoc / target  := (LocalRootProject / baseDirectory).value / "website" / "static" / "api",
+    ScalaUnidoc / unidoc / target := (LocalRootProject / baseDirectory).value / "website" / "static" / "api",
     cleanFiles += (ScalaUnidoc / unidoc / target).value
   )
   .enablePlugins(MdocPlugin, ScalaUnidocPlugin)
