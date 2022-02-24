@@ -6,7 +6,7 @@ addSbtPlugin("com.github.sbt" % "sbt-unidoc" % "0.5.0")
 
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
 
-addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.3.0")
+addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.3.1")
 
 addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.3")
 
@@ -17,4 +17,3 @@ addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.1.0")
 addSbtPlugin("com.typesafe" % "sbt-mima-plugin" % "1.0.1")
 
 addSbtPlugin("ch.epfl.scala" % "sbt-version-policy" % "2.0.1")
-
