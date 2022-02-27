@@ -24,8 +24,7 @@ import org.saddle.array.Sorter
   */
 object ScalarTagLong extends ScalarTag[Long] {
   def missing: Long = Long.MinValue
-  def isMissing(v: Long): Boolean = v == Long.MinValue
-  def notMissing(v: Long): Boolean = v != Long.MinValue
+  def isMissing(v: Long): Boolean = v == missing 
 
   override def parse(s: String) =
     try {

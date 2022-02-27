@@ -19,11 +19,11 @@ import org.saddle.index.IndexAny
 import org.saddle.locator.{LocatorAny, Locator}
 import org.saddle.array.Sorter
 import org.saddle.Buffer
+import org.saddle.na
 
 class ScalarTagAny[T: CLM] extends ScalarTag[T] {
   def missing: T = null.asInstanceOf[T]
-  def isMissing(v: T): Boolean = v == null
-  def notMissing(v: T): Boolean = v != null
+  def isMissing(v: T): Boolean = v == missing || v == na
 
   private[this] val string = implicitly[CLM[T]] == implicitly[CLM[String]]
   def parse(s: String): T =
