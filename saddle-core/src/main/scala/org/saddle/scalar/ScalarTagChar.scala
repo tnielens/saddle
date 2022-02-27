@@ -23,4 +23,5 @@ object ScalarTagChar extends ScalarTagAny[Char] {
   override def parse(s: String) = s.head
   override def makeSorter(implicit ord: ORD[Char]): Sorter[Char] =
     Sorter.charSorter
+  override def missing: Char = Char.MinValue
 }

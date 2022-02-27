@@ -25,7 +25,7 @@ import org.saddle.array.Sorter
 object ScalarTagDouble extends ScalarTag[Double] {
   @inline def missing: Double = Double.NaN
   @inline def isMissing(v: Double): Boolean = (v != v)
-  @inline def notMissing(v: Double): Boolean = (v == v)
+  @inline override def notMissing(v: Double): Boolean = (v == v)
 
   override def parse(s: String) =
     try {

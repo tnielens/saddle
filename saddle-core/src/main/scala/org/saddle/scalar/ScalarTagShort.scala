@@ -23,4 +23,6 @@ object ScalarTagShort extends ScalarTagAny[Short] {
   override def parse(s: String) = s.toByte
   override def makeSorter(implicit ord: ORD[Short]): Sorter[Short] =
     Sorter.shortSorter
+
+  override def missing: Short = Short.MinValue
 }

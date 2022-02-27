@@ -20,12 +20,11 @@ import org.saddle.locator.{LocatorBool, Locator}
 import org.saddle.array.Sorter
 import org.saddle.Buffer
 
-/** Boolean ScalarTag
+/** Boolean ScalarTag. No support for missing value.
   */
 object ScalarTagBool extends ScalarTag[Boolean] {
   def missing: Boolean = false
   def isMissing(v: Boolean): Boolean = false
-  def notMissing(v: Boolean): Boolean = true
 
   def compare(x: Boolean, y: Boolean)(implicit ev: ORD[Boolean]) =
     if (x > y) 1 else 0
