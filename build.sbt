@@ -116,7 +116,20 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
   .in(file("saddle-core"))
   .settings(commonSettings: _*)
   .settings(
-    name := "saddle-core"
+    name := "saddle-core",
+    mimaBinaryIssueFilters := Seq(
+      // fmt: off
+      // binary incompat in static methods, only usable in java
+      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagByte.missing"),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagChar.missing"),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagFloat.missing"),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagShort.missing"),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagFloat.isMissing"),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagBool.notMissing"),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagInt.notMissing"),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagLong.notMissing"),
+      // fmt: on
+    )
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
