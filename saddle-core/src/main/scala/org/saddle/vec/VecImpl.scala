@@ -465,10 +465,11 @@ private[saddle] object VecImpl {
         i += step
       }
       if (i != end) {
-        val lastNotMissing = buf(i)
+        var lastNotMissing = buf(i)
         i += step
         while (i != end && s.notMissing(buf(i))) {
-          i += 1
+          lastNotMissing = buf(i)
+          i += step
         }
         var remaining = limit
         while (
