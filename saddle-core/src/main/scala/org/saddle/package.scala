@@ -455,4 +455,11 @@ package object saddle {
 
   }
 
+  /** Filling method for NA values. Non-sealed because could add more variants
+    * in the future.
+    */
+  // private constructor to prevent public extensions
+  abstract class FillMethod private[saddle] ()
+  case object FillForward extends FillMethod() {}
+  case object FillBackward extends FillMethod() {}
 }

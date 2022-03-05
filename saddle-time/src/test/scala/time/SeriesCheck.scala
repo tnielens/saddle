@@ -392,7 +392,6 @@ class SeriesCheck extends Specification with ScalaCheck {
 
     "reindex works" in {
       implicit val ser = Arbitrary(SeriesArbitraries.seriesDateTimeDoubleNoDup)
-
       forAll { (s1: Series[DateTime, Double], s2: Series[DateTime, Double]) =>
         s1.reindex(s2.index).index must_== s2.index
       }
