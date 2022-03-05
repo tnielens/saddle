@@ -20,11 +20,13 @@ import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
 import org.saddle.ops.BinOps._
 import org.saddle.order._
+import org.saddle.Arbitraries._
 
 class SeriesCheck extends Specification with ScalaCheck {
 
   "Series[Int, Double] Tests" in {
     implicit val ser = Arbitrary(SeriesArbitraries.seriesDoubleWithNA)
+    implicit val idx = Arbitrary(IndexArbitraries.indexIntWithDups)
 
     "median works" in {
       forAll { (s: Series[Int, Double]) =>
@@ -459,6 +461,47 @@ class SeriesCheck extends Specification with ScalaCheck {
       forAll { (f: Frame[Int, Int, Double]) => f.melt.pivot must_== f }
     }
 
-  }
+    "reindex with filling throws if the Series is not monotonic" in {
+      implicit val ser =
+        Arbitrary(SeriesArbitraries.seriesIntDoubleWithUnorderedIdxAndDupAndNAs)
+      forAll { (s: Series[Int, Double], i: Index[Int], f: FillMethod) =>
+        (!s.index.isMonotonic) ==>
+          (s.reindex(i, f) must throwA[IllegalArgumentException])
+      }
+    }
 
+    "reindex with filling doesn't throw if the Series is monotonic" in {
+      implicit val ser =
+        Arbitrary(SeriesArbitraries.seriesIntDoubleMonotonicWithNAs)
+      forAll { (s: Series[Int, Double], i: Index[Int], f: FillMethod) =>
+        (s.index.isMonotonic) ==> {
+          s.reindex(i, f)
+          success
+        }
+      }
+    }
+
+    "reindex with filling fills unmapped keys of the new index with values from the base series" in {
+      Series(Vec(1, 2, 4), Index(1, 2, 4))
+        .reindex(Index(3), FillForward) must_== Series(Vec(2), Index(3))
+      Series(Vec(1, 2, 4), Index(1, 2, 4))
+        .reindex(Index(3), FillBackward) must_== Series(Vec(4), Index(3))
+
+      Series(Vec(1, 3, 5), Index(1, 3, 5))
+        .reindex(Index(2, 4), FillForward)
+        .must_==(Series(Vec(1, 3), Index(2, 4)))
+
+      Series(Vec(1, 2, 3), Index(10, 20, 30))
+        .reindex(Index(10, 11, 12, 13, 20, 21, 22, 23), FillForward)
+        .values
+        .must_==(Vec(1, 1, 1, 1, 2, 2, 2, 2))
+    }
+
+    "reindex with filling applies the limit" in {
+      Series(Vec(1, 2, 3), Index(10, 20, 30))
+        .reindex(Index(10, 11, 12, 13, 20, 21, 22, 23), FillForward, limit=1)
+        .values
+        .must_==(Vec[Int](1, 1, na, na, 2, 2, na, na))
+    }
+  }
 }

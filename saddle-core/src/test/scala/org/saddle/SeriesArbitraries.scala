@@ -45,4 +45,9 @@ object SeriesArbitraries {
       idx <- Gen.listOfN(n, Gen.choose(0, 5))
     } yield Series(Vec(lst: _*), Index(idx: _*))
 
+  def seriesIntDoubleWithUnorderedIdxAndDupAndNAs: Gen[Series[Int, Double]] =
+    dupSeriesDoubleWithNA
+
+  def seriesIntDoubleMonotonicWithNAs: Gen[Series[Int, Double]] =
+    seriesDoubleWithNA
 }
