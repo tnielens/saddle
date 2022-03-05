@@ -350,6 +350,11 @@ class VecCheck extends Specification with ScalaCheck {
       v.fillForward() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
     }
 
+    "fillForward fills last value forward" in {
+      val v = Vec[Int](1, 2, na, na)
+      v.fillForward() mustEqual Vec[Int](1, 2, 2, 2)
+    }
+
     "fillForward fills values forward until the limit if greater than 0" in {
       val v = Vec[Int](1, na, na, 2, na, na, na)
       v.fillForward(0) mustEqual Vec[Int](1, 1, 1, 2, 2, 2, 2)
@@ -365,6 +370,11 @@ class VecCheck extends Specification with ScalaCheck {
     "fillBackward fills values backward" in {
       val v = Vec[Int](na, na, 1, na, na, 2)
       v.fillBackward() mustEqual Vec[Int](1, 1, 1, 2, 2, 2)
+    }
+
+    "fillBackward fills last value backward" in {
+      val v = Vec[Int](na, na, 2, 1)
+      v.fillBackward() mustEqual Vec[Int](2, 2, 2, 1)
     }
 
     "fillBackword fills values backward until the limit if greater than 0" in {
