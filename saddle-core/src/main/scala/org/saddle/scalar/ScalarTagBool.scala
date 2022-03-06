@@ -25,6 +25,7 @@ import org.saddle.Buffer
 object ScalarTagBool extends ScalarTag[Boolean] {
   def missing: Boolean = false
   def isMissing(v: Boolean): Boolean = false
+  override def notMissing(v: Boolean): Boolean = true
 
   def compare(x: Boolean, y: Boolean)(implicit ev: ORD[Boolean]) =
     if (x > y) 1 else 0
