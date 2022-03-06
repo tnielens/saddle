@@ -17,6 +17,6 @@ jobs:
         java-version: 8
     - uses: actions/setup-node@v1
     - name: Compile 2.13
-      run: sbt -J-Xmx3000m clean test docs/mdoc versionPolicyCheck 
+      run: sbt -J-Xmx3000m clean test docs/mdoc versionPolicyCheck docs/unidoc
     - name: Compile 2.12
-      run: sbt -J-Xmx3000m ++2.12.13! clean test docs/mdoc versionPolicyCheck 
+      run: sbt -J-Xmx3000m ++2.12.13! clean test docs/mdoc versionPolicyCheck docs/unidoc

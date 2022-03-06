@@ -258,7 +258,8 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   /** Create a new Series whose index is `newIx` and whose values are derived
     * from the original Series. For keys in `newIx` not contained in this
     * series's index, the associated values are derived based on the filling
-    * method `fillMethod` against this series. This series must be monotonic.
+    * method `fillMethod` against this series. 
+    * This series must be monotonic, othrwise IllegalArgumentException is thrown.
     * @param keys
     *   Sequence of keys to be the index of the result series
     * @param fillMethod
@@ -266,8 +267,6 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
     *   `FillForward` or `FillBackward`.
     * @param limit
     *   Limit for the filling method. Not applicable if <= 0.
-    * @throws IllegalArgumentException
-    *   if this series's index is not monotonic (inc/dec).
     */
   def reindex(
       newIx: Index[X],
