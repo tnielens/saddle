@@ -150,4 +150,11 @@ object VecArbitraries {
       lst <- Gen.listOfN(n, Gen.chooseNum(-1000, 1000))
     } yield Vec(lst.filter(_ > 0): _*)
 
+  def vec[T: ST](gen: Gen[T]): Gen[Vec[T]] = for {
+    n <- Gen.choose(0, 20)
+    lst <- Gen.listOfN(n, gen)
+  } yield Vec(lst: _*)
+
+  def vecSorted[T: ST: ORD](gen: Gen[T]): Gen[Vec[T]] = 
+    vec(gen).map(_.sorted)
 }

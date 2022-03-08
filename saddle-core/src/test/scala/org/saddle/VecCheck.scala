@@ -20,35 +20,102 @@ import org.scalacheck.{Gen, Arbitrary}
 import org.scalacheck.Prop._
 import org.saddle.scalar.Value
 import org.saddle.ops.BinOps._
-import org.saddle.order._
 import org.saddle.util.DoubleTotalOrder
+import org.saddle.scalar.FromScalars
+import org.saddle.scalar.FromScalarGen
+import org.saddle.scalar.ScalarGen
 
 /** Test on properties of Vec
   */
 class VecCheck extends Specification with ScalaCheck {
 
-  "uprounding division" in {
-    forAll { (a: Int, b: Int) =>
-      (a >= 0 && b > 0) ==> {
-        org.saddle.util
-          .dividePositiveRoundUp(a, b) == math.ceil(a / b.toDouble).toInt
+  "heterogeneous scalar generators checks" in {
+    implicit val fromScalarGenVec = new FromScalarGen[Vec] {
+      override def apply[T](sg: ScalarGen[T]): Gen[Vec[T]] =
+        VecArbitraries.vec(sg.gen)(sg.tag)
       }
+    "takeLeft" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        v.takeLeft(5) must_== v.toSeq.take(5).toVec
     }
   }
 
-  "Double Vec Tests" in {
-    implicit val vec = Arbitrary(VecArbitraries.vecDoubleWithNA)
-    "update" in {
-      forAll { (v: Vec[Double], d: Double) =>
-        (v.length > 0) ==> {
-          val i = v.length / 2
-          v(i) = d
-          (v.raw(i) must_== d) and
-            (v.toArray(i) must_== d)
-        }
-
+    "takeRight" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        v.takeRight(5) must_== v.toSeq.takeRight(5).toVec
       }
     }
+
+    "dropLeft" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        v.dropLeft(5) must_== v.toSeq.drop(5).toVec
+      }
+    }
+
+    "dropRight" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        v.dropRight(5) must_== v.toSeq.dropRight(5).toVec
+      }
+    }
+
+    "vectors equality" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        (v must_== Vec(v.contents)) and (v must_== v)
+      }
+    }
+
+    "last works" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        val v = fs.value
+        if (v.isEmpty)
+          v.last must_== scalar.NA
+        else
+          v.last must_== v.at(v.length - 1)
+      }
+    }
+
+    "concat works" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        val data = v.contents
+        v.concat(v) must_== Vec(data ++ data)
+      }
+    }
+
+    "dropNA works" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        val data = v.contents
+        v.dropNA must_== Vec(data.filter(st.notMissing))
+      }
+        }
+
+    "hasNA works" in {
+      forAll { (fs: FromScalars[Vec]) =>
+        implicit val st = fs.tag
+        val v = fs.value
+        val data = v.contents
+        v.hasNA must_== (data.indexWhere(st.isMissing) >= 0)
+      }
+    }
+
+    // make more tests use the heterogenous generators
+  }
+
+  "further checks" in {
+    implicit val vec = Arbitrary(VecArbitraries.vecDoubleWithNA)
     "assignment operator in view" in {
       val v = org.saddle.vec.ones(2)
 
@@ -124,28 +191,6 @@ class VecCheck extends Specification with ScalaCheck {
       v3 *= Vec(-10, 10)
       v must_== Vec(0, 1, 2, 3, -40, 5, 6, 70, 8, 9)
     }
-    "takeLeft" in {
-      forAll { (v: Vec[Double]) => v.takeLeft(5) must_== v.toSeq.take(5).toVec }
-    }
-    "takeRight" in {
-      forAll { (v: Vec[Double]) =>
-        v.takeRight(5) must_== v.toSeq.takeRight(5).toVec
-      }
-    }
-    "dropLeft" in {
-      forAll { (v: Vec[Double]) => v.dropLeft(5) must_== v.toSeq.drop(5).toVec }
-    }
-    "dropRight" in {
-      forAll { (v: Vec[Double]) =>
-        v.dropRight(5) must_== v.toSeq.dropRight(5).toVec
-      }
-    }
-
-    "vectors equality" in {
-      forAll { (v: Vec[Double]) =>
-        (v must_== Vec(v.contents)) and (v must_== v)
-      }
-    }
 
     "single element access of vector" in {
       forAll { (v: Vec[Double]) =>
@@ -195,13 +240,6 @@ class VecCheck extends Specification with ScalaCheck {
       }
     }
 
-    "concat works" in {
-      forAll { (v: Vec[Double]) =>
-        val data = v.contents
-        v.concat(v) must_== Vec(data ++ data)
-      }
-    }
-
     "map works" in {
       forAll { (v: Vec[Double]) =>
         val data = v.contents
@@ -223,20 +261,6 @@ class VecCheck extends Specification with ScalaCheck {
         v.zipMapIdx((a, b) => (a + b)) must_== v.toSeq.zipWithIndex.map {
           case (a, b) => a + b
         }.toVec
-      }
-    }
-
-    "dropNA works" in {
-      forAll { (v: Vec[Double]) =>
-        val data = v.contents
-        v.dropNA must_== Vec(data.filter(!_.isNaN))
-      }
-    }
-
-    "hasNA works" in {
-      forAll { (v: Vec[Double]) =>
-        val data = v.contents
-        v.hasNA must_== (data.indexWhere(_.isNaN) >= 0)
       }
     }
 
@@ -593,7 +617,5 @@ class VecCheck extends Specification with ScalaCheck {
         }
       }
     }
-
   }
-
 }
