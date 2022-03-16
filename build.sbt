@@ -122,14 +122,30 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
     mimaBinaryIssueFilters := Seq(
       // fmt: off
       // binary incompat in static methods, only usable in java
-      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagByte.missing"),
-      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagChar.missing"),
-      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagFloat.missing"),
-      ProblemFilters.exclude[IncompatibleResultTypeProblem]("org.saddle.scalar.ScalarTagShort.missing"),
-      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagFloat.isMissing"),
-      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagBool.notMissing"),
-      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagInt.notMissing"),
-      ProblemFilters.exclude[IncompatibleMethTypeProblem]("org.saddle.scalar.ScalarTagLong.notMissing"),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem](
+        "org.saddle.scalar.ScalarTagByte.missing"
+      ),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem](
+        "org.saddle.scalar.ScalarTagChar.missing"
+      ),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem](
+        "org.saddle.scalar.ScalarTagFloat.missing"
+      ),
+      ProblemFilters.exclude[IncompatibleResultTypeProblem](
+        "org.saddle.scalar.ScalarTagShort.missing"
+      ),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem](
+        "org.saddle.scalar.ScalarTagFloat.isMissing"
+      ),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem](
+        "org.saddle.scalar.ScalarTagBool.notMissing"
+      ),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem](
+        "org.saddle.scalar.ScalarTagInt.notMissing"
+      ),
+      ProblemFilters.exclude[IncompatibleMethTypeProblem](
+        "org.saddle.scalar.ScalarTagLong.notMissing"
+      )
       // fmt: on
     )
   )
@@ -277,17 +293,17 @@ lazy val jsoniter = crossProject(JSPlatform, JVMPlatform)
   )
   .jvmSettings(
     libraryDependencies ++= Seq(
-      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.11.1",
-      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.11.1" % "compile-internal",
-      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.11.1" % "test"
+      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.13.7",
+      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.13.7" % "compile-internal",
+      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.13.7" % "test"
     ) ++ scalaTest
   )
   .jsSettings(
     fork := false,
     libraryDependencies ++= Seq(
-      "com.github.plokhotnyuk.jsoniter-scala" %%% "jsoniter-scala-core" % "2.11.1",
-      "com.github.plokhotnyuk.jsoniter-scala" %%% "jsoniter-scala-macros" % "2.11.1" % "compile-internal",
-      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.11.1" % "test",
+      "com.github.plokhotnyuk.jsoniter-scala" %%% "jsoniter-scala-core" % "2.13.7",
+      "com.github.plokhotnyuk.jsoniter-scala" %%% "jsoniter-scala-macros" % "2.13.7" % "compile-internal",
+      "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.13.7" % "test",
       "org.scalatest" %%% "scalatest" % scalaTestVersion % "test"
     )
   )
