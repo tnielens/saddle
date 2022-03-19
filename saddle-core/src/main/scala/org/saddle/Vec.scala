@@ -22,6 +22,7 @@ import ops.NumericOps
 import scalar.{Scalar, ScalarTag}
 
 import java.io.OutputStream
+import org.saddle.FillMethod
 
 object Vec {
 
@@ -504,16 +505,26 @@ trait Vec[@spec(Boolean, Int, Long, Double) T] extends NumericOps[Vec[T]] {
     */
   def fillNA(f: Int => T): Vec[T]
 
+  /** Fill NAs by propagating existent values.
+    *
+    * @param fm
+    *   Filling method, forward or backward
+    * @param limit
+    *   If > 0, fill a maximum of `limit` consecutive NA values
+    * @return
+    */
+  def fillNA(method: FillMethod, limit: Int = 0): Vec[T]
+
   /** Fill NA values by propagating defined values forward.
     *
-    * @param limit 
+    * @param limit
     *   If > 0, propagate over a maximum of `limit` consecutive NA values
     */
   def fillForward(limit: Int = 0): Vec[T]
 
   /** Fill NA values by propagating defined values backward.
     *
-    * @param limit 
+    * @param limit
     *   If > 0, propagate over a maximum of `limit` consecutive NA values
     */
   def fillBackward(limit: Int = 0): Vec[T]

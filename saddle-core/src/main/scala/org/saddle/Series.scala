@@ -25,6 +25,8 @@ import org.saddle.mat.MatCols
 import org.saddle.locator.Locator
 import org.saddle.order._
 import org.saddle.index.OuterJoin
+import org.saddle.FillForward
+import org.saddle.FillBackward
 
 /** `Series` is an immutable container for 1D homogeneous data which is indexed
   * by a an associated sequence of keys.
@@ -419,8 +421,8 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
     */
   def shift(n: Int = 1): Series[X, T] = Series(values.shift(n), index)
 
-  /** Fills NA values in series with result of a function which acts on the
-    * index of the particular NA value found
+  /** Fill NA values in series with result of a function which acts on the
+    * index of the particular NA value found.
     *
     * @param f
     *   A function X => A to be applied at NA location
@@ -428,13 +430,21 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
   def fillNA(f: X => T): Series[X, T] =
     Series(VecImpl.seriesfillNA(index.toVec, values)(f), index)
 
+  /** Fill NA values by propagating defined values.
+    *
+    * @param limit
+    *   If > 0, propagate over a maximum of `limit` consecutive NA values.
+    */
+  def fillNA(method: FillMethod, limit: Int = 0): Series[X, T] =
+    Series(VecImpl.fillNA(values, method, limit), index)
+
   /** Fill NA values by propagating defined values forward.
     *
     * @param limit
     *   If > 0, propagate over a maximum of `limit` consecutive NA values.
     */
   def fillForward(limit: Int = 0): Series[X, T] =
-    Series(VecImpl.fillForward(values, limit), index)
+    Series(VecImpl.fillNA(values, FillForward, limit), index)
 
   /** Fill NA values by propagating defined values backward.
     *
@@ -442,7 +452,7 @@ class Series[X: ST: ORD, @spec(Int, Long, Double) T: ST](
     *   If > 0, propagate over a maximum of `limit` consecutive NA values.
     */
   def fillBackward(limit: Int = 0): Series[X, T] =
-    Series(VecImpl.fillBackward(values, limit), index)
+    Series(VecImpl.fillNA(values, FillBackward, limit), index)
 
   /** Creates a Series having the same values but excluding all key/value pairs
     * in which the value is NA.
