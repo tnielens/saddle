@@ -321,6 +321,55 @@ class FrameSpec extends Specification {
     val b = Vec(true, false, false, false)
     testFrame.T.rmask(b).T must_== testFrame.mask(b)
   }
+
+  "fillNA" should {
+    val testFrame =
+      Frame(
+        Vec[Int](1, 2, na),
+        Vec[Int](na, 2, 3),
+        Vec[Int](na, na, na),
+        Vec[Int](1, na, na)
+      )
+    "fill NAs with an arbitrary value" in {
+      testFrame
+        .fillNA(4)
+        .must_==(
+          Frame(
+            Vec[Int](1, 2, 4),
+            Vec[Int](4, 2, 3),
+            Vec[Int](4, 4, 4),
+            Vec[Int](1, 4, 4)
+          )
+        )
+
+    }
+    "fill NAs forward" in {
+      testFrame
+        .fillNA(FillForward)
+        .must_==(
+          Frame(
+            Vec[Int](1, 2, 2),
+            Vec[Int](na, 2, 3),
+            Vec[Int](na, na, na),
+            Vec[Int](1, 1, 1)
+          )
+        )
+    }
+
+    "fill NAs backward" in {
+      testFrame
+        .fillNA(FillBackward)
+        .must_==(
+          Frame(
+            Vec[Int](1, 2, na),
+            Vec[Int](2, 2, 3),
+            Vec[Int](na, na, na),
+            Vec[Int](1, na, na)
+          )
+        )
+    }
+  }
+
   "joinMap" in {
     val testframe2 = Frame(
       1 -> Series(1 -> "1,1", 2 -> "2,1", 3 -> "3,1", 4 -> "4,1"),

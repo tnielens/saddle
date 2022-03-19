@@ -35,6 +35,7 @@ import org.saddle.mat.MatCols
 import org.saddle.order._
 import _root_.cats.kernel.Order
 import org.saddle.array.Sorter.intSorter
+import org.saddle.FillMethod
 
 /** `Frame` is an immutable container for 2D data which is indexed along both
   * axes (rows, columns) by associated keys (i.e., indexes).
@@ -923,6 +924,17 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     */
   def mask(m: Vec[Boolean]): Frame[RX, CX, T] =
     Frame(values.map(v => v.mask(m)), rowIx, colIx)
+
+  /** Fill NAs with a defined value.
+    */
+  def fillNA(v: T): Frame[RX, CX, T] = mapCols((_, c) => c.fillNA(_ => v))
+
+  /** Fill NA values by propagating defined values column-wise.
+    *
+    * @param limit
+    *   If > 0, propagate over a maximum of `limit` consecutive NA values.
+    */
+  def fillNA(fillMethod: FillMethod, limit: Int = 0) = mapCols((_, c) => c.fillNA(fillMethod, limit))
 
   /** Joins two frames along both their indexes and applies a function to each
     * pair of values; when either value is NA, the result of the function is
