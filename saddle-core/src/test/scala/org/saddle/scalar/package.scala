@@ -49,7 +49,19 @@ package object scalar {
         E(apply[Long]),
         E(apply[Float]),
         E(apply[Double]),
-        E(apply[String])
+        E(apply[String]),
+      )
+
+    val genWithoutBool: Gen[EScalarGen] =
+      Gen.oneOf(
+        E(apply[Byte]),
+        E(apply[Short]),
+        E(apply[Char]),
+        E(apply[Int]),
+        E(apply[Long]),
+        E(apply[Float]),
+        E(apply[Double]),
+        E(apply[String]),
       )
 
     val genWithoutNA: Gen[EScalarGen] =
