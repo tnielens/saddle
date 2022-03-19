@@ -22,6 +22,24 @@ import org.saddle.scalar._
 
 class ScalarTagCheck extends Specification with ScalaCheck {
 
+  "isMissing != notMissing" in {
+    forAll(ScalarGen.genWithoutBool) { (est: E[ScalarGen]) =>
+      val st = est.value.tag
+      val gen = est.value.gen
+
+      forAll(gen) { (v: est.T) =>
+        st.isMissing(v) != st.notMissing(v)
+      }
+    }
+  }
+
+  "isMissing(missing)" in {
+    forAll(ScalarGen.genWithoutBool) { (est: E[ScalarGen]) =>
+      val st = est.value.tag
+      st.isMissing(st.missing)
+    }
+  }
+
   "ScalarTagAny" should {
     val tag = implicitly[ScalarTagAny[Any]]
     "treat null as missing" in {
@@ -32,6 +50,7 @@ class ScalarTagCheck extends Specification with ScalaCheck {
     }
   }
 
+  // primitive cases to cover automatic (un)boxing issues
   "ScalarTagByte" should {
     "use Byte.MinValue as the missing value for Byte - check" in {
       def prop(v: Byte) =
