@@ -22,7 +22,6 @@ import ops.NumericOps
 import scalar.{Scalar, ScalarTag}
 
 import java.io.OutputStream
-import org.saddle.FillMethod
 
 object Vec {
 
