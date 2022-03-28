@@ -148,8 +148,8 @@ lazy val core = crossProject(JSPlatform, JVMPlatform)
     libraryDependencies ++= Seq(
       "org.scala-lang.modules" %%% "scala-collection-compat" % "2.5.0",
       "org.typelevel" %%% "cats-core" % "2.6.1",
-      "org.specs2" %%% "specs2-core" % "4.14.1" % "test",
-      "org.specs2" %%% "specs2-scalacheck" % "4.14.1" % "test"
+      "org.specs2" %%% "specs2-core" % "4.15.0" % "test",
+      "org.specs2" %%% "specs2-scalacheck" % "4.15.0" % "test"
     )
   )
   .dependsOn(spire, io)
