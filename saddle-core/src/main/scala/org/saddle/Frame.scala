@@ -763,6 +763,15 @@ class Frame[RX: ST: ORD, CX: ST: ORD, @spec(Int, Long, Double) T](
     if (loc == -1) emptyCol else colAt(loc)
   }
 
+  /** Return scalar of first row and column found
+    *
+    * @param r
+    *   Row to match
+    * @param c
+    *   Column to match
+    */
+  def get(r: RX, c: CX): Scalar[T] = firstCol(c).get(r)
+
   /** Return empty series of type equivalent to a row of frame
     */
   def emptyRow: Series[CX, T] = Series.empty[CX, T]
